@@ -1,0 +1,45 @@
+----------------------------
+2000 t.u. OpenWorkload 3.0
+----------------------------
+Number of observations: 666
+Mean value: 2.381243229719217
+
+
+----------------------------
+4000 t.u. OpenWorkload 3.0
+----------------------------
+Number of observations: 1333
+Mean value: 2.39445325881470
+
+----------------------------
+2000 t.u. OpenWorkload 3.0 Only Exponential distributions.
+----------------------------
+Number of observations: 667
+Mean value: 1.7162753714347831
+
+e-Motions: 1.6572399011705623
+
+----------------------------
+4000 t.u. OpenWorkload 3.0 Only Exponential distributions.
+----------------------------
+Number of observations: 1333
+Mean value: 1.6539061678248288
+
+----------------------------
+8000 t.u. OpenWorkload 3.0 Only Exponential distributions.
+----------------------------
+Number of observations: 2667 
+Mean value: 1.6559651815129346
+
+e-Motions: 1.6646403244262815
+
+----------------------------
+16000 t.u. OpenWorkload 3.0 Only Exponential distributions.
+----------------------------
+Number of observations: 5333 
+Mean value: 1.6641062518928926
+
+e-Motions: 1.6531756128911028
+
+
+

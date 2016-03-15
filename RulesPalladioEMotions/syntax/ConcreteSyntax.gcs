@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gcs:MetamodelGD xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gcs="http://www.lcc.uma.es/GCS/1.0" name="@PCMFLATTEN@">
+  <packagesGD name="pcmflatten">
+    <classesGD name="PCMpcmDummyClass">
+      <class href="flatten.ecore#//PCMpcmDummyClass"/>
+    </classesGD>
+    <classesGD name="PCMcorePCMRandomVariable">
+      <class href="flatten.ecore#//PCMcorePCMRandomVariable"/>
+    </classesGD>
+    <classesGD name="PCMentityResourceProvidedRole">
+      <class href="flatten.ecore#//PCMentityResourceProvidedRole"/>
+    </classesGD>
+    <classesGD name="PCMentityInterfaceProvidingRequiringEntity">
+      <class href="flatten.ecore#//PCMentityInterfaceProvidingRequiringEntity"/>
+    </classesGD>
+    <classesGD name="PCMentityInterfaceProvidingEntity">
+      <class href="flatten.ecore#//PCMentityInterfaceProvidingEntity"/>
+    </classesGD>
+    <classesGD name="PCMentityInterfaceRequiringEntity">
+      <class href="flatten.ecore#//PCMentityInterfaceRequiringEntity"/>
+    </classesGD>
+    <classesGD name="PCMentityResourceInterfaceRequiringEntity">
+      <class href="flatten.ecore#//PCMentityResourceInterfaceRequiringEntity"/>
+    </classesGD>
+    <classesGD name="PCMentityResourceRequiredRole">
+      <class href="flatten.ecore#//PCMentityResourceRequiredRole"/>
+    </classesGD>
+    <classesGD name="PCMentityResourceInterfaceProvidingEntity">
+      <class href="flatten.ecore#//PCMentityResourceInterfaceProvidingEntity"/>
+    </classesGD>
+    <classesGD name="PCMentityComposedProvidingRequiringEntity">
+      <class href="flatten.ecore#//PCMentityComposedProvidingRequiringEntity"/>
+    </classesGD>
+    <classesGD name="PCMentityNamedElement">
+      <class href="flatten.ecore#//PCMentityNamedElement"/>
+    </classesGD>
+    <classesGD name="PCMentityResourceInterfaceProvidingRequiringEntity">
+      <class href="flatten.ecore#//PCMentityResourceInterfaceProvidingRequiringEntity"/>
+    </classesGD>
+    <classesGD name="PCMentityEntity">
+      <class href="flatten.ecore#//PCMentityEntity"/>
+    </classesGD>
+    <classesGD name="PCMcompositionDelegationConnector">
+      <class href="flatten.ecore#//PCMcompositionDelegationConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionConnector">
+      <class href="flatten.ecore#//PCMcompositionConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionComposedStructure">
+      <class href="flatten.ecore#//PCMcompositionComposedStructure"/>
+    </classesGD>
+    <classesGD name="PCMcompositionResourceRequiredDelegationConnector">
+      <class href="flatten.ecore#//PCMcompositionResourceRequiredDelegationConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionEventChannel">
+      <class href="flatten.ecore#//PCMcompositionEventChannel"/>
+    </classesGD>
+    <classesGD name="PCMcompositionEventChannelSourceConnector">
+      <class href="flatten.ecore#//PCMcompositionEventChannelSourceConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionEventChannelSinkConnector">
+      <class href="flatten.ecore#//PCMcompositionEventChannelSinkConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionProvidedDelegationConnector">
+      <class href="flatten.ecore#//PCMcompositionProvidedDelegationConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionRequiredDelegationConnector">
+      <class href="flatten.ecore#//PCMcompositionRequiredDelegationConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionAssemblyConnector">
+      <class href="flatten.ecore#//PCMcompositionAssemblyConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionAssemblyEventConnector">
+      <class href="flatten.ecore#//PCMcompositionAssemblyEventConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionSourceDelegationConnector">
+      <class href="flatten.ecore#//PCMcompositionSourceDelegationConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionSinkDelegationConnector">
+      <class href="flatten.ecore#//PCMcompositionSinkDelegationConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionAssemblyInfrastructureConnector">
+      <class href="flatten.ecore#//PCMcompositionAssemblyInfrastructureConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionProvidedInfrastructureDelegationConnector">
+      <class href="flatten.ecore#//PCMcompositionProvidedInfrastructureDelegationConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionRequiredInfrastructureDelegationConnector">
+      <class href="flatten.ecore#//PCMcompositionRequiredInfrastructureDelegationConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionRequiredResourceDelegationConnector">
+      <class href="flatten.ecore#//PCMcompositionRequiredResourceDelegationConnector"/>
+    </classesGD>
+    <classesGD name="PCMcompositionAssemblyContext" figurePath="/PalladioRules/imgs/AssemblyContext.gif">
+      <class href="flatten.ecore#//PCMcompositionAssemblyContext"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelWorkload">
+      <class href="flatten.ecore#//PCMusagemodelWorkload"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelUsageScenario" figurePath="/PalladioRules/imgs/UsageScenario.gif">
+      <class href="flatten.ecore#//PCMusagemodelUsageScenario"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelUserData">
+      <class href="flatten.ecore#//PCMusagemodelUserData"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelUsageModel">
+      <class href="flatten.ecore#//PCMusagemodelUsageModel"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelEntryLevelSystemCall" figurePath="/PalladioRules/imgs/EntryLevelSystemCall.gif">
+      <class href="flatten.ecore#//PCMusagemodelEntryLevelSystemCall"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelAbstractUserAction">
+      <class href="flatten.ecore#//PCMusagemodelAbstractUserAction"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelScenarioBehaviour" figurePath="/PalladioRules/imgs/ScenarioBehaviour.gif">
+      <class href="flatten.ecore#//PCMusagemodelScenarioBehaviour"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelBranchTransition" figurePath="/PalladioRules/imgs/BranchTransition.gif">
+      <class href="flatten.ecore#//PCMusagemodelBranchTransition"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelBranch" figurePath="/PalladioRules/imgs/Branch.gif">
+      <class href="flatten.ecore#//PCMusagemodelBranch"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelLoop" figurePath="/PalladioRules/imgs/Loop.gif">
+      <class href="flatten.ecore#//PCMusagemodelLoop"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelStop" figurePath="/PalladioRules/imgs/Stop.gif">
+      <class href="flatten.ecore#//PCMusagemodelStop"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelStart" figurePath="/PalladioRules/imgs/Start.gif">
+      <class href="flatten.ecore#//PCMusagemodelStart"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelOpenWorkload" figurePath="/PalladioRules/imgs/OpenWorkload.gif">
+      <class href="flatten.ecore#//PCMusagemodelOpenWorkload"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelDelay" figurePath="/PalladioRules/imgs/Delay.gif">
+      <class href="flatten.ecore#//PCMusagemodelDelay"/>
+    </classesGD>
+    <classesGD name="PCMusagemodelClosedWorkload" figurePath="/PalladioRules/imgs/ClosedWorkload.gif">
+      <class href="flatten.ecore#//PCMusagemodelClosedWorkload"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryPassiveResource">
+      <class href="flatten.ecore#//PCMrepositoryPassiveResource"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryBasicComponent" figurePath="/PalladioRules/imgs/BasicComponent.gif">
+      <class href="flatten.ecore#//PCMrepositoryBasicComponent"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryImplementationComponentType">
+      <class href="flatten.ecore#//PCMrepositoryImplementationComponentType"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryRepositoryComponent">
+      <class href="flatten.ecore#//PCMrepositoryRepositoryComponent"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryProvidedRole">
+      <class href="flatten.ecore#//PCMrepositoryProvidedRole"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryParameter">
+      <class href="flatten.ecore#//PCMrepositoryParameter"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryDataType">
+      <class href="flatten.ecore#//PCMrepositoryDataType"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryRepository">
+      <class href="flatten.ecore#//PCMrepositoryRepository"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryInterface">
+      <class href="flatten.ecore#//PCMrepositoryInterface"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryRequiredCharacterisation">
+      <class href="flatten.ecore#//PCMrepositoryRequiredCharacterisation"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryEventGroup">
+      <class href="flatten.ecore#//PCMrepositoryEventGroup"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryEventType">
+      <class href="flatten.ecore#//PCMrepositoryEventType"/>
+    </classesGD>
+    <classesGD name="PCMrepositorySignature" figurePath="/PalladioRules/imgs/Signature.gif">
+      <class href="flatten.ecore#//PCMrepositorySignature"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryExceptionType">
+      <class href="flatten.ecore#//PCMrepositoryExceptionType"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryInfrastructureSignature">
+      <class href="flatten.ecore#//PCMrepositoryInfrastructureSignature"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryInfrastructureInterface">
+      <class href="flatten.ecore#//PCMrepositoryInfrastructureInterface"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryInfrastructureRequiredRole">
+      <class href="flatten.ecore#//PCMrepositoryInfrastructureRequiredRole"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryRequiredRole">
+      <class href="flatten.ecore#//PCMrepositoryRequiredRole"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryOperationSignature" figurePath="/PalladioRules/imgs/Signature.gif">
+      <class href="flatten.ecore#//PCMrepositoryOperationSignature"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryOperationInterface">
+      <class href="flatten.ecore#//PCMrepositoryOperationInterface"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryOperationRequiredRole">
+      <class href="flatten.ecore#//PCMrepositoryOperationRequiredRole"/>
+    </classesGD>
+    <classesGD name="PCMrepositorySourceRole">
+      <class href="flatten.ecore#//PCMrepositorySourceRole"/>
+    </classesGD>
+    <classesGD name="PCMrepositorySinkRole">
+      <class href="flatten.ecore#//PCMrepositorySinkRole"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryOperationProvidedRole">
+      <class href="flatten.ecore#//PCMrepositoryOperationProvidedRole"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryInfrastructureProvidedRole">
+      <class href="flatten.ecore#//PCMrepositoryInfrastructureProvidedRole"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryCompleteComponentType">
+      <class href="flatten.ecore#//PCMrepositoryCompleteComponentType"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryProvidesComponentType">
+      <class href="flatten.ecore#//PCMrepositoryProvidesComponentType"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryCompositeComponent">
+      <class href="flatten.ecore#//PCMrepositoryCompositeComponent"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryPrimitiveDataType">
+      <class href="flatten.ecore#//PCMrepositoryPrimitiveDataType"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryCollectionDataType">
+      <class href="flatten.ecore#//PCMrepositoryCollectionDataType"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryCompositeDataType">
+      <class href="flatten.ecore#//PCMrepositoryCompositeDataType"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryInnerDeclaration">
+      <class href="flatten.ecore#//PCMrepositoryInnerDeclaration"/>
+    </classesGD>
+    <classesGD name="PCMrepositoryRole">
+      <class href="flatten.ecore#//PCMrepositoryRole"/>
+    </classesGD>
+    <classesGD name="PCMresourcetypeResourceSignature">
+      <class href="flatten.ecore#//PCMresourcetypeResourceSignature"/>
+    </classesGD>
+    <classesGD name="PCMresourcetypeProcessingResourceType" figurePath="/PalladioRules/imgs/ProcessingResourceType.gif">
+      <class href="flatten.ecore#//PCMresourcetypeProcessingResourceType"/>
+    </classesGD>
+    <classesGD name="PCMresourcetypeResourceType">
+      <class href="flatten.ecore#//PCMresourcetypeResourceType"/>
+    </classesGD>
+    <classesGD name="PCMresourcetypeResourceRepository">
+      <class href="flatten.ecore#//PCMresourcetypeResourceRepository"/>
+    </classesGD>
+    <classesGD name="PCMresourcetypeSchedulingPolicy" figurePath="/PalladioRules/imgs/SchedulingPolicy.gif">
+      <class href="flatten.ecore#//PCMresourcetypeSchedulingPolicy"/>
+    </classesGD>
+    <classesGD name="PCMresourcetypeCommunicationLinkResourceType">
+      <class href="flatten.ecore#//PCMresourcetypeCommunicationLinkResourceType"/>
+    </classesGD>
+    <classesGD name="PCMresourcetypeResourceInterface">
+      <class href="flatten.ecore#//PCMresourcetypeResourceInterface"/>
+    </classesGD>
+    <classesGD name="PCMprotocolProtocol">
+      <class href="flatten.ecore#//PCMprotocolProtocol"/>
+    </classesGD>
+    <classesGD name="PCMparameterVariableUsage">
+      <class href="flatten.ecore#//PCMparameterVariableUsage"/>
+    </classesGD>
+    <classesGD name="PCMparameterVariableCharacterisation">
+      <class href="flatten.ecore#//PCMparameterVariableCharacterisation"/>
+    </classesGD>
+    <classesGD name="PCMparameterCharacterisedVariable">
+      <class href="flatten.ecore#//PCMparameterCharacterisedVariable"/>
+    </classesGD>
+    <classesGD name="PCMreliabilityFailureOccurrenceDescription">
+      <class href="flatten.ecore#//PCMreliabilityFailureOccurrenceDescription"/>
+    </classesGD>
+    <classesGD name="PCMreliabilityHardwareInducedFailureType">
+      <class href="flatten.ecore#//PCMreliabilityHardwareInducedFailureType"/>
+    </classesGD>
+    <classesGD name="PCMreliabilitySoftwareInducedFailureType">
+      <class href="flatten.ecore#//PCMreliabilitySoftwareInducedFailureType"/>
+    </classesGD>
+    <classesGD name="PCMreliabilityInternalFailureOccurrenceDescription">
+      <class href="flatten.ecore#//PCMreliabilityInternalFailureOccurrenceDescription"/>
+    </classesGD>
+    <classesGD name="PCMreliabilityNetworkInducedFailureType">
+      <class href="flatten.ecore#//PCMreliabilityNetworkInducedFailureType"/>
+    </classesGD>
+    <classesGD name="PCMreliabilityExternalFailureOccurrenceDescription">
+      <class href="flatten.ecore#//PCMreliabilityExternalFailureOccurrenceDescription"/>
+    </classesGD>
+    <classesGD name="PCMreliabilityResourceTimeoutFailureType">
+      <class href="flatten.ecore#//PCMreliabilityResourceTimeoutFailureType"/>
+    </classesGD>
+    <classesGD name="PCMreliabilityFailureType">
+      <class href="flatten.ecore#//PCMreliabilityFailureType"/>
+    </classesGD>
+    <classesGD name="PCMseffStopAction" figurePath="/PalladioRules/imgs/StopAction.gif">
+      <class href="flatten.ecore#//PCMseffStopAction"/>
+    </classesGD>
+    <classesGD name="PCMseffAbstractInternalControlFlowAction">
+      <class href="flatten.ecore#//PCMseffAbstractInternalControlFlowAction"/>
+    </classesGD>
+    <classesGD name="PCMseffAbstractAction">
+      <class href="flatten.ecore#//PCMseffAbstractAction"/>
+    </classesGD>
+    <classesGD name="PCMseffResourceDemandingBehaviour" figurePath="/PalladioRules/imgs/ResourceDemandingBehaviour.gif">
+      <class href="flatten.ecore#//PCMseffResourceDemandingBehaviour"/>
+    </classesGD>
+    <classesGD name="PCMseffAbstractLoopAction">
+      <class href="flatten.ecore#//PCMseffAbstractLoopAction"/>
+    </classesGD>
+    <classesGD name="PCMseffAbstractBranchTransition">
+      <class href="flatten.ecore#//PCMseffAbstractBranchTransition"/>
+    </classesGD>
+    <classesGD name="PCMseffBranchAction" figurePath="/PalladioRules/imgs/BranchAction.gif">
+      <class href="flatten.ecore#//PCMseffBranchAction"/>
+    </classesGD>
+    <classesGD name="PCMseffCallAction">
+      <class href="flatten.ecore#//PCMseffCallAction"/>
+    </classesGD>
+    <classesGD name="PCMseffStartAction" figurePath="/PalladioRules/imgs/StartAction.gif">
+      <class href="flatten.ecore#//PCMseffStartAction"/>
+    </classesGD>
+    <classesGD name="PCMseffServiceEffectSpecification">
+      <class href="flatten.ecore#//PCMseffServiceEffectSpecification"/>
+    </classesGD>
+    <classesGD name="PCMseffResourceDemandingSEFF" figurePath="/PalladioRules/imgs/ResourceDemandingSEFF.gif">
+      <class href="flatten.ecore#//PCMseffResourceDemandingSEFF"/>
+    </classesGD>
+    <classesGD name="PCMseffResourceDemandingInternalBehaviour">
+      <class href="flatten.ecore#//PCMseffResourceDemandingInternalBehaviour"/>
+    </classesGD>
+    <classesGD name="PCMseffReleaseAction">
+      <class href="flatten.ecore#//PCMseffReleaseAction"/>
+    </classesGD>
+    <classesGD name="PCMseffLoopAction" figurePath="/PalladioRules/imgs/LoopAction.gif">
+      <class href="flatten.ecore#//PCMseffLoopAction"/>
+    </classesGD>
+    <classesGD name="PCMseffForkAction">
+      <class href="flatten.ecore#//PCMseffForkAction"/>
+    </classesGD>
+    <classesGD name="PCMseffForkedBehaviour">
+      <class href="flatten.ecore#//PCMseffForkedBehaviour"/>
+    </classesGD>
+    <classesGD name="PCMseffSynchronisationPoint">
+      <class href="flatten.ecore#//PCMseffSynchronisationPoint"/>
+    </classesGD>
+    <classesGD name="PCMseffExternalCallAction">
+      <class href="flatten.ecore#//PCMseffExternalCallAction"/>
+    </classesGD>
+    <classesGD name="PCMseffCallReturnAction">
+      <class href="flatten.ecore#//PCMseffCallReturnAction"/>
+    </classesGD>
+    <classesGD name="PCMseffProbabilisticBranchTransition" figurePath="/PalladioRules/imgs/ProbabilisticBranchTransition.gif">
+      <class href="flatten.ecore#//PCMseffProbabilisticBranchTransition"/>
+    </classesGD>
+    <classesGD name="PCMseffAcquireAction">
+      <class href="flatten.ecore#//PCMseffAcquireAction"/>
+    </classesGD>
+    <classesGD name="PCMseffCollectionIteratorAction">
+      <class href="flatten.ecore#//PCMseffCollectionIteratorAction"/>
+    </classesGD>
+    <classesGD name="PCMseffGuardedBranchTransition">
+      <class href="flatten.ecore#//PCMseffGuardedBranchTransition"/>
+    </classesGD>
+    <classesGD name="PCMseffSetVariableAction">
+      <class href="flatten.ecore#//PCMseffSetVariableAction"/>
+    </classesGD>
+    <classesGD name="PCMseffInternalCallAction">
+      <class href="flatten.ecore#//PCMseffInternalCallAction"/>
+    </classesGD>
+    <classesGD name="PCMseffEmitEventAction">
+      <class href="flatten.ecore#//PCMseffEmitEventAction"/>
+    </classesGD>
+    <classesGD name="PCMseffInternalAction" figurePath="/PalladioRules/imgs/InternalAction.gif">
+      <class href="flatten.ecore#//PCMseffInternalAction"/>
+    </classesGD>
+    <classesGD name="PCMseff_performanceInfrastructureCall">
+      <class href="flatten.ecore#//PCMseff_performanceInfrastructureCall"/>
+    </classesGD>
+    <classesGD name="PCMseff_performanceResourceCall">
+      <class href="flatten.ecore#//PCMseff_performanceResourceCall"/>
+    </classesGD>
+    <classesGD name="PCMseffperformanceParametricResourceDemand" figurePath="/PalladioRules/imgs/ParametricResourceDemand.gif">
+      <class href="flatten.ecore#//PCMseffperformanceParametricResourceDemand"/>
+    </classesGD>
+    <classesGD name="PCMseff_reliabilityRecoveryActionBehaviour">
+      <class href="flatten.ecore#//PCMseff_reliabilityRecoveryActionBehaviour"/>
+    </classesGD>
+    <classesGD name="PCMseff_reliabilityRecoveryAction">
+      <class href="flatten.ecore#//PCMseff_reliabilityRecoveryAction"/>
+    </classesGD>
+    <classesGD name="PCMseff_reliabilityFailureHandlingEntity">
+      <class href="flatten.ecore#//PCMseff_reliabilityFailureHandlingEntity"/>
+    </classesGD>
+    <classesGD name="PCMqosannotationsSpecifiedQoSAnnotation">
+      <class href="flatten.ecore#//PCMqosannotationsSpecifiedQoSAnnotation"/>
+    </classesGD>
+    <classesGD name="PCMqosannotationsQoSAnnotations">
+      <class href="flatten.ecore#//PCMqosannotationsQoSAnnotations"/>
+    </classesGD>
+    <classesGD name="PCMqosannotationsSpecifiedOutputParameterAbstraction">
+      <class href="flatten.ecore#//PCMqosannotationsSpecifiedOutputParameterAbstraction"/>
+    </classesGD>
+    <classesGD name="PCMqos_performanceSystemSpecifiedExecutionTime">
+      <class href="flatten.ecore#//PCMqos_performanceSystemSpecifiedExecutionTime"/>
+    </classesGD>
+    <classesGD name="PCMqos_performanceSpecifiedExecutionTime">
+      <class href="flatten.ecore#//PCMqos_performanceSpecifiedExecutionTime"/>
+    </classesGD>
+    <classesGD name="PCMqos_performanceComponentSpecifiedExecutionTime">
+      <class href="flatten.ecore#//PCMqos_performanceComponentSpecifiedExecutionTime"/>
+    </classesGD>
+    <classesGD name="PCMqos_reliabilitySpecifiedReliabilityAnnotation">
+      <class href="flatten.ecore#//PCMqos_reliabilitySpecifiedReliabilityAnnotation"/>
+    </classesGD>
+    <classesGD name="PCMsystemSystem">
+      <class href="flatten.ecore#//PCMsystemSystem"/>
+    </classesGD>
+    <classesGD name="PCMresourceenvironmentResourceEnvironment">
+      <class href="flatten.ecore#//PCMresourceenvironmentResourceEnvironment"/>
+    </classesGD>
+    <classesGD name="PCMresourceenvironmentLinkingResource">
+      <class href="flatten.ecore#//PCMresourceenvironmentLinkingResource"/>
+    </classesGD>
+    <classesGD name="PCMresourceenvironmentResourceContainer" figurePath="/PalladioRules/imgs/ResourceContainer.gif">
+      <class href="flatten.ecore#//PCMresourceenvironmentResourceContainer"/>
+    </classesGD>
+    <classesGD name="PCMresourceenvironmentProcessingResourceSpecification" figurePath="/PalladioRules/imgs/ProcessingResourceSpecification.gif">
+      <class href="flatten.ecore#//PCMresourceenvironmentProcessingResourceSpecification"/>
+    </classesGD>
+    <classesGD name="PCMresourceenvironmentCommunicationLinkResourceSpecification">
+      <class href="flatten.ecore#//PCMresourceenvironmentCommunicationLinkResourceSpecification"/>
+    </classesGD>
+    <classesGD name="PCMallocationAllocationContext" figurePath="/PalladioRules/imgs/AllocationContext.gif">
+      <class href="flatten.ecore#//PCMallocationAllocationContext"/>
+    </classesGD>
+    <classesGD name="PCMallocationAllocation">
+      <class href="flatten.ecore#//PCMallocationAllocation"/>
+    </classesGD>
+    <classesGD name="PCMsubsystemSubSystem">
+      <class href="flatten.ecore#//PCMsubsystemSubSystem"/>
+    </classesGD>
+    <classesGD name="STOEXstoexVariableReference">
+      <class href="flatten.ecore#//STOEXstoexVariableReference"/>
+    </classesGD>
+    <classesGD name="STOEXstoexAbstractNamedReference">
+      <class href="flatten.ecore#//STOEXstoexAbstractNamedReference"/>
+    </classesGD>
+    <classesGD name="STOEXstoexNamespaceReference">
+      <class href="flatten.ecore#//STOEXstoexNamespaceReference"/>
+    </classesGD>
+    <classesGD name="STOEXstoexVariable">
+      <class href="flatten.ecore#//STOEXstoexVariable"/>
+    </classesGD>
+    <classesGD name="STOEXstoexAtom">
+      <class href="flatten.ecore#//STOEXstoexAtom"/>
+    </classesGD>
+    <classesGD name="STOEXstoexUnary">
+      <class href="flatten.ecore#//STOEXstoexUnary"/>
+    </classesGD>
+    <classesGD name="STOEXstoexPower">
+      <class href="flatten.ecore#//STOEXstoexPower"/>
+    </classesGD>
+    <classesGD name="STOEXstoexProduct">
+      <class href="flatten.ecore#//STOEXstoexProduct"/>
+    </classesGD>
+    <classesGD name="STOEXstoexTerm">
+      <class href="flatten.ecore#//STOEXstoexTerm"/>
+    </classesGD>
+    <classesGD name="STOEXstoexComparison">
+      <class href="flatten.ecore#//STOEXstoexComparison"/>
+    </classesGD>
+    <classesGD name="STOEXstoexBooleanExpression">
+      <class href="flatten.ecore#//STOEXstoexBooleanExpression"/>
+    </classesGD>
+    <classesGD name="STOEXstoexIfElse">
+      <class href="flatten.ecore#//STOEXstoexIfElse"/>
+    </classesGD>
+    <classesGD name="STOEXstoexExpression">
+      <class href="flatten.ecore#//STOEXstoexExpression"/>
+    </classesGD>
+    <classesGD name="STOEXstoexTermExpression">
+      <class href="flatten.ecore#//STOEXstoexTermExpression"/>
+    </classesGD>
+    <classesGD name="STOEXstoexProductExpression">
+      <class href="flatten.ecore#//STOEXstoexProductExpression"/>
+    </classesGD>
+    <classesGD name="STOEXstoexProbabilityFunctionLiteral">
+      <class href="flatten.ecore#//STOEXstoexProbabilityFunctionLiteral"/>
+    </classesGD>
+    <classesGD name="STOEXstoexParenthesis">
+      <class href="flatten.ecore#//STOEXstoexParenthesis"/>
+    </classesGD>
+    <classesGD name="STOEXstoexNumericLiteral">
+      <class href="flatten.ecore#//STOEXstoexNumericLiteral"/>
+    </classesGD>
+    <classesGD name="STOEXstoexIntLiteral">
+      <class href="flatten.ecore#//STOEXstoexIntLiteral"/>
+    </classesGD>
+    <classesGD name="STOEXstoexDoubleLiteral">
+      <class href="flatten.ecore#//STOEXstoexDoubleLiteral"/>
+    </classesGD>
+    <classesGD name="STOEXstoexCompareExpression">
+      <class href="flatten.ecore#//STOEXstoexCompareExpression"/>
+    </classesGD>
+    <classesGD name="STOEXstoexBoolLiteral">
+      <class href="flatten.ecore#//STOEXstoexBoolLiteral"/>
+    </classesGD>
+    <classesGD name="STOEXstoexStringLiteral">
+      <class href="flatten.ecore#//STOEXstoexStringLiteral"/>
+    </classesGD>
+    <classesGD name="STOEXstoexPowerExpression">
+      <class href="flatten.ecore#//STOEXstoexPowerExpression"/>
+    </classesGD>
+    <classesGD name="STOEXstoexBooleanOperatorExpression">
+      <class href="flatten.ecore#//STOEXstoexBooleanOperatorExpression"/>
+    </classesGD>
+    <classesGD name="STOEXstoexNotExpression">
+      <class href="flatten.ecore#//STOEXstoexNotExpression"/>
+    </classesGD>
+    <classesGD name="STOEXstoexNegativeExpression">
+      <class href="flatten.ecore#//STOEXstoexNegativeExpression"/>
+    </classesGD>
+    <classesGD name="STOEXstoexFunctionLiteral">
+      <class href="flatten.ecore#//STOEXstoexFunctionLiteral"/>
+    </classesGD>
+    <classesGD name="STOEXstoexIfElseExpression">
+      <class href="flatten.ecore#//STOEXstoexIfElseExpression"/>
+    </classesGD>
+    <classesGD name="STOEXstoexRandomVariable">
+      <class href="flatten.ecore#//STOEXstoexRandomVariable"/>
+    </classesGD>
+    <classesGD name="UNITSunitsBaseUnit">
+      <class href="flatten.ecore#//UNITSunitsBaseUnit"/>
+    </classesGD>
+    <classesGD name="UNITSunitsUnitRepository">
+      <class href="flatten.ecore#//UNITSunitsUnitRepository"/>
+    </classesGD>
+    <classesGD name="UNITSunitsUnit">
+      <class href="flatten.ecore#//UNITSunitsUnit"/>
+    </classesGD>
+    <classesGD name="UNITSunitsUnitMultiplication">
+      <class href="flatten.ecore#//UNITSunitsUnitMultiplication"/>
+    </classesGD>
+    <classesGD name="UNITSunitsUnitPower">
+      <class href="flatten.ecore#//UNITSunitsUnitPower"/>
+    </classesGD>
+    <classesGD name="UNITSunitsUnitLiteral">
+      <class href="flatten.ecore#//UNITSunitsUnitLiteral"/>
+    </classesGD>
+    <classesGD name="UNITSunitsUnitCarryingElement">
+      <class href="flatten.ecore#//UNITSunitsUnitCarryingElement"/>
+    </classesGD>
+    <classesGD name="IDENTIFIERidentifierIdentifier">
+      <class href="flatten.ecore#//IDENTIFIERidentifierIdentifier"/>
+    </classesGD>
+    <classesGD name="TOKENtokensSEFFToken" figurePath="/PalladioRules/imgs/TokenSEFF.gif">
+      <class href="flatten.ecore#//TOKENtokensSEFFToken"/>
+    </classesGD>
+    <classesGD name="TOKENtokensTokenProb">
+      <class href="flatten.ecore#//TOKENtokensTokenProb"/>
+    </classesGD>
+    <classesGD name="ObTimeStamp" figurePath="/PalladioRules/imgs/Glass-24-TS.png">
+      <class href="flatten.ecore#//ObTimeStamp"/>
+    </classesGD>
+    <classesGD name="ObResponseTime" figurePath="/PalladioRules/imgs/Glass-24-RT.png">
+      <class href="flatten.ecore#//ObResponseTime"/>
+    </classesGD>
+    <classesGD name="TOKENtokensUSToken" figurePath="/PalladioRules/imgs/TokenUsage.gif">
+      <class href="flatten.ecore#//TOKENtokensUSToken"/>
+    </classesGD>
+    <classesGD name="ObThroughPut" figurePath="/PalladioRules/imgs/ObserverThroughput.jpg">
+      <class href="flatten.ecore#//ObThroughPut"/>
+    </classesGD>
+    <classesGD name="TOKENtokensSEFFLoopToken" figurePath="/PalladioRules/imgs/TokenLoop.gif">
+      <class href="flatten.ecore#//TOKENtokensSEFFLoopToken"/>
+    </classesGD>
+    <classesGD name="TOKENtokensSandTimer" figurePath="/PalladioRules/imgs/SandTimer.png">
+      <class href="flatten.ecore#//TOKENtokensSandTimer"/>
+    </classesGD>
+    <classesGD name="TOKENtokensUSLoopToken" figurePath="/PalladioRules/imgs/TokenLoop.gif">
+      <class href="flatten.ecore#//TOKENtokensUSLoopToken"/>
+    </classesGD>
+    <classesGD name="TOKENtokensRETURNVar">
+      <class href="flatten.ecore#//TOKENtokensRETURNVar"/>
+    </classesGD>
+    <package href="flatten.ecore#/"/>
+  </packagesGD>
+</gcs:MetamodelGD>

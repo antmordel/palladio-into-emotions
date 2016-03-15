@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pcmflatten="pcmflatten/1.0">
+  <pcmflatten:PCMusagemodelUsageModel>
+    <usageScenario_UsageModel id="_LPnI8CHdEd6lJo4DCALHMw" entityName="defaultUsageScenario">
+      <scenarioBehaviour_UsageScenario id="_LPwS4CHdEd6lJo4DCALHMw" entityName="defaultUsageScenarioBehaviour">
+        <actions_ScenarioBehaviour xsi:type="pcmflatten:PCMusagemodelStart" id="_LPwS4SHdEd6lJo4DCALHMw" successor="_GL3QUKfLEeSf8oVhFTxEXg"/>
+        <actions_ScenarioBehaviour xsi:type="pcmflatten:PCMusagemodelStop" id="_LPwS4iHdEd6lJo4DCALHMw" predecessor="_GL3QUKfLEeSf8oVhFTxEXg"/>
+        <actions_ScenarioBehaviour xsi:type="pcmflatten:PCMusagemodelEntryLevelSystemCall" id="_GL3QUKfLEeSf8oVhFTxEXg" successor="_LPwS4iHdEd6lJo4DCALHMw" predecessor="_LPwS4SHdEd6lJo4DCALHMw" providedRole_EntryLevelSystemCall="_-r1fUCHcEd6lJo4DCALHMw" operationSignature__EntryLevelSystemCall="_KjhikgzkEeCFg86gxKwVPw"/>
+      </scenarioBehaviour_UsageScenario>
+      <workload_UsageScenario xsi:type="pcmflatten:PCMusagemodelOpenWorkload">
+        <interArrivalTime_OpenWorkload specification="3"/>
+      </workload_UsageScenario>
+    </usageScenario_UsageModel>
+  </pcmflatten:PCMusagemodelUsageModel>
+  <pcmflatten:PCMresourcetypeResourceRepository>
+    <resourceInterfaces__ResourceRepository id="_tw_Q8E5CEeCUKeckjJ_n-w" entityName="CpuInterface">
+      <resourceSignatures__ResourceInterface id="_wF22kE5CEeCUKeckjJ_n-w" entityName="process" resourceServiceId="1"/>
+    </resourceInterfaces__ResourceRepository>
+    <resourceInterfaces__ResourceRepository id="_xXv8QE5CEeCUKeckjJ_n-w" entityName="HddInterface">
+      <resourceSignatures__ResourceInterface id="_ygMyEE5CEeCUKeckjJ_n-w" entityName="read" resourceServiceId="1"/>
+      <resourceSignatures__ResourceInterface id="_zUFtIE5CEeCUKeckjJ_n-w" entityName="write" resourceServiceId="2"/>
+    </resourceInterfaces__ResourceRepository>
+    <schedulingPolicies__ResourceRepository id="ProcessorSharing" entityName="Processor Sharing"/>
+    <schedulingPolicies__ResourceRepository id="FCFS" entityName="First-Come-First-Serve"/>
+    <schedulingPolicies__ResourceRepository id="Delay" entityName="Delay"/>
+    <availableResourceTypes_ResourceRepository xsi:type="pcmflatten:PCMresourcetypeProcessingResourceType" id="_oro4gG3fEdy4YaaT-RYrLQ" entityName="CPU" unitSpecification="work units per second">
+      <resourceProvidedRoles__ResourceInterfaceProvidingEntity id="_patY8E5dEeCg1tUg4V9tRw" entityName="ResourceProvidedRole_CpuInterface_CPU" providedResourceInterface__ResourceProvidedRole="_tw_Q8E5CEeCUKeckjJ_n-w"/>
+    </availableResourceTypes_ResourceRepository>
+    <availableResourceTypes_ResourceRepository xsi:type="pcmflatten:PCMresourcetypeCommunicationLinkResourceType" id="_o3sScH2AEdyH8uerKnHYug" entityName="LAN" unitSpecification="byte per second"/>
+    <availableResourceTypes_ResourceRepository xsi:type="pcmflatten:PCMresourcetypeProcessingResourceType" id="_BIjHoQ3KEdyouMqirZIhzQ" entityName="HDD" unitSpecification="byte per second">
+      <resourceProvidedRoles__ResourceInterfaceProvidingEntity id="_tCR8kE5dEeCg1tUg4V9tRw" entityName="ResourceProvidedRole_HddInterface_HDD" providedResourceInterface__ResourceProvidedRole="_xXv8QE5CEeCUKeckjJ_n-w"/>
+    </availableResourceTypes_ResourceRepository>
+    <availableResourceTypes_ResourceRepository xsi:type="pcmflatten:PCMresourcetypeProcessingResourceType" id="_nvHX4KkREdyEA_b89s7q9w" entityName="DELAY" unitSpecification="seconds">
+      <resourceProvidedRoles__ResourceInterfaceProvidingEntity id="_x68UoE5dEeCg1tUg4V9tRw" entityName="ResourceProvidedRole_CpuInterface_DELAY" providedResourceInterface__ResourceProvidedRole="_tw_Q8E5CEeCUKeckjJ_n-w"/>
+    </availableResourceTypes_ResourceRepository>
+  </pcmflatten:PCMresourcetypeResourceRepository>
+  <pcmflatten:PCMresourceenvironmentResourceEnvironment>
+    <resourceContainer_ResourceEnvironment id="_B0aZ0CHdEd6lJo4DCALHMw" entityName="appserver">
+      <activeResourceSpecifications_ResourceContainer id="_ssJ0QYr-EeG0c6Q1F-wA1Q" schedulingPolicy="FCFS" activeResourceType_ActiveResourceSpecification="_oro4gG3fEdy4YaaT-RYrLQ">
+        <processingRate_ProcessingResourceSpecification specification="1"/>
+      </activeResourceSpecifications_ResourceContainer>
+    </resourceContainer_ResourceEnvironment>
+  </pcmflatten:PCMresourceenvironmentResourceEnvironment>
+  <pcmflatten:PCMrepositoryRepository id="_Ls3VgHv_Edub45jJKtm_Dg" entityName="PrimitiveDataTypes" repositoryDescription="">
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryPrimitiveDataType"/>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryPrimitiveDataType" type="STRING"/>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryPrimitiveDataType" type="BOOL"/>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryPrimitiveDataType" type="DOUBLE"/>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryPrimitiveDataType" type="CHAR"/>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryPrimitiveDataType" type="BYTE"/>
+  </pcmflatten:PCMrepositoryRepository>
+  <pcmflatten:PCMrepositoryRepository id="_dqFLECHbEd6tG9VclJz3cw" entityName="defaultRepository">
+    <components__Repository xsi:type="pcmflatten:PCMrepositoryBasicComponent" id="_os1t4CHbEd62GabW1zGSBw" entityName="AComponent">
+      <providedRoles_InterfaceProvidingEntity xsi:type="pcmflatten:PCMrepositoryOperationProvidedRole" id="_qZKs0CHbEd62GabW1zGSBw" entityName="Provided_AnInterface_AComponent" providedInterface__OperationProvidedRole="_n7g-oCHbEd62GabW1zGSBw"/>
+      <serviceEffectSpecifications__BasicComponent xsi:type="pcmflatten:PCMseffResourceDemandingSEFF" id="12345" describedService__SEFF="_KjhikgzkEeCFg86gxKwVPw">
+        <steps_Behaviour xsi:type="pcmflatten:PCMseffStartAction" id="_qZUd0CHbEd62GabW1zGSBw" successor_AbstractAction="_vXLqAP5uEeSdFeZ4efdibQ"/>
+        <steps_Behaviour xsi:type="pcmflatten:PCMseffStopAction" id="_qZUd0SHbEd62GabW1zGSBw" predecessor_AbstractAction="_vXLqAP5uEeSdFeZ4efdibQ"/>
+        <steps_Behaviour xsi:type="pcmflatten:PCMseffInternalAction" id="_vXLqAP5uEeSdFeZ4efdibQ" predecessor_AbstractAction="_qZUd0CHbEd62GabW1zGSBw" successor_AbstractAction="_qZUd0SHbEd62GabW1zGSBw">
+          <resourceDemand_Action requiredResource_ParametricResourceDemand="_oro4gG3fEdy4YaaT-RYrLQ">
+            <specification_ParametericResourceDemand specification="DoublePDF[(1.0; 0.2)(6.0; 0.8)]"/>
+          </resourceDemand_Action>
+        </steps_Behaviour>
+      </serviceEffectSpecifications__BasicComponent>
+    </components__Repository>
+    <interfaces__Repository xsi:type="pcmflatten:PCMrepositoryOperationInterface" id="_n7g-oCHbEd62GabW1zGSBw" entityName="AnInterface">
+      <signatures__OperationInterface id="_KjhikgzkEeCFg86gxKwVPw" entityName="do"/>
+    </interfaces__Repository>
+  </pcmflatten:PCMrepositoryRepository>
+  <pcmflatten:PCMallocationAllocation id="_JiPBICHdEd6lJo4DCALHMw" entityName="defaultAllocation" targetResourceEnvironment_Allocation="/2" system_Allocation="_84D0kCHcEd6lJo4DCALHMw">
+    <allocationContexts_Allocation id="_KCkHACHdEd6lJo4DCALHMw" entityName="Allocation_Assembly_AComponent &lt;AComponent> &lt;AComponent>" resourceContainer_AllocationContext="_B0aZ0CHdEd6lJo4DCALHMw" assemblyContext_AllocationContext="_9c3KwCHcEd6lJo4DCALHMw"/>
+  </pcmflatten:PCMallocationAllocation>
+  <pcmflatten:PCMsystemSystem id="_84D0kCHcEd6lJo4DCALHMw" entityName="defaultSystem">
+    <assemblyContexts__ComposedStructure id="_9c3KwCHcEd6lJo4DCALHMw" entityName="Assembly_AComponent &lt;AComponent>" encapsulatedComponent__AssemblyContext="_os1t4CHbEd62GabW1zGSBw"/>
+    <connectors__ComposedStructure xsi:type="pcmflatten:PCMcompositionProvidedDelegationConnector" id="_ntQ_QKDMEeSTa-m_xXpXMw" entityName="ProvDelegation Provided_AnInterface -> Provided_AnInterface_AComponent" innerProvidedRole_ProvidedDelegationConnector="_qZKs0CHbEd62GabW1zGSBw" outerProvidedRole_ProvidedDelegationConnector="_-r1fUCHcEd6lJo4DCALHMw" assemblyContext_ProvidedDelegationConnector="_9c3KwCHcEd6lJo4DCALHMw"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="pcmflatten:PCMrepositoryOperationProvidedRole" id="_-r1fUCHcEd6lJo4DCALHMw" entityName="Provided_AnInterface" providedInterface__OperationProvidedRole="_n7g-oCHbEd62GabW1zGSBw"/>
+  </pcmflatten:PCMsystemSystem>
+</xmi:XMI>

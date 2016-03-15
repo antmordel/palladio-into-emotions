@@ -1,0 +1,35 @@
+---- ----------------------------------------------- ----
+---- Programmatically generated code using e-Motions ----
+---- @date Fri Jun 26 17:15:24 CEST 2015             ----
+---- ----------------------------------------------- ----
+set print attribute off .
+load ../BehaviorFiles/mOdCL.maude
+load model-checker.maude
+load ../BehaviorFiles/MGDefinitions.maude
+load ../BehaviorFiles/MGRealTimeMaude24.maude
+load ../BehaviorFiles/EcoreMM.maude
+load ../BehaviorFiles/e-Motions.maude
+
+load ../BehaviorFiles/flatten.ecore.maude
+load ../BehaviorFiles/PalladioGrammar.maude
+load ../BehaviorFiles/palladio_behavior.maude
+load MediaStore80.xmi.maude
+
+set print conceal off .
+set show advisories off .
+
+mod TICKRULE is
+  pr MEDIASTORE80 .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) /\ TE =/= zero 
+  /\ (T plus TE) le toRat(100) [print "--> TickRule applied in time " T " with " TE " t.u."] .
+endm
+
+rewrite init(MEDIASTORE80) .

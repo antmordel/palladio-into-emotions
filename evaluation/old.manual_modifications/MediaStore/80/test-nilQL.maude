@@ -1,0 +1,7 @@
+load load-test.maude
+
+rew nilQL '1 nilQL nilQL '2 nilQL .
+
+rew "this is one module above the top:" .
+
+rew in LEX-ANALYZER : nilQL '1 nilQL nilQL '2 nilQL .

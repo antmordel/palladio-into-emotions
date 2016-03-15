@@ -1,0 +1,4 @@
+
+Time units    Exec time   Rewrites
+- 30          - 123075ms  - 57505723
+- 50          - 458995ms  - 304979327

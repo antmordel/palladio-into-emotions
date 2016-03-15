@@ -1,0 +1,23 @@
+---- ----------------------------------------------- ----
+---- Programmatically generated code using e-Motions ----
+---- @date Tue Jan 20 11:52:58 CET 2015             ----
+---- ----------------------------------------------- ----
+---- set print attribute on .
+
+mod TICKRULE is
+  pr MINIMUMEXAMPLEEXTENDED .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) /\ TE =/= zero 
+    /\ (T plus TE) le toRat(5000) .
+endm
+
+rewrite init(MINIMUMEXAMPLEEXTENDED) .
+
+q

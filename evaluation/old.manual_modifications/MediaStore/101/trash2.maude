@@ -1,0 +1,29 @@
+set print conceal off .
+
+rew
+
+{@pcmflatten@{
+---- parent token
+<  oid('2153) : TOKENtokensSEFFToken@pcmflatten | tsOb@TOKENtokensSEFFToken@pcmflatten : oid('2154) # context@TOKENtokensSEFFToken@pcmflatten : Set{oid(
+    '/0/@usageScenario_UsageModel.0/@scenarioBehaviour_UsageScenario/@actions_ScenarioBehaviour.2/@inputParameterUsages_EntryLevelSystemCall.0)} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : oid('2156) # loopToken@TOKENtokensSEFFToken@pcmflatten : null # returnVars@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    id@TOKENtokensSEFFToken@pcmflatten : "" # completed@TOKENtokensSEFFToken@pcmflatten : false # branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} # prob@TOKENtokensSEFFToken@pcmflatten : 0 >
+---- nested token
+<  oid('2156) : TOKENtokensSEFFToken@pcmflatten | tsOb@TOKENtokensSEFFToken@pcmflatten : oid('2157) # context@TOKENtokensSEFFToken@pcmflatten : Set{oid(
+    '/0/@usageScenario_UsageModel.0/@scenarioBehaviour_UsageScenario/@actions_ScenarioBehaviour.2/@inputParameterUsages_EntryLevelSystemCall.0) ; oid(
+    '/4/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@inputVariableUsages__CallAction.0) ; oid(
+    '/4/@components__Repository.1/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@returnVariableUsage__CallReturnAction.0) ; oid(
+    '/4/@components__Repository.1/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@returnVariableUsage__CallReturnAction.1)} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null # loopToken@TOKENtokensSEFFToken@pcmflatten : null # returnVars@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    id@TOKENtokensSEFFToken@pcmflatten : "" # completed@TOKENtokensSEFFToken@pcmflatten : true # branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} # prob@TOKENtokensSEFFToken@pcmflatten : 0 >
+---- action where this token is stuck
+<  oid('_U_0WQBweEeWZC418QByrUw) : PCMseffStopAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten :
+    Set{mt} # predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : oid('_kvvlwDXbEeWKCL17yMs2kw) # successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null #
+    resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : oid('_U_wr4BweEeWZC418QByrUw) # token@PCMseffAbstractAction@pcmflatten : OrderedSet{oid('2156)}
+    # entityName@PCMentityNamedElement@pcmflatten : "stop" # id@IDENTIFIERidentifierIdentifier@pcmflatten : "_U_0WQBweEeWZC418QByrUw" > 
+  
+
+}} in time 10 .

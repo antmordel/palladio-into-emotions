@@ -1,0 +1,5 @@
+Original:
+rewrites: 232759239 in 764866ms cpu (907418ms real)
+
+Modifying EnterInExternalCallAction:
+rewrites: 23792344 in 77787ms cpu (86291ms real) (305864 rewrites/second)

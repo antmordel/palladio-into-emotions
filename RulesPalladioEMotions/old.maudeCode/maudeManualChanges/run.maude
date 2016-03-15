@@ -1,0 +1,8 @@
+set print conceal on .
+print conceal <_:_|_> __ .
+
+--- set profile on .
+
+rew [17] init(MEDIASTORE) .
+
+--- show profile .

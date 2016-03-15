@@ -1,0 +1,8 @@
+[1] "MinimumExample with Exponentials and OpenWorkload = 3"
+
+	Two-sample Kolmogorov-Smirnov test
+
+data:  minimumPCM[, 1] and minimumEmotions[, 1]
+D = 0.019689, p-value = 0.2525
+alternative hypothesis: two-sided
+

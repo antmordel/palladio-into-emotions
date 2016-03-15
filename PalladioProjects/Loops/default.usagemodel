@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/1.0" xmlns:usagemodel="http://sdq.ipd.uka.de/PalladioComponentModel/UsageModel/5.0">
+  <usageScenario_UsageModel id="_rYd-UKDPEeSTa-m_xXpXMw" entityName="defaultUsageScenario">
+    <scenarioBehaviour_UsageScenario id="_Dpf5QKDQEeSTa-m_xXpXMw">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_DpggUKDQEeSTa-m_xXpXMw" successor="_r2snwKJWEeS1vvyFpccg9g"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_DpggUaDQEeSTa-m_xXpXMw" predecessor="_r2snwKJWEeS1vvyFpccg9g"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_r2snwKJWEeS1vvyFpccg9g" successor="_DpggUaDQEeSTa-m_xXpXMw" predecessor="_DpggUKDQEeSTa-m_xXpXMw">
+        <loopIteration_Loop specification="8"/>
+        <bodyBehaviour_Loop id="_r23m4KJWEeS1vvyFpccg9g">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_r241AKJWEeS1vvyFpccg9g" successor="_S2zw0KJYEeS1vvyFpccg9g"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_r25cEKJWEeS1vvyFpccg9g" predecessor="_k01coKJYEeS1vvyFpccg9g"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_S2zw0KJYEeS1vvyFpccg9g" successor="_k01coKJYEeS1vvyFpccg9g" predecessor="_r241AKJWEeS1vvyFpccg9g">
+            <providedRole_EntryLevelSystemCall href="default.system#_vQ9aMKDMEeSTa-m_xXpXMw"/>
+            <operationSignature__EntryLevelSystemCall href="default.repository#_vbwtQKDSEeSTa-m_xXpXMw"/>
+            <inputParameterUsages_EntryLevelSystemCall>
+              <variableCharacterisation_VariableUsage type="VALUE">
+                <specification_VariableCharacterisation specification="Exp(1)"/>
+              </variableCharacterisation_VariableUsage>
+              <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="doA"/>
+            </inputParameterUsages_EntryLevelSystemCall>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_k01coKJYEeS1vvyFpccg9g" successor="_r25cEKJWEeS1vvyFpccg9g" predecessor="_S2zw0KJYEeS1vvyFpccg9g">
+            <timeSpecification_Delay specification="2.0"/>
+          </actions_ScenarioBehaviour>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:OpenWorkload">
+      <interArrivalTime_OpenWorkload specification="20.0"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

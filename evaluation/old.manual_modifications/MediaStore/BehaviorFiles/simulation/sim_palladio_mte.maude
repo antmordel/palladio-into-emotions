@@ -1,0 +1,223 @@
+---- ----------------------------------------------------------
+---- Created by Antonio Moreno-Delgado
+---- ----------------------------------------------------------
+---- MTEs in this file:
+---- -> for usage model:
+----      + RTObserverBirthUsageModel
+----      + OpenWorkloadCreateSandTimer
+----      + DecreaseCountDown
+----      + OpenWorkloadSpec
+----      + StartUsageModel
+----      + ActionUsageModelTrans
+----      + EntryLevelSystemCall
+---- -> for SEFF:
+----      + RTObserverBirthSEFF
+----      + StartSEFF
+----      + ActionSEFFTrans
+----      + EnterInExternalCallAction
+
+mod PALLADIO-MTE is
+  pr SIGNATURE-AND-EQS .
+  
+---- ##########################################################
+---- ----------------------------------------------------------
+---- Usage Model
+---- ----------------------------------------------------------
+---- ##########################################################
+
+---- Observers
+  eq [RTObserverBirthUsageModel] : mte(MM@:@Metamodel {
+    < sB:OCL-Type : PCMUSAGEMODELSCENARIOBEHAVIOUR@PCMFLATTEN@sB@CLASS:PCMusagemodelScenarioBehaviour@pcmflatten |
+        usageScenario@-@SenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten : USAGESCENARIO@-@SENARIOBEHAVIOUR@sB@ATT:OCL-Type # 
+        rtOb@PCMusagemodelScenarioBehaviour@pcmflatten : null # sB@SFS:Set{@StructuralFeatureInstance} > 
+    < usSc:OCL-Type : PCMUSAGEMODELUSAGESCENARIO@PCMFLATTEN@usSc@CLASS:PCMusagemodelUsageScenario@pcmflatten | 
+        scenarioBehaviour@-@UsageScenario@PCMusagemodelUsageScenario@pcmflatten : sB:OCL-Type #
+        usSc@SFS:Set{@StructuralFeatureInstance} > 
+      OBJSET@:Set{@Object} })
+    = 0 [print "- mte RTObserverBirthUsageModel"] .
+    
+  eq [OpenWorkloadCreateSandTimer] : mte(_`{_`}(MM@:@Metamodel, 
+    __(
+      <_:_|_>(ow:OCL-Type, PCMUSAGEMODELOPENWORKLOAD@PCMFLATTEN@ow@CLASS:PCMusagemodelOpenWorkload@pcmflatten, 
+        _#_(
+          _:_(sandTimer@PCMusagemodelOpenWorkload@pcmflatten, null), 
+          ow@SFS:Set{@StructuralFeatureInstance})), 
+      OBJSET@:Set{@Object})))
+    = 0 [print "- mte OpenWorkloadCreateSandTimer"] .
+    
+  ceq [DecreaseCountDown] : mte(_`{_`}(MM@:@Metamodel, 
+    __(
+      < st:OCL-Type : TOKENTOKENSSANDTIMER@PCMFLATTEN@st@CLASS:TOKENtokensSandTimer@pcmflatten |
+          countDown@TOKENtokensSandTimer@pcmflatten : COUNTDOWN:OCL-Type # 
+          st@SFS:Set{@StructuralFeatureInstance} >,
+      <_:_|_>(CLK@:Oid, Clock@MGBehavior, 
+          _:_(time@Clock@MGBehavior, TIME@CLK@:Time)), 
+      OBJSET@:Set{@Object})))
+    = 0
+    if MODEL@:@Model := _`{_`}(MM@:@Metamodel, 
+      __(
+        < st:OCL-Type : TOKENTOKENSSANDTIMER@PCMFLATTEN@st@CLASS:TOKENtokensSandTimer@pcmflatten |
+           countDown@TOKENtokensSandTimer@pcmflatten : COUNTDOWN:OCL-Type # 
+           st@SFS:Set{@StructuralFeatureInstance} >, 
+        <_:_|_>(CLK@:Oid, Clock@MGBehavior, 
+            _:_(time@Clock@MGBehavior, TIME@CLK@:Time)), 
+        OBJSET@:Set{@Object}))
+    /\ not_(currentExec@DecreaseCountDown(Set`{_`}(st:OCL-Type), MODEL@:@Model))
+    /\ toRat(COUNTDOWN:OCL-Type) > 0 [print " - DecreaseCountDown mte"] .
+    
+  eq [OpenWorkloadSpec] : mte(_`{_`}(MM@:@Metamodel, 
+    __(
+      <_:_|_>(st:OCL-Type, TOKENTOKENSSANDTIMER@PCMFLATTEN@st@CLASS:TOKENtokensSandTimer@pcmflatten, 
+        _#_(
+          _:_(countDown@TOKENtokensSandTimer@pcmflatten, 0), st@SFS:Set{@StructuralFeatureInstance})), 
+      OBJSET@:Set{@Object})))
+    = 0 [print " - OpenWorkloadSpec mte"] .
+    
+  eq [StartUsageModel] : mte(_`{_`}(MM@:@Metamodel, 
+    __(
+      <_:_|_>(start:OCL-Type, PCMUSAGEMODELSTART@PCMFLATTEN@start@CLASS:PCMusagemodelStart@pcmflatten, 
+        _#_(
+          _:_(token@PCMusagemodelAbstractUserAction@pcmflatten, Set{sToken:OCL-Type ; OtherTokens:MSet{OCL-Exp}}), 
+          start@SFS:Set{@StructuralFeatureInstance})), 
+      <_:_|_>(sToken:OCL-Type, TOKENTOKENSUSTOKEN@PCMFLATTEN@sToken@CLASS:TOKENtokensUSToken@pcmflatten, 
+        _#_(
+          _:_(completed@TOKENtokensUSToken@pcmflatten, false), 
+          sToken@SFS:Set{@StructuralFeatureInstance})), 
+      OBJSET@:Set{@Object})))
+    = 0 [print " - StartUsageModel mte"].
+    
+  eq [ActionUsageModelTrans] : mte(_`{_`}(MM@:@Metamodel, 
+    __(
+      <_:_|_>(current:OCL-Type, PCMUSAGEMODELABSTRACTUSERACTION@PCMFLATTEN@current@CLASS:PCMusagemodelAbstractUserAction@pcmflatten, 
+        _#_(
+          _:_(successor@PCMusagemodelAbstractUserAction@pcmflatten, next:OCL-Type), 
+          _:_(token@PCMusagemodelAbstractUserAction@pcmflatten, Set{sToken:OCL-Type ; OtherTokens:MSet{OCL-Exp}}), current@SFS:Set{@StructuralFeatureInstance})), 
+      <_:_|_>(next:OCL-Type, PCMUSAGEMODELABSTRACTUSERACTION@PCMFLATTEN@next@CLASS:PCMusagemodelAbstractUserAction@pcmflatten, 
+        _#_(
+          _:_(predecessor@PCMusagemodelAbstractUserAction@pcmflatten, PREDECESSOR@next@ATT:OCL-Type), 
+          _:_(token@PCMusagemodelAbstractUserAction@pcmflatten, TOKEN@next@ATT:OCL-Type), next@SFS:Set{@StructuralFeatureInstance})), 
+      <_:_|_>(sToken:OCL-Type, TOKENTOKENSUSTOKEN@PCMFLATTEN@sToken@CLASS:TOKENtokensUSToken@pcmflatten, 
+        _#_(
+          _:_(completed@TOKENtokensUSToken@pcmflatten, true), sToken@SFS:Set{@StructuralFeatureInstance})), 
+      OBJSET@:Set{@Object})))
+    = 0 [print " - ActionUsageModelTrans mte"] .
+
+  ceq [EntryLevelSystemCall] : mte(_`{_`}(MM@:@Metamodel, 
+    __(
+      <_:_|_>(elsc:OCL-Type, PCMUSAGEMODELENTRYLEVELSYSTEMCALL@PCMFLATTEN@elsc@CLASS:PCMusagemodelEntryLevelSystemCall@pcmflatten, 
+          _#_(
+            _:_(token@PCMusagemodelAbstractUserAction@pcmflatten, Set{sToken:OCL-Type ; OtherTokens:MSet{OCL-Exp}}), 
+            _:_(operationSignature@-@@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten, signature:OCL-Type), elsc@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(signature:OCL-Type, PCMREPOSITORYOPERATIONSIGNATURE@PCMFLATTEN@signature@CLASS:PCMrepositoryOperationSignature@pcmflatten, signature@SFS:Set{@StructuralFeatureInstance}), 
+        <_:_|_>(rdseff:OCL-Type, PCMSEFFRESOURCEDEMANDINGSEFF@PCMFLATTEN@rdseff@CLASS:PCMseffResourceDemandingSEFF@pcmflatten, 
+          _#_(
+            _:_(describedService@-@@-@SEFF@PCMseffServiceEffectSpecification@pcmflatten, signature:OCL-Type), 
+            _:_(steps@-@Behaviour@PCMseffResourceDemandingBehaviour@pcmflatten, STEPS@-@BEHAVIOUR@rdseff@ATT:OCL-Type), rdseff@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(start:OCL-Type, PCMSEFFSTARTACTION@PCMFLATTEN@start@CLASS:PCMseffStartAction@pcmflatten, 
+          _#_(
+            _:_(resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten, RESOURCEDEMANDINGBEHAVIOUR@-@ABSTRACTACTION@start@ATT:OCL-Type), 
+            _:_(token@PCMseffAbstractAction@pcmflatten, TOKEN@start@ATT:OCL-Type), start@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(sToken:OCL-Type, TOKENtokensUSToken@pcmflatten@sToken@CLASS:TOKENtokensUSToken@pcmflatten, 
+          _#_(
+            _:_(completed@TOKENtokensUSToken@pcmflatten, false), 
+            _:_(cToken@TOKENtokensUSToken@pcmflatten, null), sToken@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(basicComp:OCL-Type, PCMREPOSITORYBASICCOMPONENT@PCMFLATTEN@basicComp@CLASS:PCMrepositoryBasicComponent@pcmflatten, 
+          _#_(
+            _:_(serviceEffectSpecifications@-@@-@BasicComponent@PCMrepositoryBasicComponent@pcmflatten,
+                SERVICEEFFECTSPECIFICATIONS@-@@-@BASICCOMPONENT@basicComp@ATT:OCL-Type),
+                basicComp@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(assCtx:OCL-Type, PCMCOMPOSITIONASSEMBLYCONTEXT@PCMFLATTEN@assCtx@CLASS:PCMcompositionAssemblyContext@pcmflatten, 
+          _#_(
+            _:_(encapsulatedComponent@-@@-@AssemblyContext@PCMcompositionAssemblyContext@pcmflatten, basicComp:OCL-Type),
+                assCtx@SFS:Set{@StructuralFeatureInstance})), 
+        OBJSET@:Set{@Object})))
+    = 0
+    if _in_(start:OCL-Type, STEPS@-@BEHAVIOUR@rdseff@ATT:OCL-Type)
+    /\ _in_(rdseff:OCL-Type, SERVICEEFFECTSPECIFICATIONS@-@@-@BASICCOMPONENT@basicComp@ATT:OCL-Type)
+       [print "- mte EntryLevelSystemCall"] .
+    
+---- ##########################################################
+---- ----------------------------------------------------------
+---- Service Effect Specification - SEFF
+---- ----------------------------------------------------------
+---- ##########################################################
+    
+  eq [RTObserverBirthSEFF] : mte(_`{_`}(MM@:@Metamodel, 
+    __(
+      <_:_|_>(rdseff:OCL-Type, PCMSEFFRESOURCEDEMANDINGSEFF@PCMFLATTEN@rdseff@CLASS:PCMseffResourceDemandingSEFF@pcmflatten, 
+        _#_(
+          _:_(basicComponent@-@ServiceEffectSpecification@PCMseffServiceEffectSpecification@pcmflatten, BASICCOMPONENT@-@SERVICEEFFECTSPECIFICATION@rdseff@ATT:OCL-Type), 
+          _:_(rtOb@PCMseffResourceDemandingBehaviour@pcmflatten, null),
+          rdseff@SFS:Set{@StructuralFeatureInstance})), 
+      OBJSET@:Set{@Object})))
+    = 0
+   [print "- mte RTObserverBirthSEFF"] .
+   
+  eq [StartSEFF] : mte(_`{_`}(MM@:@Metamodel, 
+    __(
+      <_:_|_>(start:OCL-Type, PCMSEFFSTARTACTION@PCMFLATTEN@start@CLASS:PCMseffStartAction@pcmflatten, 
+        _#_(
+          _:_(token@PCMseffAbstractAction@pcmflatten, Set{token:OCL-Type ; OtherTokens:MSet{OCL-Exp}}),
+          start@SFS:Set{@StructuralFeatureInstance})), 
+      <_:_|_>(token:OCL-Type, TOKENTOKENSSEFFTOKEN@PCMFLATTEN@token@CLASS:TOKENtokensSEFFToken@pcmflatten, 
+        _#_(
+          _:_(completed@TOKENtokensSEFFToken@pcmflatten, false), token@SFS:Set{@StructuralFeatureInstance})), 
+      OBJSET@:Set{@Object})))
+    = 0 [print "- mte StartSEFF"] .
+    
+  ceq [ActionSEFFTrans] : mte(_`{_`}(MM@:@Metamodel, 
+    __(
+      <_:_|_>(current:OCL-Type, PCMSEFFABSTRACTACTION@PCMFLATTEN@current@CLASS:PCMseffAbstractAction@pcmflatten, 
+        _#_(
+          _:_(successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten, succ:OCL-Type), 
+          _:_(token@PCMseffAbstractAction@pcmflatten, Set{token:OCL-Type ; OtherTokens:MSet{OCL-Exp}}), current@SFS:Set{@StructuralFeatureInstance})), 
+      <_:_|_>(succ:OCL-Type, PCMSEFFABSTRACTACTION@PCMFLATTEN@succ@CLASS:PCMseffAbstractAction@pcmflatten, 
+        _#_(
+          _:_(predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten, PREDECESSOR@-@ABSTRACTACTION@succ@ATT:OCL-Type), 
+          _:_(token@PCMseffAbstractAction@pcmflatten, TOKEN@succ@ATT:OCL-Type), succ@SFS:Set{@StructuralFeatureInstance})), 
+      <_:_|_>(token:OCL-Type, TOKENTOKENSSEFFTOKEN@PCMFLATTEN@token@CLASS:TOKENtokensSEFFToken@pcmflatten, 
+        _#_(
+          _:_(completed@TOKENtokensSEFFToken@pcmflatten, true), token@SFS:Set{@StructuralFeatureInstance})), 
+      <_:_|_>(CLK@:Oid, Clock@MGBehavior, 
+          _:_(time@Clock@MGBehavior, TIME@CLK@:Time)), 
+      <_:_|_>(oid('ids@), Counter@MGBehavior, 
+          _:_(value@Counter@MGBehavior, VALUE@ids@:Int)), 
+      <_:_|_>(oid('rdm@), Counter@MGBehavior, 
+          _:_(value@Counter@MGBehavior, VALUE@rdm@:Int)), OBJSET@:Set{@Object})))
+    = 0 
+    if not(PCMSEFFABSTRACTACTION@PCMFLATTEN@succ@CLASS:PCMseffAbstractAction@pcmflatten :: PCMseffInternalAction@pcmflatten)
+     [print "- mte ActionSEFFTrans"] .
+     
+  eq [EnterInExternalCallAction] : mte(_`{_`}(MM@:@Metamodel, 
+      __(
+        <_:_|_>(eca:OCL-Type, PCMSEFFEXTERNALCALLACTION@PCMFLATTEN@eca@CLASS:PCMseffExternalCallAction@pcmflatten, 
+          _#_(
+            _:_(calledService@-@ExternalService@PCMseffExternalCallAction@pcmflatten, sign:OCL-Type), 
+            _:_(token@PCMseffAbstractAction@pcmflatten, Set{t:OCL-Type ; OtherTokens:MSet{OCL-Exp}}), eca@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(t:OCL-Type, TOKENTOKENSSEFFTOKEN@PCMFLATTEN@t@CLASS:TOKENtokensSEFFToken@pcmflatten, 
+          _#_(
+            _:_(completed@TOKENtokensSEFFToken@pcmflatten, false), 
+            _:_(nestedToken@TOKENtokensSEFFToken@pcmflatten, null), t@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(sign:OCL-Type, PCMREPOSITORYOPERATIONSIGNATURE@PCMFLATTEN@sign@CLASS:PCMrepositoryOperationSignature@pcmflatten, sign@SFS:Set{@StructuralFeatureInstance}), 
+        <_:_|_>(SEFF:OCL-Type, PCMSEFFRESOURCEDEMANDINGSEFF@PCMFLATTEN@SEFF@CLASS:PCMseffResourceDemandingSEFF@pcmflatten, 
+          _#_(
+            _:_(steps@-@Behaviour@PCMseffResourceDemandingBehaviour@pcmflatten, 
+              Set{start:OCL-Type ; OtherSteps:MSet{OCL-Exp}}), 
+            _:_(describedService@-@@-@SEFF@PCMseffServiceEffectSpecification@pcmflatten, sign:OCL-Type), SEFF@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(start:OCL-Type, PCMSEFFSTARTACTION@PCMFLATTEN@start@CLASS:PCMseffStartAction@pcmflatten, 
+          _#_(
+            _:_(resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten, RESOURCEDEMANDINGBEHAVIOUR@-@ABSTRACTACTION@start@ATT:OCL-Type), 
+            _:_(token@PCMseffAbstractAction@pcmflatten, TOKEN@start@ATT:OCL-Type), start@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(basicComp:OCL-Type, PCMREPOSITORYBASICCOMPONENT@PCMFLATTEN@basicComp@CLASS:PCMrepositoryBasicComponent@pcmflatten, 
+          _#_(
+            _:_(serviceEffectSpecifications@-@@-@BasicComponent@PCMrepositoryBasicComponent@pcmflatten,
+                Set{SEFF:OCL-Type ; OthersRDseff:MSet{OCL-Exp}}),
+                basicComp@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(allCtx:OCL-Type, PCMCOMPOSITIONASSEMBLYCONTEXT@PCMFLATTEN@allCtx@CLASS:PCMcompositionAssemblyContext@pcmflatten, 
+          _#_(
+            _:_(encapsulatedComponent@-@@-@AssemblyContext@PCMcompositionAssemblyContext@pcmflatten, basicComp:OCL-Type), 
+            allCtx@SFS:Set{@StructuralFeatureInstance})), 
+        OBJSET@:Set{@Object}))) = 0
+      [print "- mte EnterInExternalCallAction"] .
+   
+endm

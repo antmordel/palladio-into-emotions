@@ -1,0 +1,64 @@
+-- -------------------------
+-- ECMFAExample 1000 t.u. 
+-- -------------------------
+
+Number of observations: 345
+
+Mean value: 9.058721914646378
+
+Mean value: 9.173211235085809
+Confidence value alpha: 0.9
+Upper bound: 9.834539930986114
+Lower bound: 8.511882539185503
+
+-- -------------------------
+-- ECMFAExample 2000 t.u. 
+-- -------------------------
+
+Number of observations: 698
+
+Mean value: 9.95096312416333
+
+Mean value: 9.869956476440594
+Confidence value alpha: 0.9
+Upper bound: 10.335730902306397
+Lower bound: 9.404182050574791
+
+-- -------------------------
+-- ECMFAExample 4000 t.u. 
+-- -------------------------
+
+Number of observations: 1359
+
+Mean value: 10.486757766624727
+
+Mean value: 10.590584786752474
+Confidence value alpha: 0.9
+Upper bound: 12.12000547479077
+Lower bound: 9.06116409871418
+
+-- -------------------------
+-- ECMFAExample 8000 t.u. 
+-- -------------------------
+
+Number of observations: 2737
+
+Mean value: 9.851891316880536
+
+Mean value: 9.855999226673264
+Confidence value alpha: 0.9
+Upper bound: 10.206481902827823
+Lower bound: 9.505516550518704
+
+-- -------------------------
+-- ECMFAExample 00  t.u. 
+-- -------------------------
+
+Number of observations: 5493
+
+Mean value: 9.949738703107785
+
+Mean value: 9.961176006029154
+Confidence value alpha: 0.9
+Upper bound: 10.25049740605882
+Lower bound: 9.671854605999489

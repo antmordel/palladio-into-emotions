@@ -1,0 +1,2 @@
+--- MinimumExample tests and info
+

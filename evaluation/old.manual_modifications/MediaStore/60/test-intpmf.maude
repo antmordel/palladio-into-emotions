@@ -1,0 +1,19 @@
+---- set trace on .
+---- set trace select on .
+---- trace select on .
+---- trace select eq-evalIntPMF evalIntPMF .
+
+red evalPall(
+      getTerm(metaParse(upModule('PALLADIO-GRAMMAR, false), preParsing("IntPMF[(0; 0.0)(10; 0.2)(11; 0.8)]"), 'Exp )),
+      Set{mt},
+      @pcmflatten@{none},
+      85) .
+
+red evalPall(
+      getTerm(metaParse(upModule('PALLADIO-GRAMMAR, false), preParsing("IntPMF[(0; 0.0)(10; 0.2)(11; 0.2)(12; 0.2)(13; 0.2)(14; 0.2)]"), 'Exp )),
+      Set{mt},
+      @pcmflatten@{none},
+      85) .
+
+
+----  getTerm(metaParse(upModule('PALLADIO-GRAMMAR, false), preParsing("IntPMF[(0; 0.0)(10; 0.2)(11; 0.2)(12; 0.2)(13; 0.2)(14; 0.2)]"), 'Exp )),

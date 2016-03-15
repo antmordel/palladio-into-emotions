@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://sdq.ipd.uka.de/PalladioComponentModel/Repository/5.0" xmlns:seff="http://sdq.ipd.uka.de/PalladioComponentModel/SEFF/5.0" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/1.0" id="_dqFLECHbEd6tG9VclJz3cw" entityName="MediaStoreRepository">
+  <components__Repository xsi:type="repository:BasicComponent" id="_os1t4CHbEd62GabW1zGSBw" entityName="WebGUI">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_qZKs0CHbEd62GabW1zGSBw" entityName="Provided_IHTTP_WebGUI" providedInterface__OperationProvidedRole="_n7g-oCHbEd62GabW1zGSBw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_pJlMwBwREeWZC418QByrUw" entityName="Required_IMediaStore_WebGUI" requiredInterface__OperationRequiredRole="_HfEZ8BwREeWZC418QByrUw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="12345" describedService__SEFF="_KjhikgzkEeCFg86gxKwVPw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_qZUd0CHbEd62GabW1zGSBw" successor_AbstractAction="_nKStMBwfEeWZC418QByrUw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_qZUd0SHbEd62GabW1zGSBw" predecessor_AbstractAction="_nKStMBwfEeWZC418QByrUw"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_nKStMBwfEeWZC418QByrUw" predecessor_AbstractAction="_qZUd0CHbEd62GabW1zGSBw" successor_AbstractAction="_qZUd0SHbEd62GabW1zGSBw" calledService_ExternalService="_KBfTYBwREeWZC418QByrUw" role_ExternalService="_pJlMwBwREeWZC418QByrUw">
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage type="NUMBER_OF_ELEMENTS">
+            <specification_VariableCharacterisation specification="desiredFiles.NUMBER_OF_ELEMENTS"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="desiredFiles"/>
+        </inputVariableUsages__CallAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_MAtisBwdEeWZC418QByrUw" entityName="MediaStore">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_U_ZfgBweEeWZC418QByrUw" entityName="Provided_IMediaStore_MediaStore" providedInterface__OperationProvidedRole="_HfEZ8BwREeWZC418QByrUw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_EyeoIBwiEeWZC418QByrUw" entityName="Required_ISound_MediaStore" requiredInterface__OperationRequiredRole="_8ln7cBwhEeWZC418QByrUw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_ond5ABwjEeWZC418QByrUw" entityName="IAudioDBRequiredRole" requiredInterface__OperationRequiredRole="_UHax0BwiEeWZC418QByrUw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_U_wr4BweEeWZC418QByrUw" describedService__SEFF="_KBfTYBwREeWZC418QByrUw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_U_x6ABweEeWZC418QByrUw" entityName="start" successor_AbstractAction="_qHbhYB8MEeWl18eZfdnZBQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_U_0WQBweEeWZC418QByrUw" entityName="stop" predecessor_AbstractAction="_kvvlwDXbEeWKCL17yMs2kw"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_qHbhYB8MEeWl18eZfdnZBQ" predecessor_AbstractAction="_U_x6ABweEeWZC418QByrUw" successor_AbstractAction="_kvvlwDXbEeWKCL17yMs2kw" calledService_ExternalService="_e8j58BwjEeWZC418QByrUw" role_ExternalService="_ond5ABwjEeWZC418QByrUw">
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage type="NUMBER_OF_ELEMENTS">
+            <specification_VariableCharacterisation specification="desiredFiles.NUMBER_OF_ELEMENTS"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="desiredFiles"/>
+        </inputVariableUsages__CallAction>
+        <returnVariableUsage__CallReturnAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="RETURN.INNER.BYTESIZE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="returnedFiles">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="INNER"/>
+          </namedReference__VariableUsage>
+        </returnVariableUsage__CallReturnAction>
+        <returnVariableUsage__CallReturnAction>
+          <variableCharacterisation_VariableUsage type="NUMBER_OF_ELEMENTS">
+            <specification_VariableCharacterisation specification="RETURN.NUMBER_OF_ELEMENTS"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="returnedFiles"/>
+        </returnVariableUsage__CallReturnAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:LoopAction" id="_kvvlwDXbEeWKCL17yMs2kw" entityName="LoopWatermark" predecessor_AbstractAction="_qHbhYB8MEeWl18eZfdnZBQ" successor_AbstractAction="_U_0WQBweEeWZC418QByrUw">
+        <bodyBehaviour_Loop id="_kv2TcDXbEeWKCL17yMs2kw">
+          <steps_Behaviour xsi:type="seff:StartAction" id="_kv4IoDXbEeWKCL17yMs2kw" successor_AbstractAction="_w4q0gDXdEeWKCL17yMs2kw"/>
+          <steps_Behaviour xsi:type="seff:StopAction" id="_kv4IoTXbEeWKCL17yMs2kw" predecessor_AbstractAction="_w4q0gDXdEeWKCL17yMs2kw"/>
+          <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_w4q0gDXdEeWKCL17yMs2kw" predecessor_AbstractAction="_kv4IoDXbEeWKCL17yMs2kw" successor_AbstractAction="_kv4IoTXbEeWKCL17yMs2kw" calledService_ExternalService="_9zMh0BwhEeWZC418QByrUw" role_ExternalService="_EyeoIBwiEeWZC418QByrUw">
+            <inputVariableUsages__CallAction>
+              <variableCharacterisation_VariableUsage type="BYTESIZE">
+                <specification_VariableCharacterisation specification="5"/>
+              </variableCharacterisation_VariableUsage>
+              <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="fileToMark">
+                <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="INNER"/>
+              </namedReference__VariableUsage>
+            </inputVariableUsages__CallAction>
+            <returnVariableUsage__CallReturnAction>
+              <variableCharacterisation_VariableUsage type="BYTESIZE">
+                <specification_VariableCharacterisation specification="RETURN.BYTESIZE"/>
+              </variableCharacterisation_VariableUsage>
+              <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="markedFile"/>
+            </returnVariableUsage__CallReturnAction>
+          </steps_Behaviour>
+        </bodyBehaviour_Loop>
+        <iterationCount_LoopAction specification="desiredFiles.NUMBER_OF_ELEMENTS"/>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_LOdNEBwiEeWZC418QByrUw" entityName="DigitalWatermarking">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_M8dnABwiEeWZC418QByrUw" entityName="Provided_ISound_DigitalWatermarking" providedInterface__OperationProvidedRole="_8ln7cBwhEeWZC418QByrUw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_M8eOEBwiEeWZC418QByrUw" describedService__SEFF="_9zMh0BwhEeWZC418QByrUw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_M8eOERwiEeWZC418QByrUw" entityName="start" successor_AbstractAction="_dfXBADXeEeWKCL17yMs2kw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_M8eOEhwiEeWZC418QByrUw" entityName="stop" predecessor_AbstractAction="_l5R5UDXeEeWKCL17yMs2kw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_dfXBADXeEeWKCL17yMs2kw" entityName="watermarkInternalAciton" predecessor_AbstractAction="_M8eOERwiEeWZC418QByrUw" successor_AbstractAction="_l5R5UDXeEeWKCL17yMs2kw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0.001 * fileToMark.INNER.BYTESIZE"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_l5R5UDXeEeWKCL17yMs2kw" entityName="setReturnWatermark" predecessor_AbstractAction="_dfXBADXeEeWKCL17yMs2kw" successor_AbstractAction="_M8eOEhwiEeWZC418QByrUw">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="500"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="RETURN"/>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_m04goB8OEeWl18eZfdnZBQ" entityName="DBAdapter">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_puSWsB8OEeWl18eZfdnZBQ" entityName="Provided_IAudioDB_DBAdapter" providedInterface__OperationProvidedRole="_UHax0BwiEeWZC418QByrUw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_9MoT0B8QEeWl18eZfdnZBQ" entityName="Required_IMySQL_DBAdapter" requiredInterface__OperationRequiredRole="_0x9NkB8QEeWl18eZfdnZBQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_puWBEB8OEeWl18eZfdnZBQ" describedService__SEFF="_e8j58BwjEeWZC418QByrUw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_puWoIB8OEeWl18eZfdnZBQ" entityName="start" successor_AbstractAction="_40cAAB8aEeWl18eZfdnZBQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_puXPMB8OEeWl18eZfdnZBQ" entityName="stop" predecessor_AbstractAction="_bVh5ECktEeW_XfZyhddNDg"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_40cAAB8aEeWl18eZfdnZBQ" predecessor_AbstractAction="_puWoIB8OEeWl18eZfdnZBQ" successor_AbstractAction="_PyQqMCktEeW_XfZyhddNDg" calledService_ExternalService="_22FBcB8QEeWl18eZfdnZBQ" role_ExternalService="_9MoT0B8QEeWl18eZfdnZBQ">
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage type="NUMBER_OF_ELEMENTS">
+            <specification_VariableCharacterisation specification="desiredFiles.NUMBER_OF_ELEMENTS"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="FilesIDs"/>
+        </inputVariableUsages__CallAction>
+        <returnVariableUsage__CallReturnAction>
+          <variableCharacterisation_VariableUsage type="NUMBER_OF_ELEMENTS">
+            <specification_VariableCharacterisation specification="RETURN.NUMBER_OF_ELEMENTS"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="filesFromDB"/>
+        </returnVariableUsage__CallReturnAction>
+        <returnVariableUsage__CallReturnAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="RETURN.BYTESIZE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="filesFromDB">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="INNER"/>
+          </namedReference__VariableUsage>
+        </returnVariableUsage__CallReturnAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_PyQqMCktEeW_XfZyhddNDg" predecessor_AbstractAction="_40cAAB8aEeWl18eZfdnZBQ" successor_AbstractAction="_bVh5ECktEeW_XfZyhddNDg">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="NUMBER_OF_ELEMENTS">
+            <specification_VariableCharacterisation specification="filesFromDB.NUMBER_OF_ELEMENTS"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="RETURN"/>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_bVh5ECktEeW_XfZyhddNDg" predecessor_AbstractAction="_PyQqMCktEeW_XfZyhddNDg" successor_AbstractAction="_puXPMB8OEeWl18eZfdnZBQ">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="filesFromDB.INNER.BYTESIZE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="RETURN">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="INNER"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_RyEt0B8REeWl18eZfdnZBQ" entityName="AudioDB">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_U-mUMB8REeWl18eZfdnZBQ" entityName="IMySQLProvidedRole" providedInterface__OperationProvidedRole="_0x9NkB8QEeWl18eZfdnZBQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_U-oJYB8REeWl18eZfdnZBQ" describedService__SEFF="_22FBcB8QEeWl18eZfdnZBQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_U-oJYR8REeWl18eZfdnZBQ" entityName="start" successor_AbstractAction="_cyGhMB8bEeWl18eZfdnZBQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_U-oJYh8REeWl18eZfdnZBQ" entityName="stop" predecessor_AbstractAction="_qkubkCk3EeW_XfZyhddNDg"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_cyGhMB8bEeWl18eZfdnZBQ" entityName="queryDB" predecessor_AbstractAction="_U-oJYR8REeWl18eZfdnZBQ" successor_AbstractAction="_kBY-ACC-EeWtRYs6yYCF1Q">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0.000001 * StoredFiles.NUMBER_OF_ELEMENTS + 0.1"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:LoopAction" id="_kBY-ACC-EeWtRYs6yYCF1Q" entityName="getterLoop" predecessor_AbstractAction="_cyGhMB8bEeWl18eZfdnZBQ" successor_AbstractAction="_3XLnUCb7EeW_XfZyhddNDg">
+        <bodyBehaviour_Loop id="_kBmZYCC-EeWtRYs6yYCF1Q">
+          <steps_Behaviour xsi:type="seff:StartAction" id="_kBo1oCC-EeWtRYs6yYCF1Q" successor_AbstractAction="_sXkl0CC-EeWtRYs6yYCF1Q"/>
+          <steps_Behaviour xsi:type="seff:StopAction" id="_kBpcsCC-EeWtRYs6yYCF1Q" predecessor_AbstractAction="_sXkl0CC-EeWtRYs6yYCF1Q"/>
+          <steps_Behaviour xsi:type="seff:InternalAction" id="_sXkl0CC-EeWtRYs6yYCF1Q" entityName="SelectFiles" predecessor_AbstractAction="_kBo1oCC-EeWtRYs6yYCF1Q" successor_AbstractAction="_kBpcsCC-EeWtRYs6yYCF1Q">
+            <resourceDemand_Action>
+              <specification_ParametericResourceDemand specification="0.001 * StoredFiles.INNER.BYTESIZE + 0.08"/>
+              <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+            </resourceDemand_Action>
+          </steps_Behaviour>
+        </bodyBehaviour_Loop>
+        <iterationCount_LoopAction specification="FilesIDs.NUMBER_OF_ELEMENTS"/>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_3XLnUCb7EeW_XfZyhddNDg" predecessor_AbstractAction="_kBY-ACC-EeWtRYs6yYCF1Q" successor_AbstractAction="_qkubkCk3EeW_XfZyhddNDg">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="NUMBER_OF_ELEMENTS">
+            <specification_VariableCharacterisation specification="FilesIDs.NUMBER_OF_ELEMENTS"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="RETURN"/>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_qkubkCk3EeW_XfZyhddNDg" predecessor_AbstractAction="_3XLnUCb7EeW_XfZyhddNDg" successor_AbstractAction="_U-oJYh8REeWl18eZfdnZBQ">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="StoredFiles.INNER.BYTESIZE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:NamespaceReference" referenceName="RETURN">
+            <innerReference_NamespaceReference xsi:type="stoex:VariableReference" referenceName="INNER"/>
+          </namedReference__VariableUsage>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_n7g-oCHbEd62GabW1zGSBw" entityName="IHTTP">
+    <signatures__OperationInterface id="_KjhikgzkEeCFg86gxKwVPw" entityName="downloadHTTP" returnType__OperationSignature="_KFjl_BwPEeWZC418QByrUw">
+      <parameters__OperationSignature dataType__Parameter="_3APsjBwPEeWZC418QByrUw" parameterName="desiredFiles"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_HfEZ8BwREeWZC418QByrUw" entityName="IMediaStore">
+    <signatures__OperationInterface id="_KBfTYBwREeWZC418QByrUw" entityName="downloadFromDB" returnType__OperationSignature="_KFjl_BwPEeWZC418QByrUw">
+      <parameters__OperationSignature dataType__Parameter="_3APsjBwPEeWZC418QByrUw" parameterName="desiredFiles"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_8ln7cBwhEeWZC418QByrUw" entityName="ISound">
+    <signatures__OperationInterface id="_9zMh0BwhEeWZC418QByrUw" entityName="watermark" returnType__OperationSignature="_RbGQLRwPEeWZC418QByrUw">
+      <parameters__OperationSignature dataType__Parameter="_RbGQLRwPEeWZC418QByrUw" parameterName="fileToMark"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_UHax0BwiEeWZC418QByrUw" entityName="IAudioDB">
+    <signatures__OperationInterface id="_e8j58BwjEeWZC418QByrUw" entityName="queryDB" returnType__OperationSignature="_KFjl_BwPEeWZC418QByrUw">
+      <parameters__OperationSignature dataType__Parameter="_3APsjBwPEeWZC418QByrUw" parameterName="desiredFiles"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_0x9NkB8QEeWl18eZfdnZBQ" entityName="IMySQL">
+    <signatures__OperationInterface id="_22FBcB8QEeWl18eZfdnZBQ" entityName="getFiles" returnType__OperationSignature="_KFjl_BwPEeWZC418QByrUw">
+      <parameters__OperationSignature dataType__Parameter="_3APsjBwPEeWZC418QByrUw" parameterName="FilesIDs"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_RbGQLRwPEeWZC418QByrUw" entityName="FILE">
+    <innerType_CollectionDataType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_KFjl_BwPEeWZC418QByrUw" entityName="FILELIST" innerType_CollectionDataType="_RbGQLRwPEeWZC418QByrUw"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_3APsjBwPEeWZC418QByrUw" entityName="ID_LIST">
+    <innerType_CollectionDataType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+  </dataTypes__Repository>
+</repository:Repository>

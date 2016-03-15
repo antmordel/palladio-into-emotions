@@ -1,0 +1,92 @@
+crl [TokenEnterInABranchUM@Instantaneous] :
+    _`{_`}(MM@:@Metamodel, 
+      __(
+      <_:_|_>(bA:OCL-Type, PCMUSAGEMODELBRANCH@PCMFLATTEN@bA@CLASS:PCMusagemodelBranch@pcmflatten, 
+        _#_(
+          _:_(token@PCMusagemodelAbstractUserAction@pcmflatten, OrderedSet{t:OCL-Type # OtherTokens:List{OCL-Exp}}), 
+          _:_(branchTransitions@-@Branch@PCMusagemodelBranch@pcmflatten, Set{bT:OCL-Type ; Remaining:MSet{OCL-Exp}}), bA@SFS:Set{@StructuralFeatureInstance})),
+      <_:_|_>(bT:OCL-Type, PCMUSAGEMODELBRANCHTRANSITION@PCMFLATTEN@bT@CLASS:PCMusagemodelBranchTransition@pcmflatten, 
+        _#_(
+          _:_(branchedBehaviour@-@BranchTransition@PCMusagemodelBranchTransition@pcmflatten, scBeh:OCL-Type), 
+          _:_(branch@-@BranchTransition@PCMusagemodelBranchTransition@pcmflatten, BRANCH@-@BRANCHTRANSITION@bT@ATT:OCL-Type), bT@SFS:Set{@StructuralFeatureInstance})),
+      <_:_|_>(scBeh:OCL-Type, PCMUSAGEMODELSCENARIOBEHAVIOUR@PCMFLATTEN@scBeh@CLASS:PCMusagemodelScenarioBehaviour@pcmflatten, 
+        _#_(
+          _:_(branchTransition@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten, BRANCHTRANSITION@-@SCENARIOBEHAVIOUR@scBeh@ATT:OCL-Type), 
+          _:_(actions@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten, Set{start:OCL-Type ; RemActions:MSet{OCL-Exp}}), scBeh@SFS:Set{@StructuralFeatureInstance})),
+      <_:_|_>(start:OCL-Type, PCMUSAGEMODELSTART@PCMFLATTEN@start@CLASS:PCMusagemodelStart@pcmflatten, 
+        _#_(
+          _:_(scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten, SCENARIOBEHAVIOUR@-@ABSTRACTUSERACTION@start@ATT:OCL-Type), 
+          _:_(token@PCMusagemodelAbstractUserAction@pcmflatten, TOKEN@start@ATT:OCL-Type), start@SFS:Set{@StructuralFeatureInstance})),
+      <_:_|_>(t:OCL-Type, TOKENTOKENSUSTOKEN@PCMFLATTEN@t@CLASS:TOKENtokensUSToken@pcmflatten, 
+        _#_(
+          _:_(completed@TOKENtokensUSToken@pcmflatten, false), 
+          _:_(prob@TOKENtokensUSToken@pcmflatten, PROB@t@ATT:OCL-Type), 
+          _:_(branchNumber@TOKENtokensUSToken@pcmflatten, BRANCHNUMBER@t@ATT:OCL-Type), 
+          _:_(branchesProb@TOKENtokensUSToken@pcmflatten, BRANCHESPROB@t@ATT:OCL-Type), t@SFS:Set{@StructuralFeatureInstance})),
+      <_:_|_>(CLK@:Oid, Clock@MGBehavior, 
+            _:_(time@Clock@MGBehavior, TIME@CLK@:Time)), 
+      <_:_|_>('rdm@, Counter@MGBehavior, 
+            _:_(value@Counter@MGBehavior, _+_(VALUE@rdm@:Int, 7))), 
+      <_:_|_>('ids@, Counter@MGBehavior, 
+            _:_(value@Counter@MGBehavior, VALUE@ids@:Int)),
+      OBJSET@:Set{@Object}))
+  =>
+    readjust(Set`{_`}(mt), nil, _`{_`}(MM@:@Metamodel, 
+      __(
+        <_:_|_>(bA:OCL-Type, PCMUSAGEMODELBRANCH@PCMFLATTEN@bA@CLASS:PCMusagemodelBranch@pcmflatten, 
+          _#_(
+            _:_(branchTransitions@-@Branch@PCMusagemodelBranch@pcmflatten, Set{bT:OCL-Type ; Remaining:MSet{OCL-Exp}}), 
+            _:_(token@PCMusagemodelAbstractUserAction@pcmflatten, OrderedSet{OtherTokens:List{OCL-Exp}}), bA@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(bT:OCL-Type, PCMUSAGEMODELBRANCHTRANSITION@PCMFLATTEN@bT@CLASS:PCMusagemodelBranchTransition@pcmflatten, 
+          _#_(
+            _:_(branchedBehaviour@-@BranchTransition@PCMusagemodelBranchTransition@pcmflatten, scBeh:OCL-Type), 
+            _:_(branch@-@BranchTransition@PCMusagemodelBranchTransition@pcmflatten, update(branch@-@BranchTransition@PCMusagemodelBranchTransition@pcmflatten, BRANCH@-@BRANCHTRANSITION@bT@ATT:OCL-Type, nil, link(bA:OCL-Type, null))), bT@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(scBeh:OCL-Type, PCMUSAGEMODELSCENARIOBEHAVIOUR@PCMFLATTEN@scBeh@CLASS:PCMusagemodelScenarioBehaviour@pcmflatten, 
+          _#_(
+            _:_(branchTransition@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten, update(branchTransition@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten, BRANCHTRANSITION@-@SCENARIOBEHAVIOUR@scBeh@ATT:OCL-Type, nil, link(bT:OCL-Type, null))), 
+            _:_(actions@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten, Set{start:OCL-Type ; RemActions:MSet{OCL-Exp}}), scBeh@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(start:OCL-Type, PCMUSAGEMODELSTART@PCMFLATTEN@start@CLASS:PCMusagemodelStart@pcmflatten, 
+          _#_(
+            _:_(token@PCMusagemodelAbstractUserAction@pcmflatten, update(token@PCMusagemodelAbstractUserAction@pcmflatten, TOKEN@start@ATT:OCL-Type, nil, link(t:OCL-Type, null))), 
+            _:_(scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten, SCENARIOBEHAVIOUR@-@ABSTRACTUSERACTION@start@ATT:OCL-Type), start@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(t:OCL-Type, TOKENTOKENSUSTOKEN@PCMFLATTEN@t@CLASS:TOKENtokensUSToken@pcmflatten, 
+          _#_(
+            _:_(prob@TOKENtokensUSToken@pcmflatten, 0), 
+            _:_(branchNumber@TOKENtokensUSToken@pcmflatten, 0), 
+            _:_(branchesProb@TOKENtokensUSToken@pcmflatten, Sequence{}), 
+            _:_(completed@TOKENtokensUSToken@pcmflatten, false), t@SFS:Set{@StructuralFeatureInstance})), 
+        <_:_|_>(CLK@:Oid, Clock@MGBehavior, 
+            _:_(time@Clock@MGBehavior, TIME@CLK@:Time)), 
+        <_:_|_>('rdm@, Counter@MGBehavior, 
+            _:_(value@Counter@MGBehavior, _+_(VALUE@rdm@:Int, 7))), OBJSET@:Set{@Object}, 
+        <_:_|_>('ids@, Counter@MGBehavior, 
+            _:_(value@Counter@MGBehavior, _+_(VALUE@ids@:Int, 1))))))
+  if MODEL@:@Model := _`{_`}(MM@:@Metamodel, 
+    __(
+      <_:_|_>(bA:OCL-Type, PCMUSAGEMODELBRANCH@PCMFLATTEN@bA@CLASS:PCMusagemodelBranch@pcmflatten, 
+        _#_(
+          _:_(token@PCMusagemodelAbstractUserAction@pcmflatten, OrderedSet{t:OCL-Type # OtherTokens:List{OCL-Exp}}), 
+          _:_(branchTransitions@-@Branch@PCMusagemodelBranch@pcmflatten, Set{bT:OCL-Type ; Remaining:MSet{OCL-Exp}}), bA@SFS:Set{@StructuralFeatureInstance})),
+      <_:_|_>(bT:OCL-Type, PCMUSAGEMODELBRANCHTRANSITION@PCMFLATTEN@bT@CLASS:PCMusagemodelBranchTransition@pcmflatten, 
+        _#_(
+          _:_(branchedBehaviour@-@BranchTransition@PCMusagemodelBranchTransition@pcmflatten, scBeh:OCL-Type), 
+          _:_(branch@-@BranchTransition@PCMusagemodelBranchTransition@pcmflatten, BRANCH@-@BRANCHTRANSITION@bT@ATT:OCL-Type), bT@SFS:Set{@StructuralFeatureInstance})),
+      <_:_|_>(scBeh:OCL-Type, PCMUSAGEMODELSCENARIOBEHAVIOUR@PCMFLATTEN@scBeh@CLASS:PCMusagemodelScenarioBehaviour@pcmflatten, 
+        _#_(
+          _:_(branchTransition@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten, BRANCHTRANSITION@-@SCENARIOBEHAVIOUR@scBeh@ATT:OCL-Type), 
+          _:_(actions@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten, Set{start:OCL-Type ; RemActions:MSet{OCL-Exp}}), scBeh@SFS:Set{@StructuralFeatureInstance})),
+      <_:_|_>(start:OCL-Type, PCMUSAGEMODELSTART@PCMFLATTEN@start@CLASS:PCMusagemodelStart@pcmflatten, 
+        _#_(
+          _:_(scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten, SCENARIOBEHAVIOUR@-@ABSTRACTUSERACTION@start@ATT:OCL-Type), 
+          _:_(token@PCMusagemodelAbstractUserAction@pcmflatten, TOKEN@start@ATT:OCL-Type), start@SFS:Set{@StructuralFeatureInstance})),
+      <_:_|_>(t:OCL-Type, TOKENTOKENSUSTOKEN@PCMFLATTEN@t@CLASS:TOKENtokensUSToken@pcmflatten, 
+        _#_(
+          _:_(completed@TOKENtokensUSToken@pcmflatten, false), 
+          _:_(prob@TOKENtokensUSToken@pcmflatten, PROB@t@ATT:OCL-Type), 
+          _:_(branchNumber@TOKENtokensUSToken@pcmflatten, BRANCHNUMBER@t@ATT:OCL-Type), 
+          _:_(branchesProb@TOKENtokensUSToken@pcmflatten, BRANCHESPROB@t@ATT:OCL-Type), t@SFS:Set{@StructuralFeatureInstance})),
+      OBJSET@:Set{@Object}))
+    /\ branchToInput:OCL-Type := eval(t:OCL-Type . branchNumber@OCLSf, env(empty), MODEL@:@Model)
+    /\ ind:OCL-Type := eval(_->`indexOf`(_`)(_->`asSequence`(`)(__(bA:OCL-Type, ._(branchTransitions@-@Branch@OCLSf))), bT:OCL-Type), env(empty), MODEL@:@Model)
+    /\ eval(ind:OCL-Type .=. branchToInput:OCL-Type)
+    [print " -> TokenEnterInABranchUM@Instantaneous \tin time " TIME@CLK@:Time] .

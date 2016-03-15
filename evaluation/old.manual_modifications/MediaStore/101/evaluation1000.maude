@@ -1,0 +1,38 @@
+
+set show advisories off .
+set print attribute off .
+load ../BehaviorFiles/mOdCL.maude
+load model-checker.maude
+load ../BehaviorFiles/MGDefinitions.maude
+load ../BehaviorFiles/MGRealTimeMaude24.maude
+load ../BehaviorFiles/EcoreMM.maude
+load ../BehaviorFiles/e-Motions.maude
+
+load ../BehaviorFiles/flatten.ecore.maude
+load ../BehaviorFiles/PalladioGrammar.maude
+load ../BehaviorFiles/palladio_behavior.maude
+load MediaStore101.xmi.maude
+
+set print conceal off .
+print conceal _`{_`} .
+
+mod TICKRULE is
+  pr MEDIASTORE101 .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) /\ TE =/= zero 
+  /\ (T plus TE) le toRat(1000) 
+  /\ floatTime:OCL-Type := toFloat(T)
+  /\ floatIncrement:OCL-Type := toFloat(TE)
+   [print "--> TickRule applied in time " floatTime:OCL-Type " with " floatIncrement:OCL-Type " t.u."] .
+endm
+
+rewrite init(MEDIASTORE101) .
+
+q

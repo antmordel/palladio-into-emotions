@@ -1,0 +1,33 @@
+---- ----------------------------------------------- ----
+---- Programmatically generated code using e-Motions ----
+---- @date Tue Jan 20 11:52:58 CET 2015             ----
+---- ----------------------------------------------- ----
+set print attribute on .
+
+load ../GlobalFiles/mOdCL.maude
+load model-checker.maude
+load ../GlobalFiles/MGDefinitions.maude
+load ../GlobalFiles/MGRealTimeMaude24.maude
+load ../GlobalFiles/EcoreMM.maude
+load ../GlobalFiles/e-Motions.maude
+load ../GlobalFiles/flatten.ecore.maude
+load ../GlobalFiles/PalladioGrammar.maude 
+load ../GlobalFiles/ManualChangesRulesPalladio_v5.maude
+
+load ECMFAexample.xmi.maude
+
+mod TICKRULE is
+  pr ECMFAEXAMPLE .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) /\ TE =/= zero 
+    /\ (T plus TE) le toRat(1000) .
+endm
+
+rewrite init(ECMFAEXAMPLE) .

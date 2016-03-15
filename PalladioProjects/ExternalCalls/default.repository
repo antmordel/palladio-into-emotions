@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://sdq.ipd.uka.de/PalladioComponentModel/Repository/5.0" xmlns:seff="http://sdq.ipd.uka.de/PalladioComponentModel/SEFF/5.0" id="_dqFLECHbEd6tG9VclJz3cw" entityName="defaultRepository">
+  <components__Repository xsi:type="repository:BasicComponent" id="_os1t4CHbEd62GabW1zGSBw" entityName="AComponent">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_qZKs0CHbEd62GabW1zGSBw" entityName="Provided_AnInterface_AComponent" providedInterface__OperationProvidedRole="_n7g-oCHbEd62GabW1zGSBw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_oKe0oIXOEeSup9fKV6290w" entityName="Required_BInterface_AComponent" requiredInterface__OperationRequiredRole="_YG4OIIXOEeSup9fKV6290w"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_d8NI8KVuEeSi0pbbmd5wUg" describedService__SEFF="_YLC4EKVtEeSi0pbbmd5wUg">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_eToxgKVuEeSi0pbbmd5wUg" entityName="start" successor_AbstractAction="_3fvNkKVuEeSi0pbbmd5wUg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_eTpYkKVuEeSi0pbbmd5wUg" entityName="stop" predecessor_AbstractAction="_3fvNkKVuEeSi0pbbmd5wUg"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_3fvNkKVuEeSi0pbbmd5wUg" predecessor_AbstractAction="_eToxgKVuEeSi0pbbmd5wUg" successor_AbstractAction="_eTpYkKVuEeSi0pbbmd5wUg" calledService_ExternalService="_cF9OcKVtEeSi0pbbmd5wUg" role_ExternalService="_oKe0oIXOEeSup9fKV6290w"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_Rv0lcIXOEeSup9fKV6290w" entityName="BComponent">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_mHheYIXOEeSup9fKV6290w" entityName="Provided_BInterface_BComponent" providedInterface__OperationProvidedRole="_YG4OIIXOEeSup9fKV6290w"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_mHj6oIXOEeSup9fKV6290w" describedService__SEFF="_cF9OcKVtEeSi0pbbmd5wUg">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_mHkhsIXOEeSup9fKV6290w" entityName="start" successor_AbstractAction="_OuooAKVtEeSi0pbbmd5wUg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_mHkhsYXOEeSup9fKV6290w" entityName="stop" predecessor_AbstractAction="_OuooAKVtEeSi0pbbmd5wUg"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_OuooAKVtEeSi0pbbmd5wUg" entityName="computeComponentB" predecessor_AbstractAction="_mHkhsIXOEeSup9fKV6290w" successor_AbstractAction="_mHkhsYXOEeSup9fKV6290w">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="DoublePDF[(0.5;0.25)(1.0;0.50)(2.0;0.25)]"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_n7g-oCHbEd62GabW1zGSBw" entityName="AInterface">
+    <signatures__OperationInterface id="_YLC4EKVtEeSi0pbbmd5wUg" entityName="do"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_YG4OIIXOEeSup9fKV6290w" entityName="BInterface">
+    <signatures__OperationInterface id="_cF9OcKVtEeSi0pbbmd5wUg" entityName="fo"/>
+  </interfaces__Repository>
+</repository:Repository>

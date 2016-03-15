@@ -1,0 +1,25 @@
+-- ---------------------------------------------------------------------------
+-- MinimumExample 1000 t.u. OpenWorkload = 2.0 only DoublePDF distributions.
+-- ---------------------------------------------------------------------------
+
+Number of observations: 500
+
+Mean value: 2.1455064587459995
+
+Mean value: 2.1534949002277224
+Confidence value alpha: 0.9
+Upper bound: 2.1948601793309197
+Lower bound: 2.112129621124525
+
+-- ---------------------------------------------------------------------------
+-- MinimumExample 2000 t.u. OpenWorkload = 2.0 only DoublePDF distributions.
+-- ---------------------------------------------------------------------------
+
+Number of observations: 1000
+
+Mean value: 2.1921277415550042
+
+Mean value: 2.205951178229923
+Confidence value alpha: 0.9
+Upper bound: 2.2507493803267966
+Lower bound: 2.1611529761330495

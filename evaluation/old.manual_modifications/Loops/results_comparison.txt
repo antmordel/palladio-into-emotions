@@ -1,0 +1,29 @@
+-- --------------------------------
+-- Loops 2000 t.u. 
+-- --------------------------------
+
+## Palladio:
+
+Number of observations: 100
+
+Mean value: 19.568769001720003
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 100
+rTime@ObResponseTime@pcmflatten : 1.950423101857707e+1
+
+-- --------------------------------
+-- Loops 4000 t.u. 
+-- --------------------------------
+
+## Palladio:
+
+Number of observations: 200
+
+Mean value: 19.34095258545
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 200
+rTime@ObResponseTime@pcmflatten : 1.9494841010053591e+1

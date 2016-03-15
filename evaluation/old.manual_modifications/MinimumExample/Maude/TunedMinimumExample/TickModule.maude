@@ -1,0 +1,33 @@
+---- ----------------------------------------------- ----
+---- Programmatically generated code using e-Motions ----
+---- @date Mon Jan 19 11:14:37 CET 2015             ----
+---- ----------------------------------------------- ----
+--- set print attribute on .
+load mOdCL.maude
+load model-checker.maude
+load MGDefinitions.maude
+load MGRealTimeMaude24.maude
+load EcoreMM.maude
+load e-Motions.maude
+
+load flatten.ecore.maude
+load ManualChangesRulesPalladio_v5.maude
+load MinimumExample.xmi.maude
+
+mod TICKRULE is
+  pr MINIMUMEXAMPLE .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) /\ TE =/= zero 
+     /\ (T plus TE) le toRat(1000) .
+endm
+
+--- set profile on .
+
+---rewrite init(MINIMUMEXAMPLE) .

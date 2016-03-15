@@ -1,0 +1,128 @@
+--------------------------------------------------------------
+---- Created by Antonio Moreno-Delgado
+--------------------------------------------------------------
+
+mod SIGNATURE-AND-EQS is
+  pr E-MOTIONS .
+  pr DENSE_TIME .
+  pr @PCMFLATTEN@ .
+  pr PALLADIO-EVAL-EXP .
+  
+  op interArrivalTime@-@OpenWorkload@OCLSf : -> @StructuralFeature .
+  op specification@OCLSf : -> @StructuralFeature .
+  op countDown@OCLSf : -> @StructuralFeature .
+  
+  ---- without optimization
+  op branches@-@Branch@OCLSf : -> @StructuralFeature .
+  op branchProbability@OCLSf : -> @StructuralFeature .
+  op prob@OCLSf : -> @StructuralFeature .
+  op branchesProb@OCLSf : -> @StructuralFeature .
+  op branchNumber@OCLSf : -> @StructuralFeature .
+  op branches@-@Branch@OCLSf : -> @StructuralFeature .
+  op loopToken@OCLSf : -> @StructuralFeature .
+  op loopIteration@-@Loop@OCLSf : -> @StructuralFeature .
+  op iterations@OCLSf : -> @StructuralFeature .
+  op context@OCLSf : -> @StructuralFeature .
+  op iterationCount@-@LoopAction@OCLSf : -> @StructuralFeature .
+  
+  op S : -> Vid .
+  op v : -> Vid .
+  op i : -> Vid .
+  
+  eq name(interArrivalTime@-@OpenWorkload@OCLSf)
+    = "interArrivalTime_OpenWorkload" .
+  eq name(specification@OCLSf)
+    = "specification" .
+  eq name(countDown@OCLSf)
+    = "countDown" .
+  eq name(prob@OCLSf)
+    = "prob" .
+  eq name(branchesProb@OCLSf)
+    = "branchesProb" .
+  eq name(branchNumber@OCLSf)
+    = "branchNumber" .
+  eq name(branches@-@Branch@OCLSf)
+    = "branches_Branch" .
+  eq name(loopToken@OCLSf)
+    = "loopToken" .
+  eq name(loopIteration@-@Loop@OCLSf)
+    = "loopIteration_Loop" .
+  eq name(iterations@OCLSf)
+    = "iterations" .
+  eq name(context@OCLSf)
+    = "context" .
+  eq name(iterationCount@-@LoopAction@OCLSf)
+    = "iterationCount_LoopAction" .
+
+  op currentExec@DecreaseCountDown : Set @Model -> Bool  .
+  eq currentExec@DecreaseCountDown(Set`{_`}(st:OCL-Type), _`{_`}(MM@:@Metamodel, 
+    __(
+      <_:_|_>(ACTEXEC@:Oid, OngoingActionExec@MGBehavior, 
+        _#_(
+          _:_(action@ActionExec@MGBehavior, "DecreaseCountDown"), 
+          _:_(endingTime@ActionExec@MGBehavior, null), 
+          _:_(participants@ActionExec@MGBehavior, Set`{_`}(_;_(L@ACTEXEC@:MSet{OCL-Exp}, OR1@:Oid))), ACTEXEC@@SFS:Set{@StructuralFeatureInstance})), OBJSET@:Set{@Object}, 
+      <_:_|_>(OR1@:Oid, ObjectRole@MGBehavior, 
+        _#_(
+          _:_(actualObject@ObjectRole@MGBehavior, st:OCL-Type),
+          _:_(role@ObjectRole@MGBehavior, "st"))))))
+    = true .
+  eq currentExec@DecreaseCountDown(OIDSET@:Set, MODEL@:@Model)
+    = false [owise] .
+
+  op currentExec@InternalActionSEFF : Set @Model -> Bool  .
+  eq currentExec@InternalActionSEFF(Set`{_`}(_;_(IA:OCL-Type, PRD:OCL-Type, PRT:OCL-Type, PRS:OCL-Type, Sch:OCL-Type, t:OCL-Type)), _`{_`}(MM@:@Metamodel, 
+    __(
+      <_:_|_>(ACTEXEC@:Oid, AtomicActionExec@MGBehavior, 
+        _#_(
+          _:_(action@ActionExec@MGBehavior, "InternalActionSEFF"), 
+          _:_(endingTime@ActionExec@MGBehavior, null), 
+          _:_(participants@ActionExec@MGBehavior, Set`{_`}(_;_(L@ACTEXEC@:MSet{OCL-Exp}, OR1@:Oid, OR2@:Oid, OR3@:Oid, OR4@:Oid, OR5@:Oid, OR6@:Oid))), ACTEXEC@@SFS:Set{@StructuralFeatureInstance})), OBJSET@:Set{@Object}, 
+      <_:_|_>(OR1@:Oid, ObjectRole@MGBehavior, 
+        _#_(
+          _:_(actualObject@ObjectRole@MGBehavior, IA:OCL-Type), 
+          _:_(role@ObjectRole@MGBehavior, "IA"))), 
+      <_:_|_>(OR2@:Oid, ObjectRole@MGBehavior, 
+        _#_(
+          _:_(actualObject@ObjectRole@MGBehavior, PRD:OCL-Type), 
+          _:_(role@ObjectRole@MGBehavior, "PRD"))), 
+      <_:_|_>(OR3@:Oid, ObjectRole@MGBehavior, 
+        _#_(
+          _:_(actualObject@ObjectRole@MGBehavior, PRT:OCL-Type), 
+          _:_(role@ObjectRole@MGBehavior, "PRT"))), 
+      <_:_|_>(OR4@:Oid, ObjectRole@MGBehavior, 
+        _#_(
+          _:_(actualObject@ObjectRole@MGBehavior, PRS:OCL-Type), 
+          _:_(role@ObjectRole@MGBehavior, "PRS"))), 
+      <_:_|_>(OR5@:Oid, ObjectRole@MGBehavior, 
+        _#_(
+          _:_(actualObject@ObjectRole@MGBehavior, Sch:OCL-Type), 
+          _:_(role@ObjectRole@MGBehavior, "Sch"))), 
+      <_:_|_>(OR6@:Oid, ObjectRole@MGBehavior, 
+        _#_(
+          _:_(actualObject@ObjectRole@MGBehavior, t:OCL-Type), 
+          _:_(role@ObjectRole@MGBehavior, "t"))))))
+    = true .
+  eq currentExec@InternalActionSEFF(OIDSET@:Set, MODEL@:@Model)
+    = false [owise] .
+  
+  op currentExec@DelayUsageModel : Set @Model -> Bool  .  
+  eq currentExec@DelayUsageModel(Set`{_`}(_;_(delay:OCL-Type, sToken:OCL-Type)), _`{_`}(MM@:@Metamodel, 
+    __(
+      <_:_|_>(ACTEXEC@:Oid, AtomicActionExec@MGBehavior, 
+        _#_(
+          _:_(action@ActionExec@MGBehavior, "DelayUsageModel"), 
+          _:_(endingTime@ActionExec@MGBehavior, null), 
+          _:_(participants@ActionExec@MGBehavior, Set`{_`}(_;_(L@ACTEXEC@:MSet{OCL-Exp}, OR1@:Oid, OR2@:Oid))), ACTEXEC@@SFS:Set{@StructuralFeatureInstance})), OBJSET@:Set{@Object}, 
+      <_:_|_>(OR1@:Oid, ObjectRole@MGBehavior, 
+        _#_(
+          _:_(actualObject@ObjectRole@MGBehavior, delay:OCL-Type), 
+          _:_(role@ObjectRole@MGBehavior, "delay"))), 
+      <_:_|_>(OR2@:Oid, ObjectRole@MGBehavior, 
+        _#_(
+          _:_(actualObject@ObjectRole@MGBehavior, sToken:OCL-Type), 
+          _:_(role@ObjectRole@MGBehavior, "sToken"))))))
+    = true .
+  eq currentExec@DelayUsageModel(OIDSET@:Set, MODEL@:@Model)
+    = false [owise] .
+endm

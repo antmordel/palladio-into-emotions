@@ -1,0 +1,1933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behavior:Behavior xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behavior="http://www.lcc.uma.es/Behavior/1.0">
+  <metamodelGD href="../syntax/ConcreteSyntax.gcs#/"/>
+  <rules xsi:type="behavior:AtomicRule" name="OpenWorkloadSpec" lhs="//@rules.0/@patterns.0" rhs="//@rules.0/@patterns.1" maxDuration="0" periodicity="0.0">
+    <vbles name="owRate" type="Int" value="eMotions.parseExp(ow.interArrivalTime_OpenWorkload.specification)"/>
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="start" inLinks="//@rules.0/@patterns.0/@els.7">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.42"/>
+      </els>
+      <els xsi:type="behavior:Clock" id="clk"/>
+      <els xsi:type="behavior:Object" id="ow" outLinks="//@rules.0/@patterns.0/@els.9" inLinks="//@rules.0/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.43"/>
+      </els>
+      <els xsi:type="behavior:Object" id="usSc" outLinks="//@rules.0/@patterns.0/@els.4 //@rules.0/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.32"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.0/@patterns.0/@els.3" target="//@rules.0/@patterns.0/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelUsageScenario/workload_UsageScenario"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.0/@patterns.0/@els.7" inLinks="//@rules.0/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.0/@patterns.0/@els.3" target="//@rules.0/@patterns.0/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelUsageScenario/scenarioBehaviour_UsageScenario"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.0/@patterns.0/@els.5" target="//@rules.0/@patterns.0/@els.0">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/actions_ScenarioBehaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="st" inLinks="//@rules.0/@patterns.0/@els.9">
+        <sfs oclValue="0">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSandTimer/countDown"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.192"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.0/@patterns.0/@els.2" target="//@rules.0/@patterns.0/@els.8">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelOpenWorkload/sandTimer"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="start" outLinks="//@rules.0/@patterns.1/@els.9" inLinks="//@rules.0/@patterns.1/@els.7">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.42"/>
+      </els>
+      <els xsi:type="behavior:Clock" id="clk"/>
+      <els xsi:type="behavior:Object" id="ow" outLinks="//@rules.0/@patterns.1/@els.11" inLinks="//@rules.0/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.43"/>
+      </els>
+      <els xsi:type="behavior:Object" id="usSc" outLinks="//@rules.0/@patterns.1/@els.5 //@rules.0/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.32"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.0/@patterns.1/@els.7" inLinks="//@rules.0/@patterns.1/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.0/@patterns.1/@els.3" target="//@rules.0/@patterns.1/@els.4">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelUsageScenario/scenarioBehaviour_UsageScenario"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.0/@patterns.1/@els.3" target="//@rules.0/@patterns.1/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelUsageScenario/workload_UsageScenario"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.0/@patterns.1/@els.4" target="//@rules.0/@patterns.1/@els.0">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/actions_ScenarioBehaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.0/@patterns.1/@els.13" inLinks="//@rules.0/@patterns.1/@els.9">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.0/@patterns.1/@els.0" target="//@rules.0/@patterns.1/@els.8">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="st" inLinks="//@rules.0/@patterns.1/@els.11">
+        <sfs oclValue="owRate">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSandTimer/countDown"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.192"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.0/@patterns.1/@els.2" target="//@rules.0/@patterns.1/@els.10">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelOpenWorkload/sandTimer"/>
+      </els>
+      <els xsi:type="behavior:Object" id="ts" inLinks="//@rules.0/@patterns.1/@els.13">
+        <sfs oclValue="clk.time">
+          <sf href="../syntax/flatten.ecore#//ObTimeStamp/tStamp"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.187"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.0/@patterns.1/@els.8" target="//@rules.0/@patterns.1/@els.12">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensUSToken/tsOb"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="StartUsageModel" lhs="//@rules.1/@patterns.0" rhs="//@rules.1/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="start" outLinks="//@rules.1/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.42"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" inLinks="//@rules.1/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.1/@patterns.0/@els.0" target="//@rules.1/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="start" outLinks="//@rules.1/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.42"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" inLinks="//@rules.1/@patterns.1/@els.2">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.1/@patterns.1/@els.0" target="//@rules.1/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="ActionUsageModelTrans" lhs="//@rules.2/@patterns.0" rhs="//@rules.2/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="current" outLinks="//@rules.2/@patterns.0/@els.2 //@rules.2/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.36"/>
+      </els>
+      <els xsi:type="behavior:Object" id="next" inLinks="//@rules.2/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.36"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.2/@patterns.0/@els.0" target="//@rules.2/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/successor"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" inLinks="//@rules.2/@patterns.0/@els.4">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.2/@patterns.0/@els.0" target="//@rules.2/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="current" outLinks="//@rules.2/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.36"/>
+      </els>
+      <els xsi:type="behavior:Object" id="next" outLinks="//@rules.2/@patterns.1/@els.4" inLinks="//@rules.2/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.36"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.2/@patterns.1/@els.0" target="//@rules.2/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/successor"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" inLinks="//@rules.2/@patterns.1/@els.4">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.2/@patterns.1/@els.1" target="//@rules.2/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="StopUsageModel" lhs="//@rules.3/@patterns.0" rhs="//@rules.3/@patterns.1" maxDuration="0">
+    <vbles name="thisRT" type="Int" value="clk.time - ts.tStamp"/>
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="stop" outLinks="//@rules.3/@patterns.0/@els.5" inLinks="//@rules.3/@patterns.0/@els.3">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.41"/>
+      </els>
+      <els xsi:type="behavior:Clock" id="clk"/>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.3/@patterns.0/@els.3 //@rules.3/@patterns.0/@els.7">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.3/@patterns.0/@els.2" target="//@rules.3/@patterns.0/@els.0">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/actions_ScenarioBehaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" outLinks="//@rules.3/@patterns.0/@els.9" inLinks="//@rules.3/@patterns.0/@els.5">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.3/@patterns.0/@els.0" target="//@rules.3/@patterns.0/@els.4">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="rt" inLinks="//@rules.3/@patterns.0/@els.7">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.188"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.3/@patterns.0/@els.2" target="//@rules.3/@patterns.0/@els.6">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/rtOb"/>
+      </els>
+      <els xsi:type="behavior:Object" id="ts" inLinks="//@rules.3/@patterns.0/@els.9">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.187"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.3/@patterns.0/@els.4" target="//@rules.3/@patterns.0/@els.8">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensUSToken/tsOb"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="stop" inLinks="//@rules.3/@patterns.1/@els.3">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.41"/>
+      </els>
+      <els xsi:type="behavior:Clock" id="clk"/>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.3/@patterns.1/@els.3 //@rules.3/@patterns.1/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.3/@patterns.1/@els.2" target="//@rules.3/@patterns.1/@els.0">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/actions_ScenarioBehaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="rt" inLinks="//@rules.3/@patterns.1/@els.5">
+        <sfs oclValue="rt.counter + 1">
+          <sf href="../syntax/flatten.ecore#//ObResponseTime/counter"/>
+        </sfs>
+        <sfs oclValue="rt.tTime + thisRT">
+          <sf href="../syntax/flatten.ecore#//ObResponseTime/tTime"/>
+        </sfs>
+        <sfs oclValue="rt.allRT->append(thisRT)">
+          <sf href="../syntax/flatten.ecore#//ObResponseTime/allRT"/>
+        </sfs>
+        <sfs oclValue="(rt.tTime + thisRT * 1.0) / (rt.counter + 1.0)">
+          <sf href="../syntax/flatten.ecore#//ObResponseTime/rTime"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.188"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.3/@patterns.1/@els.2" target="//@rules.3/@patterns.1/@els.4">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/rtOb"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="EntryLevelSystemCall" lhs="//@rules.4/@patterns.0" rhs="//@rules.4/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="elsc" outLinks="//@rules.4/@patterns.0/@els.2 //@rules.4/@patterns.0/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.35"/>
+      </els>
+      <els xsi:type="behavior:Object" id="signature" inLinks="//@rules.4/@patterns.0/@els.2 //@rules.4/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.64"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.0/@els.0" target="//@rules.4/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelEntryLevelSystemCall/operationSignature__EntryLevelSystemCall"/>
+      </els>
+      <els xsi:type="behavior:Object" id="rdseff" outLinks="//@rules.4/@patterns.0/@els.4 //@rules.4/@patterns.0/@els.6" inLinks="//@rules.4/@patterns.0/@els.12">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.108"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.0/@els.3" target="//@rules.4/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffServiceEffectSpecification/describedService__SEFF"/>
+      </els>
+      <els xsi:type="behavior:Object" id="start" inLinks="//@rules.4/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.106"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.0/@els.3" target="//@rules.4/@patterns.0/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" inLinks="//@rules.4/@patterns.0/@els.8">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.0/@els.0" target="//@rules.4/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="sToken.cToken.oclIsUndefined()"/>
+      <els xsi:type="behavior:Clock" id="clk"/>
+      <els xsi:type="behavior:Object" id="basicComp" outLinks="//@rules.4/@patterns.0/@els.12" inLinks="//@rules.4/@patterns.0/@els.14">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.47"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.0/@els.11" target="//@rules.4/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMrepositoryBasicComponent/serviceEffectSpecifications__BasicComponent"/>
+      </els>
+      <els xsi:type="behavior:Object" id="assCtx" outLinks="//@rules.4/@patterns.0/@els.14">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.30"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.0/@els.13" target="//@rules.4/@patterns.0/@els.11">
+        <ref href="../syntax/flatten.ecore#//PCMcompositionAssemblyContext/encapsulatedComponent__AssemblyContext"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="elsc" outLinks="//@rules.4/@patterns.1/@els.2 //@rules.4/@patterns.1/@els.10">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.35"/>
+      </els>
+      <els xsi:type="behavior:Object" id="signature" inLinks="//@rules.4/@patterns.1/@els.2 //@rules.4/@patterns.1/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.64"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.1/@els.0" target="//@rules.4/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelEntryLevelSystemCall/operationSignature__EntryLevelSystemCall"/>
+      </els>
+      <els xsi:type="behavior:Object" id="rdseff" outLinks="//@rules.4/@patterns.1/@els.4 //@rules.4/@patterns.1/@els.6" inLinks="//@rules.4/@patterns.1/@els.14">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.108"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.1/@els.3" target="//@rules.4/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffServiceEffectSpecification/describedService__SEFF"/>
+      </els>
+      <els xsi:type="behavior:Object" id="start" outLinks="//@rules.4/@patterns.1/@els.8" inLinks="//@rules.4/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.106"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.1/@els.3" target="//@rules.4/@patterns.1/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="compToken" inLinks="//@rules.4/@patterns.1/@els.8 //@rules.4/@patterns.1/@els.11">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <sfs oclValue="elsc.inputParameterUsages_EntryLevelSystemCall->including(assCtx.configParameterUsages__AssemblyContext)->flatten()">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/context"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.1/@els.5" target="//@rules.4/@patterns.1/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" outLinks="//@rules.4/@patterns.1/@els.11" inLinks="//@rules.4/@patterns.1/@els.10">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.1/@els.0" target="//@rules.4/@patterns.1/@els.9">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.1/@els.9" target="//@rules.4/@patterns.1/@els.7">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensUSToken/cToken"/>
+      </els>
+      <els xsi:type="behavior:Clock" id="clk"/>
+      <els xsi:type="behavior:Object" id="basicComp" outLinks="//@rules.4/@patterns.1/@els.14" inLinks="//@rules.4/@patterns.1/@els.16">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.47"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.1/@els.13" target="//@rules.4/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMrepositoryBasicComponent/serviceEffectSpecifications__BasicComponent"/>
+      </els>
+      <els xsi:type="behavior:Object" id="assCtx" outLinks="//@rules.4/@patterns.1/@els.16">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.30"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.4/@patterns.1/@els.15" target="//@rules.4/@patterns.1/@els.13">
+        <ref href="../syntax/flatten.ecore#//PCMcompositionAssemblyContext/encapsulatedComponent__AssemblyContext"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="StartSEFF" lhs="//@rules.5/@patterns.0" rhs="//@rules.5/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="start" outLinks="//@rules.5/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.106"/>
+      </els>
+      <els xsi:type="behavior:Object" id="token" inLinks="//@rules.5/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.5/@patterns.0/@els.0" target="//@rules.5/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="start" outLinks="//@rules.5/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.106"/>
+      </els>
+      <els xsi:type="behavior:Object" id="token" inLinks="//@rules.5/@patterns.1/@els.2">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.5/@patterns.1/@els.0" target="//@rules.5/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="ActionSEFFTrans" lhs="//@rules.6/@patterns.0" rhs="//@rules.6/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="current" outLinks="//@rules.6/@patterns.0/@els.2 //@rules.6/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.100"/>
+      </els>
+      <els xsi:type="behavior:Object" id="succ" inLinks="//@rules.6/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.100"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.6/@patterns.0/@els.0" target="//@rules.6/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/successor_AbstractAction"/>
+      </els>
+      <els xsi:type="behavior:Object" id="token" inLinks="//@rules.6/@patterns.0/@els.4">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.6/@patterns.0/@els.0" target="//@rules.6/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="not succ.oclIsTypeOf(PCMseffInternalAction)"/>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="current" outLinks="//@rules.6/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.100"/>
+      </els>
+      <els xsi:type="behavior:Object" id="succ" outLinks="//@rules.6/@patterns.1/@els.4" inLinks="//@rules.6/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.100"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.6/@patterns.1/@els.0" target="//@rules.6/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/successor_AbstractAction"/>
+      </els>
+      <els xsi:type="behavior:Object" id="token" inLinks="//@rules.6/@patterns.1/@els.4">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.6/@patterns.1/@els.1" target="//@rules.6/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="StopSEFF" lhs="//@rules.7/@patterns.0" rhs="//@rules.7/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="stop" outLinks="//@rules.7/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.98"/>
+      </els>
+      <els xsi:type="behavior:Object" id="token" inLinks="//@rules.7/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.7/@patterns.0/@els.0" target="//@rules.7/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="stop" outLinks="//@rules.7/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.98"/>
+      </els>
+      <els xsi:type="behavior:Object" id="token" inLinks="//@rules.7/@patterns.1/@els.2">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.7/@patterns.1/@els.0" target="//@rules.7/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="TokenProb2ProbabilisticBranch" lhs="//@rules.8/@patterns.0" rhs="//@rules.8/@patterns.1" maxDuration="0">
+    <vbles name="branchNumberAux" type="Int" value="token.branchesProb->iterate(v; i : Integer = 1 | if token.prob &lt;= (token.branchesProb->subSequence(1, i)->sum())  then i else i + 1 endif)"/>
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="bA" outLinks="//@rules.8/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.104"/>
+      </els>
+      <els xsi:type="behavior:Object" id="token" inLinks="//@rules.8/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.8/@patterns.0/@els.0" target="//@rules.8/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="token.branchNumber &lt; 1"/>
+      <els xsi:type="behavior:Condition" oclValue="token.branchesProb->size() > 0"/>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="bA" outLinks="//@rules.8/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.104"/>
+      </els>
+      <els xsi:type="behavior:Object" id="token" inLinks="//@rules.8/@patterns.1/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <sfs oclValue="branchNumberAux">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/branchNumber"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.8/@patterns.1/@els.0" target="//@rules.8/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="DelayUsageModel" lhs="//@rules.9/@patterns.0" rhs="//@rules.9/@patterns.1" maxDuration="spec" minDuration="spec">
+    <vbles name="spec" type="Int" value="eMotions.parseExp(delay.timeSpecification_Delay.specification)"/>
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="delay" outLinks="//@rules.9/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.44"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" inLinks="//@rules.9/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.9/@patterns.0/@els.0" target="//@rules.9/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="delay" outLinks="//@rules.9/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.44"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" inLinks="//@rules.9/@patterns.1/@els.2">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.9/@patterns.1/@els.0" target="//@rules.9/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="BranchUM2TokenProb" lhs="//@rules.10/@patterns.0" rhs="//@rules.10/@patterns.1" maxDuration="0">
+    <vbles name="auxSeq" type="Seq(Int)" value="b.branchTransitions_Branch->collect(S | (S.branchProbability * 1000).round())->asSequence()"/>
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="b" outLinks="//@rules.10/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.39"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.10/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.10/@patterns.0/@els.0" target="//@rules.10/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="t.prob = 0"/>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="b" outLinks="//@rules.10/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.39"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.10/@patterns.1/@els.2">
+        <sfs oclValue="eMotions.random(1000) + 1">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/prob"/>
+        </sfs>
+        <sfs oclValue="auxSeq">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/branchesProb"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.10/@patterns.1/@els.0" target="//@rules.10/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="TokenProbUM2ProbabilisticBranch" lhs="//@rules.11/@patterns.0" rhs="//@rules.11/@patterns.1" maxDuration="0">
+    <vbles name="branchNumberAux" type="Int" value="t.branchesProb->iterate(v; i : Integer = 1 | if t.prob &lt;= (t.branchesProb->subSequence(1, i)->sum())  then i else i + 1 endif)"/>
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="b" outLinks="//@rules.11/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.39"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.11/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.11/@patterns.0/@els.0" target="//@rules.11/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="t.branchesProb->size() > 0"/>
+      <els xsi:type="behavior:Condition" oclValue="t.branchNumber &lt; 1"/>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="b" outLinks="//@rules.11/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.39"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.11/@patterns.1/@els.2">
+        <sfs oclValue="branchNumberAux">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/branchNumber"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.11/@patterns.1/@els.0" target="//@rules.11/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="EnterInExternalCallAction" lhs="//@rules.12/@patterns.0" rhs="//@rules.12/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="eca" outLinks="//@rules.12/@patterns.0/@els.2 //@rules.12/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.115"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.12/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.0/@els.0" target="//@rules.12/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sign" inLinks="//@rules.12/@patterns.0/@els.4 //@rules.12/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.64"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.0/@els.0" target="//@rules.12/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffExternalCallAction/calledService_ExternalService"/>
+      </els>
+      <els xsi:type="behavior:Object" id="SEFF" outLinks="//@rules.12/@patterns.0/@els.6 //@rules.12/@patterns.0/@els.8" inLinks="//@rules.12/@patterns.0/@els.11">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.108"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.0/@els.5" target="//@rules.12/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffServiceEffectSpecification/describedService__SEFF"/>
+      </els>
+      <els xsi:type="behavior:Object" id="start" inLinks="//@rules.12/@patterns.0/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.106"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.0/@els.5" target="//@rules.12/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="t.nestedToken.oclIsUndefined()"/>
+      <els xsi:type="behavior:Object" id="basicComp" outLinks="//@rules.12/@patterns.0/@els.11" inLinks="//@rules.12/@patterns.0/@els.13">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.47"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.0/@els.10" target="//@rules.12/@patterns.0/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMrepositoryBasicComponent/serviceEffectSpecifications__BasicComponent"/>
+      </els>
+      <els xsi:type="behavior:Object" id="allCtx" outLinks="//@rules.12/@patterns.0/@els.13">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.30"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.0/@els.12" target="//@rules.12/@patterns.0/@els.10">
+        <ref href="../syntax/flatten.ecore#//PCMcompositionAssemblyContext/encapsulatedComponent__AssemblyContext"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="eca" outLinks="//@rules.12/@patterns.1/@els.2 //@rules.12/@patterns.1/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.115"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.12/@patterns.1/@els.11" inLinks="//@rules.12/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.1/@els.0" target="//@rules.12/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sign" inLinks="//@rules.12/@patterns.1/@els.4 //@rules.12/@patterns.1/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.64"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.1/@els.0" target="//@rules.12/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffExternalCallAction/calledService_ExternalService"/>
+      </els>
+      <els xsi:type="behavior:Object" id="SEFF" outLinks="//@rules.12/@patterns.1/@els.7 //@rules.12/@patterns.1/@els.8" inLinks="//@rules.12/@patterns.1/@els.13">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.108"/>
+      </els>
+      <els xsi:type="behavior:Object" id="start" outLinks="//@rules.12/@patterns.1/@els.10" inLinks="//@rules.12/@patterns.1/@els.7">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.106"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.1/@els.5" target="//@rules.12/@patterns.1/@els.6">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.1/@els.5" target="//@rules.12/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffServiceEffectSpecification/describedService__SEFF"/>
+      </els>
+      <els xsi:type="behavior:Object" id="newToken" inLinks="//@rules.12/@patterns.1/@els.10 //@rules.12/@patterns.1/@els.11">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <sfs oclValue="t.context->union(eca.inputVariableUsages__CallAction)->union(allCtx.configParameterUsages__AssemblyContext)">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/context"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.1/@els.6" target="//@rules.12/@patterns.1/@els.9">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.1/@els.1" target="//@rules.12/@patterns.1/@els.9">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/nestedToken"/>
+      </els>
+      <els xsi:type="behavior:Object" id="basicComp" outLinks="//@rules.12/@patterns.1/@els.13" inLinks="//@rules.12/@patterns.1/@els.15">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.47"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.1/@els.12" target="//@rules.12/@patterns.1/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMrepositoryBasicComponent/serviceEffectSpecifications__BasicComponent"/>
+      </els>
+      <els xsi:type="behavior:Object" id="allCtx" outLinks="//@rules.12/@patterns.1/@els.15">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.30"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.12/@patterns.1/@els.14" target="//@rules.12/@patterns.1/@els.12">
+        <ref href="../syntax/flatten.ecore#//PCMcompositionAssemblyContext/encapsulatedComponent__AssemblyContext"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="LoopToLoopTokenSEFF" lhs="//@rules.13/@patterns.0" rhs="//@rules.13/@patterns.1" maxDuration="0">
+    <vbles name="iter" type="Int" value="eMotions.parseExp(loop.iterationCount_LoopAction.specification)"/>
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.13/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.111"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.13/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.13/@patterns.0/@els.0" target="//@rules.13/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="t.loopToken.oclIsUndefined()"/>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.13/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.111"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.13/@patterns.1/@els.4" inLinks="//@rules.13/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.13/@patterns.1/@els.0" target="//@rules.13/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="loopT" inLinks="//@rules.13/@patterns.1/@els.4">
+        <sfs oclValue="iter">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFLoopToken/iterations"/>
+        </sfs>
+        <sfs oclValue="t.context">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/context"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.191"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.13/@patterns.1/@els.1" target="//@rules.13/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/loopToken"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="LoopStop2StartSEFF" lhs="//@rules.14/@patterns.0" rhs="//@rules.14/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.14/@patterns.0/@els.2 //@rules.14/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.111"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.14/@patterns.0/@els.8" inLinks="//@rules.14/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.14/@patterns.0/@els.0" target="//@rules.14/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="beh" outLinks="//@rules.14/@patterns.0/@els.5" inLinks="//@rules.14/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.101"/>
+      </els>
+      <els xsi:type="behavior:Object" id="stop" outLinks="//@rules.14/@patterns.0/@els.9" inLinks="//@rules.14/@patterns.0/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.98"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.14/@patterns.0/@els.3" target="//@rules.14/@patterns.0/@els.4">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.14/@patterns.0/@els.0" target="//@rules.14/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractLoopAction/bodyBehaviour_Loop"/>
+      </els>
+      <els xsi:type="behavior:Object" id="loopT" inLinks="//@rules.14/@patterns.0/@els.8 //@rules.14/@patterns.0/@els.9">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.191"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.14/@patterns.0/@els.1" target="//@rules.14/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/loopToken"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.14/@patterns.0/@els.4" target="//@rules.14/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.14/@patterns.1/@els.2 //@rules.14/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.111"/>
+      </els>
+      <els xsi:type="behavior:Object" id="beh" outLinks="//@rules.14/@patterns.1/@els.4" inLinks="//@rules.14/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.101"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.14/@patterns.1/@els.0" target="//@rules.14/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractLoopAction/bodyBehaviour_Loop"/>
+      </els>
+      <els xsi:type="behavior:Object" id="stop" inLinks="//@rules.14/@patterns.1/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.98"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.14/@patterns.1/@els.1" target="//@rules.14/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.14/@patterns.1/@els.8" inLinks="//@rules.14/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.14/@patterns.1/@els.0" target="//@rules.14/@patterns.1/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="loopT" inLinks="//@rules.14/@patterns.1/@els.8">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <sfs oclValue="loopT.iterations - 1">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFLoopToken/iterations"/>
+        </sfs>
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFLoopToken/started"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.191"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.14/@patterns.1/@els.5" target="//@rules.14/@patterns.1/@els.7">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/loopToken"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="LoopStartTokenExistSEFF" lhs="//@rules.15/@patterns.0" rhs="//@rules.15/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.15/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.111"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.15/@patterns.0/@els.4" inLinks="//@rules.15/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.15/@patterns.0/@els.0" target="//@rules.15/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="loopT" inLinks="//@rules.15/@patterns.0/@els.4">
+        <sfs oclValue="0">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFLoopToken/iterations"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.191"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.15/@patterns.0/@els.1" target="//@rules.15/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/loopToken"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.15/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.111"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.15/@patterns.1/@els.2">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.15/@patterns.1/@els.0" target="//@rules.15/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="SetVariableActionSEFF" lhs="//@rules.16/@patterns.0" rhs="//@rules.16/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="sva" outLinks="//@rules.16/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.121"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.16/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.16/@patterns.0/@els.0" target="//@rules.16/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="sva" outLinks="//@rules.16/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.121"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.16/@patterns.1/@els.2">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.16/@patterns.1/@els.0" target="//@rules.16/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="ExitOfAExternalCallAction" lhs="//@rules.17/@patterns.0" rhs="//@rules.17/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="eca" outLinks="//@rules.17/@patterns.0/@els.4 //@rules.17/@patterns.0/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.115"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sign" inLinks="//@rules.17/@patterns.0/@els.4 //@rules.17/@patterns.0/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.64"/>
+      </els>
+      <els xsi:type="behavior:Object" id="SEFF" outLinks="//@rules.17/@patterns.0/@els.5 //@rules.17/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.108"/>
+      </els>
+      <els xsi:type="behavior:Object" id="stop" outLinks="//@rules.17/@patterns.0/@els.11" inLinks="//@rules.17/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.98"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.17/@patterns.0/@els.0" target="//@rules.17/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffExternalCallAction/calledService_ExternalService"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.17/@patterns.0/@els.2" target="//@rules.17/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffServiceEffectSpecification/describedService__SEFF"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.17/@patterns.0/@els.2" target="//@rules.17/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.17/@patterns.0/@els.10" inLinks="//@rules.17/@patterns.0/@els.8">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.17/@patterns.0/@els.0" target="//@rules.17/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="nestedToken" inLinks="//@rules.17/@patterns.0/@els.10 //@rules.17/@patterns.0/@els.11">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.17/@patterns.0/@els.7" target="//@rules.17/@patterns.0/@els.9">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/nestedToken"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.17/@patterns.0/@els.3" target="//@rules.17/@patterns.0/@els.9">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="eca" outLinks="//@rules.17/@patterns.1/@els.4 //@rules.17/@patterns.1/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.115"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sign" inLinks="//@rules.17/@patterns.1/@els.4 //@rules.17/@patterns.1/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.64"/>
+      </els>
+      <els xsi:type="behavior:Object" id="SEFF" outLinks="//@rules.17/@patterns.1/@els.5 //@rules.17/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.108"/>
+      </els>
+      <els xsi:type="behavior:Object" id="stop" inLinks="//@rules.17/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.98"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.17/@patterns.1/@els.0" target="//@rules.17/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffExternalCallAction/calledService_ExternalService"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.17/@patterns.1/@els.2" target="//@rules.17/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffServiceEffectSpecification/describedService__SEFF"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.17/@patterns.1/@els.2" target="//@rules.17/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.17/@patterns.1/@els.8">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.17/@patterns.1/@els.0" target="//@rules.17/@patterns.1/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="ExitLevelUsageModel" lhs="//@rules.18/@patterns.0" rhs="//@rules.18/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="elsc" outLinks="//@rules.18/@patterns.0/@els.2 //@rules.18/@patterns.0/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.35"/>
+      </els>
+      <els xsi:type="behavior:Object" id="signature" inLinks="//@rules.18/@patterns.0/@els.2 //@rules.18/@patterns.0/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.64"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.18/@patterns.0/@els.0" target="//@rules.18/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelEntryLevelSystemCall/operationSignature__EntryLevelSystemCall"/>
+      </els>
+      <els xsi:type="behavior:Object" id="rdseff" outLinks="//@rules.18/@patterns.0/@els.5 //@rules.18/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.108"/>
+      </els>
+      <els xsi:type="behavior:Object" id="stop" outLinks="//@rules.18/@patterns.0/@els.11" inLinks="//@rules.18/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.98"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.18/@patterns.0/@els.3" target="//@rules.18/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffServiceEffectSpecification/describedService__SEFF"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.18/@patterns.0/@els.3" target="//@rules.18/@patterns.0/@els.4">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" outLinks="//@rules.18/@patterns.0/@els.10" inLinks="//@rules.18/@patterns.0/@els.8">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.18/@patterns.0/@els.0" target="//@rules.18/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="seffT" inLinks="//@rules.18/@patterns.0/@els.10 //@rules.18/@patterns.0/@els.11">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.18/@patterns.0/@els.7" target="//@rules.18/@patterns.0/@els.9">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensUSToken/cToken"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.18/@patterns.0/@els.4" target="//@rules.18/@patterns.0/@els.9">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="elsc" outLinks="//@rules.18/@patterns.1/@els.6 //@rules.18/@patterns.1/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.35"/>
+      </els>
+      <els xsi:type="behavior:Object" id="signature" inLinks="//@rules.18/@patterns.1/@els.5 //@rules.18/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.64"/>
+      </els>
+      <els xsi:type="behavior:Object" id="rdseff" outLinks="//@rules.18/@patterns.1/@els.4 //@rules.18/@patterns.1/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.108"/>
+      </els>
+      <els xsi:type="behavior:Object" id="stop" inLinks="//@rules.18/@patterns.1/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.98"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.18/@patterns.1/@els.2" target="//@rules.18/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.18/@patterns.1/@els.2" target="//@rules.18/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffServiceEffectSpecification/describedService__SEFF"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.18/@patterns.1/@els.0" target="//@rules.18/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelEntryLevelSystemCall/operationSignature__EntryLevelSystemCall"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" inLinks="//@rules.18/@patterns.1/@els.8">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.18/@patterns.1/@els.0" target="//@rules.18/@patterns.1/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="IntActSEFFSchFCFS" lhs="//@rules.19/@patterns.0" rhs="//@rules.19/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="pred" outLinks="//@rules.19/@patterns.0/@els.2 //@rules.19/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.100"/>
+      </els>
+      <els xsi:type="behavior:Object" id="IA" outLinks="//@rules.19/@patterns.0/@els.11" inLinks="//@rules.19/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.124"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.19/@patterns.0/@els.0" target="//@rules.19/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/successor_AbstractAction"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.19/@patterns.0/@els.4">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.19/@patterns.0/@els.0" target="//@rules.19/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="PRD" outLinks="//@rules.19/@patterns.0/@els.12" inLinks="//@rules.19/@patterns.0/@els.11">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.127"/>
+      </els>
+      <els xsi:type="behavior:Object" id="PRT" inLinks="//@rules.19/@patterns.0/@els.10 //@rules.19/@patterns.0/@els.12">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.80"/>
+      </els>
+      <els xsi:type="behavior:Object" id="PRS" outLinks="//@rules.19/@patterns.0/@els.9 //@rules.19/@patterns.0/@els.10">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.142"/>
+      </els>
+      <els xsi:type="behavior:Object" id="SP" inLinks="//@rules.19/@patterns.0/@els.9">
+        <sfs oclValue="'FCFS'">
+          <sf href="../syntax/flatten.ecore#//IDENTIFIERidentifierIdentifier/id"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.83"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.19/@patterns.0/@els.7" target="//@rules.19/@patterns.0/@els.8">
+        <ref href="../syntax/flatten.ecore#//PCMresourceenvironmentProcessingResourceSpecification/schedulingPolicy"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.19/@patterns.0/@els.7" target="//@rules.19/@patterns.0/@els.6">
+        <ref href="../syntax/flatten.ecore#//PCMresourceenvironmentProcessingResourceSpecification/activeResourceType_ActiveResourceSpecification"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.19/@patterns.0/@els.1" target="//@rules.19/@patterns.0/@els.5" pos="">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractInternalControlFlowAction/resourceDemand_Action"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.19/@patterns.0/@els.5" target="//@rules.19/@patterns.0/@els.6">
+        <ref href="../syntax/flatten.ecore#//PCMseffperformanceParametricResourceDemand/requiredResource_ParametricResourceDemand"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="pred" outLinks="//@rules.19/@patterns.1/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.100"/>
+      </els>
+      <els xsi:type="behavior:Object" id="IA" outLinks="//@rules.19/@patterns.1/@els.3 //@rules.19/@patterns.1/@els.9" inLinks="//@rules.19/@patterns.1/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.124"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.19/@patterns.1/@els.3">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.19/@patterns.1/@els.1" target="//@rules.19/@patterns.1/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.19/@patterns.1/@els.0" target="//@rules.19/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/successor_AbstractAction"/>
+      </els>
+      <els xsi:type="behavior:Object" id="PRD" outLinks="//@rules.19/@patterns.1/@els.10" inLinks="//@rules.19/@patterns.1/@els.9">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.127"/>
+      </els>
+      <els xsi:type="behavior:Object" id="PRT" inLinks="//@rules.19/@patterns.1/@els.10 //@rules.19/@patterns.1/@els.11">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.80"/>
+      </els>
+      <els xsi:type="behavior:Object" id="PRS" outLinks="//@rules.19/@patterns.1/@els.11 //@rules.19/@patterns.1/@els.12">
+        <sfs oclValue="PRS.queue->append(t)">
+          <sf href="../syntax/flatten.ecore#//PCMresourceenvironmentProcessingResourceSpecification/queue"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.142"/>
+      </els>
+      <els xsi:type="behavior:Object" id="SP" inLinks="//@rules.19/@patterns.1/@els.12">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.83"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.19/@patterns.1/@els.1" target="//@rules.19/@patterns.1/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractInternalControlFlowAction/resourceDemand_Action"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.19/@patterns.1/@els.5" target="//@rules.19/@patterns.1/@els.6">
+        <ref href="../syntax/flatten.ecore#//PCMseffperformanceParametricResourceDemand/requiredResource_ParametricResourceDemand"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.19/@patterns.1/@els.7" target="//@rules.19/@patterns.1/@els.6">
+        <ref href="../syntax/flatten.ecore#//PCMresourceenvironmentProcessingResourceSpecification/activeResourceType_ActiveResourceSpecification"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.19/@patterns.1/@els.7" target="//@rules.19/@patterns.1/@els.8">
+        <ref href="../syntax/flatten.ecore#//PCMresourceenvironmentProcessingResourceSpecification/schedulingPolicy"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="OpenWorkloadCreateSandTimer" lhs="//@rules.20/@patterns.0" rhs="//@rules.20/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="ow">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.43"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="ow.sandTimer.oclIsUndefined()"/>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="ow" outLinks="//@rules.20/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.43"/>
+      </els>
+      <els xsi:type="behavior:Object" id="st" inLinks="//@rules.20/@patterns.1/@els.2">
+        <sfs oclValue="0">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSandTimer/countDown"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.192"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.20/@patterns.1/@els.0" target="//@rules.20/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelOpenWorkload/sandTimer"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:OngoingRule" name="DecreaseCountDown" lhs="//@rules.21/@patterns.0" rhs="//@rules.21/@patterns.1" maxDuration="st.countDown">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="st">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.192"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="st">
+        <sfs oclValue="st.countDown - T">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSandTimer/countDown"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.192"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="RTObserverBirthUsageModel" lhs="//@rules.22/@patterns.0" rhs="//@rules.22/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="sB" inLinks="//@rules.22/@patterns.0/@els.3">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="sB.rtOb.oclIsUndefined()"/>
+      <els xsi:type="behavior:Object" id="usSc" outLinks="//@rules.22/@patterns.0/@els.3">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.32"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.22/@patterns.0/@els.2" target="//@rules.22/@patterns.0/@els.0">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelUsageScenario/scenarioBehaviour_UsageScenario"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="sB" outLinks="//@rules.22/@patterns.1/@els.2" inLinks="//@rules.22/@patterns.1/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.22/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.188"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.22/@patterns.1/@els.0" target="//@rules.22/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/rtOb"/>
+      </els>
+      <els xsi:type="behavior:Object" id="usSc" outLinks="//@rules.22/@patterns.1/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.32"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.22/@patterns.1/@els.3" target="//@rules.22/@patterns.1/@els.0">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelUsageScenario/scenarioBehaviour_UsageScenario"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="InternalActionSEFF" lhs="//@rules.23/@patterns.0" rhs="//@rules.23/@patterns.1" maxDuration="rTime" minDuration="rTime">
+    <vbles name="rTime" type="Integer" value="eMotions.parseExp(PRD.specification_ParametericResourceDemand.specification) / eMotions.parseExp(PRS.processingRate_ProcessingResourceSpecification.specification)"/>
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="IA" outLinks="//@rules.23/@patterns.0/@els.4 //@rules.23/@patterns.0/@els.10" inLinks="//@rules.23/@patterns.0/@els.13">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.124"/>
+      </els>
+      <els xsi:type="behavior:Object" id="PRD" outLinks="//@rules.23/@patterns.0/@els.5" inLinks="//@rules.23/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.127"/>
+      </els>
+      <els xsi:type="behavior:Object" id="PRT" inLinks="//@rules.23/@patterns.0/@els.5 //@rules.23/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.80"/>
+      </els>
+      <els xsi:type="behavior:Object" id="PRS" outLinks="//@rules.23/@patterns.0/@els.6 //@rules.23/@patterns.0/@els.8" inLinks="//@rules.23/@patterns.0/@els.17">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.142"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.0/@els.0" target="//@rules.23/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractInternalControlFlowAction/resourceDemand_Action"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.0/@els.1" target="//@rules.23/@patterns.0/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMseffperformanceParametricResourceDemand/requiredResource_ParametricResourceDemand"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.0/@els.3" target="//@rules.23/@patterns.0/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMresourceenvironmentProcessingResourceSpecification/activeResourceType_ActiveResourceSpecification"/>
+      </els>
+      <els xsi:type="behavior:Object" id="Sch" inLinks="//@rules.23/@patterns.0/@els.8">
+        <sfs oclValue="'FCFS'">
+          <sf href="../syntax/flatten.ecore#//IDENTIFIERidentifierIdentifier/id"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.83"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.0/@els.3" target="//@rules.23/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMresourceenvironmentProcessingResourceSpecification/schedulingPolicy"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.23/@patterns.0/@els.10">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.0/@els.0" target="//@rules.23/@patterns.0/@els.9">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="PRS.queue->indexOf(t) &lt;= PRS.numberOfReplicas"/>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.23/@patterns.0/@els.13" inLinks="//@rules.23/@patterns.0/@els.15">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.108"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.0/@els.12" target="//@rules.23/@patterns.0/@els.0">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="bc" outLinks="//@rules.23/@patterns.0/@els.15" inLinks="//@rules.23/@patterns.0/@els.19">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.47"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.0/@els.14" target="//@rules.23/@patterns.0/@els.12">
+        <ref href="../syntax/flatten.ecore#//PCMrepositoryBasicComponent/serviceEffectSpecifications__BasicComponent"/>
+      </els>
+      <els xsi:type="behavior:Object" id="rc" outLinks="//@rules.23/@patterns.0/@els.17" inLinks="//@rules.23/@patterns.0/@els.22">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.141"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.0/@els.16" target="//@rules.23/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMresourceenvironmentResourceContainer/activeResourceSpecifications_ResourceContainer"/>
+      </els>
+      <els xsi:type="behavior:Object" id="ac" outLinks="//@rules.23/@patterns.0/@els.19" inLinks="//@rules.23/@patterns.0/@els.21">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.30"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.0/@els.18" target="//@rules.23/@patterns.0/@els.14">
+        <ref href="../syntax/flatten.ecore#//PCMcompositionAssemblyContext/encapsulatedComponent__AssemblyContext"/>
+      </els>
+      <els xsi:type="behavior:Object" id="allctx" outLinks="//@rules.23/@patterns.0/@els.21 //@rules.23/@patterns.0/@els.22">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.144"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.0/@els.20" target="//@rules.23/@patterns.0/@els.18">
+        <ref href="../syntax/flatten.ecore#//PCMallocationAllocationContext/assemblyContext_AllocationContext"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.0/@els.20" target="//@rules.23/@patterns.0/@els.16">
+        <ref href="../syntax/flatten.ecore#//PCMallocationAllocationContext/resourceContainer_AllocationContext"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="IA" outLinks="//@rules.23/@patterns.1/@els.8 //@rules.23/@patterns.1/@els.10" inLinks="//@rules.23/@patterns.1/@els.12">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.124"/>
+      </els>
+      <els xsi:type="behavior:Object" id="PRD" outLinks="//@rules.23/@patterns.1/@els.7" inLinks="//@rules.23/@patterns.1/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.127"/>
+      </els>
+      <els xsi:type="behavior:Object" id="PRT" inLinks="//@rules.23/@patterns.1/@els.6 //@rules.23/@patterns.1/@els.7">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.80"/>
+      </els>
+      <els xsi:type="behavior:Object" id="PRS" outLinks="//@rules.23/@patterns.1/@els.5 //@rules.23/@patterns.1/@els.6" inLinks="//@rules.23/@patterns.1/@els.18">
+        <sfs oclValue="PRS.queue->excluding(t)">
+          <sf href="../syntax/flatten.ecore#//PCMresourceenvironmentProcessingResourceSpecification/queue"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.142"/>
+      </els>
+      <els xsi:type="behavior:Object" id="Sch" inLinks="//@rules.23/@patterns.1/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.83"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.1/@els.3" target="//@rules.23/@patterns.1/@els.4">
+        <ref href="../syntax/flatten.ecore#//PCMresourceenvironmentProcessingResourceSpecification/schedulingPolicy"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.1/@els.3" target="//@rules.23/@patterns.1/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMresourceenvironmentProcessingResourceSpecification/activeResourceType_ActiveResourceSpecification"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.1/@els.1" target="//@rules.23/@patterns.1/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMseffperformanceParametricResourceDemand/requiredResource_ParametricResourceDemand"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.1/@els.0" target="//@rules.23/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractInternalControlFlowAction/resourceDemand_Action"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.23/@patterns.1/@els.10">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.1/@els.0" target="//@rules.23/@patterns.1/@els.9">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.23/@patterns.1/@els.12" inLinks="//@rules.23/@patterns.1/@els.14">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.108"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.1/@els.11" target="//@rules.23/@patterns.1/@els.0">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="bc" outLinks="//@rules.23/@patterns.1/@els.14" inLinks="//@rules.23/@patterns.1/@els.16">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.47"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.1/@els.13" target="//@rules.23/@patterns.1/@els.11">
+        <ref href="../syntax/flatten.ecore#//PCMrepositoryBasicComponent/serviceEffectSpecifications__BasicComponent"/>
+      </els>
+      <els xsi:type="behavior:Object" id="ac" outLinks="//@rules.23/@patterns.1/@els.16" inLinks="//@rules.23/@patterns.1/@els.20">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.30"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.1/@els.15" target="//@rules.23/@patterns.1/@els.13">
+        <ref href="../syntax/flatten.ecore#//PCMcompositionAssemblyContext/encapsulatedComponent__AssemblyContext"/>
+      </els>
+      <els xsi:type="behavior:Object" id="rc" outLinks="//@rules.23/@patterns.1/@els.18" inLinks="//@rules.23/@patterns.1/@els.21">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.141"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.1/@els.17" target="//@rules.23/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMresourceenvironmentResourceContainer/activeResourceSpecifications_ResourceContainer"/>
+      </els>
+      <els xsi:type="behavior:Object" id="allctx" outLinks="//@rules.23/@patterns.1/@els.20 //@rules.23/@patterns.1/@els.21">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.144"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.1/@els.19" target="//@rules.23/@patterns.1/@els.15">
+        <ref href="../syntax/flatten.ecore#//PCMallocationAllocationContext/assemblyContext_AllocationContext"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.23/@patterns.1/@els.19" target="//@rules.23/@patterns.1/@els.17">
+        <ref href="../syntax/flatten.ecore#//PCMallocationAllocationContext/resourceContainer_AllocationContext"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="TokenEnterInABranchUM" lhs="//@rules.24/@patterns.0" rhs="//@rules.24/@patterns.1" maxDuration="0">
+    <vbles name="ind" type="Int" value="bA.branchTransitions_Branch->asSequence()->indexOf(bT)"/>
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="bA" outLinks="//@rules.24/@patterns.0/@els.2 //@rules.24/@patterns.0/@els.9">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.39"/>
+      </els>
+      <els xsi:type="behavior:Object" id="bT" outLinks="//@rules.24/@patterns.0/@els.5" inLinks="//@rules.24/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.38"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.24/@patterns.0/@els.0" target="//@rules.24/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelBranch/branchTransitions_Branch"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.24/@patterns.0/@els.6" inLinks="//@rules.24/@patterns.0/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Object" id="start" inLinks="//@rules.24/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.42"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.24/@patterns.0/@els.1" target="//@rules.24/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelBranchTransition/branchedBehaviour_BranchTransition"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.24/@patterns.0/@els.3" target="//@rules.24/@patterns.0/@els.4">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/actions_ScenarioBehaviour"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="ind = t.branchNumber"/>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.24/@patterns.0/@els.9">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.24/@patterns.0/@els.0" target="//@rules.24/@patterns.0/@els.8">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="bA" outLinks="//@rules.24/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.39"/>
+      </els>
+      <els xsi:type="behavior:Object" id="bT" outLinks="//@rules.24/@patterns.1/@els.4" inLinks="//@rules.24/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.38"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.24/@patterns.1/@els.0" target="//@rules.24/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelBranch/branchTransitions_Branch"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" inLinks="//@rules.24/@patterns.1/@els.4 //@rules.24/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.24/@patterns.1/@els.1" target="//@rules.24/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelBranchTransition/branchedBehaviour_BranchTransition"/>
+      </els>
+      <els xsi:type="behavior:Object" id="start" outLinks="//@rules.24/@patterns.1/@els.6 //@rules.24/@patterns.1/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.42"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.24/@patterns.1/@els.5" target="//@rules.24/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/scenarioBehaviour_AbstractUserAction"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.24/@patterns.1/@els.8">
+        <sfs oclValue="0">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/prob"/>
+        </sfs>
+        <sfs oclValue="0">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/branchNumber"/>
+        </sfs>
+        <sfs oclValue="Sequence{}">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/branchesProb"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.24/@patterns.1/@els.5" target="//@rules.24/@patterns.1/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="TokenExitBranchUM" lhs="//@rules.25/@patterns.0" rhs="//@rules.25/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="bA" outLinks="//@rules.25/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.39"/>
+      </els>
+      <els xsi:type="behavior:Object" id="bT" outLinks="//@rules.25/@patterns.0/@els.5" inLinks="//@rules.25/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.38"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.25/@patterns.0/@els.6" inLinks="//@rules.25/@patterns.0/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Object" id="stop" outLinks="//@rules.25/@patterns.0/@els.8" inLinks="//@rules.25/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.41"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.25/@patterns.0/@els.0" target="//@rules.25/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelBranch/branchTransitions_Branch"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.25/@patterns.0/@els.1" target="//@rules.25/@patterns.0/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelBranchTransition/branchedBehaviour_BranchTransition"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.25/@patterns.0/@els.2" target="//@rules.25/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/actions_ScenarioBehaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.25/@patterns.0/@els.8">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.25/@patterns.0/@els.3" target="//@rules.25/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="bA" outLinks="//@rules.25/@patterns.1/@els.4 //@rules.25/@patterns.1/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.39"/>
+      </els>
+      <els xsi:type="behavior:Object" id="bT" outLinks="//@rules.25/@patterns.1/@els.5" inLinks="//@rules.25/@patterns.1/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.38"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.25/@patterns.1/@els.6" inLinks="//@rules.25/@patterns.1/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Object" id="stop" inLinks="//@rules.25/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.41"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.25/@patterns.1/@els.0" target="//@rules.25/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelBranch/branchTransitions_Branch"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.25/@patterns.1/@els.1" target="//@rules.25/@patterns.1/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelBranchTransition/branchedBehaviour_BranchTransition"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.25/@patterns.1/@els.2" target="//@rules.25/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/actions_ScenarioBehaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.25/@patterns.1/@els.8">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.25/@patterns.1/@els.0" target="//@rules.25/@patterns.1/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="LoopToLoopTokenUM" lhs="//@rules.26/@patterns.0" rhs="//@rules.26/@patterns.1" maxDuration="0">
+    <vbles name="iter" type="Int" value="eMotions.parseExp(loop.loopIteration_Loop.specification)"/>
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.26/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.40"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.26/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.26/@patterns.0/@els.0" target="//@rules.26/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="t.loopToken.oclIsUndefined()"/>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.26/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.40"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.26/@patterns.1/@els.4" inLinks="//@rules.26/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.26/@patterns.1/@els.0" target="//@rules.26/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="loopT" inLinks="//@rules.26/@patterns.1/@els.4">
+        <sfs oclValue="iter">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSLoopToken/iterations"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.193"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.26/@patterns.1/@els.1" target="//@rules.26/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensUSToken/loopToken"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="LoopStartTokenUM" lhs="//@rules.27/@patterns.0" rhs="//@rules.27/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.27/@patterns.0/@els.2 //@rules.27/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.40"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" outLinks="//@rules.27/@patterns.0/@els.4" inLinks="//@rules.27/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.27/@patterns.0/@els.0" target="//@rules.27/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="loopT" inLinks="//@rules.27/@patterns.0/@els.4">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSLoopToken/started"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.193"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.27/@patterns.0/@els.1" target="//@rules.27/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensUSToken/loopToken"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.27/@patterns.0/@els.8" inLinks="//@rules.27/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.27/@patterns.0/@els.0" target="//@rules.27/@patterns.0/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelLoop/bodyBehaviour_Loop"/>
+      </els>
+      <els xsi:type="behavior:Object" id="start" inLinks="//@rules.27/@patterns.0/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.42"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.27/@patterns.0/@els.5" target="//@rules.27/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/actions_ScenarioBehaviour"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="loopT.iterations > 0"/>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.27/@patterns.1/@els.5 //@rules.27/@patterns.1/@els.7">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.40"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.27/@patterns.1/@els.6" inLinks="//@rules.27/@patterns.1/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Object" id="start" outLinks="//@rules.27/@patterns.1/@els.9" inLinks="//@rules.27/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.42"/>
+      </els>
+      <els xsi:type="behavior:Object" id="sToken" outLinks="//@rules.27/@patterns.1/@els.8" inLinks="//@rules.27/@patterns.1/@els.7">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Object" id="loopT" inLinks="//@rules.27/@patterns.1/@els.8 //@rules.27/@patterns.1/@els.9">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSLoopToken/started"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.193"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.27/@patterns.1/@els.0" target="//@rules.27/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelLoop/bodyBehaviour_Loop"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.27/@patterns.1/@els.1" target="//@rules.27/@patterns.1/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/actions_ScenarioBehaviour"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.27/@patterns.1/@els.0" target="//@rules.27/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.27/@patterns.1/@els.3" target="//@rules.27/@patterns.1/@els.4">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensUSToken/loopToken"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.27/@patterns.1/@els.2" target="//@rules.27/@patterns.1/@els.4">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="LoopStartTokenSEFF" lhs="//@rules.28/@patterns.0" rhs="//@rules.28/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.28/@patterns.0/@els.2 //@rules.28/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.111"/>
+      </els>
+      <els xsi:type="behavior:Object" id="beh" outLinks="//@rules.28/@patterns.0/@els.4" inLinks="//@rules.28/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.101"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.28/@patterns.0/@els.0" target="//@rules.28/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractLoopAction/bodyBehaviour_Loop"/>
+      </els>
+      <els xsi:type="behavior:Object" id="start" inLinks="//@rules.28/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.106"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.28/@patterns.0/@els.1" target="//@rules.28/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.28/@patterns.0/@els.8" inLinks="//@rules.28/@patterns.0/@els.6">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.28/@patterns.0/@els.0" target="//@rules.28/@patterns.0/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="loopT" inLinks="//@rules.28/@patterns.0/@els.8">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFLoopToken/started"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.191"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.28/@patterns.0/@els.5" target="//@rules.28/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/loopToken"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="loopT.iterations > 0"/>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.28/@patterns.1/@els.5 //@rules.28/@patterns.1/@els.7">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.111"/>
+      </els>
+      <els xsi:type="behavior:Object" id="beh" outLinks="//@rules.28/@patterns.1/@els.6" inLinks="//@rules.28/@patterns.1/@els.5">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.101"/>
+      </els>
+      <els xsi:type="behavior:Object" id="start" outLinks="//@rules.28/@patterns.1/@els.9" inLinks="//@rules.28/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.106"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.28/@patterns.1/@els.8" inLinks="//@rules.28/@patterns.1/@els.7">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Object" id="loopT" inLinks="//@rules.28/@patterns.1/@els.8 //@rules.28/@patterns.1/@els.9">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFLoopToken/started"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.191"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.28/@patterns.1/@els.0" target="//@rules.28/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractLoopAction/bodyBehaviour_Loop"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.28/@patterns.1/@els.1" target="//@rules.28/@patterns.1/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.28/@patterns.1/@els.0" target="//@rules.28/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.28/@patterns.1/@els.3" target="//@rules.28/@patterns.1/@els.4">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/loopToken"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.28/@patterns.1/@els.2" target="//@rules.28/@patterns.1/@els.4">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="LoopStartTokenExitUM" lhs="//@rules.29/@patterns.0" rhs="//@rules.29/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.29/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.40"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.29/@patterns.0/@els.3" inLinks="//@rules.29/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Object" id="loopT" inLinks="//@rules.29/@patterns.0/@els.3">
+        <sfs oclValue="0">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSLoopToken/iterations"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.193"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.29/@patterns.0/@els.1" target="//@rules.29/@patterns.0/@els.2">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensUSToken/loopToken"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.29/@patterns.0/@els.0" target="//@rules.29/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.29/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.40"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.29/@patterns.1/@els.2">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.29/@patterns.1/@els.0" target="//@rules.29/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="BranchSEFF2TokenProb" lhs="//@rules.30/@patterns.0" rhs="//@rules.30/@patterns.1" maxDuration="0">
+    <vbles name="auxSeq" type="Seq(Int)" value="b.branches_Branch->collect(S | (S.branchProbability * 1000).round())->asSequence()"/>
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="b" outLinks="//@rules.30/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.104"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.30/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.30/@patterns.0/@els.0" target="//@rules.30/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="t.prob = 0"/>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="b" outLinks="//@rules.30/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.104"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.30/@patterns.1/@els.2">
+        <sfs oclValue="eMotions.random(1000) + 1">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/prob"/>
+        </sfs>
+        <sfs oclValue="auxSeq">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/branchesProb"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.30/@patterns.1/@els.0" target="//@rules.30/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="TokenEnterInABranchSEFF" lhs="//@rules.31/@patterns.0" rhs="//@rules.31/@patterns.1" maxDuration="0">
+    <vbles name="ind" type="Int" value="bA.branches_Branch->asSequence()->indexOf(bT)"/>
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="bA" outLinks="//@rules.31/@patterns.0/@els.2 //@rules.31/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.104"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.31/@patterns.0/@els.2">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.31/@patterns.0/@els.0" target="//@rules.31/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="bT" outLinks="//@rules.31/@patterns.0/@els.6" inLinks="//@rules.31/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.117"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.31/@patterns.0/@els.0" target="//@rules.31/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffBranchAction/branches_Branch"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.31/@patterns.0/@els.8" inLinks="//@rules.31/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.101"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.31/@patterns.0/@els.3" target="//@rules.31/@patterns.0/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractBranchTransition/branchBehaviour_BranchTransition"/>
+      </els>
+      <els xsi:type="behavior:Object" id="start" inLinks="//@rules.31/@patterns.0/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.106"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.31/@patterns.0/@els.5" target="//@rules.31/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Condition" oclValue="ind = t.branchNumber"/>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="bA" outLinks="//@rules.31/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.104"/>
+      </els>
+      <els xsi:type="behavior:Object" id="bT" outLinks="//@rules.31/@patterns.1/@els.4" inLinks="//@rules.31/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.117"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.31/@patterns.1/@els.0" target="//@rules.31/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffBranchAction/branches_Branch"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.31/@patterns.1/@els.6" inLinks="//@rules.31/@patterns.1/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.101"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.31/@patterns.1/@els.1" target="//@rules.31/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractBranchTransition/branchBehaviour_BranchTransition"/>
+      </els>
+      <els xsi:type="behavior:Object" id="start" outLinks="//@rules.31/@patterns.1/@els.8" inLinks="//@rules.31/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.106"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.31/@patterns.1/@els.3" target="//@rules.31/@patterns.1/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.31/@patterns.1/@els.8">
+        <sfs oclValue="0">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/prob"/>
+        </sfs>
+        <sfs oclValue="0">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/branchNumber"/>
+        </sfs>
+        <sfs oclValue="Sequence{}">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/branchesProb"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.31/@patterns.1/@els.5" target="//@rules.31/@patterns.1/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="TokenExitFromBranchSEFF" lhs="//@rules.32/@patterns.0" rhs="//@rules.32/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="bA" outLinks="//@rules.32/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.104"/>
+      </els>
+      <els xsi:type="behavior:Object" id="bT" outLinks="//@rules.32/@patterns.0/@els.4" inLinks="//@rules.32/@patterns.0/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.117"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.32/@patterns.0/@els.0" target="//@rules.32/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffBranchAction/branches_Branch"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.32/@patterns.0/@els.6" inLinks="//@rules.32/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.101"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.32/@patterns.0/@els.1" target="//@rules.32/@patterns.0/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractBranchTransition/branchBehaviour_BranchTransition"/>
+      </els>
+      <els xsi:type="behavior:Object" id="stop" outLinks="//@rules.32/@patterns.0/@els.8" inLinks="//@rules.32/@patterns.0/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.98"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.32/@patterns.0/@els.3" target="//@rules.32/@patterns.0/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.32/@patterns.0/@els.8">
+        <sfs oclValue="true">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensSEFFToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.32/@patterns.0/@els.5" target="//@rules.32/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="bA" outLinks="//@rules.32/@patterns.1/@els.2 //@rules.32/@patterns.1/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.104"/>
+      </els>
+      <els xsi:type="behavior:Object" id="bT" outLinks="//@rules.32/@patterns.1/@els.4" inLinks="//@rules.32/@patterns.1/@els.2">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.117"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.32/@patterns.1/@els.0" target="//@rules.32/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMseffBranchAction/branches_Branch"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.32/@patterns.1/@els.6" inLinks="//@rules.32/@patterns.1/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.101"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.32/@patterns.1/@els.1" target="//@rules.32/@patterns.1/@els.3">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractBranchTransition/branchBehaviour_BranchTransition"/>
+      </els>
+      <els xsi:type="behavior:Object" id="stop" inLinks="//@rules.32/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.98"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.32/@patterns.1/@els.3" target="//@rules.32/@patterns.1/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMseffResourceDemandingBehaviour/steps_Behaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" inLinks="//@rules.32/@patterns.1/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.185"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.32/@patterns.1/@els.0" target="//@rules.32/@patterns.1/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMseffAbstractAction/token"/>
+      </els>
+    </patterns>
+  </rules>
+  <rules xsi:type="behavior:AtomicRule" name="LoopStop2StartUM" lhs="//@rules.33/@patterns.0" rhs="//@rules.33/@patterns.1" maxDuration="0">
+    <patterns name="LHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.33/@patterns.0/@els.3 //@rules.33/@patterns.0/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.40"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.33/@patterns.0/@els.4" inLinks="//@rules.33/@patterns.0/@els.3">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Object" id="stop" outLinks="//@rules.33/@patterns.0/@els.6" inLinks="//@rules.33/@patterns.0/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.41"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.33/@patterns.0/@els.0" target="//@rules.33/@patterns.0/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelLoop/bodyBehaviour_Loop"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.33/@patterns.0/@els.1" target="//@rules.33/@patterns.0/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/actions_ScenarioBehaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="loopT" inLinks="//@rules.33/@patterns.0/@els.6 //@rules.33/@patterns.0/@els.9">
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSToken/completed"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.193"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.33/@patterns.0/@els.2" target="//@rules.33/@patterns.0/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.33/@patterns.0/@els.9" inLinks="//@rules.33/@patterns.0/@els.8">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.33/@patterns.0/@els.0" target="//@rules.33/@patterns.0/@els.7">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.33/@patterns.0/@els.7" target="//@rules.33/@patterns.0/@els.5">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensUSToken/loopToken"/>
+      </els>
+    </patterns>
+    <patterns name="RHS">
+      <els xsi:type="behavior:Object" id="loop" outLinks="//@rules.33/@patterns.1/@els.3 //@rules.33/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.40"/>
+      </els>
+      <els xsi:type="behavior:Object" id="scBeh" outLinks="//@rules.33/@patterns.1/@els.4" inLinks="//@rules.33/@patterns.1/@els.3">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.37"/>
+      </els>
+      <els xsi:type="behavior:Object" id="stop" inLinks="//@rules.33/@patterns.1/@els.4">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.41"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.33/@patterns.1/@els.0" target="//@rules.33/@patterns.1/@els.1">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelLoop/bodyBehaviour_Loop"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.33/@patterns.1/@els.1" target="//@rules.33/@patterns.1/@els.2">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelScenarioBehaviour/actions_ScenarioBehaviour"/>
+      </els>
+      <els xsi:type="behavior:Object" id="t" outLinks="//@rules.33/@patterns.1/@els.8" inLinks="//@rules.33/@patterns.1/@els.6">
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.189"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.33/@patterns.1/@els.0" target="//@rules.33/@patterns.1/@els.5">
+        <ref href="../syntax/flatten.ecore#//PCMusagemodelAbstractUserAction/token"/>
+      </els>
+      <els xsi:type="behavior:Object" id="loopT" inLinks="//@rules.33/@patterns.1/@els.8">
+        <sfs oclValue="loopT.iterations - 1">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSLoopToken/iterations"/>
+        </sfs>
+        <sfs oclValue="false">
+          <sf href="../syntax/flatten.ecore#//TOKENtokensUSLoopToken/started"/>
+        </sfs>
+        <classGD href="../syntax/ConcreteSyntax.gcs#//@packagesGD.0/@classesGD.193"/>
+      </els>
+      <els xsi:type="behavior:Link" src="//@rules.33/@patterns.1/@els.5" target="//@rules.33/@patterns.1/@els.7">
+        <ref href="../syntax/flatten.ecore#//TOKENtokensUSToken/loopToken"/>
+      </els>
+    </patterns>
+  </rules>
+</behavior:Behavior>

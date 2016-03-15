@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pcmflatten="pcmflatten/1.0">
+  <pcmflatten:PCMusagemodelUsageModel>
+    <usageScenario_UsageModel id="_LPnI8CHdEd6lJo4DCALHMw" entityName="defaultUsageScenario">
+      <scenarioBehaviour_UsageScenario id="_LPwS4CHdEd6lJo4DCALHMw" entityName="defaultUsageScenarioBehaviour">
+        <actions_ScenarioBehaviour xsi:type="pcmflatten:PCMusagemodelStart" id="_LPwS4SHdEd6lJo4DCALHMw" successor="_Rr7aIHnTEeOBarAp0jPAaA"/>
+        <actions_ScenarioBehaviour xsi:type="pcmflatten:PCMusagemodelStop" id="_LPwS4iHdEd6lJo4DCALHMw" predecessor="_Rr7aIHnTEeOBarAp0jPAaA"/>
+        <actions_ScenarioBehaviour xsi:type="pcmflatten:PCMusagemodelDelay" id="_Rr7aIHnTEeOBarAp0jPAaA" entityName="anyDelay" successor="_LPwS4iHdEd6lJo4DCALHMw" predecessor="_LPwS4SHdEd6lJo4DCALHMw">
+          <timeSpecification_Delay specification="5"/>
+        </actions_ScenarioBehaviour>
+      </scenarioBehaviour_UsageScenario>
+      <workload_UsageScenario xsi:type="pcmflatten:PCMusagemodelOpenWorkload">
+        <interArrivalTime_OpenWorkload specification="1"/>
+      </workload_UsageScenario>
+    </usageScenario_UsageModel>
+  </pcmflatten:PCMusagemodelUsageModel>
+  <pcmflatten:PCMresourceenvironmentResourceEnvironment>
+    <resourceContainer_ResourceEnvironment id="_B0aZ0CHdEd6lJo4DCALHMw" entityName="appserver">
+      <activeResourceSpecifications_ResourceContainer id="_ssJ0QYr-EeG0c6Q1F-wA1Q"/>
+    </resourceContainer_ResourceEnvironment>
+  </pcmflatten:PCMresourceenvironmentResourceEnvironment>
+  <pcmflatten:PCMrepositoryRepository id="_dqFLECHbEd6tG9VclJz3cw" entityName="defaultRepository"/>
+  <pcmflatten:PCMallocationAllocation id="_JiPBICHdEd6lJo4DCALHMw" entityName="defaultAllocation" targetResourceEnvironment_Allocation="/1" system_Allocation="_84D0kCHcEd6lJo4DCALHMw">
+    <allocationContexts_Allocation id="_KCkHACHdEd6lJo4DCALHMw" entityName="Allocation_Assembly_AComponent &lt;AComponent> &lt;AComponent>" resourceContainer_AllocationContext="_B0aZ0CHdEd6lJo4DCALHMw" assemblyContext_AllocationContext="_9c3KwCHcEd6lJo4DCALHMw"/>
+  </pcmflatten:PCMallocationAllocation>
+  <pcmflatten:PCMsystemSystem id="_84D0kCHcEd6lJo4DCALHMw" entityName="defaultSystem">
+    <assemblyContexts__ComposedStructure id="_9c3KwCHcEd6lJo4DCALHMw" entityName="Assembly_AComponent &lt;AComponent>"/>
+    <connectors__ComposedStructure xsi:type="pcmflatten:PCMcompositionProvidedDelegationConnector" id="__VHF0CHcEd6lJo4DCALHMw" entityName="ProvDelegation Provided_AnInterface -> Provided_AnInterface_AComponent" outerProvidedRole_ProvidedDelegationConnector="_-r1fUCHcEd6lJo4DCALHMw" assemblyContext_ProvidedDelegationConnector="_9c3KwCHcEd6lJo4DCALHMw"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="pcmflatten:PCMrepositoryOperationProvidedRole" id="_-r1fUCHcEd6lJo4DCALHMw" entityName="Provided_AnInterface"/>
+  </pcmflatten:PCMsystemSystem>
+</xmi:XMI>

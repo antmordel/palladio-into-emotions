@@ -1,0 +1,399 @@
+fmod PALLADIO-GRAMMAR is
+	pr QID-LIST * ( --- Same renamings as in mOdCL
+               op _|_   : Nat Nat -> Nat  to _|N_,    
+               op _xor_ : Nat Nat -> Nat to _nxor_,   
+               op _<_   : Nat Nat -> Bool to _<N_,    
+               op _<=_  : Nat Nat -> Bool to _<=N_,   
+               op _>_   : Nat Nat -> Bool to _>N_,    
+               op _>=_  : Nat Nat -> Bool to _>=N_,   
+               op _*_   : Nat Nat -> Nat to _*N_,     
+               op _+_   : Nat Nat -> Nat to _+N_,
+               op _<_  : String String -> Bool to _ltS_,   
+               op _<=_ : String String -> Bool to _leqS_,   
+               op _>_  : String String -> Bool to _gtS_,   
+               op _>=_ : String String -> Bool to _geqS_,  
+               op _+_  : String String -> String to _++_,
+               --- Renamings of Qid
+               op string : Qid -> String to toString,
+               op nil : -> QidList to nilQL) .
+	sort Exp Variable VariableReference Characterization ListPairs Pair Token .
+	subsort Token < Exp .
+	subsort Pair < ListPairs .
+	
+	op vble : Qid -> Variable
+		[special
+		  (id-hook Bubble (1 1)
+		   op-hook qidSymbol (<Qids> : ~> Qid))] .
+    
+    op cht : Qid -> Characterization
+		[special
+		  (id-hook Bubble (1 1)
+		   op-hook qidSymbol (<Qids> : ~> Qid))] .
+
+    op vr : Qid -> VariableReference 
+        [special
+          (id-hook Bubble (1 1)
+           op-hook qidSymbol (<Qids> : ~> Qid))] .
+		   
+    op t : Qid -> Token
+		[special
+		  (id-hook Bubble (1 1)
+		   op-hook qidSymbol (<Qids> : ~> Qid))] .
+			
+	op _._ : Variable Characterization -> Exp [prec 31] .
+	op _._._ : Variable VariableReference Characterization -> Exp [prec 31] .
+	op _*_ : Exp Exp -> Exp [prec 33] .
+    op _+_ : Exp Exp -> Exp [prec 35] .
+	op Exp`(_`) : Exp -> Exp .
+	op IntPMF`[_`] : ListPairs -> Exp .
+	op __ : ListPairs ListPairs -> ListPairs [assoc] .
+	op `(_;_`) : Token Token -> Pair .
+	op DoublePDF`[_`] : ListPairs -> Exp .
+
+endfm
+
+mod LEX-ANALYZER is
+  
+  pr MGMETA-LEVEL .
+  pr OCL-INT .
+  
+  ---- I will use my lists because sort conflicts
+  sort MyFindResultList .
+  subsort FindResult < MyFindResultList .
+  
+  op nilFindResult : -> MyFindResultList [ctor] .
+  op _::FR_ : MyFindResultList MyFindResultList -> MyFindResultList [assoc id: nilFindResult] .
+  
+  var N N' : Int .
+  var QIL : QidList .
+  var S S' Token : String .
+  var L : MyFindResultList .
+  var FR : FindResult .
+  
+  op preParsing : String -> QidList .
+  op preParsing : String QidList -> QidList .
+  op preParsingListValues : String -> QidList .
+  
+  eq preParsing(S) = preParsing(removeSpaces(S), nil) .
+  eq preParsing("", QIL) = QIL .
+  
+  op removeSpaces : String -> String .
+  ceq removeSpaces(S)
+    = if FR == notFound
+      then S
+      else substr(S, 0, FR) ++ if FR <N length(S)
+       				           then removeSpaces(substr(S, FR +N 1, length(S)))
+       				           else ""
+       				           fi
+      fi
+     if FR := find(S, " ", 0) .
+     
+  eq preParsingListValues("") = nil .
+  eq preParsingListValues(S)
+    = if S == "" 
+      then nil
+      else
+        '`( preParsing(substr(S, 1, find(S, ";", 1) -N 1)) '; 
+        preParsing( substr(S, find(S, ";", 1) +N 1, (find(S, ")", 1) -N find(S, ";", 1)) -N 1)) '`)
+        preParsingListValues(substr(S, find(S, ")", 0) +N 1, length(S)))
+      fi .
+    
+  ceq [ExpDistr] : preParsing(S, QIL)
+    = QIL 'Exp '`( preParsing(Res:String) '`)
+    if find(S, "Exp(", 0) == 0 
+      /\ Res:String := substr(S, 4, sd(sd(length(S), 4), 1)) .
+      
+  ceq [IntPMFDistr] : preParsing(S, QIL)
+    = QIL 'IntPMF '`[ preParsingListValues(Res:String) '`]
+    if find(S, "IntPMF[", 0) == 0 
+      /\ Res:String := substr(S, 7, sd(sd(length(S), 7), 1)) .
+      
+  ceq [DoublePDFDistr] : preParsing(S, QIL)
+    = QIL 'DoublePDF '`[ preParsingListValues(Res:String) '`]
+    if find(S, "DoublePDF[", 0) == 0 
+      /\ Res:String := substr(S, 10, sd(sd(length(S), 10), 1)) .
+  
+  ceq [general-case] : preParsing(S, QIL)
+    = if N == length(S)
+      ---- Last token is not included
+      then preParsing(substr(S, N +N 1, length(S)), QIL qid(S'))
+      else preParsing(substr(S, N +N 1, length(S)), QIL qid(S') qid(Token))
+      fi
+  if  N := nextToken(S)
+   /\ S' := substr(S, 0, N) 
+   /\ Token := substr(S, N, 1) [owise] .
+   
+  op nextToken : String -> Int .
+  op minToken : MyFindResultList -> Int .
+  
+  ceq nextToken(S)
+    = if N =/= -1 
+      then
+        if substr(S, N, 1) == "." and ascii(substr(S, N +N 1, 1)) <=N 57 and ascii(substr(S, N +N 1, 1)) >=N 48
+        then N +N 1 +N nextToken(substr(S, N +N 1, sd(length(S), N)))
+        else N
+        fi
+      else length(S)
+      fi
+   if N := minToken(find(S, " ", 0) ::FR
+                    find(S, ".", 0) ::FR
+                    find(S, "*", 0) ::FR
+                    find(S, "+", 0)) .
+   
+   eq minToken(nilFindResult) = -1 .
+   eq minToken(notFound) = -1 .
+   eq minToken(N) = N .
+   eq minToken(N ::FR notFound ::FR L) = minToken(N ::FR L) .
+   eq minToken(notFound ::FR L) = minToken(L) .
+   eq minToken(notFound ::FR N ::FR L) = minToken(N ::FR L) .
+   eq minToken(N ::FR N' ::FR L)
+     = if N >N N' 
+       then minToken(N' ::FR L) 
+       else minToken(N ::FR L)
+       fi .
+
+endm
+
+
+---- mod TEST is
+----  pr @PCMFLATTEN@ .
+---- endm
+
+mod PALLADIO-EVAL-EXP is
+  pr @PCMFLATTEN@ .
+  pr MGBEHAVIORMM .
+  ---pr QID-LIST .
+  ---pr MYQID .
+  pr MGDISTRIBUTIONS .
+  pr LEX-ANALYZER  .
+	           
+  ---pr META-LEVEL .
+  ---pr CONVERSION .
+  
+  sort PalladioParsingError .
+  op palladioError : -> PalladioParsingError [ctor] .
+  
+  var QIL : QidList .
+  var S S' S'' VN CN VCH VR : String .
+  var N AUX RS Random CurrentP : Int .
+  var Acc : Rat .
+  var E1 E2 L Pair1 Pair2 : GroundTerm .
+  var Ctx Chrs : Set .
+  var M : @Model .
+  var Ct V1 V2 : Constant .
+  var V V' V'' V''' V'''' : Oid .
+  var MM : @Metamodel .
+  var RSet RSet' : MSet{OCL-Exp} .
+  var OBJSET : Set{@Object} .
+  var SFS SFS' SFS'' SFS''' : Set{@StructuralFeatureInstance} .
+  var Left CurrentV : Float .
+  
+  op parsePallExp : String Set @Model Int -> Float .
+  op parsePallExp : QidList Set @Model Int -> Float . ---- it could be any type, but in a naive solution we'll use int.
+  ---- 1st: List of tokens which conform the expression
+  ---- 2nd: Context (references to VariableCharacterizations)
+  ---- 3rd: Model used to navigate to VariableUsages
+  
+  eq parsePallExp(S, Ctx, M, RS) = parsePallExp(preParsing(S), Ctx, M, RS) .
+  
+  eq parsePallExp(QIL, Ctx, M, RS) 
+    = evalPall(getTerm(metaParse(upModule('PALLADIO-GRAMMAR, false), QIL, 'Exp )), Ctx, M, RS) .
+  						    
+  op evalPall : Term Set @Model Int -> Float .
+
+  eq evalPall(_`[_`]('t, C:Constant), Ctx, M, RS) = getValue(downQid(C:Constant)) .
+
+  eq [multiplication] : evalPall(_`[_`]('_*_, (E1 , E2)) , Ctx, M, RS)
+   	= evalPall(E1, Ctx, M, RS) *N evalPall(E2, Ctx, M, RS) .
+ 
+  eq [addition] : evalPall(_`[_`]('_+_, (E1 , E2)) , Ctx, M, RS)
+   	= evalPall(E1, Ctx, M, RS) + evalPall(E2, Ctx, M, RS) .
+   	
+  ceq [evalVariable] : evalPall(_`[_`]('_._, 
+                               (_`[_`]('vble, CV:Constant), 
+                                _`[_`]('cht, CC:Constant))), Ctx, M, RS) 
+    = if aux:OCL-Type :: Float 
+      then rat(aux:OCL-Type)
+      else parsePallExp(aux:OCL-Type, Ctx, M, RS)
+      fi
+      ---- aux:OCL-Type
+    if aux:OCL-Type := ---- parsePallExp(getVariable(toString(downQid(CV:Constant)), toString(downQid(CC:Constant)), Ctx, M), Ctx, M, RS) 
+          getVariable(toString(downQid(CV:Constant)), toString(downQid(CC:Constant)), Ctx, M) .
+
+  ceq [evalINNERVariable] : evalPall(_`[_`]('_._._,
+                                    (_`[_`]('vble, CV:Constant),
+                                     _`[_`]('vr, VR:Constant),
+                                     _`[_`]('cht, CC:Constant))), Ctx, M, RS) 
+    = if aux:OCL-Type :: Float 
+      then rat(aux:OCL-Type)
+      else parsePallExp(aux:OCL-Type, Ctx, M, RS)
+      fi     
+    if aux:OCL-Type := getVariable(toString(downQid(CV:Constant)), toString(downQid(VR:Constant)), toString(downQid(CC:Constant)), Ctx, M) .
+  
+  eq [expDistribution] : evalPall(_`[_`]('Exp`(_`), (_`[_`]('t, C:Constant))), Ctx, M, RS)  = expDistrF(getFloat(downQid(C:Constant)), RS) .
+  
+  ---- ----------------- ----
+  ---- IntPMF evaluation ----
+  ---- ----------------- ----
+  eq [IntPMF] : evalPall(_`[_`]('IntPMF`[_`], L), Ctx, M, RS) = evalIntPMF(L, RS) .
+  
+  op evalIntPMF : GroundTerm Int -> Int .
+  op evalIntPMF : GroundTerm Rat Int -> Int .
+  ---- 1st int: accumulator
+  ---- 2nd int: generated random
+  
+  eq evalIntPMF(L, RS) = evalIntPMF(L, 0, unifDistr(0, 1000, RS)) .
+  ---- eq [eq-evalIntPMF] : evalIntPMF(_`[_`]('__, _`,_(_`[_`]('`(_;_`), 
+  ----                               _`,_(
+  ----                                 _`[_`]('t, V1),
+  ----                                 _`[_`]('t, V2))), L)), Acc, Random)
+  ----     = if _+N_(Acc, _*N_(getValue(downQid(V2)), 1000)) > Random 
+  ----       then getValue(downQid(V1))
+  ----       else evalIntPMF(L, _+N_(Acc, _*N_(getValue(downQid(V2)), 1000)), Random)
+  ----       fi 
+  ----    [print "evalInt " V1] .
+  ceq evalIntPMF(_`[_`]('__,  _`,_(_`[_`]('`(_;_`),
+                 _`,_(
+                   _`[_`]('t, V1),
+                   _`[_`]('t, V2))), L)), Acc, Random)
+    = if newAcc:Rat > Random
+      then getValue(downQid(V1))
+      else evalIntPMF(L, newAcc:Rat, Random)
+      fi
+    if newAcc:Rat := Acc +N (getValue(downQid(V2)) *N 1000) .
+     ---- [print " - evalIntPMF with Acc: " Acc "\n\t and L: " L "\n\t newAcc: " newAcc:Rat] .
+  
+   eq evalIntPMF(_`[_`]('`(_;_`), _`,_(_`[_`]('t, V1), _`[_`]('t, V2))), Acc, Random)
+    ---- We suppose that if there is just one (remaining) value, the expression is well-formed and that value is returned.
+     = getValue(downQid(V1)) .
+    
+  ---- -------------------- ----
+  ---- DoublePDF evaluation ----
+  ---- -------------------- ----
+  eq [DoublePDF] : evalPall(_`[_`]('DoublePDF`[_`], L), Ctx, M, RS) = evalDoublePDF(L, RS) .
+  op evalDoublePDF : GroundTerm Int -> Rat .
+  op evalDoublePDF : GroundTerm Int Int Float -> Rat .
+  ---- 1st int: accumulator
+  ---- 2nd int: generated random
+  ---- 3rd float: left interval
+  op sampleDoublePDF : Float Int Int Int Float -> Rat .
+  
+  eq evalDoublePDF(L, RS) = evalDoublePDF(L, 0, unifDistr(0, 1000, RS), 0.0) .
+  
+  eq evalDoublePDF(_`[_`]('__, _`,_(_`[_`]('`(_;_`), 
+                              _`,_(
+                                _`[_`]('t, V1),
+                                _`[_`]('t, V2))), L)), Acc, Random, Left)
+    = if rat(_+_(Acc, _*_(getValue(downQid(V2)), 1000))) > Random 
+      then sampleDoublePDF(getValue(downQid(V1)), rat(_*_(getValue(downQid(V2)), 1000)), Acc, Random, Left)
+      else evalDoublePDF(L, rat(_+_(Acc, _*_(getValue(downQid(V2)), 1000))), Random, getValue(downQid(V1)))
+      fi .
+  
+  eq evalDoublePDF(_`[_`]('`(_;_`), _`,_(_`[_`]('t, V1), _`[_`]('t, V2))), Acc, Random, Left)
+    ---- We suppose that if there is just one (remaining) value, the expression is well-formed and that value is returned.
+    = sampleDoublePDF(getValue(downQid(V1)), rat(_*_(getValue(downQid(V2)), 1000)), Acc, Random, Left) .
+  
+  eq sampleDoublePDF(CurrentV, CurrentP, Acc, Random, Left)
+    = rat(_+_(_/_(_*_(_-_(Random, Acc), _-_(CurrentV, Left)), CurrentP), Left)) .
+  ---- if R:Float := _+_(_/_(_*_(_-_(Random, Acc), _-_(CurrentV, Left)), CurrentP), Left)
+  ----   [print "{ Random: " Random ", CurrentV: " CurrentV ", CurrentP: " CurrentP ", Left: " Left ", Result: " R:Float " }" ] .
+   
+   
+   
+  ---- Auxiliary functions to get variables ----
+  op getVariable : String String Set @Model -> String .
+  op getVariable : String String String Set @Model -> String .
+  ---- var. name
+  ---- characterization name
+  ---- context
+  ---- model
+  ceq [VALUE-Characterization] : getVariable(VN, "VALUE" , Ctx, 
+    (MM{ < V : PCMparameterVariableUsage@pcmflatten | 
+           namedReference@-@@-@VariableUsage@PCMparameterVariableUsage@pcmflatten : V''' #
+           variableCharacterisation@-@VariableUsage@PCMparameterVariableUsage@pcmflatten : Chrs #
+           SFS >
+         < V''' : STOEXstoexVariableReference@pcmflatten |
+    	   referenceName@STOEXstoexAbstractNamedReference@pcmflatten : CN >
+         < V' : PCMparameterVariableCharacterisation@pcmflatten |
+           type@PCMparameterVariableCharacterisation@pcmflatten : VALUE@VariableCharacterisationType@pcmflatten #
+           specification@-@VariableCharacterisation@PCMparameterVariableCharacterisation@pcmflatten : V'' #
+           SFS' >
+         < V'' : PCMcorePCMRandomVariable@pcmflatten |
+           specification@STOEXstoexRandomVariable@pcmflatten : VSPEC:String #
+           SFS'' >
+         OBJSET})) = VSPEC:String
+    if V' in Chrs and V in Ctx . 
+    ---- [print "entra :: " VSPEC:String] .
+
+  ceq [BYTESIZE-VarReference-Characterization] : getVariable(VN, VR, "BYTESIZE", Ctx, 
+    (MM{ < V'' : PCMparameterVariableUsage@pcmflatten |
+            namedReference@-@@-@VariableUsage@PCMparameterVariableUsage@pcmflatten : V #
+            variableCharacterisation@-@VariableUsage@PCMparameterVariableUsage@pcmflatten : Chrs # 
+            SFS' > 
+         < V : STOEXstoexNamespaceReference@pcmflatten | 
+            referenceName@STOEXstoexAbstractNamedReference@pcmflatten : VN #
+            innerReference@-@NamespaceReference@STOEXstoexNamespaceReference@pcmflatten : V' >
+         < V' : STOEXstoexVariableReference@pcmflatten | 
+            referenceName@STOEXstoexAbstractNamedReference@pcmflatten : VR # SFS > 
+         < V''' : PCMparameterVariableCharacterisation@pcmflatten |
+            specification@-@VariableCharacterisation@PCMparameterVariableCharacterisation@pcmflatten : V'''' # SFS'' > 
+         < V'''' : PCMcorePCMRandomVariable@pcmflatten |
+            specification@STOEXstoexRandomVariable@pcmflatten : VSPEC:String # SFS''' >
+         OBJSET})) = VSPEC:String
+    if V'' in Ctx and V''' in Chrs . 
+
+  ceq [LocalVariable-Characterization] : getVariable(VN, "NUMBER_OF_ELEMENTS", Ctx,
+    (MM{ < V : PCMparameterVariableUsage@pcmflatten | 
+           namedReference@-@@-@VariableUsage@PCMparameterVariableUsage@pcmflatten : V' #
+           variableCharacterisation@-@VariableUsage@PCMparameterVariableUsage@pcmflatten : Chrs # SFS >
+         < V' : STOEXstoexVariableReference@pcmflatten | 
+           referenceName@STOEXstoexAbstractNamedReference@pcmflatten : VN >
+         < V'' : PCMparameterVariableCharacterisation@pcmflatten | 
+           type@PCMparameterVariableCharacterisation@pcmflatten : NUMBER@-@OF@-@ELEMENTS@VariableCharacterisationType@pcmflatten #
+           specification@-@VariableCharacterisation@PCMparameterVariableCharacterisation@pcmflatten : V''' # SFS' >
+         < V''' : PCMcorePCMRandomVariable@pcmflatten |
+           specification@STOEXstoexRandomVariable@pcmflatten : VSPEC:String # SFS'' >
+         OBJSET})) = VSPEC:String
+    if V in Ctx and V'' in Chrs .
+    
+  ceq [NUMBEROFELEMENTS-Characterization] : getVariable(VN, "NUMBER_OF_ELEMENTS" , Ctx, 
+    (MM{ < V : PCMparameterVariableUsage@pcmflatten | 
+           namedReference@-@@-@VariableUsage@PCMparameterVariableUsage@pcmflatten : V''' #
+           variableCharacterisation@-@VariableUsage@PCMparameterVariableUsage@pcmflatten : Chrs #
+           SFS >
+         < V''' : STOEXstoexVariableReference@pcmflatten |
+           referenceName@STOEXstoexAbstractNamedReference@pcmflatten : CN >
+         < V' : PCMparameterVariableCharacterisation@pcmflatten |
+           type@PCMparameterVariableCharacterisation@pcmflatten : NUMBER@-@OF@-@ELEMENTS@VariableCharacterisationType@pcmflatten #
+           specification@-@VariableCharacterisation@PCMparameterVariableCharacterisation@pcmflatten : V'' #
+           SFS' >
+         < V'' : PCMcorePCMRandomVariable@pcmflatten |
+           specification@STOEXstoexRandomVariable@pcmflatten : VSPEC:String #
+           SFS'' >
+         OBJSET})) = VSPEC:String
+    if V in Ctx and V' in Chrs [print VN ".NUMBER_OF_ELEMENTS := " VSPEC:String] . 
+
+ 
+  
+  op getValue : Qid -> Rat .
+  eq getValue(Q:Qid) = if getRat(Q:Qid) :: Rat 
+                       then getRat(Q:Qid)
+                       else rat(getFloat(Q:Qid))
+                       fi .
+  
+  op getRat : Qid -> [Rat] .
+  eq getRat(Q:Qid) = string2rat(toString(Q:Qid), 10) .
+  
+  op getFloat : Qid -> [Float] .
+  ceq getFloat(Q:Qid) = if find(S, ".", 0) == notFound
+                        then string2float(toString(Q:Qid) + ".0")
+                        else string2float(toString(Q:Qid))
+                        fi
+    if S := toString(Q:Qid) .
+  
+  ----op parseToken : 
+  op downQid : Term -> [Qid] [memo] .
+  eq downQid(Ct) 
+    = qid(substr(toString(getName(Ct)), 1, length(toString(getName(Ct))))) .
+
+endm

@@ -1,0 +1,8 @@
+[1] "MinimumExample with DoublePDF and OpenWorkload = 2"
+
+	Two-sample Kolmogorov-Smirnov test
+
+data:  minimumPCM[, 1] and minimumEmotions[, 1]
+D = 0.040522, p-value = 0.07501
+alternative hypothesis: two-sided
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pcmflatten="pcmflatten/1.0">
+  <pcmflatten:PCMusagemodelUsageModel>
+    <usageScenario_UsageModel id="_LPnI8CHdEd6lJo4DCALHMw" entityName="MediaStore">
+      <scenarioBehaviour_UsageScenario id="_LPwS4CHdEd6lJo4DCALHMw" entityName="defaultUsageScenarioBehaviour">
+        <actions_ScenarioBehaviour xsi:type="pcmflatten:PCMusagemodelStart" id="_LPwS4SHdEd6lJo4DCALHMw" successor="_NC8HwCHdEd6lJo4DCALHMw"/>
+        <actions_ScenarioBehaviour xsi:type="pcmflatten:PCMusagemodelStop" id="_LPwS4iHdEd6lJo4DCALHMw" predecessor="_NC8HwCHdEd6lJo4DCALHMw"/>
+        <actions_ScenarioBehaviour xsi:type="pcmflatten:PCMusagemodelEntryLevelSystemCall" id="_NC8HwCHdEd6lJo4DCALHMw" successor="_LPwS4iHdEd6lJo4DCALHMw" predecessor="_LPwS4SHdEd6lJo4DCALHMw" providedRole_EntryLevelSystemCall="_-r1fUCHcEd6lJo4DCALHMw" operationSignature__EntryLevelSystemCall="_KjhikgzkEeCFg86gxKwVPw"/>
+      </scenarioBehaviour_UsageScenario>
+      <workload_UsageScenario xsi:type="pcmflatten:PCMusagemodelOpenWorkload">
+        <interArrivalTime_OpenWorkload specification="2"/>
+      </workload_UsageScenario>
+    </usageScenario_UsageModel>
+  </pcmflatten:PCMusagemodelUsageModel>
+  <pcmflatten:PCMresourcetypeResourceRepository>
+    <resourceInterfaces__ResourceRepository id="_tw_Q8E5CEeCUKeckjJ_n-w" entityName="CpuInterface">
+      <resourceSignatures__ResourceInterface id="_wF22kE5CEeCUKeckjJ_n-w" entityName="process" resourceServiceId="1"/>
+    </resourceInterfaces__ResourceRepository>
+    <resourceInterfaces__ResourceRepository id="_xXv8QE5CEeCUKeckjJ_n-w" entityName="HddInterface">
+      <resourceSignatures__ResourceInterface id="_ygMyEE5CEeCUKeckjJ_n-w" entityName="read" resourceServiceId="1"/>
+      <resourceSignatures__ResourceInterface id="_zUFtIE5CEeCUKeckjJ_n-w" entityName="write" resourceServiceId="2"/>
+    </resourceInterfaces__ResourceRepository>
+    <schedulingPolicies__ResourceRepository id="ProcessorSharing" entityName="Processor Sharing"/>
+    <schedulingPolicies__ResourceRepository id="FCFS" entityName="First-Come-First-Serve"/>
+    <schedulingPolicies__ResourceRepository id="Delay" entityName="Delay"/>
+    <availableResourceTypes_ResourceRepository xsi:type="pcmflatten:PCMresourcetypeProcessingResourceType" id="_oro4gG3fEdy4YaaT-RYrLQ" entityName="CPU" unitSpecification="work units per second">
+      <resourceProvidedRoles__ResourceInterfaceProvidingEntity id="_patY8E5dEeCg1tUg4V9tRw" entityName="ResourceProvidedRole_CpuInterface_CPU" providedResourceInterface__ResourceProvidedRole="_tw_Q8E5CEeCUKeckjJ_n-w"/>
+    </availableResourceTypes_ResourceRepository>
+    <availableResourceTypes_ResourceRepository xsi:type="pcmflatten:PCMresourcetypeCommunicationLinkResourceType" id="_o3sScH2AEdyH8uerKnHYug" entityName="LAN" unitSpecification="byte per second"/>
+    <availableResourceTypes_ResourceRepository xsi:type="pcmflatten:PCMresourcetypeProcessingResourceType" id="_BIjHoQ3KEdyouMqirZIhzQ" entityName="HDD" unitSpecification="byte per second">
+      <resourceProvidedRoles__ResourceInterfaceProvidingEntity id="_tCR8kE5dEeCg1tUg4V9tRw" entityName="ResourceProvidedRole_HddInterface_HDD" providedResourceInterface__ResourceProvidedRole="_xXv8QE5CEeCUKeckjJ_n-w"/>
+    </availableResourceTypes_ResourceRepository>
+    <availableResourceTypes_ResourceRepository xsi:type="pcmflatten:PCMresourcetypeProcessingResourceType" id="_nvHX4KkREdyEA_b89s7q9w" entityName="DELAY" unitSpecification="seconds">
+      <resourceProvidedRoles__ResourceInterfaceProvidingEntity id="_x68UoE5dEeCg1tUg4V9tRw" entityName="ResourceProvidedRole_CpuInterface_DELAY" providedResourceInterface__ResourceProvidedRole="_tw_Q8E5CEeCUKeckjJ_n-w"/>
+    </availableResourceTypes_ResourceRepository>
+  </pcmflatten:PCMresourcetypeResourceRepository>
+  <pcmflatten:PCMresourceenvironmentResourceEnvironment>
+    <resourceContainer_ResourceEnvironment id="_GAeeUCpXEeKNWc2UWjbmuw" entityName="AppServer">
+      <activeResourceSpecifications_ResourceContainer id="_KFRwgCpXEeKNWc2UWjbmuw" schedulingPolicy="ProcessorSharing" activeResourceType_ActiveResourceSpecification="_oro4gG3fEdy4YaaT-RYrLQ" numberOfReplicas="2">
+        <processingRate_ProcessingResourceSpecification specification="1.0"/>
+      </activeResourceSpecifications_ResourceContainer>
+    </resourceContainer_ResourceEnvironment>
+  </pcmflatten:PCMresourceenvironmentResourceEnvironment>
+  <pcmflatten:PCMrepositoryRepository id="_Ls3VgHv_Edub45jJKtm_Dg" entityName="PrimitiveDataTypes" repositoryDescription="">
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryPrimitiveDataType"/>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryPrimitiveDataType" type="STRING"/>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryPrimitiveDataType" type="BOOL"/>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryPrimitiveDataType" type="DOUBLE"/>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryPrimitiveDataType" type="CHAR"/>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryPrimitiveDataType" type="BYTE"/>
+  </pcmflatten:PCMrepositoryRepository>
+  <pcmflatten:PCMrepositoryRepository id="_dqFLECHbEd6tG9VclJz3cw" entityName="MediaStoreRepository">
+    <components__Repository xsi:type="pcmflatten:PCMrepositoryBasicComponent" id="_os1t4CHbEd62GabW1zGSBw" entityName="WebGUI">
+      <providedRoles_InterfaceProvidingEntity xsi:type="pcmflatten:PCMrepositoryOperationProvidedRole" id="_qZKs0CHbEd62GabW1zGSBw" entityName="Provided_IHTTP_WebGUI" providedInterface__OperationProvidedRole="_n7g-oCHbEd62GabW1zGSBw"/>
+      <requiredRoles_InterfaceRequiringEntity xsi:type="pcmflatten:PCMrepositoryOperationRequiredRole" id="_pJlMwBwREeWZC418QByrUw" entityName="Required_IMediaStore_WebGUI" requiredInterface__OperationRequiredRole="_HfEZ8BwREeWZC418QByrUw"/>
+      <serviceEffectSpecifications__BasicComponent xsi:type="pcmflatten:PCMseffResourceDemandingSEFF" id="12345" describedService__SEFF="_KjhikgzkEeCFg86gxKwVPw">
+        <steps_Behaviour xsi:type="pcmflatten:PCMseffStartAction" id="_qZUd0CHbEd62GabW1zGSBw" successor_AbstractAction="_qZUd0SHbEd62GabW1zGSBw"/>
+        <steps_Behaviour xsi:type="pcmflatten:PCMseffStopAction" id="_qZUd0SHbEd62GabW1zGSBw" predecessor_AbstractAction="_qZUd0CHbEd62GabW1zGSBw"/>
+      </serviceEffectSpecifications__BasicComponent>
+    </components__Repository>
+    <interfaces__Repository xsi:type="pcmflatten:PCMrepositoryOperationInterface" id="_n7g-oCHbEd62GabW1zGSBw" entityName="IHTTP">
+      <signatures__OperationInterface id="_KjhikgzkEeCFg86gxKwVPw" entityName="downloadHTTP" returnType__OperationSignature="_KFjl_BwPEeWZC418QByrUw">
+        <parameters__OperationSignature dataType__Parameter="_3APsjBwPEeWZC418QByrUw" parameterName="desiredFiles"/>
+      </signatures__OperationInterface>
+    </interfaces__Repository>
+    <interfaces__Repository xsi:type="pcmflatten:PCMrepositoryOperationInterface" id="_HfEZ8BwREeWZC418QByrUw" entityName="IMediaStore">
+      <signatures__OperationInterface id="_KBfTYBwREeWZC418QByrUw" entityName="downloadFromDB" returnType__OperationSignature="_KFjl_BwPEeWZC418QByrUw">
+        <parameters__OperationSignature dataType__Parameter="_3APsjBwPEeWZC418QByrUw" parameterName="desiredFiles"/>
+      </signatures__OperationInterface>
+    </interfaces__Repository>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryCollectionDataType" id="_RbGQLRwPEeWZC418QByrUw" entityName="FILE"/>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryCollectionDataType" id="_KFjl_BwPEeWZC418QByrUw" entityName="FILELIST"/>
+    <dataTypes__Repository xsi:type="pcmflatten:PCMrepositoryCollectionDataType" id="_3APsjBwPEeWZC418QByrUw" entityName="ID_LIST"/>
+  </pcmflatten:PCMrepositoryRepository>
+  <pcmflatten:PCMallocationAllocation id="_JiPBICHdEd6lJo4DCALHMw" entityName="defaultAllocation" targetResourceEnvironment_Allocation="/2" system_Allocation="_84D0kCHcEd6lJo4DCALHMw">
+    <allocationContexts_Allocation id="_gmLeoCsoEeK79cj3OHITwQ" entityName="AllCtx_MediaStore" resourceContainer_AllocationContext="_GAeeUCpXEeKNWc2UWjbmuw" assemblyContext_AllocationContext="_9c3KwCHcEd6lJo4DCALHMw"/>
+  </pcmflatten:PCMallocationAllocation>
+  <pcmflatten:PCMsystemSystem id="_84D0kCHcEd6lJo4DCALHMw" entityName="MediaStore_System">
+    <assemblyContexts__ComposedStructure id="_9c3KwCHcEd6lJo4DCALHMw" entityName="AssCtx_WebGUI" encapsulatedComponent__AssemblyContext="_os1t4CHbEd62GabW1zGSBw"/>
+    <connectors__ComposedStructure xsi:type="pcmflatten:PCMcompositionProvidedDelegationConnector" id="__VHF0CHcEd6lJo4DCALHMw" entityName="ProvDelegation Provided_AnInterface -> Provided_AnInterface_AComponent" innerProvidedRole_ProvidedDelegationConnector="_qZKs0CHbEd62GabW1zGSBw" outerProvidedRole_ProvidedDelegationConnector="_-r1fUCHcEd6lJo4DCALHMw" assemblyContext_ProvidedDelegationConnector="_9c3KwCHcEd6lJo4DCALHMw"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="pcmflatten:PCMrepositoryOperationProvidedRole" id="_-r1fUCHcEd6lJo4DCALHMw" providedInterface__OperationProvidedRole="_n7g-oCHbEd62GabW1zGSBw"/>
+  </pcmflatten:PCMsystemSystem>
+</xmi:XMI>

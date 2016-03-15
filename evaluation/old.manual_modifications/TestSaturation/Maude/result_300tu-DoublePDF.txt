@@ -1,0 +1,732 @@
+		     \||||||||||||||||||/
+		   --- Welcome to Maude ---
+		     /||||||||||||||||||\
+	    Maude 2.7++ built: Sep  9 2014 14:55:11
+	    With additional hooks 
+	    Copyright 1997-2014 SRI International
+		   Mon May 25 18:18:55 2015
+Warning: sort declarations for operator if_then_else_fi failed preregularity
+    check on 16 out of 38958219 sort tuples. First such tuple is (Bool,
+    OclVoid, @Attribute).
+==========================================
+rewrite in TICKRULE : init(TESTSATURATION) .
+rewrites: 23114735 in 22740ms cpu (22740ms real) (1016479 rewrites/second)
+result ClockedSystem: {@pcmflatten@{
+<  '/0 : PCMusagemodelUsageModel@pcmflatten |
+    usageScenario@-@UsageModel@PCMusagemodelUsageModel@pcmflatten : Set{
+    '_LPnI8CHdEd6lJo4DCALHMw} #
+    userData@-@UsageModel@PCMusagemodelUsageModel@pcmflatten : Set{mt} > 
+<  '/0/@usageScenario_UsageModel.0/@workload_UsageScenario :
+    PCMusagemodelOpenWorkload@pcmflatten |
+    usageScenario@-@Workload@PCMusagemodelWorkload@pcmflatten :
+    '_LPnI8CHdEd6lJo4DCALHMw #
+    interArrivalTime@-@OpenWorkload@PCMusagemodelOpenWorkload@pcmflatten : '/0/@usageScenario_UsageModel.0/@workload_UsageScenario/@interArrivalTime_OpenWorkload # sandTimer@PCMusagemodelOpenWorkload@pcmflatten : '1 > 
+<  '/0/@usageScenario_UsageModel.0/@workload_UsageScenario/@interArrivalTime_OpenWorkload : PCMcorePCMRandomVariable@pcmflatten |
+    closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    '/0/@usageScenario_UsageModel.0/@workload_UsageScenario #
+    delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # specification@STOEXstoexRandomVariable@pcmflatten : "1" > 
+<  '/1 : PCMresourcetypeResourceRepository@pcmflatten | resourceInterfaces@-@@-@ResourceRepository@PCMresourcetypeResourceRepository@pcmflatten : Set{
+    '_tw_Q8E5CEeCUKeckjJ_n-w ; '_xXv8QE5CEeCUKeckjJ_n-w} # schedulingPolicies@-@@-@ResourceRepository@PCMresourcetypeResourceRepository@pcmflatten : Set{'Delay
+    ; 'FCFS ; 'ProcessorSharing} # availableResourceTypes@-@ResourceRepository@PCMresourcetypeResourceRepository@pcmflatten : Set{'_BIjHoQ3KEdyouMqirZIhzQ ;
+    '_nvHX4KkREdyEA_b89s7q9w ; '_o3sScH2AEdyH8uerKnHYug ;
+    '_oro4gG3fEdy4YaaT-RYrLQ} > 
+<  '/2 : PCMresourceenvironmentResourceEnvironment@pcmflatten | linkingResources@-@@-@ResourceEnvironment@PCMresourceenvironmentResourceEnvironment@pcmflatten
+    : Set{mt} # resourceContainer@-@ResourceEnvironment@PCMresourceenvironmentResourceEnvironment@pcmflatten : Set{'_B0aZ0CHdEd6lJo4DCALHMw} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" > 
+<  '/2/@resourceContainer_ResourceEnvironment.0/@activeResourceSpecifications_ResourceContainer.0/@processingRate_ProcessingResourceSpecification :
+    PCMcorePCMRandomVariable@pcmflatten |
+    closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null
+    # delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    '_ssJ0QYr-EeG0c6Q1F-wA1Q # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    specification@STOEXstoexRandomVariable@pcmflatten : "1" > 
+<  '/3/@dataTypes__Repository.0 : PCMrepositoryPrimitiveDataType@pcmflatten |
+    repository@-@@-@DataType@PCMrepositoryDataType@pcmflatten :
+    '_Ls3VgHv_Edub45jJKtm_Dg # type@PCMrepositoryPrimitiveDataType@pcmflatten :
+    INT@PrimitiveTypeEnum@pcmflatten > 
+<  '/3/@dataTypes__Repository.1 : PCMrepositoryPrimitiveDataType@pcmflatten |
+    repository@-@@-@DataType@PCMrepositoryDataType@pcmflatten :
+    '_Ls3VgHv_Edub45jJKtm_Dg # type@PCMrepositoryPrimitiveDataType@pcmflatten :
+    STRING@PrimitiveTypeEnum@pcmflatten > 
+<  '/3/@dataTypes__Repository.2 : PCMrepositoryPrimitiveDataType@pcmflatten |
+    repository@-@@-@DataType@PCMrepositoryDataType@pcmflatten :
+    '_Ls3VgHv_Edub45jJKtm_Dg # type@PCMrepositoryPrimitiveDataType@pcmflatten :
+    BOOL@PrimitiveTypeEnum@pcmflatten > 
+<  '/3/@dataTypes__Repository.3 : PCMrepositoryPrimitiveDataType@pcmflatten |
+    repository@-@@-@DataType@PCMrepositoryDataType@pcmflatten :
+    '_Ls3VgHv_Edub45jJKtm_Dg # type@PCMrepositoryPrimitiveDataType@pcmflatten :
+    DOUBLE@PrimitiveTypeEnum@pcmflatten > 
+<  '/3/@dataTypes__Repository.4 : PCMrepositoryPrimitiveDataType@pcmflatten |
+    repository@-@@-@DataType@PCMrepositoryDataType@pcmflatten :
+    '_Ls3VgHv_Edub45jJKtm_Dg # type@PCMrepositoryPrimitiveDataType@pcmflatten :
+    CHAR@PrimitiveTypeEnum@pcmflatten > 
+<  '/3/@dataTypes__Repository.5 : PCMrepositoryPrimitiveDataType@pcmflatten |
+    repository@-@@-@DataType@PCMrepositoryDataType@pcmflatten :
+    '_Ls3VgHv_Edub45jJKtm_Dg # type@PCMrepositoryPrimitiveDataType@pcmflatten :
+    BYTE@PrimitiveTypeEnum@pcmflatten > 
+<  '/4/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0 :
+    PCMseffperformanceParametricResourceDemand@pcmflatten | specification@-@ParametericResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '/4/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0/@specification_ParametericResourceDemand
+    # requiredResource@-@ParametricResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '_oro4gG3fEdy4YaaT-RYrLQ # action@-@ParametricResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten :
+    '_vXLqAP5uEeSdFeZ4efdibQ > 
+<  '/4/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0/@specification_ParametericResourceDemand : PCMcorePCMRandomVariable@pcmflatten |
+    closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : '/4/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0 #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null
+    # delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # specification@STOEXstoexRandomVariable@pcmflatten :
+    "DoublePDF[(1.0; 0.5)(2.0; 0.5)]" > 
+<  '1 : TOKENtokensSandTimer@pcmflatten |
+    countDown@TOKENtokensSandTimer@pcmflatten : 1 > 
+<  '12345 : PCMseffResourceDemandingSEFF@pcmflatten | abstractLoopAction@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : null # abstractBranchTransition@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    steps@-@Behaviour@PCMseffResourceDemandingBehaviour@pcmflatten : Set{
+    '_qZUd0CHbEd62GabW1zGSBw ; '_qZUd0SHbEd62GabW1zGSBw ;
+    '_vXLqAP5uEeSdFeZ4efdibQ} #
+    tpOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    rtOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    describedService@-@@-@SEFF@PCMseffServiceEffectSpecification@pcmflatten :
+    '_KjhikgzkEeCFg86gxKwVPw # basicComponent@-@ServiceEffectSpecification@PCMseffServiceEffectSpecification@pcmflatten : '_os1t4CHbEd62GabW1zGSBw # resourceDemandingInternalBehaviours@PCMseffResourceDemandingSEFF@pcmflatten : Set{mt} #
+    seffTypeID@PCMseffServiceEffectSpecification@pcmflatten : "1" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "12345" > 
+<  '3 : ObResponseTime@pcmflatten | counter@ObResponseTime@pcmflatten : 288 #
+    tTime@ObResponseTime@pcmflatten : 1272243115726132573189/576460752303423488
+    # rTime@ObResponseTime@pcmflatten : 7.6631597222222219 #
+    allRT@ObResponseTime@pcmflatten : Sequence{2.3799999999999999e-1 #
+    1.8919999999999999 # 2.2559999999999998 # 1.2919999999999996 #
+    2.2699999999999996 # 2.7119999999999993 # 3.2619999999999996 #
+    2.2879999999999994 # 1.4439999999999997 # 1.0319999999999996 #
+    1.8599999999999969e-1 # 4.2599999999999999e-1 # 1.026 #
+    8.6799999999999999e-1 # 1.1819999999999999 # 4.5799999999999996e-1 # 1.722
+    # 1.6879999999999999 # 7.8599999999999992e-1 # 6.4200000000000002e-1 #
+    1.3800000000000001e-1 # 2.48e-1 # 1.294 # 1.3960000000000001 #
+    1.8200000000000001 # 2.3820000000000001 # 1.8840000000000001 #
+    2.0960000000000001 # 1.242 # 2.1560000000000001 # 1.6100000000000001 #
+    2.5960000000000001 # 3.238 # 3.996 # 3.532 # 4.4779999999999998 #
+    4.0039999999999996 # 4.8259999999999996 # 4.3359999999999994 # 3.75 #
+    4.1120000000000001 # 5.04 # 4.8919999999999995 # 3.964 # 4.6379999999999999
+    # 4.4199999999999999 # 5.0039999999999996 # 5.4239999999999995 #
+    6.3039999999999994 # 6.8179999999999996 # 6.25 # 6.7039999999999997 # 6.742
+    # 6.0059999999999993 # 6.4259999999999993 # 5.7119999999999997 #
+    5.0159999999999991 # 4.0819999999999999 # 4.8039999999999994 #
+    5.2959999999999994 # 4.5659999999999998 # 4.4319999999999995 #
+    5.1519999999999992 # 4.5679999999999996 # 4.4499999999999993 #
+    3.4899999999999998 # 3.1539999999999999 # 3.8180000000000001 #
+    4.5839999999999996 # 4.2139999999999995 # 3.4819999999999998 #
+    2.6080000000000001 # 2.8479999999999999 # 3.282 # 2.6799999999999997 #
+    2.3319999999999999 # 1.4359999999999999 # 1.994 # 2.706 #
+    2.5640000000000001 # 3.0859999999999999 # 2.8599999999999999 #
+    2.0619999999999998 # 2.294 # 1.736 # 2.222 # 1.3500000000000001 # 1.726 #
+    1.242 # 6.3200000000000001e-1 # 3.4599999999999997e-1 # 1.1539999999999999
+    # 1.71 # 2.3039999999999998 # 1.9339999999999997 # 2.8219999999999996 #
+    1.9039999999999997 # 2.2279999999999998 # 2.0779999999999994 #
+    1.6139999999999997 # 2.2179999999999995 # 2.7599999999999998 #
+    3.4959999999999996 # 4.2999999999999998 # 4.0679999999999996 #
+    3.0699999999999998 # 3.7919999999999998 # 3.9619999999999997 #
+    4.7979999999999992 # 5.6559999999999997 # 6.3759999999999994 #
+    5.5119999999999996 # 6.395999999999999 # 6.2759999999999989 #
+    5.645999999999999 # 5.2939999999999996 # 4.3419999999999996 #
+    3.9759999999999995 # 4.2799999999999994 # 3.6639999999999997 #
+    2.9199999999999995 # 3.4459999999999997 # 3.0079999999999996 #
+    3.1519999999999997 # 2.2819999999999996 # 3.0159999999999996 #
+    3.8019999999999996 # 2.9799999999999995 # 3.9199999999999995 #
+    4.2859999999999996 # 5.2459999999999996 # 5.7579999999999991 #
+    5.9779999999999998 # 5.8759999999999994 # 6.5919999999999996 #
+    5.8179999999999996 # 5.7259999999999991 # 6.6659999999999995 #
+    6.8499999999999996 # 6.2899999999999991 # 5.6599999999999993 #
+    6.2599999999999998 # 5.5199999999999996 # 5.3459999999999992 #
+    5.6179999999999994 # 6.2079999999999993 # 6.6659999999999995 #
+    7.2039999999999988 # 8.0619999999999994 # 7.6939999999999991 #
+    6.9459999999999997 # 7.3139999999999992 # 8.2439999999999998 #
+    8.3099999999999987 # 8.9599999999999991 # 8.4239999999999995 #
+    9.3559999999999981 # 9.759999999999998 # 1.0183999999999999e+1 #
+    1.0865999999999998e+1 # 1.1485999999999999e+1 # 1.1631999999999998e+1 #
+    1.0697999999999999e+1 # 1.1033999999999999e+1 # 1.0225999999999999e+1 #
+    9.4739999999999984 # 9.7739999999999991 # 1.0555999999999999e+1 #
+    9.8259999999999987 # 9.7999999999999989 # 1.0222e+1 # 1.0295999999999999e+1
+    # 1.0973999999999998e+1 # 9.977999999999998 # 1.0415999999999999e+1 #
+    1.0281999999999998e+1 # 1.1101999999999999e+1 # 1.0661999999999999e+1 #
+    1.1297999999999998e+1 # 1.2121999999999998e+1 # 1.1525999999999998e+1 #
+    1.0683999999999999e+1 # 9.7679999999999989 # 9.7399999999999984 #
+    1.0105999999999998e+1 # 1.0617999999999999e+1 # 1.0069999999999999e+1 #
+    1.0555999999999999e+1 # 9.8919999999999995 # 9.5779999999999994 #
+    9.4059999999999988 # 1.0307999999999998e+1 # 9.879999999999999 #
+    1.0869999999999999e+1 # 1.1067999999999998e+1 # 1.0263999999999999e+1 #
+    1.1117999999999999e+1 # 1.1523999999999999e+1 # 1.1539999999999999e+1 #
+    1.1238e+1 # 1.1807999999999998e+1 # 1.2409999999999998e+1 #
+    1.3357999999999999e+1 # 1.2541999999999998e+1 # 1.3415999999999999e+1 #
+    1.3757999999999999e+1 # 1.4573999999999998e+1 # 1.5529999999999999e+1 #
+    1.5779999999999999e+1 # 1.5655999999999999e+1 # 1.5821999999999999e+1 #
+    1.4839999999999998e+1 # 1.4823999999999998e+1 # 1.5469999999999999e+1 #
+    1.4723999999999998e+1 # 1.4709999999999999e+1 # 1.5123999999999999e+1 #
+    1.4239999999999998e+1 # 1.3443999999999999e+1 # 1.3557999999999998e+1 #
+    1.3065999999999999e+1 # 1.2393999999999998e+1 # 1.2145999999999999e+1 #
+    1.3061999999999998e+1 # 1.3603999999999999e+1 # 1.4453999999999999e+1 #
+    1.4601999999999999e+1 # 1.4539999999999999e+1 # 1.3745999999999999e+1 #
+    1.4685999999999998e+1 # 1.4087999999999997e+1 # 1.4553999999999998e+1 #
+    1.3565999999999999e+1 # 1.3417999999999997e+1 # 1.4331999999999999e+1 #
+    1.3451999999999998e+1 # 1.2841999999999999e+1 # 1.2345999999999998e+1 #
+    1.2671999999999999e+1 # 1.3585999999999999e+1 # 1.3179999999999998e+1 #
+    1.2621999999999998e+1 # 1.2645999999999999e+1 # 1.2101999999999999e+1 #
+    1.1551999999999998e+1 # 1.1945999999999998e+1 # 1.1165999999999999e+1 #
+    1.0533999999999999e+1 # 1.1467999999999998e+1 # 1.1565999999999999e+1 #
+    1.1331999999999999e+1 # 1.1713999999999999e+1 # 1.1798e+1 #
+    1.0835999999999999e+1 # 9.9559999999999995 # 1.075e+1 # 1.0988e+1 #
+    1.1875999999999999e+1 # 1.2045999999999999e+1 # 1.1251999999999999e+1 #
+    1.1731999999999999e+1 # 1.1433999999999999e+1 # 1.1709999999999999e+1 #
+    1.1933999999999999e+1 # 1.1978e+1 # 1.2574e+1 # 1.3456e+1 #
+    1.2851999999999999e+1 # 1.2959999999999999e+1 # 1.3606e+1 #
+    1.2991999999999999e+1 # 1.3318e+1 # 1.3734e+1 # 1.3437999999999999e+1 #
+    1.4366e+1 # 1.5299999999999999e+1 # 1.5215999999999999e+1 #
+    1.4267999999999999e+1 # 1.4337999999999999e+1 # 1.3561999999999999e+1 #
+    1.3979999999999999e+1 # 1.36e+1 # 1.2799999999999999e+1 #
+    1.2565999999999999e+1 # 1.3404e+1 # 1.3038e+1 # 1.2446e+1 # 1.2596e+1} > 
+<  '9497 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9498 # cToken@TOKENtokensUSToken@pcmflatten : '9503 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9498 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 288 > 
+<  '9503 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9504 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9531 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9532 # cToken@TOKENtokensUSToken@pcmflatten : '9537 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9532 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 289 > 
+<  '9537 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9538 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9543 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9544 # cToken@TOKENtokensUSToken@pcmflatten : '9549 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9544 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 290 > 
+<  '9549 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9550 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9577 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9578 # cToken@TOKENtokensUSToken@pcmflatten : '9583 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9578 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 291 > 
+<  '9583 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9584 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9633 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9634 # cToken@TOKENtokensUSToken@pcmflatten : '9639 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9634 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 292 > 
+<  '9639 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9640 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9689 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9690 # cToken@TOKENtokensUSToken@pcmflatten : '9695 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9690 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 293 > 
+<  '9695 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9696 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9723 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9724 # cToken@TOKENtokensUSToken@pcmflatten : '9729 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9724 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 294 > 
+<  '9729 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9730 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9779 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9780 # cToken@TOKENtokensUSToken@pcmflatten : '9785 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9780 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 295 > 
+<  '9785 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9786 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9813 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9814 # cToken@TOKENtokensUSToken@pcmflatten : '9819 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9814 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 296 > 
+<  '9819 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9820 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9825 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9826 # cToken@TOKENtokensUSToken@pcmflatten : '9831 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9826 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 297 > 
+<  '9831 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9832 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9859 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9860 # cToken@TOKENtokensUSToken@pcmflatten : '9865 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9860 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 298 > 
+<  '9865 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9866 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9915 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9916 # cToken@TOKENtokensUSToken@pcmflatten : '9921 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9916 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 299 > 
+<  '9921 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9922 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9937 : AtomicActionExec@MGBehavior | participants@ActionExec@MGBehavior :
+    Set{'9938 ; '9939 ; '9940 ; '9941 ; '9942 ; '9943} #
+    variables@ActionExec@MGBehavior : Set{'9944} #
+    startingTime@ActionExec@MGBehavior :
+    172705335547096463437/576460752303423488 # endingTime@ActionExec@MGBehavior
+    : null # action@ActionExec@MGBehavior : "InternalActionSEFF" #
+    maxTimer@ActionExec@MGBehavior : 284771611637891341/576460752303423488 #
+    minTimer@AtomicActionExec@MGBehavior :
+    284771611637891341/576460752303423488 #
+    executionTime@AtomicActionExec@MGBehavior :
+    232890143930582963/576460752303423488 # status@AtomicActionExec@MGBehavior
+    : unfinished@ActionStatus@MGBehavior > 
+<  '9938 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '_vXLqAP5uEeSdFeZ4efdibQ # role@ObjectRole@MGBehavior : "IA" > 
+<  '9939 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior : '/4/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0 # role@ObjectRole@MGBehavior : "PRD" > 
+<  '9940 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '_oro4gG3fEdy4YaaT-RYrLQ # role@ObjectRole@MGBehavior : "PRT" > 
+<  '9941 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '_ssJ0QYr-EeG0c6Q1F-wA1Q # role@ObjectRole@MGBehavior : "PRS" > 
+<  '9942 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior : 'FCFS #
+    role@ObjectRole@MGBehavior : "Sch" > 
+<  '9943 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior : '9503 #
+    role@ObjectRole@MGBehavior : "t" > 
+<  '9944 : Variable@MGBehavior | name@Variable@MGBehavior : "rTime" #
+    value@Variable@MGBehavior : 8088464930757411/9007199254740992 > 
+<  '9949 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten :
+    '9950 # cToken@TOKENtokensUSToken@pcmflatten : '9955 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '9950 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 300 > 
+<  '9955 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '9956 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 0 > 
+<  '9957 : OngoingActionExec@MGBehavior | participants@ActionExec@MGBehavior :
+    Set{'9958} # variables@ActionExec@MGBehavior : Set{mt} #
+    startingTime@ActionExec@MGBehavior : 300 # endingTime@ActionExec@MGBehavior
+    : null # action@ActionExec@MGBehavior : "DecreaseCountDown" #
+    maxTimer@ActionExec@MGBehavior : freeze('1 . countDown@OCLSf) #
+    upperBoundTimer@OngoingActionExec@MGBehavior : null > 
+<  '9958 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior : '1 #
+    role@ObjectRole@MGBehavior : "st" > 
+<  'Delay : PCMresourcetypeSchedulingPolicy@pcmflatten | resourceRepository@-@@-@SchedulingPolicy@PCMresourcetypeSchedulingPolicy@pcmflatten : '/1 #
+    entityName@PCMentityNamedElement@pcmflatten : "Delay" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "Delay" > 
+<  'FCFS : PCMresourcetypeSchedulingPolicy@pcmflatten | resourceRepository@-@@-@SchedulingPolicy@PCMresourcetypeSchedulingPolicy@pcmflatten : '/1 #
+    entityName@PCMentityNamedElement@pcmflatten : "First-Come-First-Serve" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "FCFS" > 
+<  'ProcessorSharing : PCMresourcetypeSchedulingPolicy@pcmflatten | resourceRepository@-@@-@SchedulingPolicy@PCMresourcetypeSchedulingPolicy@pcmflatten : '/1 #
+    entityName@PCMentityNamedElement@pcmflatten : "Processor Sharing" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "ProcessorSharing" > 
+<  '_-r1fUCHcEd6lJo4DCALHMw : PCMrepositoryOperationProvidedRole@pcmflatten |
+    providingEntity@-@ProvidedRole@PCMrepositoryProvidedRole@pcmflatten :
+    '_84D0kCHcEd6lJo4DCALHMw # providedInterface@-@@-@OperationProvidedRole@PCMrepositoryOperationProvidedRole@pcmflatten : '_n7g-oCHbEd62GabW1zGSBw #
+    entityName@PCMentityNamedElement@pcmflatten : "Provided_AnInterface" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_-r1fUCHcEd6lJo4DCALHMw" > 
+<  '_84D0kCHcEd6lJo4DCALHMw : PCMsystemSystem@pcmflatten | providedRoles@-@InterfaceProvidingEntity@PCMentityInterfaceProvidingEntity@pcmflatten : Set{
+    '_-r1fUCHcEd6lJo4DCALHMw} # requiredRoles@-@InterfaceRequiringEntity@PCMentityInterfaceRequiringEntity@pcmflatten : Set{mt} # resourceRequiredRoles@-@@-@ResourceInterfaceRequiringEntity@PCMentityResourceInterfaceRequiringEntity@pcmflatten : Set{mt} # assemblyContexts@-@@-@ComposedStructure@PCMcompositionComposedStructure@pcmflatten : Set{'_9c3KwCHcEd6lJo4DCALHMw} # resourceRequiredDelegationConnectors@-@ComposedStructure@PCMcompositionComposedStructure@pcmflatten : Set{
+    mt} # eventChannel@-@@-@ComposedStructure@PCMcompositionComposedStructure@pcmflatten : Set{mt} # connectors@-@@-@ComposedStructure@PCMcompositionComposedStructure@pcmflatten : Set{'_ntQ_QKDMEeSTa-m_xXpXMw} #
+    qosAnnotations@-@System@PCMsystemSystem@pcmflatten : Set{mt} #
+    entityName@PCMentityNamedElement@pcmflatten : "defaultSystem" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_84D0kCHcEd6lJo4DCALHMw" > 
+<  '_9c3KwCHcEd6lJo4DCALHMw : PCMcompositionAssemblyContext@pcmflatten | parentStructure@-@@-@AssemblyContext@PCMcompositionAssemblyContext@pcmflatten :
+    '_84D0kCHcEd6lJo4DCALHMw # encapsulatedComponent@-@@-@AssemblyContext@PCMcompositionAssemblyContext@pcmflatten : '_os1t4CHbEd62GabW1zGSBw # configParameterUsages@-@@-@AssemblyContext@PCMcompositionAssemblyContext@pcmflatten : Set{mt} #
+    entityName@PCMentityNamedElement@pcmflatten :
+    "Assembly_AComponent <AComponent>" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_9c3KwCHcEd6lJo4DCALHMw" > 
+<  '_B0aZ0CHdEd6lJo4DCALHMw :
+    PCMresourceenvironmentResourceContainer@pcmflatten | activeResourceSpecifications@-@ResourceContainer@PCMresourceenvironmentResourceContainer@pcmflatten :
+    Set{'_ssJ0QYr-EeG0c6Q1F-wA1Q} # resourceEnvironment@-@ResourceContainer@PCMresourceenvironmentResourceContainer@pcmflatten : '/2 # nestedResourceContainers@-@@-@ResourceContainer@PCMresourceenvironmentResourceContainer@pcmflatten :
+    Set{mt} # parentResourceContainer@-@@-@ResourceContainer@PCMresourceenvironmentResourceContainer@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "appserver" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_B0aZ0CHdEd6lJo4DCALHMw" > 
+<  '_BIjHoQ3KEdyouMqirZIhzQ : PCMresourcetypeProcessingResourceType@pcmflatten
+    | resourceProvidedRoles@-@@-@ResourceInterfaceProvidingEntity@PCMentityResourceInterfaceProvidingEntity@pcmflatten : Set{'_tCR8kE5dEeCg1tUg4V9tRw} # hardwareInducedFailureType@-@@-@ProcessingResourceType@PCMresourcetypeProcessingResourceType@pcmflatten : null #
+    resourceRepository@-@ResourceType@PCMresourcetypeResourceType@pcmflatten :
+    '/1 # unit@UNITSunitsUnitCarryingElement@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "HDD" #
+    unitSpecification@UNITSunitsUnitCarryingElement@pcmflatten :
+    "byte per second" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_BIjHoQ3KEdyouMqirZIhzQ" > 
+<  '_GL3QUKfLEeSf8oVhFTxEXg : PCMusagemodelEntryLevelSystemCall@pcmflatten | providedRole@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten :
+    '_-r1fUCHcEd6lJo4DCALHMw # operationSignature@-@@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten : '_KjhikgzkEeCFg86gxKwVPw # outputParameterUsages@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten
+    : Set{mt} # inputParameterUsages@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten : Set{mt} #
+    successor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_LPwS4iHdEd6lJo4DCALHMw #
+    predecessor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_LPwS4SHdEd6lJo4DCALHMw # scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten : '_LPwS4CHdEd6lJo4DCALHMw #
+    token@PCMusagemodelAbstractUserAction@pcmflatten : OrderedSet{'9497 # '9531
+    # '9543 # '9577 # '9633 # '9689 # '9723 # '9779 # '9813 # '9825 # '9859 #
+    '9915 # '9949} # entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    priority@PCMusagemodelEntryLevelSystemCall@pcmflatten : 0 #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_GL3QUKfLEeSf8oVhFTxEXg" > 
+<  '_JiPBICHdEd6lJo4DCALHMw : PCMallocationAllocation@pcmflatten |
+    targetResourceEnvironment@-@Allocation@PCMallocationAllocation@pcmflatten :
+    '/2 # system@-@Allocation@PCMallocationAllocation@pcmflatten :
+    '_84D0kCHcEd6lJo4DCALHMw #
+    allocationContexts@-@Allocation@PCMallocationAllocation@pcmflatten : Set{
+    '_KCkHACHdEd6lJo4DCALHMw} # entityName@PCMentityNamedElement@pcmflatten :
+    "defaultAllocation" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_JiPBICHdEd6lJo4DCALHMw" > 
+<  '_KCkHACHdEd6lJo4DCALHMw : PCMallocationAllocationContext@pcmflatten | resourceContainer@-@AllocationContext@PCMallocationAllocationContext@pcmflatten :
+    '_B0aZ0CHdEd6lJo4DCALHMw # assemblyContext@-@AllocationContext@PCMallocationAllocationContext@pcmflatten : '_9c3KwCHcEd6lJo4DCALHMw #
+    allocation@-@AllocationContext@PCMallocationAllocationContext@pcmflatten :
+    '_JiPBICHdEd6lJo4DCALHMw # eventChannel@-@@-@AllocationContext@PCMallocationAllocationContext@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten :
+    "Allocation_Assembly_AComponent <AComponent> <AComponent>" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_KCkHACHdEd6lJo4DCALHMw" > 
+<  '_KjhikgzkEeCFg86gxKwVPw : PCMrepositoryOperationSignature@pcmflatten |
+    exceptions@-@@-@Signature@PCMrepositorySignature@pcmflatten : Set{mt} #
+    failureType@PCMrepositorySignature@pcmflatten : Set{mt} # interface@-@@-@OperationSignature@PCMrepositoryOperationSignature@pcmflatten :
+    '_n7g-oCHbEd62GabW1zGSBw # parameters@-@@-@OperationSignature@PCMrepositoryOperationSignature@pcmflatten : OrderedSet{mt-ord} # returnType@-@@-@OperationSignature@PCMrepositoryOperationSignature@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "do" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_KjhikgzkEeCFg86gxKwVPw" > 
+<  '_LPnI8CHdEd6lJo4DCALHMw : PCMusagemodelUsageScenario@pcmflatten |
+    usageModel@-@UsageScenario@PCMusagemodelUsageScenario@pcmflatten : '/0 #
+    scenarioBehaviour@-@UsageScenario@PCMusagemodelUsageScenario@pcmflatten :
+    '_LPwS4CHdEd6lJo4DCALHMw #
+    workload@-@UsageScenario@PCMusagemodelUsageScenario@pcmflatten :
+    '/0/@usageScenario_UsageModel.0/@workload_UsageScenario #
+    entityName@PCMentityNamedElement@pcmflatten : "defaultUsageScenario" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_LPnI8CHdEd6lJo4DCALHMw" > 
+<  '_LPwS4CHdEd6lJo4DCALHMw : PCMusagemodelScenarioBehaviour@pcmflatten |
+    usageScenario@-@SenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten
+    : '_LPnI8CHdEd6lJo4DCALHMw # branchTransition@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten : null #
+    loop@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten : null #
+    actions@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten :
+    Set{'_GL3QUKfLEeSf8oVhFTxEXg ; '_LPwS4SHdEd6lJo4DCALHMw ;
+    '_LPwS4iHdEd6lJo4DCALHMw} # rtOb@PCMusagemodelScenarioBehaviour@pcmflatten
+    : '3 # tpOb@PCMusagemodelScenarioBehaviour@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten :
+    "defaultUsageScenarioBehaviour" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_LPwS4CHdEd6lJo4DCALHMw" > 
+<  '_LPwS4SHdEd6lJo4DCALHMw : PCMusagemodelStart@pcmflatten |
+    successor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_GL3QUKfLEeSf8oVhFTxEXg #
+    predecessor@PCMusagemodelAbstractUserAction@pcmflatten : null # scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_LPwS4CHdEd6lJo4DCALHMw # token@PCMusagemodelAbstractUserAction@pcmflatten
+    : OrderedSet{mt-ord} # entityName@PCMentityNamedElement@pcmflatten :
+    "aName" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_LPwS4SHdEd6lJo4DCALHMw" > 
+<  '_LPwS4iHdEd6lJo4DCALHMw : PCMusagemodelStop@pcmflatten |
+    successor@PCMusagemodelAbstractUserAction@pcmflatten : null #
+    predecessor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_GL3QUKfLEeSf8oVhFTxEXg # scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten : '_LPwS4CHdEd6lJo4DCALHMw #
+    token@PCMusagemodelAbstractUserAction@pcmflatten : OrderedSet{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_LPwS4iHdEd6lJo4DCALHMw" > 
+<  '_Ls3VgHv_Edub45jJKtm_Dg : PCMrepositoryRepository@pcmflatten |
+    components@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{mt} #
+    interfaces@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{mt} #
+    failureTypes@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{mt} #
+    dataTypes@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{
+    '/3/@dataTypes__Repository.0 ; '/3/@dataTypes__Repository.1 ;
+    '/3/@dataTypes__Repository.2 ; '/3/@dataTypes__Repository.3 ;
+    '/3/@dataTypes__Repository.4 ; '/3/@dataTypes__Repository.5} #
+    entityName@PCMentityNamedElement@pcmflatten : "PrimitiveDataTypes" #
+    repositoryDescription@PCMrepositoryRepository@pcmflatten : "" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_Ls3VgHv_Edub45jJKtm_Dg" > 
+<  '_dqFLECHbEd6tG9VclJz3cw : PCMrepositoryRepository@pcmflatten |
+    components@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{
+    '_os1t4CHbEd62GabW1zGSBw} #
+    interfaces@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{
+    '_n7g-oCHbEd62GabW1zGSBw} #
+    failureTypes@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{mt} #
+    dataTypes@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{mt} #
+    entityName@PCMentityNamedElement@pcmflatten : "defaultRepository" #
+    repositoryDescription@PCMrepositoryRepository@pcmflatten : null #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_dqFLECHbEd6tG9VclJz3cw" > 
+<  '_n7g-oCHbEd62GabW1zGSBw : PCMrepositoryOperationInterface@pcmflatten |
+    parentInterfaces@-@@-@Interface@PCMrepositoryInterface@pcmflatten : Set{mt}
+    # protocols@-@@-@Interface@PCMrepositoryInterface@pcmflatten : Set{mt} #
+    requiredCharacterisations@PCMrepositoryInterface@pcmflatten : Set{mt} #
+    repository@-@@-@Interface@PCMrepositoryInterface@pcmflatten :
+    '_dqFLECHbEd6tG9VclJz3cw # signatures@-@@-@OperationInterface@PCMrepositoryOperationInterface@pcmflatten : Set{'_KjhikgzkEeCFg86gxKwVPw} #
+    entityName@PCMentityNamedElement@pcmflatten : "AnInterface" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_n7g-oCHbEd62GabW1zGSBw" > 
+<  '_ntQ_QKDMEeSTa-m_xXpXMw :
+    PCMcompositionProvidedDelegationConnector@pcmflatten |
+    parentStructure@-@@-@Connector@PCMcompositionConnector@pcmflatten :
+    '_84D0kCHcEd6lJo4DCALHMw # innerProvidedRole@-@ProvidedDelegationConnector@PCMcompositionProvidedDelegationConnector@pcmflatten : '_qZKs0CHbEd62GabW1zGSBw
+    # outerProvidedRole@-@ProvidedDelegationConnector@PCMcompositionProvidedDelegationConnector@pcmflatten : '_-r1fUCHcEd6lJo4DCALHMw # assemblyContext@-@ProvidedDelegationConnector@PCMcompositionProvidedDelegationConnector@pcmflatten :
+    '_9c3KwCHcEd6lJo4DCALHMw # entityName@PCMentityNamedElement@pcmflatten :
+    "ProvDelegation Provided_AnInterface -> Provided_AnInterface_AComponent" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_ntQ_QKDMEeSTa-m_xXpXMw" > 
+<  '_nvHX4KkREdyEA_b89s7q9w : PCMresourcetypeProcessingResourceType@pcmflatten
+    | resourceProvidedRoles@-@@-@ResourceInterfaceProvidingEntity@PCMentityResourceInterfaceProvidingEntity@pcmflatten : Set{'_x68UoE5dEeCg1tUg4V9tRw} # hardwareInducedFailureType@-@@-@ProcessingResourceType@PCMresourcetypeProcessingResourceType@pcmflatten : null #
+    resourceRepository@-@ResourceType@PCMresourcetypeResourceType@pcmflatten :
+    '/1 # unit@UNITSunitsUnitCarryingElement@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "DELAY" #
+    unitSpecification@UNITSunitsUnitCarryingElement@pcmflatten : "seconds" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_nvHX4KkREdyEA_b89s7q9w" > 
+<  '_o3sScH2AEdyH8uerKnHYug :
+    PCMresourcetypeCommunicationLinkResourceType@pcmflatten | resourceProvidedRoles@-@@-@ResourceInterfaceProvidingEntity@PCMentityResourceInterfaceProvidingEntity@pcmflatten : Set{mt} #
+    resourceRepository@-@ResourceType@PCMresourcetypeResourceType@pcmflatten :
+    '/1 # networkInducedFailureType@-@@-@CommunicationLinkResourceType@PCMresourcetypeCommunicationLinkResourceType@pcmflatten : null #
+    unit@UNITSunitsUnitCarryingElement@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "LAN" #
+    unitSpecification@UNITSunitsUnitCarryingElement@pcmflatten :
+    "byte per second" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_o3sScH2AEdyH8uerKnHYug" > 
+<  '_oro4gG3fEdy4YaaT-RYrLQ : PCMresourcetypeProcessingResourceType@pcmflatten
+    | resourceProvidedRoles@-@@-@ResourceInterfaceProvidingEntity@PCMentityResourceInterfaceProvidingEntity@pcmflatten : Set{'_patY8E5dEeCg1tUg4V9tRw} # hardwareInducedFailureType@-@@-@ProcessingResourceType@PCMresourcetypeProcessingResourceType@pcmflatten : null #
+    resourceRepository@-@ResourceType@PCMresourcetypeResourceType@pcmflatten :
+    '/1 # unit@UNITSunitsUnitCarryingElement@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "CPU" #
+    unitSpecification@UNITSunitsUnitCarryingElement@pcmflatten :
+    "work units per second" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_oro4gG3fEdy4YaaT-RYrLQ" > 
+<  '_os1t4CHbEd62GabW1zGSBw : PCMrepositoryBasicComponent@pcmflatten | providedRoles@-@InterfaceProvidingEntity@PCMentityInterfaceProvidingEntity@pcmflatten :
+    Set{'_qZKs0CHbEd62GabW1zGSBw} # requiredRoles@-@InterfaceRequiringEntity@PCMentityInterfaceRequiringEntity@pcmflatten : Set{mt} # resourceRequiredRoles@-@@-@ResourceInterfaceRequiringEntity@PCMentityResourceInterfaceRequiringEntity@pcmflatten : Set{mt} # serviceEffectSpecifications@-@@-@BasicComponent@PCMrepositoryBasicComponent@pcmflatten : Set{'12345} #
+    passiveResource@-@BasicComponent@PCMrepositoryBasicComponent@pcmflatten :
+    Set{mt} # parentCompleteComponentTypes@PCMrepositoryImplementationComponentType@pcmflatten : Set{mt} # componentParameterUsage@-@ImplementationComponentType@PCMrepositoryImplementationComponentType@pcmflatten : Set{mt} # repository@-@@-@RepositoryComponent@PCMrepositoryRepositoryComponent@pcmflatten :
+    '_dqFLECHbEd6tG9VclJz3cw # entityName@PCMentityNamedElement@pcmflatten :
+    "AComponent" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_os1t4CHbEd62GabW1zGSBw" > 
+<  '_patY8E5dEeCg1tUg4V9tRw : PCMentityResourceProvidedRole@pcmflatten | resourceInterfaceProvidingEntity@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten : '_oro4gG3fEdy4YaaT-RYrLQ # providedResourceInterface@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten :
+    '_tw_Q8E5CEeCUKeckjJ_n-w # entityName@PCMentityNamedElement@pcmflatten :
+    "ResourceProvidedRole_CpuInterface_CPU" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_patY8E5dEeCg1tUg4V9tRw" > 
+<  '_qZKs0CHbEd62GabW1zGSBw : PCMrepositoryOperationProvidedRole@pcmflatten |
+    providingEntity@-@ProvidedRole@PCMrepositoryProvidedRole@pcmflatten :
+    '_os1t4CHbEd62GabW1zGSBw # providedInterface@-@@-@OperationProvidedRole@PCMrepositoryOperationProvidedRole@pcmflatten : '_n7g-oCHbEd62GabW1zGSBw #
+    entityName@PCMentityNamedElement@pcmflatten :
+    "Provided_AnInterface_AComponent" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_qZKs0CHbEd62GabW1zGSBw" > 
+<  '_qZUd0CHbEd62GabW1zGSBw : PCMseffStartAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_vXLqAP5uEeSdFeZ4efdibQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '12345 # token@PCMseffAbstractAction@pcmflatten :
+    OrderedSet{mt-ord} # entityName@PCMentityNamedElement@pcmflatten : "aName"
+    # id@IDENTIFIERidentifierIdentifier@pcmflatten : "_qZUd0CHbEd62GabW1zGSBw"
+    > 
+<  '_qZUd0SHbEd62GabW1zGSBw : PCMseffStopAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_vXLqAP5uEeSdFeZ4efdibQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '12345
+    # token@PCMseffAbstractAction@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_qZUd0SHbEd62GabW1zGSBw" > 
+<  '_ssJ0QYr-EeG0c6Q1F-wA1Q :
+    PCMresourceenvironmentProcessingResourceSpecification@pcmflatten | schedulingPolicy@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten :
+    'FCFS # activeResourceType@-@ActiveResourceSpecification@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : '_oro4gG3fEdy4YaaT-RYrLQ # processingRate@-@ProcessingResourceSpecification@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : '/2/@resourceContainer_ResourceEnvironment.0/@activeResourceSpecifications_ResourceContainer.0/@processingRate_ProcessingResourceSpecification # resourceContainer@-@ProcessingResourceSpecification@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : '_B0aZ0CHdEd6lJo4DCALHMw
+    # queue@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten :
+    Sequence{'9503 # '9537 # '9549 # '9583 # '9639 # '9695 # '9729 # '9785 #
+    '9819 # '9831 # '9865 # '9921 # '9955} #
+    MTTR@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : 0.0
+    # MTTF@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten :
+    0.0 # requiredByContainer@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : false # numberOfReplicas@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : 1 # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_ssJ0QYr-EeG0c6Q1F-wA1Q" > 
+<  '_tCR8kE5dEeCg1tUg4V9tRw : PCMentityResourceProvidedRole@pcmflatten | resourceInterfaceProvidingEntity@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten : '_BIjHoQ3KEdyouMqirZIhzQ # providedResourceInterface@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten :
+    '_xXv8QE5CEeCUKeckjJ_n-w # entityName@PCMentityNamedElement@pcmflatten :
+    "ResourceProvidedRole_HddInterface_HDD" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_tCR8kE5dEeCg1tUg4V9tRw" > 
+<  '_tw_Q8E5CEeCUKeckjJ_n-w : PCMresourcetypeResourceInterface@pcmflatten | resourceRepository@-@@-@ResourceInterface@PCMresourcetypeResourceInterface@pcmflatten : '/1 # resourceSignatures@-@@-@ResourceInterface@PCMresourcetypeResourceInterface@pcmflatten : Set{'_wF22kE5CEeCUKeckjJ_n-w} #
+    entityName@PCMentityNamedElement@pcmflatten : "CpuInterface" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_tw_Q8E5CEeCUKeckjJ_n-w" > 
+<  '_vXLqAP5uEeSdFeZ4efdibQ : PCMseffInternalAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{'/4/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_qZUd0CHbEd62GabW1zGSBw #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_qZUd0SHbEd62GabW1zGSBw # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '12345 # token@PCMseffAbstractAction@pcmflatten :
+    OrderedSet{'9503 # '9537 # '9549 # '9583 # '9639 # '9695 # '9729 # '9785 #
+    '9819 # '9831 # '9865 # '9921 # '9955} # internalFailureOccurrenceDescriptions@-@@-@InternalAction@PCMseffInternalAction@pcmflatten : Set{mt} #
+    queue@PCMseffInternalAction@pcmflatten : Sequence{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_vXLqAP5uEeSdFeZ4efdibQ" > 
+<  '_wF22kE5CEeCUKeckjJ_n-w : PCMresourcetypeResourceSignature@pcmflatten | parameter@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : null
+    # resourceInterface@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : '_tw_Q8E5CEeCUKeckjJ_n-w #
+    entityName@PCMentityNamedElement@pcmflatten : "process" #
+    resourceServiceId@PCMresourcetypeResourceSignature@pcmflatten : 1 #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_wF22kE5CEeCUKeckjJ_n-w" > 
+<  '_x68UoE5dEeCg1tUg4V9tRw : PCMentityResourceProvidedRole@pcmflatten | resourceInterfaceProvidingEntity@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten : '_nvHX4KkREdyEA_b89s7q9w # providedResourceInterface@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten :
+    '_tw_Q8E5CEeCUKeckjJ_n-w # entityName@PCMentityNamedElement@pcmflatten :
+    "ResourceProvidedRole_CpuInterface_DELAY" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_x68UoE5dEeCg1tUg4V9tRw" > 
+<  '_xXv8QE5CEeCUKeckjJ_n-w : PCMresourcetypeResourceInterface@pcmflatten | resourceRepository@-@@-@ResourceInterface@PCMresourcetypeResourceInterface@pcmflatten : '/1 # resourceSignatures@-@@-@ResourceInterface@PCMresourcetypeResourceInterface@pcmflatten : Set{'_ygMyEE5CEeCUKeckjJ_n-w ; '_zUFtIE5CEeCUKeckjJ_n-w} #
+    entityName@PCMentityNamedElement@pcmflatten : "HddInterface" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_xXv8QE5CEeCUKeckjJ_n-w" > 
+<  '_ygMyEE5CEeCUKeckjJ_n-w : PCMresourcetypeResourceSignature@pcmflatten | parameter@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : null
+    # resourceInterface@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : '_xXv8QE5CEeCUKeckjJ_n-w #
+    entityName@PCMentityNamedElement@pcmflatten : "read" #
+    resourceServiceId@PCMresourcetypeResourceSignature@pcmflatten : 1 #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_ygMyEE5CEeCUKeckjJ_n-w" > 
+<  '_zUFtIE5CEeCUKeckjJ_n-w : PCMresourcetypeResourceSignature@pcmflatten | parameter@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : null
+    # resourceInterface@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : '_xXv8QE5CEeCUKeckjJ_n-w #
+    entityName@PCMentityNamedElement@pcmflatten : "write" #
+    resourceServiceId@PCMresourcetypeResourceSignature@pcmflatten : 2 #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_zUFtIE5CEeCUKeckjJ_n-w" > 
+<  'clk@ : Clock@MGBehavior | time@Clock@MGBehavior : 300 > 
+<  'ids@ : Counter@MGBehavior | value@Counter@MGBehavior : 9959 > 
+<  'rdm@ : Counter@MGBehavior | value@Counter@MGBehavior : 23469 >}}  in time
+    300
+Bye.

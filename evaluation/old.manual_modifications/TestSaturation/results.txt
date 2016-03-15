@@ -1,0 +1,35 @@
+--> Reading file  MaudeResults/result_20tu.txt
+--> Reading file  PalladioResults/result_20tu.csv
+size of the sample
+  # size:    10
+e-Motions data analysis:
+  # mean:    6.5
+  # st dev:  2.87228132327
+PCM data analysis:
+  # mean:    6.0
+  # st dev:  2.58198889747
+(0.099999999999999978, 0.99999999799745265)
+
+--> Reading file  MaudeResults/result_100tu.txt
+--> Reading file  PalladioResults/result_100tu.csv
+size of the sample
+  # size:    50
+e-Motions data analysis:
+  # mean:    26.5
+  # st dev:  14.4308696897
+PCM data analysis:
+  # mean:    26.0
+  # st dev:  14.1421356237
+(0.020000000000000018, 1.0000000000000002)
+
+--> Reading file  MaudeResults/result_100tu-Exp.txt
+--> Reading file  PalladioResults/result_100tu-Exp.csv
+size of the sample
+  # size:    45
+e-Motions data analysis:
+  # mean:    26.1230836543
+  # st dev:  16.0705340728
+PCM data analysis:
+  # mean:    20.1773341931
+  # st dev:  13.4064841192
+(0.28749999999999998, 0.034138782268784661)

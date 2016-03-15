@@ -1,0 +1,11 @@
+with a sample of 10000 t.u.:
+
+size of the sample
+  # size:    2000
+e-Motions data analysis:
+  # mean:    2.0925
+  # st dev:  0.53380122705
+PCM data analysis:
+  # mean:    2.1105
+  # st dev:  0.527531752599
+(0.010500000000000009, 0.99988671512839344)

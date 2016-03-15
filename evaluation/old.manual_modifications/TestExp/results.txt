@@ -1,0 +1,38 @@
+
+with 1000 time units:
+
+size of the sample
+  # size:    500
+e-Motions data analysis:
+  # mean:    1.22000049577
+  # st dev:  1.11065834158
+PCM data analysis:
+  # mean:    1.63956626649
+  # st dev:  1.60928267189
+(0.11599999999999999, 0.0021477573158074762)
+
+
+with 5000 time units:
+
+size of the sample
+  # size:    2499
+e-Motions data analysis:
+  # mean:    1.2723948134
+  # st dev:  1.30866483322
+PCM data analysis:
+  # mean:    1.24962940838
+  # st dev:  1.22373003424
+(0.02273213285314124, 0.53373247433364968)
+
+
+with 10000 time units:
+
+size of the sample
+  # size:    5000
+e-Motions data analysis:
+  # mean:    1.23595389561
+  # st dev:  1.28575057028
+PCM data analysis:
+  # mean:    1.25584261577
+  # st dev:  1.24140976488
+(0.024097019403880759, 0.10814736345015447)

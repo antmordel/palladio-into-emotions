@@ -1,0 +1,101 @@
+-- ---------------------------------------------------------------------------
+-- MinimumExample 1000 t.u. OpenWorkload = 3.0 Original
+-- ---------------------------------------------------------------------------
+
+## Palladio:
+
+Number of observations: 333
+
+Mean value: 2.813590656087087
+
+Mean value: 2.7838236812244226
+Confidence value alpha: 0.9
+Upper bound: 3.115966111190765
+Lower bound: 2.4516812512580803
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 333
+rTime@ObResponseTime@pcmflatten : 2.9277001355634935
+
+-- ---------------------------------------------------------------------------
+-- MinimumExample 2000 t.u. OpenWorkload = 3.0 Original
+-- ---------------------------------------------------------------------------
+
+## Palladio:
+
+Number of observations: 666
+
+Mean value: 2.992011849337835
+
+Mean value: 2.9989418856980197
+Confidence value alpha: 0.9
+Upper bound: 3.1353125622606655
+Lower bound: 2.862571209135374
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 667 
+rTime@ObResponseTime@pcmflatten : 2.9513004771961748
+
+-- ---------------------------------------------------------------------------
+-- MinimumExample 4000 t.u. OpenWorkload = 3.0 Original
+-- ---------------------------------------------------------------------------
+
+## Palladio:
+
+Number of observations: 1333
+
+Mean value: 2.9842861484006016
+
+Mean value: 2.9771302066527032
+Confidence value alpha: 0.9
+Upper bound: 3.0349883769275463
+Lower bound: 2.91927203637786
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 1333 
+rTime@ObResponseTime@pcmflatten : 2.9066583609917265
+
+-- ---------------------------------------------------------------------------
+-- MinimumExample 8000 t.u. OpenWorkload = 3.0 Original
+-- ---------------------------------------------------------------------------
+
+## Palladio:
+
+Number of observations: 2667
+
+Mean value: 2.941391221500567
+
+Mean value: 2.9338793134417362
+Confidence value alpha: 0.9
+Upper bound: 2.990825539207688
+Lower bound: 2.8769330876757846
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 2666 
+rTime@ObResponseTime@pcmflatten : 2.9020372633162919
+
+
+-- ---------------------------------------------------------------------------
+-- MinimumExample 16000 t.u. OpenWorkload = 3.0 Original
+-- ---------------------------------------------------------------------------
+
+## Palladio:
+
+Number of observations: 5333
+
+Mean value: 2.905278653246203
+
+Mean value: 2.9071026927121104
+Confidence value alpha: 0.9
+Upper bound: 2.9428289532895398
+Lower bound: 2.871376432134681
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 5333 
+rTime@ObResponseTime@pcmflatten : 2.8758020115005278
+

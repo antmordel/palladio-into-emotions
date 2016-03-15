@@ -1,0 +1,24 @@
+--> Reading file  MaudeResults/result_1000tu.txt
+--> Reading file  PalladioResults/result_1000tu.csv
+size of the sample
+  # size:    500
+e-Motions data analysis:
+  # mean:    1.268
+  # st dev:  0.44291759956
+PCM data analysis:
+  # mean:    1.25450901804
+  # st dev:  0.435584868624
+(0.013490981963927839, 0.99999999997069244)
+Antonios-MacBook-Pro:TestIntPMF amoreno$ python ktest.py MaudeResults/result_10000tu.txt PalladioResults/result_10000tu.csv 
+--> Reading file  MaudeResults/result_10000tu.txt
+--> Reading file  PalladioResults/result_10000tu.csv
+size of the sample
+  # size:    5000
+e-Motions data analysis:
+  # mean:    1.2442
+  # st dev:  0.429611871344
+PCM data analysis:
+  # mean:    1.253
+  # st dev:  0.434730951279
+(0.00880000000000003, 0.98998736575662927)
+

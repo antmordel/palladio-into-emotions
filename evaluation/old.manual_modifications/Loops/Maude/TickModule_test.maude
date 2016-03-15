@@ -1,0 +1,43 @@
+---- ----------------------------------------------- ----
+---- Programmatically generated code using e-Motions ----
+---- @date Wed Jan 21 08:21:27 CET 2015             ----
+---- ----------------------------------------------- ----
+set print attribute on .
+
+load ../GlobalFiles/mOdCL.maude
+load model-checker.maude
+load ../GlobalFiles/MGDefinitions.maude
+load ../GlobalFiles/MGRealTimeMaude24.maude
+load ../GlobalFiles/EcoreMM.maude
+load ../GlobalFiles/e-Motions.maude
+load ../GlobalFiles/flatten.ecore.maude
+load ../GlobalFiles/PalladioGrammar.maude 
+load ../GlobalFiles/ManualChangesRulesPalladio_v5.maude
+
+load Loops.xmi.maude
+
+mod TICKRULE is
+  pr LOOPS .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) /\ TE =/= zero .
+endm
+
+---- set trace on .
+---- set trace select on .
+---- trace select TokenEnterInABranchUM .
+
+set print conceal on .
+print conceal <_:_|_> __ .
+
+rew init(LOOPS) .
+
+set print conceal off .
+
+---- set trace off .

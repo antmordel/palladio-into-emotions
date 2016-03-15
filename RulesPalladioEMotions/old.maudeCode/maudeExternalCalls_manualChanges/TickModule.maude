@@ -1,0 +1,37 @@
+---- ----------------------------------------------- ----
+---- Programmatically generated code using e-Motions ----
+---- @date Tue Jan 27 09:31:50 CET 2015             ----
+---- ----------------------------------------------- ----
+set print attribute on .
+load mOdCL.maude
+load model-checker.maude
+load MGDefinitions.maude
+load MGRealTimeMaude24.maude
+load EcoreMM.maude
+load e-Motions.maude
+
+load flatten.ecore.maude
+load ManualchangesRulesPalladio_v5.maude
+load ExternalCalls.xmi.maude
+
+mod TICKRULE is
+  pr EXTERNALCALLS .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) /\ TE =/= zero /\ (T plus TE) le 2000 .
+endm
+
+set print conceal on .
+print conceal __ <_:_|_> .
+
+set profile on .
+
+rewrite init(EXTERNALCALLS) .
+
+set print conceal off .

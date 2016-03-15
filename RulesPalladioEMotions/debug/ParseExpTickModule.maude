@@ -1,0 +1,29 @@
+---- ----------------------------------------------- ----
+---- Programmatically generated code using e-Motions ----
+---- @date Wed Jan 07 11:02:17 CET 2015             ----
+---- ----------------------------------------------- ----
+set print attribute on .
+load mOdCL.maude
+load model-checker.maude
+load MGDefinitions.maude
+load MGRealTimeMaude24.maude
+load EcoreMM.maude
+load PalladioGrammar.maude
+load e-Motions.maude
+
+load flatten.ecore.maude
+load EfficientRulesPalladio.behavior.maude
+load me_extended.xmi.maude
+
+mod TICKRULE is
+  pr ME@-@EXTENDED .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) /\ TE =/= zero .
+endm

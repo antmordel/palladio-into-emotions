@@ -1,0 +1,13 @@
+		     \||||||||||||||||||/
+		   --- Welcome to Maude ---
+		     /||||||||||||||||||\
+	    Maude 2.7 built: Mar  3 2014 18:07:27
+	    Copyright 1997-2014 SRI International
+		   Tue Sep 15 08:43:35 2015
+Warning: sort declarations for operator if_then_else_fi failed preregularity
+    check on 14 out of 27818127 sort tuples. First such tuple is (Bool,
+    OclVoid, @Attribute).
+==========================================
+rewrite in TICKRULE : init(MEDIASTORE100) .
+
+Bye.

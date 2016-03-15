@@ -1,0 +1,2296 @@
+		     \||||||||||||||||||/
+		   --- Welcome to Maude ---
+		     /||||||||||||||||||\
+	    Maude 2.7++ built: Sep  9 2014 14:55:11
+	    With additional hooks 
+	    Copyright 1997-2014 SRI International
+		   Thu May 21 11:31:31 2015
+Warning: sort declarations for operator if_then_else_fi failed preregularity
+    check on 16 out of 38958219 sort tuples. First such tuple is (Bool,
+    OclVoid, @Attribute).
+==========================================
+rewrite in TICKRULE : init(ECMFAEXAMPLE) .
+rewrites: 1054181257 in 1213612ms cpu (1213774ms real) (868631 rewrites/second)
+result ClockedSystem: {@pcmflatten@{
+<  '/0 : PCMusagemodelUsageModel@pcmflatten |
+    usageScenario@-@UsageModel@PCMusagemodelUsageModel@pcmflatten : Set{
+    '_LPnI8CHdEd6lJo4DCALHMw} #
+    userData@-@UsageModel@PCMusagemodelUsageModel@pcmflatten : Set{mt} > 
+<  '/0/@usageScenario_UsageModel.0/@scenarioBehaviour_UsageScenario/@actions_ScenarioBehaviour.3/@timeSpecification_Delay : PCMcorePCMRandomVariable@pcmflatten
+    | closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null
+    # delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten :
+    '_Rr7aIHnTEeOBarAp0jPAaA # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    specification@STOEXstoexRandomVariable@pcmflatten : "5" > 
+<  '/0/@usageScenario_UsageModel.0/@workload_UsageScenario :
+    PCMusagemodelOpenWorkload@pcmflatten |
+    usageScenario@-@Workload@PCMusagemodelWorkload@pcmflatten :
+    '_LPnI8CHdEd6lJo4DCALHMw #
+    interArrivalTime@-@OpenWorkload@PCMusagemodelOpenWorkload@pcmflatten : '/0/@usageScenario_UsageModel.0/@workload_UsageScenario/@interArrivalTime_OpenWorkload # sandTimer@PCMusagemodelOpenWorkload@pcmflatten : '1 > 
+<  '/0/@usageScenario_UsageModel.0/@workload_UsageScenario/@interArrivalTime_OpenWorkload : PCMcorePCMRandomVariable@pcmflatten |
+    closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    '/0/@usageScenario_UsageModel.0/@workload_UsageScenario #
+    delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # specification@STOEXstoexRandomVariable@pcmflatten :
+    "DoublePDF[ (1.0; 0.2) (6.0; 0.8) ]" > 
+<  '/1 : PCMresourcetypeResourceRepository@pcmflatten | resourceInterfaces@-@@-@ResourceRepository@PCMresourcetypeResourceRepository@pcmflatten : Set{
+    '_tw_Q8E5CEeCUKeckjJ_n-w ; '_xXv8QE5CEeCUKeckjJ_n-w} # schedulingPolicies@-@@-@ResourceRepository@PCMresourcetypeResourceRepository@pcmflatten : Set{'Delay
+    ; 'FCFS ; 'ProcessorSharing} # availableResourceTypes@-@ResourceRepository@PCMresourcetypeResourceRepository@pcmflatten : Set{'_BIjHoQ3KEdyouMqirZIhzQ ;
+    '_nvHX4KkREdyEA_b89s7q9w ; '_o3sScH2AEdyH8uerKnHYug ;
+    '_oro4gG3fEdy4YaaT-RYrLQ} > 
+<  '/2 : PCMresourceenvironmentResourceEnvironment@pcmflatten | linkingResources@-@@-@ResourceEnvironment@PCMresourceenvironmentResourceEnvironment@pcmflatten
+    : Set{mt} # resourceContainer@-@ResourceEnvironment@PCMresourceenvironmentResourceEnvironment@pcmflatten : Set{'_B0aZ0CHdEd6lJo4DCALHMw} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" > 
+<  '/2/@resourceContainer_ResourceEnvironment.0/@activeResourceSpecifications_ResourceContainer.0/@processingRate_ProcessingResourceSpecification :
+    PCMcorePCMRandomVariable@pcmflatten |
+    closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null
+    # delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    '_ssJ0QYr-EeG0c6Q1F-wA1Q # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    specification@STOEXstoexRandomVariable@pcmflatten : "1" > 
+<  '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.0/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0 :
+    PCMseffperformanceParametricResourceDemand@pcmflatten | specification@-@ParametericResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.0/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0/@specification_ParametericResourceDemand # requiredResource@-@ParametricResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '_oro4gG3fEdy4YaaT-RYrLQ # action@-@ParametricResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '_r2_fAH6YEeOczJTm_QImZQ > 
+<  '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.0/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0/@specification_ParametericResourceDemand :
+    PCMcorePCMRandomVariable@pcmflatten |
+    closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.0/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0 #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null
+    # delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # specification@STOEXstoexRandomVariable@pcmflatten : "5" > 
+<  '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.1/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0 :
+    PCMseffperformanceParametricResourceDemand@pcmflatten | specification@-@ParametericResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.1/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0/@specification_ParametericResourceDemand # requiredResource@-@ParametricResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '_oro4gG3fEdy4YaaT-RYrLQ # action@-@ParametricResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '_TjBvYH6ZEeOczJTm_QImZQ > 
+<  '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.1/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0/@specification_ParametericResourceDemand :
+    PCMcorePCMRandomVariable@pcmflatten |
+    closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.1/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0 #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null
+    # delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # specification@STOEXstoexRandomVariable@pcmflatten :
+    "DoublePDF[ (1.0; 0.25000000) (3.0; 0.50000000) (4.0; 0.25000000) ]" > 
+<  '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.2/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0 :
+    PCMseffperformanceParametricResourceDemand@pcmflatten | specification@-@ParametericResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.2/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0/@specification_ParametericResourceDemand # requiredResource@-@ParametricResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '_oro4gG3fEdy4YaaT-RYrLQ # action@-@ParametricResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '_jwKsYH6ZEeOczJTm_QImZQ > 
+<  '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.2/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0/@specification_ParametericResourceDemand :
+    PCMcorePCMRandomVariable@pcmflatten |
+    closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.2/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0 #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null
+    # delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # specification@STOEXstoexRandomVariable@pcmflatten :
+    "Exp(1)" > 
+<  '1 : TOKENtokensSandTimer@pcmflatten |
+    countDown@TOKENtokensSandTimer@pcmflatten :
+    1234549247852937/1125899906842624 > 
+<  '12345 : PCMseffResourceDemandingSEFF@pcmflatten | abstractLoopAction@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : null # abstractBranchTransition@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    steps@-@Behaviour@PCMseffResourceDemandingBehaviour@pcmflatten : Set{
+    '_qZUd0CHbEd62GabW1zGSBw ; '_qZUd0SHbEd62GabW1zGSBw ;
+    '_uPAUsH6XEeOczJTm_QImZQ} #
+    tpOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    rtOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    describedService@-@@-@SEFF@PCMseffServiceEffectSpecification@pcmflatten :
+    '_KjhikgzkEeCFg86gxKwVPw # basicComponent@-@ServiceEffectSpecification@PCMseffServiceEffectSpecification@pcmflatten : '_os1t4CHbEd62GabW1zGSBw # resourceDemandingInternalBehaviours@PCMseffResourceDemandingSEFF@pcmflatten : Set{mt} #
+    seffTypeID@PCMseffServiceEffectSpecification@pcmflatten : "1" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "12345" > 
+<  '3 : ObResponseTime@pcmflatten | counter@ObResponseTime@pcmflatten : 5530 #
+    tTime@ObResponseTime@pcmflatten :
+    15392250990775287801507/288230376151711744 #
+    rTime@ObResponseTime@pcmflatten : 9.6568893822152475 #
+    allRT@ObResponseTime@pcmflatten : Sequence{5.3974969594768503 #
+    7.234926465538094 # 7.0679661946290961 # 5.0079999999999991 #
+    6.1040000000000001 # 7.5129999999999999 # 8.4079999999999995 #
+    6.1194999999999995 # 7.3639999999999999 # 8.9299999999999997 #
+    5.353821895974189 # 6.4239999999999995 # 7.9119999999999999 #
+    6.1679999999999993 # 7.1159999999999997 # 1.045975e+1 # 1.205775e+1 #
+    9.8684999999999992 # 1.0988249999999999e+1 # 1.5008249999999999e+1 #
+    1.4295999999999999e+1 # 1.2241249999999999e+1 # 1.568225e+1 # 1.436425e+1 #
+    1.0469610536675688e+1 # 8.5668605366756889 # 1.1227860536675689e+1 #
+    1.4403860536675689e+1 # 1.2338978769569149e+1 # 9.6259787695691497 #
+    1.0462478769569149e+1 # 6.5468848837247666 # 5.2119999999999997 #
+    6.6319999999999997 # 6.4399999999999995 # 5.6639999999999997 #
+    8.879999999999999 # 8.8559999999999999 # 7.7654999999999994 #
+    7.9359999999999999 # 7.6654999999999998 # 9.1844999999999999 #
+    6.9887499999999996 # 1.0e+1 # 1.3630999999999998e+1 # 1.7068499999999997e+1
+    # 1.3590499999999999e+1 # 1.7770499999999998e+1 # 1.3370999999999999e+1 #
+    1.2712e+1 # 1.1066749999999999e+1 # 1.17235e+1 # 1.094575e+1 # 1.03155e+1 #
+    8.8962829371103158 # 6.8639999999999999 # 1.0e+1 # 1.419e+1 #
+    1.7044999999999998e+1 # 1.6638749999999998e+1 # 1.2509749999999999e+1 #
+    9.223749999999999 # 1.173475e+1 # 7.9159999999999995 # 6.2079999999999993 #
+    5.3999999999999995 # 5.4959999999999996 # 7.6040000000000001 #
+    6.3432348926773061 # 8.5559999999999992 # 6.6001243770194797 #
+    6.7839999999999998 # 7.6879999999999997 # 5.3871341724413035 #
+    8.347999999999999 # 1.0324999999999999e+1 # 1.2843749999999998e+1 #
+    1.4268749999999999e+1 # 1.8024999999999999e+1 # 1.3247518976050159e+1 #
+    1.1066268976050159e+1 # 9.1945189760501584 # 6.3783262124885765 #
+    5.7839999999999998 # 7.6879999999999997 # 1.0077999999999999e+1 #
+    1.0284285730951774e+1 # 5.0479999999999992 # 6.0078579464175084 #
+    8.767094307961397 # 5.3830943079613975 # 5.4279999999999999 #
+    5.1613431714266254 # 7.6760000000000002 # 6.4422499999999996 # 7.71225 #
+    7.5679999999999996 # 8.0439999999999987 # 8.7240000000000002 #
+    5.7940731201677682 # 7.6760000000000002 # 9.1739999999999995 # 1.0839e+1 #
+    1.095575e+1 # 7.1827499999999995 # 8.3159999999999989 # 7.4719999999999995
+    # 6.5880000000000001 # 7.2960000000000003 # 5.6799999999999997 # 1.0e+1 #
+    1.0438025474013777e+1 # 1.2166275474013776e+1 # 8.4857754740137779 #
+    1.0289025474013776e+1 # 7.5412754740137773 # 5.2879999999999994 #
+    5.1053605366756889 # 8.8439999999999994 # 6.5119999999999996 #
+    6.0469690765341344 # 8.8199690765341341 # 7.9629690765341339 #
+    5.6119999999999992 # 6.532 # 6.9159999999999995 # 8.1519999999999992 #
+    8.7439999999999998 # 6.8712499999999999 # 5.6639999999999997 # 1.0e+1 #
+    7.2152151335318013 # 8.3599999999999994 # 8.8159999999999989 #
+    8.6639999999999997 # 7.3860000000000001 # 6.1672499999999992 #
+    8.7080000000000002 # 9.2247500000000002 # 6.5904061141556172 #
+    8.1465551843064361 # 8.8728535653784188 # 6.4616035653784198 # 1.0e+1 #
+    1.1782e+1 # 9.0262499999999992 # 8.9167499999999986 # 1.1904249999999999e+1
+    # 9.2278821044182031 # 1.1353882104418203e+1 # 7.9328821044182023 # 1.0e+1
+    # 6.3319999999999999 # 1.0e+1 # 1.1425999999999998e+1 #
+    1.1427499999999998e+1 # 6.6844999999999999 # 6.0188773416671193 # 1.0e+1 #
+    1.0705484626328523e+1 # 1.0472484626328525e+1 # 1.2891484626328523e+1 #
+    7.7941997598603256 # 5.9119999999999999 # 6.3479999999999999 #
+    7.0439999999999996 # 7.1680000000000001 # 5.7239999999999993 # 1.0e+1 #
+    1.0e+1 # 5.2994060308210331 # 5.1142891674199902 # 1.0e+1 #
+    9.7129999999999992 # 1.2031749999999999e+1 # 8.4614999999999991 #
+    1.0453249999999999e+1 # 5.6878409450358927 # 1.0e+1 # 1.043125e+1 #
+    1.3161249999999999e+1 # 1.108375e+1 # 7.720915129900261 #
+    8.9799151299002595 # 7.7759999999999998 # 7.3634999999999993 #
+    8.4639999999999986 # 5.9309710523335157 # 9.0579710523335155 #
+    9.607721052333515 # 1.0e+1 # 9.7897499999999997 # 8.3529999999999998 #
+    6.1488535261227195 # 7.2720000000000002 # 8.3599999999999994 # 7.62425 #
+    6.1280000000000001 # 5.8519999999999994 # 5.5839999999999996 #
+    6.8499999999999996 # 5.508 # 5.6481738359350766 # 6.7279999999999998 #
+    5.0161294029477466 # 7.9959999999999996 # 7.9387499999999998 #
+    6.2559613803163616 # 1.0e+1 # 1.0170499999999999e+1 # 8.1319999999999997 #
+    8.0119999999999987 # 7.4408096823897925 # 6.0759999999999996 #
+    7.5359999999999996 # 7.8549999999999995 # 7.6639999999999997 #
+    5.128970402314823 # 7.1280000000000001 # 7.8239999999999998 #
+    7.9119999999999999 # 9.3459999999999983 # 9.3919999999999995 #
+    5.5464528224270042 # 6.0023934519454292 # 1.0e+1 # 7.239749999999999 #
+    6.1999999999999993 # 1.0e+1 # 7.73325 # 1.0e+1 # 6.7319999999999993 #
+    8.6639999999999997 # 1.1088999999999999e+1 # 1.3651e+1 #
+    1.1690499999999998e+1 # 1.3265499999999999e+1 # 9.6067342552667423 #
+    1.4536734255266742e+1 # 1.2836984255266742e+1 # 1.2118234255266742e+1 #
+    1.1163838813032932e+1 # 1.0568588813032932e+1 # 6.3470591238522864 #
+    8.0679999999999996 # 7.2059999999999995 # 9.1497499999999992 #
+    6.1959999999999997 # 6.4490296997962391 # 7.8079999999999998 #
+    5.4431669963100386 # 6.1799999999999997 # 5.4879999999999995 #
+    5.8119999999999994 # 8.0960000000000001 # 8.1559999999999988 #
+    8.8049999999999997 # 6.7850000000000001 # 7.4959999999999996 #
+    6.2873544342828502 # 6.3119999999999994 # 5.944 # 7.2800000000000002 #
+    5.7402388091116583 # 6.1839999999999993 # 6.8346703932833668 #
+    6.5279999999999996 # 5.0319999999999991 # 5.0159999999999991 #
+    8.6319999999999997 # 8.0916580037464918 # 1.0e+1 # 5.8473148870250693 #
+    5.3159999999999998 # 7.8459999999999992 # 8.2674999999999983 #
+    1.1173749999999998e+1 # 1.2664249999999999e+1 # 1.4369372216640327e+1 #
+    1.1209372216640327e+1 # 1.1540622216640326e+1 # 1.0815372216640327e+1 #
+    8.7666222166403269 # 1.0322872216640327e+1 # 9.5216222166403259 #
+    9.5825736862923794 # 6.9399999999999995 # 5.6199999999999992 #
+    6.0839999999999996 # 5.4279999999999999 # 5.6599999999999993 #
+    7.9559999999999995 # 8.5399999999999991 # 8.6900669264366694 #
+    8.3050669264366697 # 1.1015066926436671e+1 # 1.2397566926436669e+1 #
+    1.092781692643667e+1 # 1.0639514475671298e+1 # 8.5800144756712982 #
+    7.1639999999999997 # 8.0759999999999987 # 1.1011749999999999e+1 #
+    8.8162500000000001 # 5.0839999999999996 # 6.4740332964457599 #
+    5.1404121747346077 # 7.4279999999999999 # 1.0e+1 # 8.4812499999999993 #
+    5.944 # 8.016 # 1.19535e+1 # 1.0609932093469643e+1 # 1.3878932093469643e+1
+    # 1.3744932093469643e+1 # 8.2501820934696433 # 8.3841820934696436 #
+    6.2909842023334281 # 5.5191938944543697 # 1.0e+1 # 6.9329682593441451 #
+    6.6529682593441448 # 6.0759999999999996 # 5.96 # 6.9241486782916635 #
+    8.4959999999999987 # 8.8002500000000001 # 8.1479999999999997 #
+    6.3359999999999994 # 7.2687499999999998 # 6.0880000000000001 #
+    8.1359999999999992 # 5.0650720177615778 # 5.1086994379412038 #
+    6.3079999999999998 # 5.4588659058531421 # 8.9118659058531406 #
+    6.2239999999999993 # 5.0679999999999996 # 6.0739999999999998 #
+    8.347999999999999 # 8.5015077172356328 # 7.2409359596343732 #
+    5.9959999999999996 # 7.2160000000000002 # 1.0e+1 # 1.1272499999999999e+1 #
+    1.1747499999999999e+1 # 1.0664308759367078e+1 # 1.0506308759367078e+1 #
+    1.1160308759367078e+1 # 9.166058759367079 # 6.6292889204742531 #
+    9.3492889204742529 # 6.9652889204742525 # 5.8119999999999994 #
+    8.6879999999999988 # 8.9339999999999993 # 7.5959999999999992 #
+    5.8617499999999998 # 8.3199999999999985 # 1.1561999999999999e+1 #
+    1.1326263489180146e+1 # 1.1837263489180147e+1 # 9.5432634891801467 #
+    9.9885134891801464 # 1.1354513489180146e+1 # 1.0857013489180147e+1 #
+    1.1553013489180147e+1 # 7.507426511761583 # 7.6120000000000001 #
+    7.1817500000000001 # 8.1719999999999988 # 9.6799999999999997 #
+    6.5119999999999996 # 9.0119999999999987 # 1.0867749999999999e+1 #
+    9.8964999999999996 # 7.0589578810490492 # 6.190727598593778 #
+    5.2999999999999998 # 7.1120000000000001 # 7.9279999999999999 #
+    5.3679999999999994 # 7.3719999999999999 # 8.8199999999999985 #
+    1.0457585114011907e+1 # 7.3343351140119077 # 6.6850851140119074 #
+    7.9350851140119074 # 1.0e+1 # 8.5534999999999997 # 6.3777499999999998 #
+    6.2439999999999998 # 5.8679999999999994 # 7.9399999999999995 #
+    5.7199999999999998 # 5.2970592552822406 # 5.5259392825939013 #
+    5.8239999999999998 # 7.2160000000000002 # 6.2447948198640537 # 1.0e+1 #
+    7.2809999999999997 # 8.3679999999999986 # 9.6994999999999987 #
+    7.5617499999999991 # 8.505749999999999 # 8.0547499999999985 #
+    6.3159999999999998 # 8.3199999999999985 # 5.5279999999999996 # 5.992 #
+    7.5509999999999993 # 7.6029999999999998 # 5.5923972984776649 #
+    6.7719999999999994 # 6.7861603654647915 # 7.7320000000000002 #
+    6.4737499999999999 # 6.3299983076278163 # 6.1056369246229369 #
+    5.9896369246229364 # 8.6319999999999997 # 8.3559999999999999 #
+    7.7507499999999991 # 8.9077499999999983 # 9.3087499999999999 #
+    8.5357719597136672 # 8.7305836863229818 # 8.9518336863229813 #
+    8.7428336863229816 # 5.1999999999999993 # 8.3719999999999999 #
+    6.6280000000000001 # 7.1639999999999997 # 6.1839999999999993 #
+    7.1024999999999991 # 8.7880000000000003 # 5.7879999999999994 #
+    7.7039999999999997 # 7.8719999999999999 # 9.8389999999999986 #
+    1.0698999999999998e+1 # 8.5467499999999976 # 1.0010749999999998e+1 #
+    7.7240000000000002 # 5.5999999999999996 # 5.6839999999999993 #
+    7.2759999999999998 # 1.0907249999999999e+1 # 1.0542999999999999e+1 #
+    7.2013181136495072 # 7.46 # 8.4439999999999991 # 8.1454999999999984 #
+    5.0910194194050318 # 1.0e+1 # 1.11815e+1 # 1.1295499999999999e+1 #
+    1.3767749999999999e+1 # 9.6127782459137645 # 7.770278245913766 #
+    1.0295278245913766e+1 # 8.2542239340445036 # 6.3470736689844722 #
+    5.0559999999999992 # 6.6719999999999997 # 6.8479999999999999 #
+    6.9359999999999999 # 7.403795129102746 # 5.204567186759137 # 7.444 # 1.0e+1
+    # 6.4297303098141372 # 6.4399999999999995 # 6.8021552229753466 #
+    8.0041552229753457 # 7.8560731535105157 # 8.7020731535105149 #
+    6.6319999999999997 # 9.6006979703847399 # 7.558279455150914 #
+    8.9229147613066964 # 1.2591664761306697e+1 # 9.4382398943460508 #
+    5.6279999999999992 # 5.3279999999999994 # 5.3312857309517758 # 1.0e+1 #
+    5.2984060568326194 # 7.2759999999999998 # 7.0919999999999996 #
+    5.9039999999999999 # 5.2930296997962394 # 5.3188288224664806 #
+    5.4479999999999995 # 8.3519999999999985 # 6.7319999999999993 #
+    6.9951004142639475 # 9.4888504142639469 # 1.0299850414263947e+1 #
+    8.0386655253590611 # 7.5501655253590618 # 7.8399999999999999 # 8.48475 #
+    5.8486321044182032 # 1.0e+1 # 9.5595659537306279 # 6.54 # 8.452 #
+    1.009618323329569e+1 # 9.2479332332956918 # 1.1214933233295691e+1 #
+    1.4281933233295691e+1 # 1.2543683233295692e+1 # 1.056643323329569e+1 #
+    1.0956433233295691e+1 # 1.4738433233295691e+1 # 1.1032640487018595e+1 #
+    1.0598390487018596e+1 # 7.357386509741529 # 7.1280000000000001 #
+    8.2167499999999993 # 1.094e+1 # 7.4631219421383133 # 8.9559999999999995 #
+    7.0227456577914307 # 7.8247456577914303 # 8.4847456577914304 #
+    1.122574565779143e+1 # 1.251374565779143e+1 # 1.5666745657791431e+1 #
+    1.5723245657791431e+1 # 2.056324565779143e+1 # 2.429224565779143e+1 #
+    2.5964719392186392e+1 # 3.0889719392186393e+1 # 2.7608429816739548e+1 #
+    2.5611728324310342e+1 # 2.1869728324310341e+1 # 1.8029728324310341e+1 #
+    1.8715728324310341e+1 # 1.809797832431034e+1 # 2.073947832431034e+1 #
+    1.7338978324310339e+1 # 1.6541978324310339e+1 # 1.625497832431034e+1 #
+    1.5429728324310339e+1 # 1.0682728324310339e+1 # 8.9694783243103391 #
+    7.9724783243103401 # 6.0960000000000001 # 6.4959999999999996 #
+    6.4399999999999995 # 9.222999999999999 # 5.6119999999999992 #
+    6.6699999999999999 # 7.0325579767988486 # 6.9485579767988481 #
+    7.1200000000000001 # 5.1815218976412529 # 8.016 # 7.9399999999999995 #
+    8.3999999999999986 # 5.9870329371103166 # 6.8630329371103169 #
+    8.3857829371103154 # 1.0962782937110317e+1 # 1.2733895814501013e+1 #
+    1.0556895814501011e+1 # 5.8944293715088421 # 5.9964293715088424 #
+    7.0640000000000001 # 7.1319999999999997 # 5.1439999999999992 #
+    5.2479999999999993 # 5.3919999999999995 # 6.0800000000000001 #
+    8.5199999999999996 # 8.2159999999999993 # 5.3999999999999995 #
+    6.8879999999999999 # 1.0156749999999999e+1 # 6.9344999999999999 #
+    8.4327499999999986 # 1.0669499999999999e+1 # 1.1050437032290102e+1 #
+    1.1290937032290103e+1 # 1.0362255770343419e+1 # 7.2307557703434195 #
+    8.7087557703434193 # 6.2359999999999998 # 5.524 # 5.0502412374546095 #
+    7.9079999999999995 # 1.0e+1 # 8.6316721147675288 # 8.1767632035130475 #
+    9.5227632035130476 # 9.3408851456513613 # 1.0107885145651361e+1 #
+    1.2705135145651361e+1 # 1.1479385145651362e+1 # 7.8108851456513611 #
+    1.1335885145651361e+1 # 1.0661635145651362e+1 # 8.6772794985830011 #
+    9.3682794985830018 # 8.9135294985830011 # 5.3783364617377742 # 7.524 #
+    7.2515413205967407 # 8.6440000000000001 # 8.3895 # 7.4654999999999996 #
+    5.6319999999999997 # 6.8389999999999995 # 8.0879999999999992 #
+    7.6470000000000002 # 9.0857499999999991 # 9.43675 # 1.1558999999999999e+1 #
+    1.0020363056650964e+1 # 6.6903630566509653 # 5.9119999999999999 #
+    6.2241755326613184 # 9.3931755326613171 # 9.5161755326613182 #
+    9.249175532661317 # 5.7300967488082479 # 5.4323225832959094 #
+    8.8759999999999994 # 5.8639999999999999 # 1.0e+1 # 8.6280000000000001 #
+    5.5999999999999996 # 7.6040000000000001 # 7.899 # 7.444 #
+    9.0039999999999996 # 9.9319999999999986 # 7.3577499999999993 #
+    6.6840000000000002 # 5.9359999999999999 # 5.8239999999999998 #
+    8.2669999999999995 # 6.3359999999999994 # 6.7130000000000001 #
+    8.1764080037464915 # 6.7439999999999998 # 1.1718999999999999e+1 #
+    1.0016499999999999e+1 # 1.0e+1 # 7.8787499999999993 # 7.6200000000000001 #
+    6.5439999999999996 # 6.8838747791537234 # 6.0228747791537227 #
+    7.1838747791537232 # 8.4302821969245798 # 6.456532196924579 #
+    6.4079999999999995 # 6.9788514168341109 # 8.0718514168341109 #
+    1.073285141683411e+1 # 9.2153514168341104 # 7.5263514168341112 #
+    8.8958514168341107 # 7.032 # 6.3769999999999998 # 1.0e+1 #
+    1.0312249999999999e+1 # 1.0266249999999999e+1 # 5.6494999999999989 #
+    6.7639999999999993 # 6.5199999999999996 # 9.3339999999999996 # 1.042e+1 #
+    7.6917499999999999 # 5.1199999999999992 # 8.9239999999999995 #
+    1.1061274934207582e+1 # 1.2380024934207583e+1 # 1.4662524934207582e+1 #
+    1.5837524934207583e+1 # 1.8552524934207582e+1 # 2.0195024934207581e+1 #
+    1.8770274934207581e+1 # 2.0128274934207582e+1 # 1.7680524934207583e+1 #
+    1.3961121012048817e+1 # 1.7186121012048815e+1 # 1.3803621012048817e+1 #
+    1.3374551532101957e+1 # 1.6780801532101957e+1 # 1.2904801532101958e+1 #
+    1.3267801532101958e+1 # 1.0978301532101959e+1 # 1.1491051532101958e+1 #
+    1.0461051532101958e+1 # 1.2499051532101959e+1 # 1.0910301532101958e+1 #
+    1.0634301532101958e+1 # 8.405551532101958 # 8.789301532101959 #
+    5.2021162051399967 # 7.8600000000000003 # 6.1037186307125344 #
+    7.6567186307125343 # 7.0784686307125346 # 7.4483469241663665 #
+    7.4783469241663667 # 1.1998346924166366e+1 # 1.0096596924166366e+1 #
+    1.2641596924166366e+1 # 1.6210596924166364e+1 # 1.3906846924166366e+1 #
+    1.3767560629668587e+1 # 1.4490560629668586e+1 # 1.0155310629668588e+1 #
+    1.0531560629668586e+1 # 8.3393106296685868 # 1.0352310629668587e+1 #
+    1.1858560629668586e+1 # 1.0276946745554401e+1 # 1.2964946745554402e+1 #
+    8.9969467455544017 # 7.1689467455544023 # 7.4349467455544023 #
+    8.6879999999999988 # 6.9936364791202985 # 6.3079999999999998 #
+    5.3439999999999994 # 5.3989861630283178 # 8.548 # 1.0042499999999999e+1 #
+    6.6200000000000001 # 7.2097499999999997 # 9.1177499999999991 #
+    8.8127499999999994 # 5.8564999999999996 # 1.0e+1 # 6.0549999999999997 #
+    5.7599999999999998 # 8.2839999999999989 # 8.5102499999999992 #
+    9.5239999999999991 # 1.1457999999999998e+1 # 7.7782499999999999 #
+    5.7918631745169655 # 7.1399999999999997 # 6.2439999999999998 #
+    6.2839999999999998 # 5.8232558869248283 # 8.7022558869248279 #
+    7.1891092950874684 # 6.04 # 8.3759999999999994 # 8.3109999999999982 #
+    8.1700856817166301 # 7.1520000000000001 # 7.1280000000000001 #
+    6.9240439595192695 # 6.6399999999999997 # 8.6839999999999993 # 7.29 #
+    8.5859999999999985 # 6.04 # 8.0839999999999996 # 9.7087499999999984 #
+    1.0067499999999999e+1 # 1.2592499999999999e+1 # 8.2218875105245832 #
+    7.0888875105245832 # 6.0880000000000001 # 8.7319999999999993 #
+    8.9489999999999998 # 1.0e+1 # 9.6739999999999995 # 5.5649999999999995 #
+    7.2439999999999998 # 6.2079999999999993 # 1.0e+1 # 5.7635696658743543 #
+    5.1639999999999997 # 5.7423374457685794 # 8.6159999999999997 #
+    6.7799999999999994 # 5.7559999999999993 # 6.9639999999999995 #
+    1.1183999999999999e+1 # 1.2534999999999998e+1 # 1.165625e+1 #
+    9.5172499999999989 # 5.6532087707113119 # 6.8079999999999998 #
+    8.0365542890921073 # 5.9959999999999996 # 6.1973282826251301 #
+    6.6398971409366716 # 6.0272223135992995 # 5.6839999999999993 #
+    8.2639999999999993 # 1.0e+1 # 8.8119999999999994 # 1.0e+1 # 8.87575 #
+    7.1599999999999993 # 8.2359999999999989 # 8.6652765835076906 #
+    5.4319999999999995 # 6.5800000000000001 # 1.0e+1 # 9.1485000000000003 #
+    6.6407499999999997 # 9.4307499999999997 # 5.5447271964595348 #
+    7.4119999999999999 # 6.4319999999999995 # 9.347999999999999 # 7.67225 #
+    7.7599999999999998 # 8.8167128466416838 # 1.0758712846641682e+1 #
+    8.7704628466416832 # 1.0355462846641682e+1 # 7.9152128466416833 #
+    5.3279999999999994 # 7.5679999999999996 # 5.3519999999999994 #
+    7.8680000000000003 # 5.0534007977449784 # 6.8239999999999998 #
+    6.6680000000000001 # 7.941679215104779 # 1.2416679215104779e+1 #
+    1.1901179215104779e+1 # 1.031492921510478e+1 # 9.8579292151047788 #
+    8.0126107968299234 # 7.574860796829924 # 5.6239999999999997 #
+    6.7599999999999998 # 5.5817499999999995 # 5.6161861604416794 #
+    8.0949574138774043 # 7.9319999999999995 # 1.00055e+1 #
+    1.0796517928333689e+1 # 8.4830179283336893 # 8.4920179283336878 #
+    7.8639999999999999 # 8.145999999999999 # 7.4902499999999996 # 6.024 #
+    6.7429693260764854 # 8.3079999999999998 # 7.3600000000000003 #
+    6.0876723696476382 # 5.7719999999999994 # 8.8159999999999989 #
+    6.2241755326613184 # 5.54 # 6.0161110881742283 # 7.4041110881742283 #
+    7.9639999999999995 # 8.9359999999999999 # 5.8232558869248283 #
+    5.4199999999999999 # 6.6479999999999997 # 6.3679999999999994 #
+    8.1239999999999988 # 5.3519999999999994 # 7.9349999999999996 #
+    8.8284583868662239 # 9.3089583868662249 # 9.0765712367510876 #
+    8.4199999999999999 # 9.7769999999999992 # 1.0526e+1 # 7.1332499999999994 #
+    5.516 # 5.8879999999999999 # 5.0833816299569135 # 7.6559999999999997 #
+    8.6988743770194787 # 8.6421243770194796 # 1.0e+1 # 9.5637499999999989 #
+    1.1918749999999999e+1 # 7.793499999999999 # 6.5119999999999996 #
+    5.7239999999999993 # 7.3440000000000003 # 9.9342499999999987 #
+    8.5947499999999994 # 1.0204749999999999e+1 # 1.101375e+1 # 1.3458e+1 #
+    1.11045e+1 # 1.1218749999999998e+1 # 7.196306736659877 # 7.0359999999999996
+    # 5.5395681136495076 # 6.6559999999999997 # 5.0439519085470454 # 1.0e+1 #
+    1.1715999999999999e+1 # 1.2170999999999999e+1 # 1.0606e+1 #
+    7.6294999999999993 # 5.1639999999999997 # 7.5919999999999996 #
+    7.9870000000000001 # 5.2968148870250698 # 8.4639999999999986 #
+    5.4942963428326426 # 8.3719999999999999 # 8.5465 # 8.8304999999999989 #
+    5.6051363242550947 # 8.3559999999999999 # 1.2155999999999999e+1 #
+    1.1827749999999998e+1 # 1.3279249999999999e+1 # 1.0020999999999999e+1 #
+    7.7720000000000002 # 1.0e+1 # 1.2152999999999999e+1 # 1.528425e+1 #
+    1.5582249999999998e+1 # 1.5090249999999999e+1 # 1.4192749999999998e+1 #
+    1.0811999999999999e+1 # 7.2322499999999987 # 6.1505354806144208 #
+    6.2695354806144206 # 9.8065354806144196 # 1.0e+1 # 8.6012500000000003 #
+    7.1050000000000004 # 6.2799999999999994 # 8.2919999999999998 #
+    1.0545999999999999e+1 # 8.4527499999999982 # 1.0e+1 # 1.0086499999999999e+1
+    # 7.1239999999999997 # 7.7800000000000002 # 7.3104999999999993 #
+    6.2542499999999999 # 5.0039999999999996 # 5.3119999999999994 #
+    6.1759999999999993 # 5.6597124254915707 # 7.6310891809839445 #
+    7.9202593790315632 # 7.7495093790315632 # 8.4719999999999995 #
+    8.2239385011566863 # 1.0845938501156686e+1 # 1.0549188501156685e+1 #
+    9.3636885011566857 # 5.944 # 7.9719999999999995 # 8.3989999999999991 #
+    1.0645999999999999e+1 # 5.6425000000000001 # 8.8679999999999986 #
+    7.6469999999999994 # 8.0919999999999987 # 7.4344999999999999 #
+    6.8159999999999998 # 1.0e+1 # 7.7356400625067581 # 5.5481814313276221 #
+    6.476 # 7.7220215575794251 # 7.8904725173211263 # 1.0984222517321125e+1 #
+    9.1220428898273838 # 1.0417792889827384e+1 # 1.0186292889827383e+1 #
+    8.9427928898273823 # 5.2599999999999998 # 7.1479999999999997 # 1.0e+1 #
+    7.452 # 6.951928242398739 # 8.0839999999999996 # 6.7594999999999992 #
+    1.0e+1 # 1.2739999999999998e+1 # 1.2506712846641683e+1 #
+    1.1572962846641683e+1 # 9.8087128466416829 # 8.6011227581497494 #
+    5.0479999999999992 # 7.7999999999999998 # 1.163125e+1 # 6.9417499999999999
+    # 6.7439999999999998 # 5.6971855104229876 # 1.0192185510422986e+1 #
+    1.2334185510422987e+1 # 1.6277935510422985e+1 # 1.8011935510422987e+1 #
+    2.1227935510422984e+1 # 2.0876185510422985e+1 # 2.1375935510422988e+1 #
+    2.3541935510422988e+1 # 2.3130435510422988e+1 # 2.4778935510422986e+1 #
+    2.3691435510422988e+1 # 2.2416435510422986e+1 # 2.1355685510422987e+1 #
+    1.9952146248496334e+1 # 1.8102396248496333e+1 # 2.0285896248496332e+1 #
+    1.7563146248496334e+1 # 1.6350396248496335e+1 # 1.1847396248496334e+1 #
+    9.3301462484963338 # 8.5079999999999991 # 6.8639999999999999 #
+    7.1239999999999997 # 8.4559999999999995 # 1.0956e+1 # 1.4687249999999999e+1
+    # 1.4645999999999999e+1 # 1.3185749999999999e+1 # 1.2331249999999999e+1 #
+    1.3475e+1 # 1.1979749999999999e+1 # 1.326e+1 # 9.5937377938126609 #
+    1.198748779381266e+1 # 1.4210487793812661e+1 # 1.312523779381266e+1 #
+    1.330123779381266e+1 # 1.1076046196169424e+1 # 9.4722961961694221 #
+    1.0744296196169422e+1 # 9.9460461961694229 # 9.6770461961694227 #
+    7.1289365602332113 # 8.4549365602332109 # 1.2624936560233211e+1 #
+    1.621593656023321e+1 # 1.2141686560233211e+1 # 9.1884365602332103 # 6.944 #
+    1.0e+1 # 1.2536e+1 # 9.6393064975780174 # 7.7705564975780179 #
+    8.4225564975780181 # 1.0e+1 # 9.4599999999999991 # 5.8519999999999994 #
+    6.8639999999999999 # 7.3719999999999999 # 8.7899999999999991 #
+    1.0061249999999999e+1 # 6.0117385531039931 # 6.4239999999999995 #
+    5.5516476393041083 # 7.7446476393041079 # 8.5119999999999987 #
+    9.0577499999999986 # 5.1839999999999993 # 7.9959999999999996 #
+    6.9559999999999995 # 5.7679999999999998 # 7.746999999999999 # 6.0 #
+    7.2839999999999998 # 8.2159999999999993 # 9.3155000000000001 # 9.84375 #
+    8.4862500000000001 # 8.6879999999999988 # 5.1199999999999992 #
+    8.879999999999999 # 6.5467499999999994 # 9.0142499999999988 #
+    7.8554999999999993 # 6.9038089940545406 # 6.8355589940545407 # 5.992 #
+    8.9919999999999991 # 1.1048249999999999e+1 # 1.05625e+1 #
+    1.2924499999999998e+1 # 9.2614999999999998 # 7.3769999999999998 #
+    6.7199999999999998 # 6.032 # 7.8520000000000003 # 7.0827499999999999 #
+    8.4917499999999997 # 9.0437499999999993 # 5.8319999999999999 #
+    5.2639999999999993 # 8.2159999999999993 # 8.3934999999999995 #
+    8.7594999999999992 # 1.240325e+1 # 1.2369999999999999e+1 #
+    9.1977499999999992 # 1.0072749999999999e+1 # 1.0e+1 # 1.0074999999999999e+1
+    # 1.0097e+1 # 1.4686999999999999e+1 # 1.4386650027315403e+1 #
+    9.912900027315402 # 9.1001500273154026 # 5.7679999999999998 # 1.0e+1 #
+    9.7655254740137778 # 9.2915638234086959 # 1.0879813823408696e+1 #
+    5.060563823408696 # 5.6279999999999992 # 5.7039999999999997 #
+    8.6399999999999988 # 7.5999999999999996 # 6.4039999999999999 # 6.46 #
+    7.3319999999999999 # 1.0e+1 # 8.9454999999999991 # 7.7439999999999998 #
+    5.6559999999999997 # 6.5847453208615914 # 9.0607453208615905 #
+    9.1089146652439208 # 1.2290164665243921e+1 # 1.1797914665243921e+1 #
+    8.1390257534181494 # 9.8460257534181501 # 1.0052275753418151e+1 #
+    1.202727575341815e+1 # 7.9500257534181511 # 5.7732757534181509 #
+    8.5662757534181502 # 1.2796275753418151e+1 # 1.1607775753418149e+1 #
+    1.264777575341815e+1 # 1.040927575341815e+1 # 6.2310257534181508 #
+    8.7159999999999993 # 5.0199999999999996 # 6.9569999999999999 #
+    7.5580464733104078 # 8.2441936538703526 # 6.4671936538703534 #
+    9.149193653870352 # 6.4532572392100027 # 1.0304257239210001e+1 #
+    7.802257239210002 # 8.2919999999999998 # 5.2639655668523275 #
+    6.2599999999999998 # 7.2640000000000002 # 7.7320000000000002 #
+    7.5419999999999998 # 8.4239999999999995 # 9.4107500000000002 #
+    9.9322499999999998 # 1.069125e+1 # 5.4684049288999015 # 6.4279999999999999
+    # 7.0800000000000001 # 5.9400718959741887 # 5.952 # 8.5939999999999994 #
+    7.5257499999999995 # 7.5127499999999996 # 6.9199999999999999 #
+    6.0619125018298474 # 7.9479999999999995 # 6.6879999999999997 #
+    5.3989861630283178 # 6.0139861630283171 # 9.6069861630283171 #
+    1.2042986163028317e+1 # 1.3316486163028317e+1 # 9.0639861630283178 #
+    7.4940393744092964 # 6.9960393744092961 # 8.5 # 7.4963220177615772 #
+    6.9119999999999999 # 5.3439999999999994 # 5.3495574971877309 #
+    6.9879999999999995 # 7.0559999999999992 # 7.2519999999999998 #
+    6.0439999999999996 # 5.6079999999999997 # 1.0e+1 # 9.0806670166552088 #
+    7.2800000000000002 # 1.0282e+1 # 1.0019523212723422e+1 # 6.403054626365809
+    # 1.0e+1 # 9.0122499999999999 # 9.0133117266093112 # 1.1143311726609312e+1
+    # 1.5783311726609313e+1 # 1.2599311726609312e+1 # 1.0309784483915305e+1 #
+    8.5247844839153046 # 8.238784483915305 # 9.7877844839153045 #
+    8.2667925263307058 # 8.8537925263307056 # 1.0608792526330706e+1 #
+    1.0798279772215293e+1 # 1.0604779772215293e+1 # 6.031279772215294 # 1.0e+1
+    # 5.9532178944126439 # 5.0439999999999996 # 1.0e+1 # 1.0593499999999999e+1
+    # 1.14575e+1 # 1.0443e+1 # 1.0859e+1 # 7.9100249342075832 #
+    6.6799999999999997 # 8.3287499999999994 # 7.6912499999999993 #
+    8.4239999999999995 # 5.0 # 5.4279999999999999 # 8.847999999999999 #
+    6.9879999999999995 # 6.6879999999999997 # 7.3520000000000003 # 1.0e+1 #
+    9.9959305200531396 # 9.0174305200531393 # 9.1521805200531396 #
+    8.3759999999999994 # 8.7029999999999994 # 1.0e+1 # 9.6566105757623806 #
+    5.8421105757623799 # 5.0639999999999992 # 6.0800000000000001 #
+    6.4079999999999995 # 6.5089999999999995 # 8.0919999999999987 #
+    7.2919999999999998 # 7.5759999999999996 # 1.027608568171663e+1 #
+    1.216708568171663e+1 # 1.2164177310268343e+1 # 1.1719548058042088e+1 #
+    6.2685342210704063 # 1.0e+1 # 6.8159999999999998 # 5.6311118106583553 #
+    6.4199999999999999 # 1.1209999999999999e+1 # 9.1512499999999992 #
+    8.9987499999999994 # 6.6857499999999996 # 5.7199999999999998 # 1.0e+1 #
+    9.124957881049049 # 1.1658707881049049e+1 # 1.1566918398779045e+1 #
+    7.958168398779045 # 5.5464528224270042 # 8.347999999999999 #
+    9.278510112551988 # 8.9919999999999991 # 1.0e+1 # 5.0999999999999996 #
+    5.7999999999999998 # 1.0694999999999999e+1 # 1.2447749999999999e+1 #
+    1.0147499999999999e+1 # 6.2789999859639867 # 5.1479999999999997 #
+    7.4199999999999999 # 7.0960000000000001 # 5.0661398235224082 #
+    5.6639999999999997 # 5.9719999999999995 # 8.0039999999999996 #
+    5.5533852592026491 # 7.1799999999999997 # 5.548 # 8.1600000000000001 #
+    8.0649999999999995 # 1.168e+1 # 1.2382e+1 # 1.064175e+1 # 1.328375e+1 #
+    1.4787750000000001e+1 # 1.360575e+1 # 1.2333e+1 # 8.3780438726934303 #
+    8.6853721553185608 # 1.0e+1 # 1.015625e+1 # 1.096875e+1 #
+    1.2370249999999999e+1 # 1.4306249999999999e+1 # 1.5040118232893461e+1 #
+    1.3611894816401152e+1 # 1.3380894816401151e+1 # 1.1533644816401152e+1 #
+    1.2131644816401151e+1 # 1.3407144816401152e+1 # 1.5855144816401152e+1 #
+    1.5355894816401152e+1 # 1.4904119915088817e+1 # 1.4741619915088817e+1 #
+    1.5722869915088818e+1 # 1.4318869915088817e+1 # 1.0189369915088816e+1 #
+    5.556 # 1.0005999999999998e+1 # 1.1095695158864867e+1 # 6.5199451588648678
+    # 5.0439519085470454 # 5.1187835570078297 # 6.5800000000000001 #
+    6.6820086262867981 # 7.6680000000000001 # 1.2183e+1 # 8.2212499999999995 #
+    8.0097499999999986 # 6.7919999999999998 # 6.2275579093795086 #
+    6.8439999999999994 # 5.0418642251165613 # 5.1519863780157449 # 1.0e+1 #
+    1.0649749999999999e+1 # 1.3021999999999998e+1 # 9.5184999999999977 #
+    7.4407499999999986 # 5.2639999999999993 # 6.5880000000000001 #
+    8.395999999999999 # 6.1824999999999992 # 5.476 # 6.2039728253437989 #
+    7.7560000000000002 # 6.7079999999999993 # 8.5039999999999996 #
+    8.5252499999999998 # 6.2879999999999994 # 7.444 # 1.0568999999999999e+1 #
+    9.7872499999999985 # 1.3877249999999998e+1 # 1.3218249999999999e+1 #
+    1.304425e+1 # 1.2746749999999999e+1 # 1.5084249999999999e+1 #
+    1.8040499999999998e+1 # 1.6829749999999997e+1 # 2.0392249999999997e+1 #
+    1.9813556573895646e+1 # 2.3763556573895645e+1 # 2.1817806573895645e+1 #
+    2.313317606805489e+1 # 2.5314176068054888e+1 # 2.7686176068054888e+1 #
+    2.9457176068054888e+1 # 3.235117606805489e+1 # 2.9241766681307606e+1 #
+    2.8579691646264202e+1 # 3.0623441646264201e+1 # 2.8986191646264199e+1 #
+    2.62624416462642e+1 # 2.57289416462642e+1 # 2.7259733602207984e+1 #
+    2.7747233602207984e+1 # 2.2600919762649664e+1 # 1.9351987976191072e+1 #
+    1.7690987976191071e+1 # 1.825698797619107e+1 # 2.0075987976191072e+1 #
+    1.5662737976191073e+1 # 1.3376737976191073e+1 # 1.5552737976191072e+1 #
+    1.3412487976191072e+1 # 1.5965487976191072e+1 # 1.1977418075587112e+1 #
+    1.5002418075587112e+1 # 1.3808668075587113e+1 # 1.2626668075587112e+1 #
+    1.6151668075587111e+1 # 1.5106168075587112e+1 # 1.900716807558711e+1 #
+    1.8742168075587109e+1 # 1.820066807558711e+1 # 1.9152668075587112e+1 #
+    1.5211168075587112e+1 # 1.5514827987095179e+1 # 1.462807798709518e+1 #
+    1.2895077987095179e+1 # 1.213057798709518e+1 # 7.6884881929177018 #
+    6.6719999999999997 # 8.2240000000000002 # 5.502526841969158 #
+    8.6888794751317988 # 5.2231435723320727 # 8.1839999999999993 #
+    1.1033999999999999e+1 # 1.01235e+1 # 9.7415000000000003 #
+    7.5439999999999996 # 7.7439999999999998 # 7.3751558068467435 #
+    7.0784058068467433 # 1.0e+1 # 1.1197249999999999e+1 # 1.0485249999999999e+1
+    # 6.448999999999999 # 6.9639999999999995 # 8.1674999999999986 #
+    8.4972499999999993 # 6.9139999999999997 # 6.8679999999999994 #
+    7.9319999999999995 # 7.1479999999999997 # 9.7359999999999989 #
+    6.8589048977955791 # 5.9685601207709258 # 5.5279999999999996 #
+    5.9039999999999999 # 5.8039999999999994 # 1.0e+1 # 1.0238e+1 #
+    9.3124562068139216 # 1.1811456206813922e+1 # 1.2690706206813921e+1 #
+    1.5699706206813921e+1 # 1.5295706206813922e+1 # 1.4729706206813921e+1 #
+    1.5073706206813922e+1 # 1.4206706206813921e+1 # 9.562706206813921 #
+    1.371770620681392e+1 # 1.278645620681392e+1 # 1.1010206206813921e+1 #
+    1.2670206206813921e+1 # 1.559120620681392e+1 # 1.6658206206813919e+1 #
+    1.456770620681392e+1 # 1.5025456206813921e+1 # 1.6524786389894672e+1 #
+    1.6087786389894674e+1 # 1.3018786389894673e+1 # 1.2892615212361154e+1 #
+    1.2465365212361155e+1 # 1.3374365212361155e+1 # 1.8174365212361153e+1 #
+    1.3939487678678773e+1 # 1.1395457979406487e+1 # 8.361966021821889 #
+    6.2519999999999998 # 1.0e+1 # 5.843970091312392 # 7.9399999999999995 #
+    6.5059999999999993 # 7.2160000000000002 # 1.0e+1 # 8.3055000000000003 #
+    6.4344510485019404 # 6.6520000000000001 # 8.2519999999999989 #
+    8.5299999999999994 # 8.269055282518595 # 7.7283600339772338 #
+    9.4383600339772329 # 5.4479999999999995 # 6.4354846263285248 #
+    9.3444846263285246 # 8.4661548243761438 # 1.0e+1 # 9.3605587593670787 #
+    1.3248058759367078e+1 # 1.3124808759367077e+1 # 1.2330058759367079e+1 #
+    1.0529058759367079e+1 # 1.1953058759367078e+1 # 1.0094140327358419e+1 #
+    1.1799140327358419e+1 # 1.1180390327358419e+1 # 1.1024390327358418e+1 #
+    1.1278390327358419e+1 # 1.4196623189634996e+1 # 1.4934373189634996e+1 #
+    1.4999594039179414e+1 # 1.3530969885065478e+1 # 1.4950219885065477e+1 #
+    1.4614219885065477e+1 # 1.0685985350045005e+1 # 1.0035235350045006e+1 #
+    1.1014235350045006e+1 # 1.218971997637353e+1 # 8.3212199763735306 #
+    1.139621997637353e+1 # 8.690719976373531 # 5.7228425803827276 #
+    7.5960000000000001 # 9.8569999999999993 # 1.0796249999999999e+1 # 1.2288e+1
+    # 1.0877000000000001e+1 # 8.3460678290021519 # 7.7400000000000002 #
+    7.2320000000000002 # 8.4386548977955798 # 8.9244048977955792 #
+    1.069015489779558e+1 # 1.019540489779558e+1 # 1.0160100056660447e+1 #
+    9.0471000566604474 # 6.6001000566604482 # 7.2880000000000003 #
+    6.1759999999999993 # 8.1199999999999992 # 1.3029999999999999e+1 #
+    1.0364999999999998e+1 # 1.0082999999999998e+1 # 7.9304999999999994 # 7.984
+    # 1.0e+1 # 9.4894999999999996 # 1.3183249999999999e+1 #
+    1.4410499999999999e+1 # 1.1362749999999998e+1 # 9.9057499999999994 # 1.0e+1
+    # 9.5557499999999997 # 6.4359999999999999 # 6.9650401439571974 #
+    7.1280000000000001 # 5.1679999999999993 # 5.9039999999999999 #
+    8.9799999999999986 # 1.0e+1 # 9.3244999999999987 # 5.1415635853396493 #
+    8.9759999999999991 # 5.082295263744693 # 5.7279999999999998 #
+    6.2679999999999998 # 5.5378543171717727 # 7.4279999999999999 #
+    5.6519999999999992 # 5.8319999999999999 # 5.7279999999999998 #
+    5.4732087812125467 # 8.9879999999999995 # 1.0459e+1 # 1.0946499999999999e+1
+    # 1.0130999999999998e+1 # 5.7799999999999994 # 5.6273594610398048 #
+    7.5839999999999996 # 6.5899999999999999 # 7.6879999999999997 #
+    8.3824999999999985 # 1.0932447970384739e+1 # 1.4619947970384739e+1 #
+    1.4120887252978642e+1 # 1.5102085223363382e+1 # 1.6767085223363381e+1 #
+    1.5547335223363383e+1 # 1.3224091864963134e+1 # 1.2627091864963132e+1 #
+    1.1546841864963133e+1 # 9.7400918649631336 # 6.7512353177312763 #
+    5.2459005594546886 # 8.0519999999999996 # 1.0809143011331889e+1 #
+    9.0738930113318883 # 1.1512893011331888e+1 # 1.3006893011331888e+1 #
+    1.116864301133189e+1 # 5.59639301133189 # 5.2799999999999994 #
+    5.7519999999999998 # 8.6999999999999993 # 8.8579999999999988 #
+    6.3292810618387936 # 8.8079999999999998 # 7.7699307375677744 #
+    9.9509307375677736 # 1.4484244495887937e+1 # 1.7559244495887935e+1 #
+    1.9520244495887937e+1 # 1.9656373627098354e+1 # 1.9220623627098355e+1 #
+    1.5219451545226077e+1 # 1.2292951545226076e+1 # 8.5274206217602107 #
+    1.1763420621760211e+1 # 1.1438922916121941e+1 # 1.3818922916121942e+1 #
+    1.1622422916121941e+1 # 1.4352422916121942e+1 # 1.1724324116633978e+1 #
+    8.3918035714632087 # 9.0510535714632088 # 1.0986053571463209e+1 #
+    6.9768035714632095 # 5.7657178944126439 # 6.3439999999999994 #
+    8.9919999999999991 # 1.1889249999999999e+1 # 8.4389999999999983 #
+    8.286999999999999 # 1.0480749999999999e+1 # 8.9862499999999983 #
+    6.0720000000000001 # 6.1819999999999995 # 5.8818893261746856 #
+    7.3719999999999999 # 7.1719999999999997 # 5.1731636400270515 #
+    6.8999999999999995 # 6.3279999999999994 # 5.4338646036477254 # 1.0e+1 #
+    8.7832499999999989 # 8.395999999999999 # 7.5092499999999998 #
+    5.4979973869485983 # 6.2759973869485988 # 7.3639999999999999 #
+    8.1519999999999992 # 5.9559999999999995 # 5.4992265089405015 # 1.0e+1 #
+    1.0829794819864054e+1 # 5.6830448198640537 # 6.3093333410016248 #
+    7.2119999999999997 # 1.1851999999999999e+1 # 1.3970749999999999e+1 #
+    1.1975249999999999e+1 # 7.0917499999999993 # 9.4437499999999996 #
+    9.4922499999999985 # 5.8799999999999999 # 7.3809999999999993 # 1.0e+1 #
+    1.0518749999999999e+1 # 8.1304999999999996 # 8.0787499999999994 #
+    7.7785584023567615 # 6.8130584023567611 # 7.6520000000000001 #
+    7.9244999999999992 # 6.3801034081626398 # 7.3821034081626404 #
+    7.4119999999999999 # 7.3799999999999999 # 1.0e+1 # 1.0757499999999999e+1 #
+    1.3060499999999999e+1 # 1.1344999999999999e+1 # 9.5612499999999994 #
+    6.9262499999999996 # 6.0599999999999996 # 5.7679999999999998 #
+    7.1799999999999997 # 8.1959999999999997 # 5.9159999999999995 #
+    7.3319999999999999 # 5.4064656294596105 # 5.8239999999999998 #
+    5.5108256447838535 # 8.5279999999999987 # 5.6348782934538324 #
+    6.3799999999999999 # 8.7080000000000002 # 1.2179e+1 # 1.4482999999999999e+1
+    # 1.4526249999999999e+1 # 1.4745749999999999e+1 # 1.745825e+1 #
+    1.7298614307023296e+1 # 1.3426364307023299e+1 # 1.5502364307023297e+1 #
+    1.0537922216402807e+1 # 1.0562422216402808e+1 # 8.9866722164028072 #
+    8.727172216402808 # 1.0e+1 # 1.07235e+1 # 8.1022499999999997 #
+    8.879999999999999 # 1.2578999999999999e+1 # 1.1705499999999999e+1 #
+    9.478749999999998 # 6.1162499999999982 # 6.1919999999999993 #
+    6.8199999999999994 # 7.8559999999999999 # 7.1976640053894538 # 1.0e+1 #
+    1.0021266842542309e+1 # 7.0047668425423089 # 6.2759999999999998 #
+    8.6399999999999988 # 9.4622499999999992 # 5.1863295992093565 #
+    7.6479999999999997 # 7.8079999999999998 # 6.3479999999999999 #
+    1.0607999999999999e+1 # 1.3126749999999999e+1 # 1.6626749999999998e+1 #
+    1.5548507205491134e+1 # 1.1718257205491135e+1 # 1.2561507205491134e+1 #
+    1.2111507205491135e+1 # 1.1495817905980239e+1 # 1.0658317905980239e+1 #
+    8.0698179059802388 # 8.016 # 1.0e+1 # 1.1612499999999999e+1 #
+    1.3543249999999999e+1 # 1.404125e+1 # 1.498725e+1 # 1.7500249999999998e+1 #
+    1.6705249999999999e+1 # 1.7812749999999998e+1 # 1.7139999999999997e+1 #
+    1.5158584691393424e+1 # 1.1288584691393424e+1 # 1.1878834691393424e+1 #
+    1.3030584691393424e+1 # 1.6165584691393423e+1 # 1.1774084691393423e+1 #
+    1.3712084691393423e+1 # 1.6300084691393423e+1 # 1.7486084691393422e+1 #
+    1.5965584691393424e+1 # 1.0664084691393423e+1 # 1.018506500120756e+1 #
+    1.1641315001207561e+1 # 1.2304315001207561e+1 # 1.3525315001207561e+1 #
+    1.1199815001207561e+1 # 6.1817155872607996 # 5.4639999999999995 #
+    8.6079999999999988 # 1.0846e+1 # 7.4275099279722188 # 8.5735099279722178 #
+    5.5532599279722188 # 6.5 # 5.3410828701967592 # 8.395999999999999 #
+    5.8119999999999994 # 6.4399999999999995 # 7.8159999999999998 #
+    5.5952499999999992 # 7.4639999999999995 # 7.5162499999999994 #
+    7.2563587063648827 # 7.3079999999999998 # 6.3919999999999995 # 1.0e+1 #
+    1.0049249999999999e+1 # 8.45425 # 8.5399999999999991 # 8.859 #
+    6.1839999999999993 # 7.6959999999999997 # 1.0207999999999998e+1 #
+    7.1607499999999993 # 7.6879999999999997 # 5.973749999999999 # 1.011375e+1 #
+    8.552999999999999 # 8.1755140289863402 # 5.3229639076142838 #
+    8.4319999999999986 # 8.6559999999999988 # 1.2069999999999999e+1 #
+    1.0344499999999998e+1 # 1.0956370914954906e+1 # 6.7753709149549071 #
+    5.0202027283353825 # 5.1731636400270515 # 8.3519999999999985 #
+    9.0047499999999996 # 1.0215331365202243e+1 # 7.7465706637625962 #
+    9.4918206637625957 # 8.9538206637625954 # 1.2066820663762597e+1 #
+    1.1084320663762597e+1 # 8.1815706637625958 # 1.0755320663762596e+1 #
+    1.0397320663762596e+1 # 9.0483206637625955 # 8.6519999999999992 #
+    7.0759999999999996 # 1.0e+1 # 1.164725e+1 # 1.0951749999999999e+1 #
+    6.2814999999999994 # 5.4319999999999995 # 6.7559999999999993 #
+    7.0229999999999997 # 6.5279999999999996 # 7.968 # 6.6902499999999998 #
+    7.7320000000000002 # 7.2724999603767264 # 7.0444999603767258 #
+    8.6479999999999997 # 9.5609999999999999 # 5.9868499088953282 #
+    6.9119999999999999 # 6.2679999999999998 # 8.2639999999999993 # 1.3209e+1 #
+    1.5221499999999999e+1 # 1.8297499999999999e+1 # 1.6597701888201872e+1 #
+    1.2976951888201874e+1 # 1.4070951888201874e+1 # 1.4216951888201875e+1 #
+    1.1695780500089441e+1 # 1.1277530500089441e+1 # 1.103978050008944e+1 #
+    9.7950305000894407 # 8.6147805000894415 # 7.333044321496617 #
+    6.3959999999999999 # 8.6519999999999992 # 9.5509999999999984 #
+    7.6522499999999996 # 8.5077499999999997 # 8.5954999999999995 #
+    8.7684999999999995 # 8.4077499999999983 # 9.9814999999999987 #
+    9.7624999999999993 # 9.8969911769174104 # 8.246408173227449 #
+    8.1024081732274489 # 7.8600000000000003 # 7.7909999999999995 #
+    5.7919999999999998 # 8.5759999999999987 # 1.1732999999999999e+1 #
+    9.2599999999999998 # 9.2733159537306289 # 8.4343159537306285 #
+    8.2013159537306279 # 8.7400659537306282 # 9.2480659537306291 #
+    1.1228065953730628e+1 # 1.1943065953730629e+1 # 8.8448159537306292 #
+    9.4650659537306279 # 1.0e+1 # 9.598690072200105 # 6.4632228187831204 #
+    5.3279999999999994 # 6.8919999999999995 # 7.2599999999999998 #
+    9.8789999999999996 # 8.1600000000000001 # 7.2044999999999995 #
+    6.4462139076142835 # 8.8879999999999999 # 5.3552474129654097 #
+    8.2679999999999989 # 8.9509999999999987 # 5.7639999999999993 #
+    8.8159999999999989 # 7.2792746359548266 # 1.1734274635954826e+1 #
+    6.6987746359548259 # 7.7767746359548262 # 7.9135246359548264 #
+    7.2519999999999998 # 7.2729999999999997 # 6.0279999999999996 # 1.0e+1 #
+    8.395999999999999 # 8.4052499999999988 # 8.847999999999999 #
+    8.0539999999999985 # 6.7769999999999992 # 5.7839999999999998 #
+    5.1679999999999993 # 8.5439999999999987 # 1.0780999999999999e+1 #
+    1.3341999999999999e+1 # 1.12255e+1 # 1.01585e+1 # 1.2134499999999999e+1 #
+    1.0608499999999999e+1 # 8.3074999999999992 # 6.2039999999999997 #
+    6.3319999999999999 # 8.9359999999999999 # 5.0399999999999991 #
+    7.4239999999999995 # 1.0555249999999999e+1 # 1.3673999999999999e+1 #
+    1.2711925956381553e+1 # 1.3460925956381553e+1 # 9.6864259563815533 #
+    7.4477449756943628 # 8.2957449756943618 # 7.7030626806090341 # 1.0e+1 #
+    6.1237500000000002 # 5.3453112063062802 # 7.1799999999999997 #
+    6.3519999999999994 # 8.3039999999999985 # 6.1270117842076708 #
+    5.9079999999999995 # 6.6760000000000002 # 7.0794415626976983 # 1.0e+1 #
+    1.0116249999999999e+1 # 1.1686e+1 # 8.7992499999999989 # 7.7240000000000002
+    # 8.1399999999999988 # 1.0607999999999999e+1 # 8.391 # 6.1130000000000004 #
+    5.695149204248481 # 7.5279999999999996 # 5.543004543148089 #
+    5.5039999999999996 # 8.7400000000000002 # 5.3359999999999994 #
+    5.1210383493949188 # 1.0e+1 # 6.6771870322901021 # 6.4319999999999995 #
+    7.302585114011908 # 6.3599999999999994 # 9.2849999999999984 #
+    6.2879999999999994 # 8.5719999999999992 # 6.7762500000000001 #
+    8.4902499999999996 # 1.0244249999999999e+1 # 6.5 # 5.444 #
+    6.1839999999999993 # 5.3119999999999994 # 7.2720000000000002 #
+    6.4039999999999999 # 5.9559999999999995 # 5.0519999999999996 #
+    8.7119999999999997 # 7.7489999999999997 # 1.0e+1 # 1.0063249999999998e+1 #
+    7.6289999999999987 # 8.0719999999999992 # 8.1727499999999988 #
+    8.0759999999999987 # 7.2640000000000002 # 6.7959999999999994 #
+    6.7039999999999997 # 7.6829999999999998 # 1.0761999999999999e+1 #
+    1.0278749999999999e+1 # 7.3097500000000002 # 7.3620000000000001 #
+    8.9179999999999993 # 9.1860343944773035 # 7.8187843944773041 #
+    7.9359999999999999 # 7.93675 # 8.6187499999999986 # 5.8029620675850149 #
+    6.8439999999999994 # 8.6959999999999997 # 6.6959999999999997 #
+    7.4629999999999992 # 6.6040000000000001 # 8.7589999999999986 #
+    9.5554999999999986 # 9.0849999999999991 # 1.1515999999999998e+1 #
+    7.9972499999999993 # 8.3012499999999996 # 8.1425357309517743 #
+    9.3457857309517749 # 8.3119999999999994 # 7.2484999999999991 #
+    1.0698499999999999e+1 # 7.9752499999999991 # 5.1199999999999992 #
+    8.2839999999999989 # 1.205275e+1 # 1.3423331365202243e+1 #
+    1.2519831365202242e+1 # 1.5591831365202243e+1 # 1.8241831365202241e+1 #
+    1.6392831365202241e+1 # 1.3586581365202242e+1 # 1.0069078752150842e+1 #
+    1.1868828752150842e+1 # 1.3952828752150841e+1 # 1.631532875215084e+1 #
+    1.6780828752150839e+1 # 1.5215578752150842e+1 # 1.4923078752150841e+1 #
+    1.4623078752150841e+1 # 1.3094578752150841e+1 # 1.4857078752150841e+1 #
+    1.1325078752150841e+1 # 8.1338287521508406 # 9.5190787521508415 #
+    1.2681578752150841e+1 # 1.227761710154576e+1 # 1.348861710154576e+1 #
+    1.304936710154576e+1 # 8.2243671015457611 # 1.008061710154576e+1 #
+    9.5314695672809098 # 8.2619695672809108 # 1.0e+1 # 6.7919999999999998 #
+    8.4039999999999999 # 9.1319999999999997 # 9.7419999999999991 #
+    8.0519999999999996 # 5.9864999999999995 # 8.5874999999999986 #
+    1.1606249999999999e+1 # 1.4743749999999999e+1 # 1.3285755886924827e+1 #
+    1.2836505886924828e+1 # 1.4602505886924828e+1 # 1.5577505886924827e+1 #
+    1.7164505886924825e+1 # 1.4623839227926451e+1 # 1.1994589227926452e+1 #
+    9.8295892279264514 # 1.0855589227926453e+1 # 8.775674459624252 #
+    5.7113111722054795 # 8.1899599676082193 # 5.4732087812125467 #
+    5.5673959962722481 # 6.2039728253437989 # 8.8999999999999986 #
+    8.5869999999999997 # 5.0 # 8.5199999999999996 # 5.8559999999999999 # 8.484
+    # 8.2959999999999994 # 8.6829999999999998 # 5.3752499999999994 #
+    5.6959999999999997 # 5.8891620855037656 # 7.6361620855037655 #
+    7.7080000000000002 # 7.2297500000000001 # 8.4599999999999991 #
+    6.5057499999999999 # 6.9199999999999999 # 1.0757499999999999e+1 #
+    8.3839999999999986 # 1.2968999999999999e+1 # 1.2304671557493371e+1 #
+    1.427642155749337e+1 # 1.595467155749337e+1 # 1.5016671557493371e+1 #
+    1.4512372032768878e+1 # 1.7519372032768878e+1 # 1.4335872032768878e+1 #
+    1.3309725558891598e+1 # 1.7674725558891598e+1 # 1.3665911719333277e+1 #
+    1.0243271180373082e+1 # 8.4150211803730812 # 6.2279999999999998 #
+    8.472999999999999 # 8.9719999999999995 # 1.1390749999999999e+1 #
+    1.3119249999999999e+1 # 1.544525e+1 # 1.5825999999999999e+1 # 1.681325e+1 #
+    1.5974200959741701e+1 # 1.4566157166555623e+1 # 1.5279157166555622e+1 #
+    1.6057657166555622e+1 # 1.7844657166555621e+1 # 2.1260657166555621e+1 #
+    2.0547407166555622e+1 # 2.3860407166555621e+1 # 2.3759407166555622e+1 #
+    1.8542657166555621e+1 # 1.7642657166555619e+1 # 2.0017657166555619e+1 #
+    2.0646157166555621e+1 # 2.1547907166555621e+1 # 2.1568926585960654e+1 #
+    1.9293676585960654e+1 # 1.5158676585960652e+1 # 1.5251676585960652e+1 #
+    1.8249676585960653e+1 # 1.9777676585960652e+1 # 1.7355176585960653e+1 #
+    1.5546176585960653e+1 # 1.445139304802731e+1 # 1.4617987559083222e+1 #
+    1.4690487559083222e+1 # 1.595473755908322e+1 # 1.7043737559083219e+1 #
+    1.728573755908322e+1 # 1.2373737559083221e+1 # 1.0295237559083221e+1 #
+    1.2182237559083221e+1 # 1.0707237559083222e+1 # 6.8529875590832221 #
+    5.6539264884245268 # 5.0159999999999991 # 5.8599999999999994 #
+    5.1815218976412529 # 5.1791266869152981 # 8.8879999999999999 #
+    7.9824999999999999 # 5.4845083364664804 # 6.556 # 1.0e+1 #
+    8.5422499999999992 # 1.0224499999999999e+1 # 1.0984195158864868e+1 #
+    1.1790445158864866e+1 # 1.0874195158864866e+1 # 1.4811695158864866e+1 #
+    1.3817695158864867e+1 # 1.6158630160754239e+1 # 1.360563016075424e+1 #
+    1.622063016075424e+1 # 1.8737630160754239e+1 # 1.5745674482250857e+1 #
+    1.1784174482250858e+1 # 1.1542924482250857e+1 # 1.4024174482250858e+1 #
+    1.3779674482250858e+1 # 1.5730674482250858e+1 # 1.4865424482250859e+1 #
+    1.486648620886017e+1 # 9.8662362088601707 # 6.5197362088601709 #
+    5.0080321927151275 # 5.6639999999999997 # 7.2519999999999998 #
+    6.5331825311959442 # 6.3999999999999995 # 6.6680000000000001 #
+    5.1165338372738143 # 5.9799999999999995 # 1.0e+1 # 9.9699999999999989 #
+    5.5039999999999996 # 8.6839999999999993 # 7.2080000000000002 # 1.0e+1 #
+    1.1680999999999999e+1 # 1.4999749999999999e+1 # 1.0935463705502221e+1 #
+    8.9239985833580437 # 9.0129658036567264 # 7.8672158036567268 #
+    1.0260965803656726e+1 # 7.681965803656726 # 7.3806116493326659 #
+    8.8823616493326654 # 1.3142361649332665e+1 # 1.0351762849844702e+1 #
+    1.0001762849844702e+1 # 8.9785128498447033 # 6.7719568629497378 #
+    5.2999999999999998 # 1.0e+1 # 5.8280000000000003 # 5.6093647851522705 #
+    8.1959999999999997 # 8.863999999999999 # 9.2117499999999986 # 1.225075e+1 #
+    1.6480749999999997e+1 # 1.6093916996310039e+1 # 1.7409916996310038e+1 #
+    1.6182666996310036e+1 # 1.4588916996310038e+1 # 1.2565166996310039e+1 #
+    1.2833916996310037e+1 # 1.5766916996310037e+1 # 1.5808666996310038e+1 #
+    1.5510166996310037e+1 # 1.6162666996310037e+1 # 1.3494690875895742e+1 #
+    1.4919690875895741e+1 # 1.1269525567289167e+1 # 8.3411859327539588 #
+    1.1008185932753959e+1 # 7.3826188442656795 # 6.7256485440619187 #
+    8.0359999999999996 # 8.9804503919409235 # 8.7699865891785507 #
+    5.8222365891785515 # 7.3680000000000003 # 8.6199999999999992 #
+    9.5102499999999992 # 1.142225e+1 # 1.347325e+1 # 1.6913249999999998e+1 #
+    1.3173500000000001e+1 # 1.2146749999999999e+1 # 6.6655000000000006 #
+    7.142500000000001 # 6.1399999999999997 # 8.484 # 1.2383999999999999e+1 #
+    1.2652999999999999e+1 # 1.7017999999999997e+1 # 1.6535067387565899e+1 #
+    1.4771817387565898e+1 # 1.1986067387565898e+1 # 7.3023173875658989 # 7.976
+    # 7.4739999999999993 # 7.8559999999999999 # 9.9479999999999986 #
+    1.0131749999999998e+1 # 1.10505e+1 # 1.3365499999999999e+1 #
+    1.5602499999999999e+1 # 1.2872e+1 # 1.0972249999999999e+1 #
+    1.4453499999999998e+1 # 1.43645e+1 # 1.5006749999999998e+1 #
+    1.6550999999999998e+1 # 1.295675e+1 # 1.1255249999999998e+1 #
+    6.459249999999999 # 1.0e+1 # 1.0177e+1 # 1.1002999999999998e+1 # 1.26755e+1
+    # 1.2883999999999999e+1 # 7.7357432787580604 # 7.2737101251923599 #
+    5.8279999999999994 # 7.2164074177708564 # 7.3479999999999999 #
+    9.5015000000000001 # 7.3280000000000003 # 9.6332499999999985 #
+    8.6319999999999997 # 7.1920000000000002 # 7.1120000000000001 #
+    7.8473122894535807 # 6.7666255334467884 # 8.5759999999999987 #
+    9.7459999999999987 # 7.1023703914375638 # 8.3303703914375635 #
+    8.4599999999999991 # 8.7744999999999997 # 7.4528482290618863 #
+    7.3673482290618857 # 7.6840000000000002 # 5.1473406089165721 #
+    7.3759999999999994 # 6.7219999999999995 # 5.3382738795857039 # 6.444 #
+    6.4828052825185969 # 7.444 # 7.7999999999999998 # 1.2609999999999999e+1 #
+    1.15484392825939e+1 # 8.3341892825939006 # 7.8969392825939009 #
+    8.2119999999999997 # 5.767099648235865 # 6.0439999999999996 #
+    8.5759999999999987 # 8.6959999999999997 # 1.0e+1 # 7.4799999999999995 #
+    1.0e+1 # 6.6917499999999999 # 1.0e+1 # 5.2850189760501598 #
+    7.7560000000000002 # 1.0e+1 # 1.0725e+1 # 1.3625e+1 # 8.7138312347244788 #
+    5.1999999999999993 # 8.8679999999999986 # 5.3152499999999989 #
+    5.0314906881092334 # 5.524 # 6.1759999999999993 # 1.0e+1 #
+    9.9908482290618856 # 9.7188482290618854 # 1.1861848229061884e+1 #
+    9.8453482290618854 # 1.0080348229061885e+1 # 9.0317724471284055 #
+    5.0586890173665422 # 8.8226890173665407 # 7.468 # 8.8519999999999985 #
+    5.3439999999999994 # 8.9799999999999986 # 6.8439999999999994 #
+    5.7962879604973212 # 5.3271161627150505 # 8.1920000000000002 #
+    8.2999999999999989 # 8.1319999999999997 # 5.992 # 5.7874578810490496 #
+    5.3024573790517984 # 8.668457379051798 # 7.5919999999999996 #
+    7.6879999999999997 # 6.4784096710455588 # 5.5279999999999996 #
+    5.7319999999999993 # 1.0e+1 # 6.0884999999999998 # 7.8200000000000003 #
+    9.6379999999999999 # 1.1491999999999999e+1 # 9.17225 # 7.3600000000000003 #
+    8.9959999999999987 # 1.0e+1 # 1.1063930117670262e+1 # 8.2324301176702619 #
+    5.3079999999999998 # 1.0e+1 # 1.213125e+1 # 8.4002743741718735 #
+    8.8159999999999989 # 9.0147707499752219 # 9.5435207499752224 #
+    8.4359999999999999 # 9.0627319506504715 # 1.1037731950650473e+1 #
+    1.3609731950650472e+1 # 1.0355481950650473e+1 # 1.0720231950650472e+1 #
+    1.3055231950650473e+1 # 1.3727231950650472e+1 # 1.1671481950650472e+1 #
+    1.5490231950650474e+1 # 1.2421981950650473e+1 # 8.6179736422663282 #
+    1.0018973642266328e+1 # 9.6477236422663282 # 8.0624736422663279 #
+    8.8599999999999994 # 5.8039999999999994 # 6.3599999999999994 #
+    7.8600000000000003 # 7.9639999999999995 # 8.7897499999999997 # 1.102675e+1
+    # 7.6699999999999999 # 5.4079999999999995 # 8.7720000000000002 #
+    6.3039999999999994 # 8.7202500000000001 # 6.4872203007277136 #
+    5.0544562068139216 # 1.0e+1 # 1.2738e+1 # 1.27555e+1 # 1.486975e+1 #
+    1.3938499999999999e+1 # 1.0809673764067636e+1 # 9.4246737640676361 #
+    7.8341737640676374 # 9.2601737640676358 # 9.3395043710378545 #
+    7.2599999999999998 # 6.6079999999999997 # 6.5050779181277205 #
+    9.3220779181277198 # 9.4019614602315542 # 6.9319999999999995 #
+    5.1199999999999992 # 5.9399999999999995 # 5.0253178290021525 #
+    7.0519999999999996 # 5.7919999999999998 # 8.5399999999999991 # 6.468 #
+    7.2989999999999995 # 6.7719999999999994 # 1.0e+1 # 5.6879999999999997 #
+    1.0e+1 # 5.5656338812788482 # 1.0260633881278848e+1 # 9.8096338812788471 #
+    1.1478383881278848e+1 # 1.3727133881278847e+1 # 1.2001244417954537e+1 #
+    1.1758494417954536e+1 # 8.0508171311757994 # 8.5199999999999996 # 6.43025 #
+    9.1912500000000001 # 6.725037123646282 # 9.0187871236462822 #
+    8.3439999999999994 # 6.4567168464342997 # 9.1117168464342981 #
+    8.541216846434299 # 8.7354668464342993 # 7.9959999999999996 #
+    8.5629690765341344 # 7.2400000000000002 # 6.2282324122577455 #
+    8.0999999999999996 # 7.1319999999999997 # 6.7441651299002601 #
+    8.449665129900259 # 8.0439999999999987 # 5.2799999999999994 #
+    8.2080000000000002 # 9.3360000000000003 # 9.8102499999999999 #
+    9.0887499999999992 # 7.1418087443133533 # 7.6079999999999997 #
+    8.6679999999999993 # 1.0226999999999999e+1 # 1.1867999999999999e+1 #
+    1.3443999999999999e+1 # 1.5117249999999999e+1 # 1.7198499999999999e+1 #
+    1.4641999999999999e+1 # 1.6084249999999997e+1 # 1.6135999999999999e+1 #
+    1.7605640640769479e+1 # 1.906789064076948e+1 # 1.7283890640769481e+1 #
+    1.5329955590401834e+1 # 1.0038455590401835e+1 # 5.2494555904018352 #
+    6.4188175738433131 # 6.7319999999999993 # 5.7752499999999998 #
+    7.3402499999999993 # 9.8402499999999993 # 1.1353249999999999e+1 #
+    1.0970726251412577e+1 # 1.3551976251412576e+1 # 1.1107976251412577e+1 #
+    1.0176580685695427e+1 # 7.6768306856954274 # 5.683080685695427 #
+    7.6040000000000001 # 7.0279999999999996 # 8.6399999999999988 #
+    9.7853375894782051 # 1.0129087589478205e+1 # 7.263587589478206 #
+    7.0785875894782064 # 9.3420875894782061 # 7.7983375894782059 #
+    1.0443337589478206e+1 # 9.3930875894782062 # 1.0681587589478205e+1 #
+    1.3038587589478205e+1 # 9.0735875894782048 # 1.1661087589478205e+1 #
+    9.34356448179404 # 9.5253144817940392 # 9.7713349726411245 #
+    8.5239999999999991 # 5.2079999999999993 # 7.0119999999999996 #
+    5.0159999999999991 # 5.3719999999999999 # 6.0078579464175084 #
+    5.7787050899394545 # 6.7999999999999998 # 8.4719999999999995 #
+    1.0427999999999999e+1 # 1.1780749999999999e+1 # 1.4672749999999999e+1 #
+    1.2936749999999998e+1 # 8.332749999999999 # 1.3262749999999999e+1 #
+    1.7687749999999998e+1 # 1.3446306804546705e+1 # 1.7058806804546702e+1 #
+    1.6428180877422484e+1 # 1.5747430877422484e+1 # 1.7455680877422484e+1 #
+    1.3212680877422484e+1 # 1.4143680877422485e+1 # 1.3437430877422484e+1 #
+    1.0230597873732524e+1 # 8.8095978737325229 # 9.1033478737325222 #
+    9.7858478737325232 # 6.9118926935965765 # 8.5800000000000001 #
+    5.0879999999999992 # 7.7320000000000002 # 6.5640000000000001 #
+    8.7659999999999982 # 5.3559999999999999 # 6.4319999999999995 #
+    7.4493173786075637 # 7.1558809639472134 # 8.316880963947213 #
+    5.7131445796261708 # 1.0e+1 # 1.134375e+1 # 6.0514242180665212 #
+    6.1839999999999993 # 8.6092499999999994 # 8.3236782423987385 #
+    8.2039999999999988 # 6.7763527798167811 # 7.2319540476390154 #
+    8.2897040476390149 # 1.1393704047639016e+1 # 7.2889540476390158 #
+    5.4719999999999995 # 5.8119999999999994 # 6.0999999999999996 #
+    5.6749999999999998 # 7.1200000000000001 # 1.0819999999999999e+1 #
+    6.3112499999999994 # 8.1600000000000001 # 5.9639999999999995 #
+    8.0399999999999991 # 8.8904999999999994 # 9.3852499999999992 #
+    9.7087499999999984 # 7.7480000000000002 # 6.1879999999999997 #
+    6.6600000000000001 # 8.8684999999999992 # 1.0071999999999999e+1 #
+    1.0203999999999999e+1 # 1.1016774374171874e+1 # 1.1994024374171874e+1 #
+    1.0524024374171875e+1 # 5.1639999999999997 # 5.1684186726428258 #
+    6.2837377938126613 # 6.1759999999999993 # 6.0254161310755823 #
+    8.2519999999999989 # 7.2889999999999997 # 7.1129999999999995 # 1.0e+1 #
+    9.7817499999999988 # 1.15205e+1 # 6.2509152739033711 # 8.3329152739033709 #
+    7.9231652739033711 # 8.1204152739033706 # 1.0e+1 # 1.2376999999999999e+1 #
+    1.1841249999999999e+1 # 8.0513628498848622 # 6.4279999999999999 # 1.0e+1 #
+    6.7349999999999994 # 5.0119999999999996 # 5.6599999999999993 #
+    7.4119999999999999 # 6.1841701980476191 # 5.9639999999999995 #
+    5.0736465611861616 # 5.5599999999999996 # 6.2319999999999993 #
+    5.4079999999999995 # 8.2999999999999989 # 6.468 # 7.4594999999999994 #
+    8.8919999999999995 # 8.1544999999999987 # 1.0e+1 # 8.9039999999999999 #
+    9.49925 # 6.8662499999999991 # 8.7032499999999988 # 8.885749999999998 #
+    7.4079999999999995 # 1.0e+1 # 8.4267499999999984 # 6.5759999999999996 #
+    1.0e+1 # 9.3462499999999995 # 8.7392500000000002 # 6.6817500000000001 #
+    6.9359999999999999 # 9.4689999999999994 # 1.2191999999999998e+1 #
+    9.6047499999999992 # 5.6239999999999997 # 8.6039999999999992 #
+    8.4784999999999986 # 7.3697499999999998 # 9.0407499999999992 #
+    8.3943782934538316 # 6.8037944500639371 # 9.079794450063936 #
+    6.3700444500639373 # 6.968 # 7.992 # 5.9359999999999999 #
+    6.6319999999999997 # 8.5587499999999999 # 8.1639999999999997 #
+    6.5417792849781486 # 7.5919999999999996 # 9.3827499999999997 # 1.0e+1 #
+    1.3074999999999999e+1 # 1.5654999999999999e+1 # 1.5093e+1 # 1.9363e+1 #
+    1.9866166156610102e+1 # 1.7501166156610104e+1 # 1.6570166156610103e+1 #
+    1.6250416156610104e+1 # 1.6708416156610102e+1 # 1.5242522741687031e+1 #
+    1.3597272771023338e+1 # 1.7134772771023336e+1 # 1.5447446265997726e+1 #
+    1.1122114938640552e+1 # 1.3749114938640552e+1 # 1.4210114938640553e+1 #
+    1.4385992132252483e+1 # 1.071082690234301e+1 # 1.051119583261087e+1 #
+    9.3219458326108704 # 1.167194583261087e+1 # 7.9221958326108703 #
+    7.1636958326108706 # 5.3188288224664806 # 5.0325232127234232 #
+    5.3439999999999994 # 7.8799999999999999 # 6.5 # 8.4319999999999986 #
+    8.9969999999999999 # 6.8599999999999994 # 6.1799999999999997 #
+    7.0750579767988482 # 1.1480057976798848e+1 # 1.1651057976798848e+1 #
+    1.0682557976798847e+1 # 1.1930557976798848e+1 # 6.5868079767988474 #
+    5.7458079767988481 # 7.2599999999999998 # 6.3479999999999999 #
+    5.7918631745169655 # 6.46 # 7.992 # 8.4737680955148527 # 7.6370253056569739
+    # 6.575036506734631 # 6.2275826909829322 # 7.3719999999999999 #
+    8.738999999999999 # 6.1799999999999997 # 6.032 # 7.9799999999999995 #
+    7.3925000000000001 # 1.0e+1 # 8.8159999999999989 # 9.3219999999999992 #
+    1.05595e+1 # 7.1159999999999997 # 8.0960000000000001 # 9.8187499999999996 #
+    1.133775e+1 # 8.413396702550191 # 6.4653375894782066 # 5.1404121747346077 #
+    8.1774121747346076 # 8.4919999999999991 # 5.1187835570078297 #
+    6.0960000000000001 # 8.3559999999999999 # 6.8799999999999999 #
+    7.0839999999999996 # 6.180907552412803 # 5.2169130225814362 #
+    5.0263439963574648 # 7.0794415626976983 # 8.4039999999999999 #
+    8.6999999999999993 # 5.5919999999999996 # 8.7400000000000002 #
+    8.2149999999999999 # 7.8347499999999997 # 5.6437499999999998 #
+    7.3919999999999995 # 7.6249999999999991 # 6.8883462796495918 #
+    5.1187835570078297 # 5.3900840270877248 # 5.695149204248481 #
+    6.2679999999999998 # 8.4799999999999986 # 5.3051674078106634 #
+    8.0759999999999987 # 8.6719999999999988 # 1.0156499999999999e+1 #
+    1.16785e+1 # 1.2084484202333428e+1 # 6.5609895533272029 #
+    6.1679999999999993 # 7.9319999999999995 # 9.6489999999999991 #
+    1.1959499999999998e+1 # 1.2391216846434299e+1 # 7.6446021056369489 #
+    1.0550852105636949e+1 # 6.7823521056369485 # 5.0356271986610137 #
+    5.3839999999999995 # 5.3639999999999999 # 5.0130852605665179 #
+    5.2850189760501598 # 5.1672359403937769 # 5.3599999999999994 #
+    8.1039999999999992 # 8.7039999999999988 # 8.0974999999999984 # 7.85025 #
+    6.2919999999999998 # 7.0024805215615702 # 5.0119999999999996 #
+    5.4959999999999996 # 7.6040000000000001 # 9.7099999999999991 #
+    8.7072499999999984 # 8.0519999999999996 # 8.6029999999999998 #
+    1.1261999999999999e+1 # 9.3664999999999985 # 5.5119999999999996 #
+    6.4479999999999995 # 6.0679999999999996 # 7.1879999999999997 #
+    6.095409016293738 # 6.454409016293738 # 6.0964090162937374 #
+    7.7119999999999997 # 9.9929999999999986 # 1.2180499999999999e+1 #
+    1.3288249999999998e+1 # 1.3888249999999998e+1 # 1.2817518319489141e+1 #
+    1.5437518319489142e+1 # 9.9070183194891417 # 1.0137927081467659e+1 #
+    1.047142708146766e+1 # 8.9410878192455581 # 5.5516476393041083 #
+    5.0060180933434255 # 6.4146938566594516 # 8.4359999999999999 #
+    7.9764999999999997 # 7.7084999999999999 # 8.5439999999999987 #
+    5.3279999999999994 # 8.6799999999999997 # 8.9834999999999994 #
+    7.6030000000000006 # 8.2599999999999998 # 1.0e+1 # 1.1229999999999999e+1 #
+    1.139575e+1 # 1.2769749999999998e+1 # 1.4447749999999999e+1 #
+    1.0421749999999999e+1 # 1.1771749999999999e+1 # 1.1353499999999999e+1 #
+    8.9484999999999992 # 1.1737499999999999e+1 # 1.51905e+1 #
+    1.2076499999999999e+1 # 1.0188874768174932e+1 # 1.0695124768174932e+1 #
+    9.8573747681749317 # 1.2358374768174933e+1 # 9.952124768174933 #
+    1.0170124768174933e+1 # 6.851409913039638 # 1.0e+1 # 1.0241249999999999e+1
+    # 1.1273e+1 # 1.2160499999999999e+1 # 1.03155e+1 # 1.3865499999999999e+1 #
+    1.2915749999999999e+1 # 8.2518939422789526 # 5.8698843800778624 #
+    8.8119999999999994 # 1.0882249999999999e+1 # 1.5527249999999999e+1 #
+    1.3918185001889373e+1 # 1.1616435001889373e+1 # 1.2085435001889373e+1 #
+    1.3718435001889373e+1 # 1.1855237822114898e+1 # 1.5005237822114898e+1 #
+    1.5550737822114899e+1 # 1.4604347849316527e+1 # 1.6984347849316528e+1 #
+    1.7320347849316526e+1 # 1.8744847849316528e+1 # 1.8442847849316525e+1 #
+    1.8972732229394389e+1 # 1.9340232229394388e+1 # 2.1236732229394388e+1 #
+    2.3274232229394389e+1 # 1.7572982229394388e+1 # 1.8857982229394388e+1 #
+    1.5309482229394391e+1 # 1.328173222939439e+1 # 1.4411482229394389e+1 #
+    1.3622732229394391e+1 # 1.6722732229394389e+1 # 2.0222732229394389e+1 #
+    2.1224732229394391e+1 # 2.3116232229394388e+1 # 1.7800689561626736e+1 #
+    1.8661689561626734e+1 # 1.5172439561626735e+1 # 1.3576439561626737e+1 #
+    1.4389439561626736e+1 # 1.3520689561626735e+1 # 1.4683689561626736e+1 #
+    1.4390189561626736e+1 # 1.1614961119206162e+1 # 1.1080711119206162e+1 #
+    8.3276431520346694 # 5.484 # 6.1208579186332921 # 5.6033064975780187 #
+    8.395999999999999 # 9.5024999999999995 # 6.1284999999999998 #
+    7.692499999999999 # 9.4242499999999989 # 8.9742499999999996 #
+    6.6559210077776498 # 8.2159999999999993 # 5.563874865873669 #
+    6.4208748658736683 # 5.8639999999999999 # 8.9159999999999986 #
+    7.9749999999999996 # 1.1549999999999999e+1 # 1.2968999999999999e+1 #
+    1.0342969782812077e+1 # 8.3259697828120753 # 1.2960969782812077e+1 #
+    1.1154969782812076e+1 # 1.2797969782812075e+1 # 7.8150369695712127 #
+    7.7199999999999998 # 5.6744238359350758 # 5.7874578810490496 #
+    6.2517634891801475 # 6.9267634891801473 # 6.1519999999999992 #
+    5.7119999999999997 # 7.1840000000000002 # 6.7279999999999998 #
+    6.8079999999999998 # 9.8119999999999994 # 9.0497499999999995 #
+    9.4802499999999998 # 8.5834752857576717 # 6.376354751931137 #
+    1.0282604751931137e+1 # 1.1245604751931136e+1 # 9.5308547519311357 #
+    1.0549604751931136e+1 # 8.1383547519311357 # 8.5359999999999996 #
+    7.0107499999999998 # 6.4199999999999999 # 5.5909999999999993 #
+    7.1799999999999997 # 6.8839999999999995 # 7.0442833394931945 #
+    8.4439999999999991 # 9.3279999999999994 # 1.1287249999999998e+1 #
+    8.1201388721758008 # 5.3719999999999999 # 7.6760000000000002 #
+    8.7159999999999993 # 8.6107499999999995 # 7.0934999999999997 # 1.0e+1 #
+    1.2131e+1 # 8.7002500000000005 # 7.6740000000000004 # 6.056 #
+    5.8919999999999995 # 5.5119999999999996 # 5.7360547025890849 # 1.0e+1 #
+    1.3393749999999999e+1 # 1.1453665500049087e+1 # 9.1406655000490886 # 1.0e+1
+    # 6.8169197858558412 # 5.1439999999999992 # 7.0800000000000001 #
+    7.6477386463474275 # 7.7257386463474269 # 7.6909886463474271 # 7.024 #
+    7.6736487954027401 # 7.7283987954027396 # 7.9556487954027393 # 1.0e+1 #
+    1.000625e+1 # 7.1931364791202981 # 5.4277107380733467 # 8.2240000000000002
+    # 5.8239999999999998 # 6.016 # 5.9709999999999992 # 8.6879999999999988 #
+    1.0048499999999999e+1 # 1.3485999999999999e+1 # 1.1873499999999998e+1 #
+    7.4524999999999988 # 7.484 # 7.056 # 9.3960856817166309 #
+    9.8218356817166299 # 7.6981709134144305 # 1.085941865194795e+1 #
+    6.22166865194795 # 8.122668651947949 # 7.7707116781838348 #
+    7.9284616781838348 # 7.073211678183835 # 7.3079999999999998 #
+    8.2669999999999995 # 8.9252499999999984 # 1.3300249999999998e+1 #
+    9.505749999999999 # 8.6887718447680413 # 6.3959999999999999 #
+    5.9702190949175735 # 1.0e+1 # 1.0080749999999998e+1 # 7.8426669963100384 #
+    1.0e+1 # 8.1959999999999997 # 8.8559999999999999 # 7.0359999999999996 #
+    7.0880000000000001 # 6.9543857097962949 # 7.3639999999999999 #
+    8.6519999999999992 # 1.0183e+1 # 9.048 # 9.2579999999999991 #
+    1.3195499999999999e+1 # 1.2189018093343424e+1 # 1.3410268093343426e+1 #
+    1.5479518093343426e+1 # 1.0867768093343425e+1 # 1.2013768093343426e+1 #
+    7.6075180933434252 # 7.016 # 8.1329999999999991 # 5.6439999999999992 #
+    1.0e+1 # 1.2629e+1 # 1.2766e+1 # 1.3593500588722586e+1 #
+    1.0135413090552433e+1 # 8.715352984699285 # 1.0e+1 # 7.9956782423987391 #
+    1.1040678242398737e+1 # 1.0479928242398739e+1 # 9.7659282423987381 #
+    7.9621074575035182 # 8.5563574575035179 # 8.5074868604512641 #
+    8.5119868604512643 # 7.8284868604512656 # 1.0815986860451265e+1 #
+    6.5434374654275738 # 5.7239999999999993 # 7.3680000000000003 #
+    5.0294288317086746 # 1.0e+1 # 6.5146581019586511 # 6.7359999999999998 #
+    9.8089999999999993 # 1.1000999999999999e+1 # 9.7769999999999992 #
+    1.1450748612923205e+1 # 1.1306998612923204e+1 # 1.1291911646415103e+1 #
+    1.1629494337398036e+1 # 1.2404494337398036e+1 # 1.0494244337398037e+1 #
+    7.1322443373980366 # 5.0597500254236367 # 5.0758017344341448 #
+    5.0399999999999991 # 5.6539264884245268 # 5.3915622239570355 #
+    6.3719999999999999 # 8.5227499999999985 # 7.4932499999999997 #
+    7.2222499999999998 # 7.9359999999999999 # 5.6893994955395604 # 1.0e+1 #
+    7.7437500000000004 # 5.7359999999999998 # 7.8360000000000003 #
+    1.1048499999999999e+1 # 1.0997499999999999e+1 # 1.2301499999999999e+1 #
+    1.2226027051582596e+1 # 1.0409277051582595e+1 # 1.0097445770706097e+1 #
+    7.1264457707060984 # 5.8074363479799356 # 8.5604363479799339 #
+    1.0682436347979936e+1 # 1.0795936347979936e+1 # 9.6718635862803968 #
+    7.4737446516342185 # 8.9367446516342177 # 9.803994651634218 #
+    7.6517446516342176 # 9.1434946516342173 # 1.2398494651634216e+1 #
+    1.3505494651634217e+1 # 1.223027300373559e+1 # 1.186452300373559e+1 #
+    8.2697730037355903 # 6.0640000000000001 # 8.3119999999999994 #
+    5.5293291163484133 # 8.468 # 6.6919999999999993 # 1.0e+1 #
+    7.7402499999999996 # 7.7640000000000002 # 6.9719999999999995 # 9.452 #
+    8.5212499999999984 # 9.91183352853988 # 1.0038833528539881e+1 #
+    9.86683352853988 # 9.8122457032744883 # 1.0012890738525613e+1 #
+    6.862285092759338 # 5.2439999999999998 # 5.2559999999999993 #
+    6.1711830025208076 # 5.2306718387528637 # 5.1554849238582579 #
+    6.5511690253279875 # 5.0599999999999996 # 7.8759999999999994 #
+    7.0999999999999996 # 6.3486211389291975 # 7.8319999999999999 #
+    5.2639655668523275 # 1.0e+1 # 5.4828862760946118 # 5.9568862760946111 #
+    1.0721886276094612e+1 # 1.0530386276094612e+1 # 1.2461636276094611e+1 #
+    1.0922136276094612e+1 # 8.7721362760946118 # 9.0418862760946119 #
+    1.3286886276094611e+1 # 1.7681886276094609e+1 # 1.7856386276094611e+1 #
+    1.8165886276094611e+1 # 2.0257636276094612e+1 # 1.9972886276094609e+1 #
+    1.8662136276094611e+1 # 1.6384655252144771e+1 # 1.4200405252144771e+1 #
+    1.4054565617609564e+1 # 1.4238815617609562e+1 # 1.5706916175583137e+1 #
+    1.5553166175583138e+1 # 1.2810916175583138e+1 # 1.2667916175583137e+1 #
+    1.5236916175583138e+1 # 1.4277166175583137e+1 # 1.8014666175583137e+1 #
+    1.5925306571928935e+1 # 1.8312806571928935e+1 # 1.8085056571928934e+1 #
+    1.9189556571928936e+1 # 1.6139101505926394e+1 # 1.1340577148082932e+1 #
+    1.1634327148082932e+1 # 1.1939827148082932e+1 # 1.2877327148082932e+1 #
+    1.2703077148082931e+1 # 1.0814650723232077e+1 # 8.9466507232320769 #
+    9.7596507232320775 # 1.0359787047487172e+1 # 7.1525370474871721 #
+    8.4799999999999986 # 8.7604999999999986 # 1.20505e+1 # 1.22135e+1 #
+    1.31045e+1 # 1.1188499999999999e+1 # 7.3457499999999998 #
+    5.0839999999999996 # 8.7439999999999998 # 6.3093333410016248 #
+    5.0319999999999991 # 8.3359999999999985 # 6.399528775821608 #
+    7.6544821532352376 # 8.0791139035109047 # 5.6239999999999997 # 6.54 #
+    5.8944587812125464 # 5.1959999999999997 # 5.2497442541292516 #
+    6.3959999999999999 # 8.1559999999999988 # 6.1679623878207659 #
+    8.2139623878207644 # 7.4439623878207648 # 8.016 # 6.7094999999999994 #
+    8.2679999999999989 # 9.4032499999999999 # 8.2799999999999994 #
+    9.5889999999999986 # 7.3639999999999999 # 1.0e+1 # 8.0564999999999998 #
+    6.1959999999999997 # 5.8051967053864306 # 6.4399999999999995 #
+    6.7919999999999998 # 7.0815000000000001 # 1.0e+1 # 8.2987500000000001 #
+    1.0846749999999998e+1 # 7.2037499999999994 # 8.1600000000000001 #
+    8.3759999999999994 # 8.8539999999999992 # 5.846393452768142 #
+    6.0519999999999996 # 7.8479999999999999 # 6.8399999999999999 #
+    8.8359999999999985 # 6.4719999999999995 # 6.5960000000000001 #
+    5.1719752857576733 # 8.3239999999999998 # 6.2029999999999994 # 1.0e+1 #
+    7.5279999999999996 # 7.0279999999999996 # 8.9639999999999986 #
+    5.6534006212097845 # 5.5621189391714037 # 5.9879999999999995 #
+    5.0599999999999996 # 8.8679999999999986 # 8.6167499999999997 #
+    6.9442500000000003 # 7.5 # 5.2890163164827806 # 5.5516476393041083 #
+    7.6159999999999997 # 6.976 # 8.5570215575794251 # 8.8879999999999999 #
+    9.7603346913934228 # 1.0447334691393424e+1 # 8.5958346913934225 #
+    1.0578442389683365e+1 # 1.0145431368837491e+1 # 1.0545431368837491e+1 #
+    9.0956813688374911 # 1.1119931368837491e+1 # 8.8095477454955002 #
+    8.9615477454954995 # 1.0e+1 # 7.04 # 6.54581216041462 # 5.2799999999999994
+    # 5.8843077070389667 # 8.468 # 9.6272499999999983 # 8.5887499999999992 #
+    8.8235110840708479 # 6.8879999999999999 # 9.3699999999999992 #
+    8.0500000000000007 # 1.1199999999999999e+1 # 1.0225249999999999e+1 #
+    1.141225e+1 # 1.0369965566852327e+1 # 6.5727155668523274 #
+    7.0519999999999996 # 1.0318999999999999e+1 # 9.1012499999999985 #
+    6.0906441400367957 # 8.363999999999999 # 1.0174802697586369e+1 #
+    7.2103026975863695 # 6.952 # 8.2579999999999991 # 9.968 # 1.031575e+1 #
+    6.1195000000000004 # 1.0e+1 # 8.1879999999999988 # 1.0543999999999999e+1 #
+    1.2445999999999998e+1 # 9.4129812278395129 # 7.2402312278395131 #
+    7.8600000000000003 # 5.6386590162937384 # 7.04 # 8.1440000000000001 #
+    8.1229999999999993 # 5.9692871236462821 # 5.9545119657122152 #
+    6.1719999999999997 # 7.5383074475329783 # 7.4713074475329782 #
+    6.1919999999999993 # 7.2000000000000002 # 5.1154108725291909 #
+    6.3093333410016248 # 6.3453880435907095 # 1.0e+1 # 1.1034999999999998e+1 #
+    8.7204999999999995 # 9.3534999999999986 # 7.2547499999999987 #
+    7.0067499999999994 # 7.032 # 8.0879999999999992 # 6.1439999999999992 #
+    1.0e+1 # 1.2239249999999998e+1 # 1.543525e+1 # 1.408175e+1 #
+    8.3412985075707926 # 1.1751298507570793e+1 # 1.6016298507570792e+1 #
+    1.6460048507570789e+1 # 1.1659798507570791e+1 # 1.0660798507570792e+1 #
+    1.2115798507570792e+1 # 1.3710798507570791e+1 # 1.4380548507570792e+1 #
+    1.2261798507570791e+1 # 8.356798507570792 # 5.3679999999999994 # 1.0e+1 #
+    7.5987499999999999 # 5.2536027798167808 # 7.9187712534357253 #
+    5.9238190193128091 # 8.0628190193128084 # 6.3688190193128085 #
+    6.3799999999999999 # 6.8018098260994195 # 1.0251809826099418e+1 #
+    1.0301809826099419e+1 # 9.4490598260994183 # 7.7439999999999998 #
+    7.3647499999999999 # 8.1192004752755071 # 5.2484613803163622 #
+    6.2879999999999994 # 6.1159999999999997 # 6.3759999999999994 #
+    6.8759999999999994 # 8.4211004142639467 # 1.0e+1 # 9.9159953208615903 #
+    6.0960000000000001 # 6.8838747791537234 # 7.6319999999999997 #
+    8.3300000000000001 # 5.5599999999999996 # 5.5639999999999992 #
+    5.3039999999999994 # 5.8399999999999999 # 5.3298939422789529 #
+    6.5960000000000001 # 5.7879999999999994 # 5.5499130334919 #
+    7.5999999999999996 # 5.8119999999999994 # 1.0e+1 # 5.9239999999999995 #
+    5.2039999999999997 # 5.5041811020651847 # 5.1439999999999992 # 1.0e+1 #
+    5.2999999999999998 # 7.7679999999999998 # 7.016 # 8.0887499999999992 #
+    1.0e+1 # 9.1324999999999985 # 1.1501249999999999e+1 # 1.255951023721091e+1
+    # 1.2854760237210909e+1 # 9.8805102372109097 # 6.3360102372109104 # 1.0e+1
+    # 9.7377599279722169 # 1.0082259927972217e+1 # 1.0e+1 # 9.5429999999999993
+    # 9.1919999999999984 # 9.8272499999999994 # 1.084925e+1 # 1.0497e+1 #
+    1.1627570944627582e+1 # 8.6772181111515145 # 1.0515218111151516e+1 #
+    1.2323280791760549e+1 # 1.7023280791760548e+1 # 1.8808280791760549e+1 #
+    1.9068030791760549e+1 # 1.5006280791760549e+1 # 1.4262530791760549e+1 #
+    9.5179383137896885 # 1.1761688313789689e+1 # 8.2524383137896873 #
+    6.4727628829376576 # 5.4319999999999995 # 1.0e+1 # 1.0433499999999999e+1 #
+    6.8959999999999999 # 6.6280000000000001 # 9.3242499999999993 # 6.992 #
+    5.9213032947155622 # 8.7240000000000002 # 6.6280000000000001 # 1.0e+1 #
+    9.5347499999999989 # 8.4159999999999986 # 5.2943710816204401 # 8.548 #
+    7.2519999999999998 # 9.5317499999999988 # 1.0093061172205479e+1 #
+    1.2662061172205478e+1 # 1.3489061172205478e+1 # 1.2634061172205477e+1 #
+    1.3690061172205478e+1 # 1.4652561172205479e+1 # 1.3637061172205478e+1 #
+    1.0436061172205477e+1 # 1.0917311172205478e+1 # 8.4170611722054787 #
+    6.3314422375592994 # 8.1239999999999988 # 1.1055249999999999e+1 #
+    7.9274999999999993 # 7.0199999999999996 # 7.633 # 7.4963963376186884 #
+    5.7194911769174102 # 8.2684911769174096 # 7.3759999999999994 #
+    9.3409999999999993 # 6.3039999999999994 # 7.2960000000000003 #
+    5.0470916285517129 # 6.5279999999999996 # 9.4239999999999995 #
+    1.2811499999999999e+1 # 1.1437499999999998e+1 # 8.6994999999999987 #
+    5.2399999999999993 # 5.8399999999999999 # 6.0788096823897924 #
+    7.3998096823897921 # 7.7439999999999998 # 7.2119999999999997 #
+    7.9319999999999995 # 1.0699e+1 # 1.1866e+1 # 1.4498999999999999e+1 #
+    1.4715249999999999e+1 # 1.2288499999999999e+1 # 9.2949999999999999 #
+    5.2079999999999993 # 8.1369999999999987 # 9.207749999999999 # 1.182775e+1 #
+    1.3783999999999999e+1 # 1.0513249999999999e+1 # 8.3387499999999992 #
+    8.4687499999999982 # 5.9614999999999991 # 5.4385049832042274 #
+    5.9808292740295892 # 6.0718292740295885 # 5.5959999999999992 # 1.0e+1 #
+    8.9759999999999991 # 6.1120000000000001 # 6.0679999999999996 #
+    5.3382738795857039 # 7.4159999999999995 # 5.2420715822175916 #
+    5.7919999999999998 # 8.0119999999999987 # 5.7876904959653581 #
+    6.4396951588648683 # 8.2686951588648672 # 1.0e+1 # 1.0592273867475242e+1 #
+    9.7215238674752431 # 8.1959999999999997 # 1.2331e+1 # 1.0692045715078383e+1
+    # 1.4982045715078382e+1 # 1.2682045715078383e+1 # 9.7030478272689002 #
+    7.0027978272689007 # 7.7400000000000002 # 1.0e+1 # 8.6717499999999994 #
+    6.7079999999999993 # 5.6991652739033709 # 7.6760000000000002 # 1.2606e+1 #
+    9.1252499999999994 # 1.1124749999999999e+1 # 9.1875218976412523 #
+    9.0465218976412523 # 9.1515255479048498 # 7.5202755479048511 #
+    7.3639999999999999 # 1.0e+1 # 7.032 # 6.1434999999999995 #
+    8.5960000000000001 # 1.0062249999999999e+1 # 1.3102249999999998e+1 #
+    9.9979999999999993 # 1.2568e+1 # 1.231175e+1 # 1.1475249999999999e+1 #
+    1.3378499999999999e+1 # 1.4895e+1 # 1.2344249999999999e+1 #
+    7.6535000000000002 # 5.905625980637355 # 8.9799999999999986 #
+    7.9957499999999992 # 5.8119307375677751 # 6.4319999999999995 #
+    6.0129999999999999 # 5.7359999999999998 # 7.1559999999999997 #
+    7.0439999999999996 # 6.2007499999999993 # 1.0e+1 # 7.399 #
+    6.6245515712620113 # 5.3239999999999998 # 7.7488722166403283 #
+    7.7800000000000002 # 7.4851136588279106 # 7.4163636588279109 #
+    8.5519999999999996 # 1.036525e+1 # 1.28895e+1 # 9.4749999999999996 #
+    6.9719999999999995 # 5.3119999999999994 # 6.9119999999999999 #
+    5.1519999999999992 # 9.3428059425384635 # 1.1457805942538464e+1 #
+    1.2838805942538462e+1 # 1.2872555942538463e+1 # 1.7102555942538462e+1 #
+    1.8322555942538461e+1 # 1.7532805942538463e+1 # 1.686255594253846e+1 #
+    1.2725055942538463e+1 # 1.4533055942538462e+1 # 1.1338305942538463e+1 #
+    1.2235305942538464e+1 # 8.6365559425384628 # 5.0919999999999996 #
+    5.1496607955722693 # 8.9359999999999999 # 7.2302499999999998 #
+    8.0762499999999982 # 7.7839999999999998 # 7.7880000000000003 #
+    7.1775000000000002 # 1.0e+1 # 7.7762748528340602 # 1.0601274852834059e+1 #
+    1.363627485283406e+1 # 1.2986697338148469e+1 # 1.4251697338148469e+1 #
+    1.4844697338148469e+1 # 1.0512739947275939e+1 # 1.2664489947275939e+1 #
+    1.5964489947275938e+1 # 1.2397739947275939e+1 # 1.2428989947275939e+1 #
+    1.5704989947275939e+1 # 1.6040239947275939e+1 # 1.2782983407485476e+1 #
+    1.4720983407485477e+1 # 1.4098983407485477e+1 # 1.3983233407485477e+1 #
+    1.2297233407485477e+1 # 1.3647233407485476e+1 # 1.0729233407485477e+1 #
+    6.8766326064006122 # 5.0159999999999991 # 7.0679999999999996 #
+    8.8389999999999986 # 8.6959999999999997 # 6.8999999999999995 #
+    7.8592500000000003 # 8.0467499999999994 # 5.6517499999999998 #
+    6.1040000000000001 # 6.9319999999999995 # 6.8639999999999999 #
+    6.1399999999999997 # 6.265848229061886 # 8.9719999999999995 # 1.0e+1 #
+    6.4402499999999998 # 9.2492499999999982 # 1.078675e+1 # 7.325499999999999 #
+    8.6239999999999988 # 9.0409999999999986 # 6.3771768803561839 #
+    9.3891768803561835 # 8.9134268803561838 # 1.2800926880356183e+1 #
+    1.4417926880356182e+1 # 1.2970106449209741e+1 # 1.2675856449209741e+1 #
+    1.0769856449209742e+1 # 1.2456856449209742e+1 # 1.2098856449209741e+1 #
+    1.2293856449209741e+1 # 8.5103564492097412 # 7.8839999999999995 #
+    9.0589999999999993 # 1.01335e+1 # 7.1669999999999998 # 8.379999999999999 #
+    7.4418471813454161 # 8.0399999999999991 # 8.0399999999999991 #
+    8.7799999999999994 # 8.7639691960980635 # 8.317969196098062 #
+    5.0079999999999991 # 7.2720000000000002 # 5.9079999999999995 #
+    6.7119999999999997 # 1.0424499999999998e+1 # 8.9127499999999991 #
+    5.1919999999999993 # 8.8559999999999999 # 6.2845828701967585 #
+    7.6840000000000002 # 5.6234999999999999 # 9.1234999999999999 #
+    8.8999999999999986 # 1.1222e+1 # 7.9633304180338316 # 5.4812668425423094 #
+    7.3040000000000003 # 6.7130479783049228 # 1.1223047978304923e+1 #
+    1.2459547978304922e+1 # 1.1883797978304923e+1 # 9.7823589466822103 #
+    1.110735894668221e+1 # 1.156985894668221e+1 # 1.063085894668221e+1 #
+    1.0759108946682209e+1 # 1.2984108946682211e+1 # 1.1060990012036031e+1 #
+    7.321740012036031 # 7.8162400120360305 # 5.3599999999999994 #
+    6.8679999999999994 # 7.7359999999999998 # 5.8214999999999995 #
+    5.9314043907020659 # 8.016 # 8.4647499999999987 # 1.1086749999999999e+1 #
+    1.0443749999999998e+1 # 1.0790749999999999e+1 # 8.0639999999999983 # 5.492
+    # 7.8879999999999999 # 8.7619999999999987 # 1.0e+1 # 1.2036e+1 #
+    1.4948499999999999e+1 # 1.1933999999999999e+1 # 8.2611316299569122 #
+    7.3301316299569121 # 7.4608816299569121 # 5.9826361599950744 # 1.0e+1 #
+    8.4872499999999995 # 1.2812249999999999e+1 # 1.0368499999999999e+1 #
+    8.7479999999999993 # 1.0741999999999999e+1 # 7.0188776722741144 #
+    6.6559999999999997 # 5.3237499999999995 # 7.9279999999999999 #
+    8.0640000000000001 # 6.6639999999999997 # 5.6088580120596045 #
+    5.0779615624875749 # 8.3159999999999989 # 7.9399999999999995 #
+    5.8734999999999999 # 8.4674999999999994 # 7.2599999999999998 #
+    5.0839999999999996 # 1.0e+1 # 9.8040000000000003 # 5.1199999999999992 #
+    7.2800000000000002 # 7.462717220298682 # 5.4239999999999995 #
+    7.6319999999999997 # 5.0943107004891042 # 7.2679999999999998 #
+    7.2899999999999991 # 8.7839999999999989 # 1.0e+1 # 1.0504999999999999e+1 #
+    8.676499999999999 # 1.1766499999999999e+1 # 1.57165e+1 #
+    1.6041499999999999e+1 # 1.5227e+1 # 1.6795749999999998e+1 #
+    1.8806999999999999e+1 # 2.0550749999999997e+1 # 1.8296250000000001e+1 #
+    2.2431249999999999e+1 # 2.0166e+1 # 2.0688436347979934e+1 #
+    2.0360186347979933e+1 # 1.8885186347979936e+1 # 1.4422436347979936e+1 #
+    1.7122436347979935e+1 # 1.6003436347979935e+1 # 1.4263936347979936e+1 #
+    1.1293686347979936e+1 # 9.1621863479799348 # 8.7634363479799351 #
+    9.2921863479799356 # 1.2839186347979936e+1 # 1.2143686347979935e+1 #
+    1.3972686347979936e+1 # 9.9654363479799351 # 7.1322442573594449 #
+    8.3239999999999998 # 1.3268999999999998e+1 # 1.5021999999999998e+1 #
+    1.2225249999999999e+1 # 1.2087999999999999e+1 # 8.9624999999999986 #
+    6.2079999999999993 # 6.7039999999999997 # 7.9799999999999995 #
+    6.7429693260764854 # 9.1949693260764853 # 1.0e+1 # 5.6159999999999997 #
+    8.8359999999999985 # 5.3897499999999994 # 6.234432032828507 # 1.0e+1 #
+    1.0558999999999999e+1 # 7.7284999999999995 # 1.0e+1 # 7.5004999999999997 #
+    6.8582499999999991 # 5.3989861630283178 # 5.9319999999999995 #
+    8.2879999999999985 # 6.19651490494382 # 5.3279999999999994 #
+    5.0519999999999996 # 7.1239999999999997 # 7.8999999999999995 #
+    8.4719999999999995 # 6.492 # 5.7256703932833677 # 8.1559999999999988 #
+    7.4709999999999992 # 8.2188758458860622 # 6.9569365463751671 #
+    5.531028352101373 # 5.468 # 5.8301130566509656 # 7.112384361612814 #
+    1.0079384361612814e+1 # 1.0516634361612812e+1 # 1.1688097495903387e+1 #
+    1.1692097495903388e+1 # 1.3392097495903387e+1 # 1.4963847495903387e+1 #
+    1.6618847495903388e+1 # 1.5327308261760951e+1 # 1.2905308261760952e+1 #
+    1.4375058261760952e+1 # 1.1967808261760952e+1 # 1.4146058261760952e+1 #
+    1.2275558261760953e+1 # 8.6893082617609529 # 6.6079999999999997 #
+    1.0972999999999999e+1 # 1.2077999999999999e+1 # 1.1755749999999999e+1 #
+    1.2420249999999999e+1 # 7.1215000000000002 # 1.04625e+1 # 1.37125e+1 #
+    1.3464499999999999e+1 # 1.1176e+1 # 7.7430000000000012 # 5.2319999999999993
+    # 5.5905906132527159 # 5.1879999999999997 # 5.166054605347945 # 1.0e+1 #
+    1.2516e+1 # 1.3814499999999999e+1 # 1.438725e+1 # 1.4829647298477663e+1 #
+    9.8628441692023028 # 7.132622945023912 # 7.3639101880906148 #
+    7.6799999999999997 # 7.8639999999999999 # 6.1583623140917467 #
+    5.9288695350988778 # 7.687720632878646 # 8.984 # 5.4231200643647481 #
+    8.5404594700135252 # 7.5179594700135253 # 6.9943242551657958 #
+    6.174414023102254 # 1.0e+1 # 7.4597499999999997 # 8.2347499999999982 #
+    9.2685596823897907 # 1.1171559682389791e+1 # 9.1508096823897915 #
+    5.843970091312392 # 6.5720000000000001 # 5.5039999999999996 #
+    7.6920000000000002 # 7.4319999999999995 # 6.7799999999999994 #
+    6.7599999999999998 # 8.2799999999999994 # 6.7259273885880235 #
+    8.2400000000000002 # 1.1584e+1 # 8.2777668425423077 # 6.3799999999999999 #
+    5.9119999999999999 # 9.3409999999999993 # 8.1457499999999996 #
+    5.1473406089165721 # 7.7599999999999998 # 8.0199999999999996 #
+    6.1079999999999997 # 1.0e+1 # 1.1330304289092108e+1 # 1.1267304289092108e+1
+    # 8.1125542890921079 # 8.7799999999999994 # 6.2399999999999993 #
+    6.8724999999999996 # 6.6120000000000001 # 5.4079999999999995 #
+    5.8239999999999998 # 8.6760000000000002 # 8.8259999999999987 #
+    6.3185795992093565 # 1.0e+1 # 1.045675e+1 # 1.1800484255266742e+1 #
+    8.0145143130072594 # 7.5500143130072592 # 8.2430143130072597 #
+    1.1494014313007259e+1 # 1.0729014313007259e+1 # 1.517901431300726e+1 #
+    1.2056634644090771e+1 # 1.0903384644090771e+1 # 1.2352384644090771e+1 #
+    8.8678846440907702 # 7.4534080037464925 # 7.5960000000000001 #
+    1.0302999999999999e+1 # 6.8309999999999995 # 5.9769999999999994 #
+    7.3120000000000003 # 5.9159999999999995 # 1.0795999999999999e+1 # 9.35825 #
+    1.1414e+1 # 1.13165e+1 # 1.0001249999999999e+1 # 1.03445e+1 #
+    9.074146179852832 # 7.5507928629982457 # 1.0474792862998246e+1 #
+    1.1549792862998245e+1 # 1.6439792862998246e+1 # 1.6153792862998245e+1 #
+    1.7184292862998245e+1 # 1.430894997153041e+1 # 1.5604520916157993e+1 #
+    1.7087270916157991e+1 # 1.9363770916157993e+1 # 2.0360020916157993e+1 #
+    2.2078020916157993e+1 # 2.1033888188030328e+1 # 2.1218138188030327e+1 #
+    2.2876138188030328e+1 # 1.9720138188030329e+1 # 1.9756888188030327e+1 #
+    1.8964638188030328e+1 # 2.193963818803033e+1 # 2.3407888188030327e+1 #
+    2.1852388188030329e+1 # 2.184588818803033e+1 # 2.1731888188030329e+1 #
+    2.3118888188030329e+1 # 2.2176590076232202e+1 # 1.9684840076232202e+1 #
+    2.4504840076232203e+1 # 1.9129960467669768e+1 # 2.0761460467669767e+1 #
+    2.3748960467669768e+1 # 2.3788277849071985e+1 # 2.3298277849071987e+1 #
+    2.3738527849071986e+1 # 2.0376955087372448e+1 # 1.862895508737245e+1 #
+    2.1203148741242803e+1 # 1.9423431227958531e+1 # 1.9525431227958531e+1 #
+    1.7898700625158806e+1 # 1.7208320631062549e+1 # 1.440832063106255e+1 #
+    1.293032063106255e+1 # 1.0526570631062551e+1 # 8.4983206310625512 #
+    8.2279999999999998 # 6.2079999999999993 # 6.8078888721758011 #
+    5.7492095860284991 # 5.2279999999999998 # 8.7759999999999998 #
+    6.3679999999999994 # 5.4399999999999995 # 1.0199999999999999e+1 #
+    1.1441999999999998e+1 # 1.5587e+1 # 1.35985e+1 # 1.4454231227839513e+1 #
+    1.0489231227839513e+1 # 6.1539812278395134 # 5.2997546747039133 #
+    7.8399999999999999 # 7.2279999999999998 # 5.8239999999999998 # 5.944 #
+    1.0e+1 # 8.0984999999999996 # 9.769499999999999 # 1.1564249999999999e+1 #
+    1.1209249999999999e+1 # 1.0784749999999999e+1 # 9.8484999999999996 #
+    1.1396249999999998e+1 # 9.536249999999999 # 1.1673249999999999e+1 #
+    1.4770249999999999e+1 # 1.7413249999999998e+1 # 1.9013499999999997e+1 #
+    1.9785517571997509e+1 # 1.6419017571997507e+1 # 1.4760767571997508e+1 #
+    1.4923767571997509e+1 # 9.4122434150768388 # 9.0052434150768388 #
+    8.4672434150768385 # 1.202624341507684e+1 # 8.0352434150768381 #
+    9.1422434150768392 # 6.8606123542482429 # 6.8639999999999999 #
+    6.7519999999999998 # 6.3919999999999995 # 1.1292e+1 # 7.7147499999999996 #
+    5.128970402314823 # 8.5519999999999996 # 5.9996723618310686 #
+    5.3595361972376274 # 7.6799999999999997 # 5.4034671264633545 #
+    6.2837377938126613 # 8.532 # 8.3559999999999999 # 8.7240000000000002 #
+    9.1534999999999993 # 1.0180499999999999e+1 # 1.0111499999999999e+1 #
+    7.0416583408284037 # 8.5926583408284039 # 1.1692658340828403e+1 #
+    8.2089083408284029 # 9.1249083408284033 # 9.195908340828403 #
+    1.2752158340828403e+1 # 1.4298408340828404e+1 # 1.3498408340828403e+1 #
+    1.3126158340828404e+1 # 1.5153158340828403e+1 # 1.1544908340828403e+1 #
+    1.0356658340828403e+1 # 9.4476583408284025 # 6.6336171115397153 #
+    9.1106171115397157 # 1.0e+1 # 5.5779108725291913 # 7.04 #
+    5.1935847700905278 # 5.0959999999999992 # 7.2256240728757799 #
+    6.0976240728757798 # 7.4799999999999995 # 9.4319999999999986 #
+    7.3144999999999998 # 7.3520000000000003 # 5.1039999999999992 #
+    8.395999999999999 # 7.0039999999999996 # 8.7599999999999998 #
+    6.6258920465625506 # 5.6199999999999992 # 9.3779999999999983 #
+    9.6791118106583536 # 1.3210361810658354e+1 # 1.0103861810658355e+1 #
+    7.0558667704966762 # 6.1639999999999997 # 5.9063404220388493 #
+    5.7839999999999998 # 8.9199999999999999 # 6.6360000000000001 #
+    6.8679999999999994 # 1.0e+1 # 1.09855e+1 # 7.089999999999999 # 1.0e+1 #
+    5.0239999999999991 # 6.1799999999999997 # 8.5279999999999987 #
+    5.3079999999999998 # 5.3479999999999999 # 7.2599999999999998 #
+    9.7129999999999992 # 9.380749999999999 # 8.9219999999999988 # 7.99275 #
+    8.9199999999999999 # 7.4901248658736685 # 5.4199999999999999 # 1.0e+1 #
+    1.1838999999999999e+1 # 1.2726942000423998e+1 # 8.0581920004239986 # 1.0e+1
+    # 8.552999999999999 # 5.6239999999999997 # 6.1519999999999992 #
+    7.9319999999999995 # 1.0e+1 # 8.8887499999999999 # 9.0327514601483134 #
+    8.1600000000000001 # 1.0e+1 # 1.0487749999999998e+1 # 5.9479999999999995 #
+    8.1349999999999998 # 8.4604999999999997 # 8.4709494374587866 #
+    7.216215753941567 # 5.1719752857576733 # 8.2035304700641092 #
+    8.2839999999999989 # 1.1113999999999999e+1 # 1.3016999999999999e+1 #
+    1.2885e+1 # 9.973749999999999 # 8.5107499999999998 # 7.0368843800778622 #
+    5.2239999999999993 # 7.7519999999999998 # 5.8319999999999999 #
+    5.6559999999999997 # 6.9059999999999997 # 5.2399999999999993 #
+    6.5960000000000001 # 6.8039999999999994 # 6.6137808910297071 #
+    7.8162546254246692 # 1.0984254625424668e+1 # 1.4676254625424669e+1 #
+    1.6022254625424669e+1 # 1.7853254625424668e+1 # 1.7660504625424668e+1 #
+    1.4841688195608167e+1 # 1.5752333230859293e+1 # 1.3097083230859292e+1 #
+    1.678458323085929e+1 # 1.3517583230859293e+1 # 1.1580707303735073e+1 #
+    8.3587073037350734 # 8.1199999999999992 # 7.4517499999999997 #
+    7.2742499999999994 # 5.9799999999999995 # 5.3999999999999995 #
+    5.4719999999999995 # 8.9120230264460076 # 7.7759999999999998 #
+    8.5989999999999984 # 7.3579999999999997 # 8.0079999999999991 #
+    1.0626749999999999e+1 # 1.315175e+1 # 1.4545499999999999e+1 #
+    1.2180999999999999e+1 # 1.31e+1 # 1.0182749999999999e+1 #
+    1.1188999999999998e+1 # 8.6502505887225851 # 5.1239999999999997 #
+    8.1319999999999997 # 5.1358197441603979 # 1.0e+1 # 9.8229999999999986 #
+    7.1202499999999995 # 1.0e+1 # 5.4141724853144089 # 5.1759999999999993 #
+    6.6639999999999997 # 5.9959999999999996 # 1.0e+1 # 8.206999999999999 #
+    7.5204999999999993 # 8.6239999999999988 # 1.0385e+1 # 1.0485499999999998e+1
+    # 1.2018999999999998e+1 # 1.053525e+1 # 1.2976999999999999e+1 # 1.0904e+1 #
+    1.0994249999999999e+1 # 1.2967249999999998e+1 # 1.3575749999999999e+1 #
+    1.2814249999999999e+1 # 1.546425e+1 # 1.1679642810525127e+1 #
+    1.2207392810525127e+1 # 1.2875351177034471e+1 # 1.3054351177034471e+1 #
+    9.034601177034471 # 9.9886011770344716 # 6.1628511770344714 # 1.0e+1 #
+    1.175e+1 # 7.5107835048150404 # 1.022953350481504e+1 # 8.4687835048150397 #
+    7.9030335048150402 # 8.2340335048150397 # 7.9912835048150406 #
+    8.7242835048150393 # 1.0e+1 # 1.4434999999999999e+1 # 1.489625e+1 #
+    1.4074e+1 # 9.5224803098141368 # 1.2590480309814136e+1 #
+    1.2433480309814136e+1 # 1.2869230309814137e+1 # 1.1175980309814136e+1 #
+    1.1920230309814137e+1 # 1.1382730309814136e+1 # 1.4433730309814136e+1 #
+    1.4613230309814137e+1 # 1.0164230831165582e+1 # 8.1347308311655819 #
+    8.3039999999999985 # 1.0513e+1 # 8.0377499999999991 # 1.0656499999999999e+1
+    # 1.11015e+1 # 1.2270281061838793e+1 # 1.5868281061838793e+1 #
+    1.7712281061838791e+1 # 1.8331531061838792e+1 # 1.6953781061838793e+1 #
+    1.812878106183879e+1 # 1.9460781061838791e+1 # 1.5120491827738388e+1 #
+    1.9175491827738387e+1 # 1.6307991827738388e+1 # 1.3366241827738387e+1 #
+    1.3763432236656648e+1 # 8.3194369113605617 # 1.0182436911360561e+1 #
+    1.1343686911360562e+1 # 1.1417936911360561e+1 # 1.181404799953479e+1 #
+    1.3136047999534789e+1 # 1.458604799953479e+1 # 1.496104799953479e+1 #
+    1.5174047999534789e+1 # 1.573629799953479e+1 # 1.4074797999534789e+1 #
+    1.166529799953479e+1 # 1.629029799953479e+1 # 1.5554249908081836e+1 #
+    1.2541407016613999e+1 # 8.2939070166139999 # 7.8079999999999998 #
+    7.1370706755343347 # 6.5788206755343346 # 5.7039999999999997 #
+    5.0239999999999991 # 5.1919999999999993 # 5.2319999999999993 #
+    8.4359999999999999 # 1.0664999999999999e+1 # 9.5162499999999994 #
+    6.9479999999999995 # 5.0672087707113125 # 7.6360000000000001 #
+    6.9349999999999996 # 5.5639999999999992 # 7.6559999999999997 #
+    8.7699999999999996 # 1.2663749999999999e+1 # 9.8239999999999998 #
+    5.6694306749604921 # 7.5800000000000001 # 5.4479999999999995 #
+    8.3599999999999994 # 5.0839999999999996 # 6.6607312278395137 #
+    8.9827312278395119 # 5.0693500991526559 # 5.3239999999999998 #
+    6.1319999999999997 # 7.8049420004239991 # 7.7119999999999997 #
+    8.6539999999999981 # 1.2147749999999998e+1 # 1.0102647298477663e+1 #
+    8.341647298477664 # 7.1559999999999997 # 8.7467499999999987 #
+    7.5439999999999996 # 9.5379999999999985 # 1.0131749999999998e+1 #
+    1.038125e+1 # 1.2784249999999998e+1 # 1.2680499999999999e+1 #
+    1.5155499999999998e+1 # 1.5059499999999998e+1 # 1.3555491691615854e+1 #
+    1.1407991691615855e+1 # 1.2260991691615855e+1 # 9.3567416916158539 #
+    7.7959916916158551 # 5.6424540872622897 # 6.0519999999999996 #
+    9.0659999999999989 # 9.1657499999999992 # 8.1679999999999993 #
+    7.9655609010022737 # 5.939047740014634 # 5.6240477400146336 #
+    5.2479999999999993 # 5.5744756718603092 # 1.0e+1 # 8.9039999999999999 #
+    1.1313999999999998e+1 # 9.2524296672756741 # 9.489929667275673 # 1.0e+1 #
+    8.0587499999999999 # 7.7160000000000002 # 9.3514184855217923 #
+    7.9564184855217928 # 8.5640000000000001 # 7.7599999999999998 #
+    1.1084999999999999e+1 # 1.0794659671045558e+1 # 1.4799659671045557e+1 #
+    1.4016159671045557e+1 # 1.4994909671045558e+1 # 1.5098909671045558e+1 #
+    1.4155159671045558e+1 # 1.0067159671045559e+1 # 7.7914096710455585 #
+    6.2799999999999994 # 7.9959999999999996 # 7.8894999999999991 # 1.0e+1 #
+    1.0420999999999999e+1 # 1.3872e+1 # 1.209075e+1 # 1.0074499999999999e+1 #
+    1.2951499999999999e+1 # 1.0090146739838215e+1 # 9.1371467398382151 #
+    5.0736465611861616 # 6.6146465611861611 # 1.0e+1 # 9.4689999999999994 #
+    9.0454999999999988 # 9.0684999999999985 # 5.0356271986610137 #
+    8.2560000000000002 # 8.7589999999999986 # 1.0e+1 # 6.2839999999999998 #
+    8.9559999999999995 # 7.5919999999999996 # 1.0271999999999998e+1 #
+    8.7304999999999993 # 1.0001749999999999e+1 # 6.1274999999999995 #
+    5.1119999999999992 # 5.2144316317300508 # 7.5800000000000001 # 8.016 #
+    5.1176580644860952 # 5.2194005860532382 # 6.3079999999999998 #
+    1.0502999999999998e+1 # 1.5247999999999999e+1 # 1.5860499999999998e+1 #
+    1.942925e+1 # 2.1085249999999998e+1 # 1.8453499999999998e+1 #
+    1.8416499999999999e+1 # 1.7218249999999998e+1 # 1.7352249999999998e+1 #
+    1.975225e+1 # 1.6423749999999998e+1 # 1.6852499999999999e+1 # 1.550675e+1 #
+    1.8147749999999998e+1 # 2.0292749999999998e+1 # 2.3330749999999998e+1 #
+    2.0840734255266742e+1 # 1.6601741972502378e+1 # 1.1983991972502377e+1 #
+    1.2186063554719968e+1 # 1.3504563554719969e+1 # 1.3334063554719968e+1 #
+    1.0638380936122189e+1 # 6.4618809361221885 # 8.1519999999999992 # 6.0 #
+    5.4338646036477254 # 6.3704210329814632 # 5.1566538310632399 #
+    6.0720000000000001 # 6.3199999999999994 # 5.7879999999999994 # 1.0e+1 #
+    1.1193999999999999e+1 # 1.6119e+1 # 1.8011249999999997e+1 #
+    1.4896407417770856e+1 # 1.2271657417770856e+1 # 1.5890407417770856e+1 #
+    1.6627719144380169e+1 # 1.614571914438017e+1 # 1.5579719144380169e+1 #
+    1.0818580590107022e+1 # 9.6205669681227679 # 6.7559999999999993 #
+    9.0609999999999999 # 8.2890100579506392 # 6.2385100579506396 #
+    5.1707883419981444 # 8.1839999999999993 # 1.045275e+1 # 7.3077152540843766
+    # 7.4534652540843762 # 7.5770219597136688 # 6.8773173786075645 #
+    6.0919999999999996 # 7.7290000000000001 # 6.1537499999999996 # 1.0e+1 #
+    7.4404999999999992 # 8.6639999999999997 # 8.2919999999999998 #
+    8.0629999999999988 # 1.0e+1 # 9.6799999999999997 # 1.017e+1 #
+    1.0776999999999999e+1 # 1.270275e+1 # 1.2533999999999999e+1 #
+    1.0295249999999999e+1 # 7.0432499999999996 # 8.0640000000000001 #
+    7.8719999999999999 # 5.7399999999999993 # 6.4309999999999992 #
+    5.8239999999999998 # 8.427999999999999 # 8.3759999999999994 #
+    1.0511999999999999e+1 # 5.5082499999999994 # 1.0e+1 # 1.03035e+1 #
+    8.1724999999999994 # 1.25875e+1 # 1.6006249999999998e+1 # 1.441225e+1 #
+    1.1483750000000001e+1 # 1.1685499999999999e+1 # 1.02685e+1 #
+    1.2930999999999999e+1 # 9.0340000000000007 # 7.6600000000000001 #
+    8.194183233295691 # 9.9581832332956903 # 9.4459332332956905 #
+    8.0746832332956906 # 8.7679999999999989 # 9.1837499999999999 #
+    5.6287499999999993 # 7.46 # 5.8159999999999998 # 6.1120000000000001 #
+    5.1911605264790222 # 5.0888312347244788 # 5.4124897440629915 # 1.0e+1 #
+    9.990499999999999 # 5.7194911769174102 # 1.0e+1 # 1.0186e+1 # 1.04985e+1 #
+    6.8662499999999991 # 8.8399999999999999 # 9.8099999999999987 #
+    1.1284999999999998e+1 # 7.1191512685498433 # 9.161151268549844 #
+    5.7359999999999998 # 7.4319999999999995 # 7.9159999999999995 #
+    5.7479999999999993 # 8.1199999999999992 # 1.0e+1 # 1.0956249999999999e+1 #
+    1.2704999999999998e+1 # 8.5802499999999995 # 6.0106014323632593 #
+    8.7080000000000002 # 6.47525 # 1.005025e+1 # 7.7887500000000003 #
+    7.9407500000000004 # 6.7072580424154014 # 8.4752580424154011 # 1.0e+1 #
+    8.4162499999999998 # 8.1217499999999987 # 7.6517499999999998 #
+    9.5444999999999993 # 8.0960000000000001 # 1.0282e+1 # 1.1541499999999999e+1
+    # 1.1320863174516965e+1 # 1.0506613174516964e+1 # 1.3803613174516965e+1 #
+    1.3176363174516965e+1 # 1.2232613174516965e+1 # 1.5231613174516964e+1 #
+    1.4850424649916492e+1 # 1.8287924649916491e+1 # 1.3842436615628706e+1 #
+    1.2275186615628707e+1 # 1.5685186615628707e+1 # 1.4441936615628707e+1 #
+    1.2484436615628708e+1 # 1.6478186615628704e+1 # 1.9878186615628707e+1 #
+    1.6565686615628707e+1 # 1.3066436615628707e+1 # 1.4044686615628708e+1 #
+    1.5091436615628707e+1 # 1.6770436615628707e+1 # 1.2558196543600927e+1 #
+    7.228446543600926 # 7.9239999999999995 # 1.0629249999999999e+1 #
+    5.5878746642080968 # 6.444 # 8.1999999999999993 # 1.0862499999999999e+1 #
+    1.29765e+1 # 1.4163499999999999e+1 # 1.2861749999999999e+1 #
+    1.2871734255266743e+1 # 1.3504734255266742e+1 # 1.4538234255266742e+1 #
+    1.2731234255266743e+1 # 9.3647342552667432 # 6.6919999999999993 #
+    8.9199999999999999 # 7.8993514323632592 # 1.0575351432363258e+1 #
+    7.7584981244967439 # 5.9119999999999999 # 9.2149999999999999 #
+    1.0639999999999999e+1 # 1.1748999999999999e+1 # 1.1697151200512035e+1 #
+    1.0667151200512036e+1 # 1.5317151200512036e+1 # 1.5173401200512037e+1 #
+    1.5135901200512038e+1 # 1.4986413931460159e+1 # 1.4480163931460158e+1 #
+    9.517791273127278 # 9.1612912731272775 # 5.0899247285458502 #
+    8.2968373873557741 # 1.0e+1 # 1.1583749999999998e+1 # 1.0788145980066064e+1
+    # 1.2120145980066063e+1 # 1.2359145980066064e+1 # 1.1612395980066063e+1 #
+    1.0061645980066062e+1 # 9.5674657242264605 # 9.6587689356074389 #
+    8.1780189356074384 # 1.1693018935607439e+1 # 1.0930874503033611e+1 #
+    1.0170124503033611e+1 # 7.7363745030336117 # 7.7271245030336111 #
+    8.9959999999999987 # 8.6199999999999992 # 5.8462983810719829 #
+    8.5532983810719827 # 1.1865798381071983e+1 # 1.2995548381071982e+1 #
+    1.3271548381071982e+1 # 9.3342983810719815 # 9.2992983810719831 #
+    5.1312483076278168 # 1.0e+1 # 8.9799999999999986 # 7.96075 #
+    6.7839999999999998 # 5.2613647851522707 # 5.4479999999999995 #
+    5.0060180933434255 # 7.5880000000000001 # 8.5239999999999991 #
+    8.5894999999999992 # 7.8624999999999998 # 1.01815e+1 # 9.6209300993960394 #
+    1.0393311906284509e+1 # 8.3868119062845103 # 1.039831190628451e+1 #
+    8.5170619062845105 # 8.4148119062845108 # 1.0e+1 # 5.0444999999999993 #
+    5.2999999999999998 # 8.1959999999999997 # 8.7307499999999987 #
+    7.5499999999999998 # 5.2070241904521897 # 6.6479999999999997 #
+    8.3999999999999986 # 1.2007e+1 # 7.8201195832852592 # 7.1319999999999997 #
+    5.1578241062114296 # 5.4039999999999999 # 8.1280000000000001 #
+    6.8959999999999999 # 8.968 # 6.1719999999999997 # 5.3799999999999999 #
+    8.5999999999999996 # 5.6713857097962954 # 5.2357223545389324 #
+    5.5395681136495076 # 6.6600000000000001 # 8.4229332332956908 #
+    8.3960736296414886 # 8.4159999999999986 # 9.0462499999999988 #
+    9.2392499999999984 # 6.5972499999999998 # 5.4049652540843764 #
+    5.8319999999999999 # 8.0519999999999996 # 6.7676855104229876 #
+    8.1120000000000001 # 9.4027499999999993 # 1.295275e+1 # 1.215775e+1 #
+    1.125975e+1 # 6.915744254129252 # 5.08773893532587 # 1.0e+1 # 8.532 #
+    9.3850254740137764 # 8.1935254740137768 # 6.3704210329814632 #
+    6.8159999999999998 # 5.1759999999999993 # 5.3174542518033139 #
+    5.9162907528920181 # 5.3999999999999995 # 1.0e+1 # 1.0311987005749417e+1 #
+    8.9460706508947414 # 9.4053206508947422 # 7.4039999999999999 #
+    8.8167128466416838 # 1.0097962846641684e+1 # 1.4897962846641683e+1 #
+    1.3613212846641684e+1 # 1.3748962846641684e+1 # 1.4231712846641683e+1 #
+    9.8189628466416838 # 7.2899628466416839 # 7.7759999999999998 #
+    5.4399999999999995 # 7.0402208495444176 # 7.508 # 7.4079999999999995 #
+    1.0545499999999999e+1 # 1.1145499999999998e+1 # 1.1383624072875779e+1 #
+    6.1655935782125351 # 8.2935935782125334 # 8.7665935782125342 # 1.0e+1 #
+    9.020249999999999 # 5.3681693443823306 # 8.6591693443823292 #
+    9.5542273211811786 # 7.872323399022414 # 7.7039999999999997 #
+    8.8949999999999996 # 1.0313749999999999e+1 # 8.5839999999999996 #
+    1.1927999999999999e+1 # 7.9459999999999997 # 8.4539999999999988 # 5.556 #
+    5.1826538310632397 # 1.0e+1 # 5.3319999999999999 # 7.3200000000000003 #
+    8.7999999999999989 # 1.1783999999999999e+1 # 9.7574999999999985 #
+    9.7312499999999993 # 7.3839999999999995 # 7.0009999999999994 #
+    7.0279999999999996 # 7.3719999999999999 # 7.1399999999999997 #
+    6.5359999999999996 # 5.2959999999999994 # 5.1199103176904206 # 1.0e+1 # 8.5
+    # 8.3449999999999989 # 8.5219999999999985 # 9.5457499999999982 #
+    8.4834999999999994 # 9.6644999999999985 # 1.1834499999999998e+1 #
+    7.828266842542309 # 5.3106095981133485 # 5.3999999999999995 #
+    5.1935847700905278 # 5.1479999999999997 # 6.9639999999999995 #
+    5.1639999999999997 # 8.7439999999999998 # 7.4567901439571971 #
+    6.0415401439571967 # 7.1245401439571969 # 6.2799999999999994 #
+    7.7909999999999995 # 5.516 # 5.4199999999999999 # 6.4399999999999995 #
+    1.119e+1 # 1.2354249999999999e+1 # 1.1657999999999999e+1 #
+    1.2154149198915134e+1 # 9.8722715365755498 # 9.78377153657555 #
+    9.6600215365755506 # 6.2119999999999997 # 6.0356375105245839 #
+    5.7879999999999994 # 6.8359999999999994 # 6.2238558268449005 #
+    6.8572227902169223 # 7.3559999999999999 # 8.9479999999999986 #
+    8.7502499999999994 # 8.8607499999999995 # 7.6440000000000001 #
+    5.6719999999999997 # 8.4420193972002728 # 6.016 # 8.427999999999999 #
+    6.9732813668693083 # 1.0623281366869307e+1 # 1.2188281366869308e+1 #
+    1.0677355936017277e+1 # 1.2072355936017276e+1 # 1.0159228273677693e+1 #
+    9.449478273677693 # 7.6767282736776927 # 8.8879999999999999 #
+    7.3829999999999991 # 5.452 # 5.2497442541292516 # 6.8999999999999995 #
+    8.2080000000000002 # 8.4939999999999998 # 9.2432499999999997 #
+    1.0203249999999999e+1 # 7.5599999999999996 # 1.0715e+1 # 7.468 #
+    7.1159999999999997 # 1.0e+1 # 8.2047499999999989 # 7.0444999999999993 #
+    9.7344999999999988 # 6.0094999999999992 # 5.2970592552822406 #
+    8.2639999999999993 # 1.050775e+1 # 7.2822500000000003 # 7.6959999999999997
+    # 1.0809143011331889e+1 # 1.241314301133189e+1 # 1.4946643011331888e+1 #
+    1.4350143011331889e+1 # 1.5870643011331889e+1 # 1.7378462553722901e+1 #
+    1.6979712553722901e+1 # 1.6835962553722901e+1 # 1.8685962553722902e+1 #
+    1.9604962553722903e+1 # 1.8169750903117823e+1 # 1.2863250903117821e+1 #
+    1.1708250903117822e+1 # 1.3785750903117822e+1 # 1.4701750903117823e+1 #
+    1.4039250903117823e+1 # 9.6035009031178227 # 1.3015500903117823e+1 #
+    7.8604101720291393 # 7.4159999999999995 # 1.135975e+1 # 7.8769999999999998
+    # 5.1399999999999997 # 8.1465551843064361 # 5.3215836451453251 #
+    8.1440000000000001 # 8.9759999999999991 # 6.7479999999999993 #
+    5.5799999999999992 # 6.4089999999999998 # 7.7620626806090334 #
+    9.4228486502119999 # 8.1600000000000001 # 7.601 # 5.8990673814022196 #
+    8.9719999999999995 # 8.8519999999999985 # 1.0e+1 # 1.15825e+1 #
+    1.1871499999999999e+1 # 1.3557749999999999e+1 # 1.0105749999999999e+1 #
+    8.3873741244019016 # 6.6399999999999997 # 5.7852624904856134 #
+    5.082295263744693 # 5.1959999999999997 # 5.508 # 6.8325814847661732 #
+    7.9445814847661724 # 8.4795814847661717 # 7.6800814847661725 #
+    8.740021691562001 # 1.3420021691562003e+1 # 1.2972625735071684e+1 #
+    1.2817625735071685e+1 # 8.6756257350716854 # 8.1600000000000001 #
+    8.1679999999999993 # 7.3280000000000003 # 5.3519999999999994 #
+    5.3841929938504878 # 8.8919999999999995 # 8.7930204908470841 #
+    8.3474936413706509 # 6.8695818279780481 # 1.0e+1 # 9.6172499999999985 #
+    8.7057461259573099 # 9.4757461259573095 # 9.7899961259573089 #
+    7.1404961259573101 # 8.7119999999999997 # 7.4981898941468517 #
+    8.1079999999999988 # 8.4669999999999987 # 7.9195000000000002 #
+    6.6840000000000002 # 5.1684186726428258 # 7.9159999999999995 #
+    8.6372499999999999 # 7.7806341724413031 # 8.879999999999999 # 1.164875e+1 #
+    1.3504999999999999e+1 # 1.7292499999999997e+1 # 1.3466875424735949e+1 #
+    1.2980375424735948e+1 # 1.294480552413199e+1 # 1.086330552413199e+1 #
+    1.177480552413199e+1 # 1.170230552413199e+1 # 1.222230552413199e+1 #
+    1.3792055524131991e+1 # 1.098980552413199e+1 # 1.067730552413199e+1 #
+    1.0348305524131991e+1 # 9.9373055241319914 # 1.1714305524131991e+1 #
+    8.9765555241319905 # 1.0235555524131991e+1 # 8.9029376285501929 #
+    8.2250138410387699 # 1.050376384103877e+1 # 8.2170138410387707 #
+    1.316701384103877e+1 # 7.4070138410387703 # 8.6719999999999988 #
+    5.3324999999999996 # 7.6559999999999997 # 6.9326362760946107 #
+    1.1932636276094611e+1 # 1.1966886276094611e+1 # 1.265688627609461e+1 #
+    1.102213627609461e+1 # 1.4103386276094611e+1 # 1.393888627609461e+1 #
+    1.6238886276094611e+1 # 1.4276886276094611e+1 # 1.620588627609461e+1 #
+    1.6137886276094608e+1 # 1.584288627609461e+1 # 1.4710886276094611e+1 #
+    1.373688627609461e+1 # 1.396788627609461e+1 # 1.4512704792365415e+1 #
+    1.3224454792365416e+1 # 1.5368454792365416e+1 # 1.6227704792365415e+1 #
+    1.7455704792365413e+1 # 1.5009204792365416e+1 # 1.7768204792365417e+1 #
+    1.5799954792365416e+1 # 1.3067704792365415e+1 # 1.2343704792365415e+1 #
+    1.1459239186842719e+1 # 1.1537239186842719e+1 # 1.3546239186842719e+1 #
+    1.4002989186842719e+1 # 1.6885989186842718e+1 # 1.4162989186842719e+1 #
+    1.691998918684272e+1 # 1.4896314609801404e+1 # 1.2064314609801404e+1 #
+    1.4842314609801404e+1 # 1.7082736724568932e+1 # 1.6220236724568931e+1 #
+    1.3418486724568933e+1 # 1.1892486724568933e+1 # 1.5136236724568933e+1 #
+    1.5239986724568933e+1 # 1.0430986724568932e+1 # 8.5399999999999991 #
+    1.0161249999999999e+1 # 6.1692499999999999 # 1.0e+1 # 1.3462499999999999e+1
+    # 1.1427249999999999e+1 # 9.1405246359548258 # 5.8519999999999994 # 1.0e+1
+    # 1.0276999999999999e+1 # 1.2016999999999999e+1 # 1.0152999999999999e+1 #
+    1.0892749999999999e+1 # 9.8587499999999988 # 9.3428059425384635 # 1.0e+1 #
+    7.4389999999999992 # 5.0987159939570201 # 6.3280254740137778 #
+    6.2319999999999993 # 6.1639999999999997 # 8.8119999999999994 #
+    9.331999999999999 # 1.061875e+1 # 1.216675e+1 # 1.35745e+1 # 1.286575e+1 #
+    1.1520390640769483e+1 # 9.9041406407694819 # 1.1030890640769483e+1 #
+    1.1930890640769482e+1 # 1.2543390640769482e+1 # 1.0090640640769482e+1 #
+    8.6839999999999993 # 7.4399999999999995 # 5.7962879604973212 #
+    8.5119999999999987 # 6.7719568629497378 # 7.96 # 8.442439894146851 #
+    5.0512933154054132 # 1.0e+1 # 6.5207499999999996 # 6.6680000000000001 #
+    8.5570000000000004 # 6.5707500000000003 # 6.452 # 6.9877743741718747 #
+    5.7678707477737445 # 7.1239999999999997 # 5.7399999999999993 #
+    5.1319999999999997 # 5.4939999999999998 # 7.1279999999999992 #
+    5.6039999999999992 # 1.0e+1 # 1.0585999999999999e+1 # 1.0117183426410271e+1
+    # 7.6492080623650986 # 7.9199999999999999 # 6.5960000000000001 #
+    6.0519999999999996 # 7.2199999999999998 # 8.4719999999999995 #
+    8.1479999999999997 # 7.9079999999999995 # 6.4856833777975726 #
+    8.2016833777975719 # 5.3119747860386886 # 8.5759999999999987 #
+    9.1767500000000002 # 5.2839999999999998 # 6.6639999999999997 #
+    6.1999999999999993 # 5.3919999999999995 # 5.3799999999999999 #
+    6.0469690765341344 # 8.9079999999999995 # 8.8854999999999986 #
+    8.3077499999999986 # 8.8399999999999999 # 9.2062499999999989 #
+    1.1007806851605503e+1 # 1.0987806851605502e+1 # 7.1678068516055031 #
+    7.8078068516055028 # 5.2559999999999993 # 1.0e+1 # 1.3635999999999999e+1 #
+    1.3717249999999998e+1 # 1.0273999999999999e+1 # 5.5327304801719031 #
+    5.8679999999999994 # 5.5359999999999996 # 5.0040080424154016 #
+    6.0999999999999996 # 7.2519999999999998 # 7.2637499999999999 #
+    7.4160874457685786 # 6.8359999999999994 # 1.0e+1 # 7.7583623140917464 #
+    6.3359999999999994 # 8.6999999999999993 # 8.3559999999999999 #
+    9.2317499999999999 # 6.6088623140917466 # 8.8078623140917465 #
+    7.0893866882636214 # 7.8866366882636214 # 9.2526366882636211 #
+    8.7608866882636214 # 1.3155886688263621e+1 # 1.2823597426336967e+1 #
+    8.9483474263369676 # 8.9990974263369683 # 1.0775097426336968e+1 #
+    1.2568847426336967e+1 # 9.1033474263369687 # 1.0159347426336968e+1 #
+    1.008415582869373e+1 # 1.0027541087896379e+1 # 8.2519999999999989 #
+    5.8399999999999999 # 8.452 # 5.2919999999999998 # 5.1131687191235011 #
+    8.5039999999999996 # 8.1679999999999993 # 9.8684999999999992 # 1.28405e+1 #
+    1.280052579306812e+1 # 1.581252579306812e+1 # 1.6920525793068119e+1 #
+    1.5367775793068121e+1 # 1.570677579306812e+1 # 1.555877579306812e+1 #
+    1.4775775793068121e+1 # 1.625777579306812e+1 # 2.0020275793068119e+1 #
+    2.0899525793068118e+1 # 2.399652579306812e+1 # 2.2127025793068121e+1 #
+    2.5165025793068121e+1 # 2.2813052104838484e+1 # 2.2175552104838484e+1 #
+    2.2322552104838483e+1 # 2.0610552104838483e+1 # 1.5222700053381285e+1 #
+    1.6341450053381283e+1 # 1.6483184679709808e+1 # 1.5067434679709811e+1 #
+    1.7799501000543369e+1 # 1.957875100054337e+1 # 1.9983080116891781e+1 #
+    1.9927580116891782e+1 # 1.8508080116891783e+1 # 1.8984830116891782e+1 #
+    2.0349580116891783e+1 # 2.1285580116891783e+1 # 1.8302580116891782e+1 #
+    1.9958580116891781e+1 # 1.9300330116891782e+1 # 2.1317580116891783e+1 #
+    1.8472330116891783e+1 # 2.0338330116891782e+1 # 1.8094330116891783e+1 #
+    1.731108011689178e+1 # 1.662058011689178e+1 # 1.2347580116891782e+1 #
+    1.7247580116891783e+1 # 2.0135080116891782e+1 # 2.1360080116891783e+1 #
+    2.2985080116891783e+1 # 2.0874830116891783e+1 # 2.518983011689178e+1 #
+    2.2230730914636759e+1 # 2.1244277387947168e+1 # 1.8489277387947169e+1 #
+    1.472152738794717e+1 # 1.3945093054028908e+1 # 1.1191093054028908e+1 #
+    1.3215093054028909e+1 # 1.0885343054028908e+1 # 7.948343054028908 #
+    5.4199999999999999 # 7.3440000000000003 # 6.1144999999999996 # 1.0e+1 #
+    8.1181209149549076 # 6.9877743741718747 # 8.8522743741718735 #
+    6.1319999999999997 # 5.6519999999999992 # 8.1760000000000002 #
+    5.4559999999999995 # 6.5279999999999996 # 9.0659999999999989 #
+    5.8891620855037656 # 6.7279999999999998 # 1.0130999999999998e+1 #
+    1.0240499999999999e+1 # 8.7884999999999991 # 9.6864999999999988 # 1.0e+1 #
+    1.0e+1 # 9.1774341846422978 # 6.9695748254117813 # 5.6599999999999993 #
+    9.0139999999999993 # 1.2088999999999999e+1 # 1.0978499999999999e+1 #
+    9.1102499999999988 # 1.3140249999999998e+1 # 1.2022249999999998e+1 #
+    1.2801749999999998e+1 # 1.2541749999999999e+1 # 8.6964999999999986 #
+    5.0959999999999992 # 5.9199999999999999 # 5.1159999999999997 #
+    6.9359999999999999 # 1.1481e+1 # 1.1196e+1 # 1.2402249999999999e+1 #
+    1.3850749999999998e+1 # 1.4310749999999999e+1 # 1.2108749999999999e+1 #
+    1.3501249999999999e+1 # 9.0634999999999994 # 6.8708196658743539 #
+    6.3759999999999994 # 6.1919999999999993 # 5.6319999999999997 #
+    5.3279999999999994 # 5.5679999999999996 # 1.0e+1 # 5.5359999999999996 #
+    6.2039999999999997 # 6.3239999999999998 # 5.5887871862535654 #
+    7.6159999999999997 # 7.5174146922034017 # 1.0e+1 # 5.0232686479572175 #
+    1.0e+1 # 1.0269713923820465e+1 # 7.0868275664470675 # 5.4780358219608623 #
+    6.968 # 5.2757535226043695 # 5.2839999999999998 # 1.19077553e+1 #
+    1.11515053e+1 # 6.3129354176702623 # 6.0469354176702623 # 8.532 # 8.81175 #
+    6.1040000000000001 # 5.8278221049044099 # 5.1301087063648829 #
+    6.8439999999999994 # 5.1232982373623566 # 1.0e+1 # 6.9799999999999995 #
+    6.3359999999999994 # 6.7879999999999994 # 1.0e+1 # 1.293e+1 #
+    9.8872499999999999 # 8.5339999999999989 # 8.6872499999999988 #
+    1.0241249999999999e+1 # 6.4359999999999999 # 6.5039999999999996 #
+    5.6311118106583553 # 1.0e+1 # 1.0120999999999999e+1 # 1.0302e+1 #
+    9.8259999999999987 # 5.8439999999999994 # 5.0790432283583158 #
+    5.0919999999999996 # 7.2839999999999998 # 9.3769999999999989 #
+    8.3989999999999991 # 8.3359999999999985 # 7.4479999999999995 # 1.024175e+1
+    # 1.300475e+1 # 1.0278249999999998e+1 # 5.9418843800778616 #
+    5.0576291338544994 # 8.0999999999999996 # 8.7439999999999998 #
+    8.9389559248732979 # 1.0637455924873297e+1 # 1.3846455924873297e+1 #
+    1.3328955924873297e+1 # 1.2332705924873297e+1 # 1.0747705924873298e+1 #
+    8.6309559248732981 # 6.8294559248732982 # 1.1434455924873298e+1 #
+    1.137046589522857e+1 # 1.0636715895228569e+1 # 5.8973947269372449 #
+    9.3423947269372452 # 8.9793947269372438 # 1.2689394726937245e+1 #
+    9.9536447269372434 # 1.1733644726937245e+1 # 1.3742394726937244e+1 #
+    1.2690542496219775e+1 # 7.7970424962197766 # 1.0e+1 # 8.3224999999999998 #
+    7.2720000000000002 # 6.5800000000000001 # 5.1935847700905278 #
+    6.0526833777975728 # 6.731605567426171 # 8.3813947753838374 #
+    9.574394775383837 # 8.8541447753838369 # 1.0e+1 # 7.464999999999999 #
+    5.5091603654647923 # 7.7759999999999998 # 6.4279999999999999 #
+    7.0799999999999992 # 1.0e+1 # 1.3109999999999999e+1 # 1.1128785730951774e+1
+    # 7.5312363359280843 # 9.5662363359280835 # 8.4806900903836748 #
+    5.6839999999999993 # 1.0e+1 # 9.1254999999999988 # 8.831999999999999 #
+    6.7389999999999999 # 9.129999999999999 # 1.1805e+1 # 8.9485891809839444 #
+    1.0321589180983944e+1 # 6.8423391809839442 # 1.0e+1 # 6.6072499999999996 #
+    5.508 # 7.516 # 1.2401e+1 # 8.4587499999999984 # 5.976 # 6.8169999999999993
+    # 7.048 # 5.4478508456224652 # 5.5519999999999996 # 7.7240000000000002 #
+    1.0516999999999999e+1 # 7.569 # 7.3000000000000007 # 7.3008524657351499 #
+    7.5999999999999996 # 8.8079999999999998 # 8.3519999999999985 #
+    8.9319999999999986 # 7.4959999999999996 # 1.0e+1 # 8.1227580424154002 #
+    6.1940080424154011 # 6.9039999999999999 # 1.1869e+1 # 9.1712499999999988 #
+    1.0063749999999999e+1 # 1.0399749999999999e+1 # 8.927999999999999 #
+    1.3603e+1 # 1.4317499999999999e+1 # 1.6617499999999996e+1 #
+    1.4287249999999998e+1 # 1.366925e+1 # 1.055425e+1 # 1.399175e+1 # 1.0529e+1
+    # 1.172725e+1 # 7.9432499999999999 # 1.2713249999999999e+1 #
+    9.7739999999999991 # 5.944 # 7.8399999999999999 # 1.1540999999999999e+1 #
+    1.1029999999999999e+1 # 7.1433499088953276 # 6.3280254740137778 #
+    8.3599999999999994 # 6.5800000000000001 # 5.5039999999999996 #
+    7.3599999999999994 # 8.048 # 7.54 # 8.3039999999999985 # 9.8659999999999997
+    # 1.0332749999999999e+1 # 5.9632499999999995 # 5.601480013051984 #
+    5.0839999999999996 # 6.6879999999999997 # 5.5599999999999996 #
+    5.7759999999999998 # 8.6999999999999993 # 6.2607558869248283 #
+    5.4399999999999995 # 8.2159999999999993 # 5.9808292740295892 #
+    5.6639999999999997 # 7.7560000000000002 # 1.2016e+1 # 1.04305e+1 #
+    1.1189249999999999e+1 # 1.2689249999999999e+1 # 1.4796250000000001e+1 #
+    1.697025e+1 # 1.9913999999999998e+1 # 2.2760999999999999e+1 #
+    1.9114000000000001e+1 # 1.8601499999999998e+1 # 1.5844250000000001e+1 #
+    1.2724250000000001e+1 # 1.0260962387820767e+1 # 1.3707962387820766e+1 #
+    1.2462962387820767e+1 # 9.8072123878207655 # 1.3807212387820766e+1 #
+    1.2039841521675266e+1 # 8.4203415216752653 # 8.5063415216752656 #
+    8.6293415216752649 # 8.032841521675266 # 5.6079999999999997 #
+    5.3599999999999994 # 8.4639999999999986 # 5.8904999999999994 #
+    7.9957322945718534 # 5.5656338812788482 # 5.9119999999999999 # 1.0e+1 #
+    8.8565103718528562 # 9.3107603718528562 # 9.0267603718528573 #
+    1.0979163981117708e+1 # 6.7116639811177077 # 6.8223863356566401 #
+    8.5119999999999987 # 7.6956094610398047 # 8.3559999999999999 #
+    5.6479999999999997 # 5.5279999999999996 # 6.1999999999999993 #
+    6.0569999999999995 # 6.8959999999999999 # 6.0936247681749336 #
+    8.927999999999999 # 5.5449130225814356 # 8.3839130225814351 # 5.984 #
+    5.2799999999999994 # 6.6200000000000001 # 9.2249999999999996 #
+    1.1223999999999998e+1 # 8.8524999999999991 # 5.6919999999999993 #
+    8.7199999999999989 # 8.7772499999999987 # 8.3074999999999992 #
+    8.7880000000000003 # 6.4885363896235537 # 6.3559999999999999 #
+    7.2379999999999995 # 5.8559999999999999 # 6.952 # 9.2529999999999983 #
+    1.1211794949842476e+1 # 1.3936880631559108e+1 # 1.6113880631559105e+1 #
+    1.1517347758022462e+1 # 1.3456347758022462e+1 # 1.5027347758022461e+1 #
+    1.2491847758022461e+1 # 1.4835847758022462e+1 # 1.8135847758022461e+1 #
+    1.9251597758022459e+1 # 1.9569779189350083e+1 # 2.0181279189350082e+1 #
+    1.8516529189350084e+1 # 1.6545779189350082e+1 # 1.8763779189350082e+1 #
+    2.3718779189350084e+1 # 2.3539779189350082e+1 # 2.2246269877459316e+1 #
+    1.8818769877459317e+1 # 2.0143769877459317e+1 # 1.6213157907353555e+1 #
+    1.195973304039291e+1 # 1.443473304039291e+1 # 1.6452733040392911e+1 #
+    1.818398304039291e+1 # 1.8915233040392909e+1 # 2.199423304039291e+1 #
+    2.4217233040392909e+1 # 2.1736483040392908e+1 # 1.9331733040392908e+1 #
+    2.0436733040392909e+1 # 2.3780483040392909e+1 # 2.608348304039291e+1 #
+    2.950848304039291e+1 # 3.0251983040392911e+1 # 2.989298304039291e+1 #
+    2.8489983040392911e+1 # 3.1329983040392911e+1 # 2.9406233040392909e+1 #
+    2.8743733040392911e+1 # 3.0791733040392909e+1 # 2.6826983040392911e+1 #
+    3.0708233040392912e+1 # 2.7587656876327987e+1 # 2.8741656876327987e+1 #
+    2.6078928181289836e+1 # 2.6029178181289836e+1 # 2.4913678181289836e+1 #
+    2.1524391886792056e+1 # 2.2686141886792058e+1 # 2.1010391886792057e+1 #
+    1.6793641886792056e+1 # 1.8881045496056906e+1 # 1.8663045496056906e+1 #
+    1.4510795496056907e+1 # 1.5867545496056907e+1 # 1.6986545496056905e+1 #
+    1.4860825195853147e+1 # 1.6054825195853144e+1 # 1.5152575195853148e+1 #
+    1.8427575195853144e+1 # 1.9132825195853147e+1 # 1.713465656105539e+1 #
+    1.252555735880037e+1 # 9.0858411960741829 # 7.4559999999999995 #
+    5.2744368667196229 # 6.3159999999999998 # 5.0319999999999991 #
+    8.2119999999999997 # 1.1880749999999999e+1 # 1.616075e+1 #
+    1.0945140779937375e+1 # 9.0871407799373767 # 8.4153907799373755 #
+    5.6799999999999997 # 8.0559999999999992 # 1.0555999999999999e+1 #
+    1.1796999999999999e+1 # 1.4535e+1 # 1.7317999999999998e+1 #
+    1.5654499999999999e+1 # 1.5342499999999999e+1 # 1.2089642046562551e+1 #
+    1.2752642046562551e+1 # 9.6121420465625498 # 9.90014204656255 #
+    9.6201420465625507 # 6.8988920465625503 # 8.9498920465625496 #
+    5.853315953730629 # 7.8360000000000003 # 5.7592870040823527 #
+    6.5039999999999996 # 1.0e+1 # 1.1387499999999999e+1 # 8.7517499999999995 #
+    7.7039999999999997 # 8.4879999999999995 # 1.005165360926485e+1 #
+    7.1879999999999997 # 7.1197499999999998 # 5.2039999999999997 #
+    7.1840000000000002 # 7.2480000000000002 # 5.555125903680433 #
+    5.4799999999999995 # 5.6119999999999992 # 7.492 # 9.4779999999999998 #
+    5.9977271964595342 # 1.0e+1 # 1.0582749999999999e+1 # 1.0407499999999999e+1
+    # 8.6399999999999988 # 6.5174292151047792 # 6.3704210329814632 #
+    6.6639999999999997 # 5.0319999999999991 # 5.3319999999999999 #
+    6.634755741436253 # 6.6799999999999997} > 
+<  '325569 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten
+    : '325570 # cToken@TOKENtokensUSToken@pcmflatten : null #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '325570 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten :
+    9218170919717118161213/576460752303423488 > 
+<  '325603 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten
+    : '325604 # cToken@TOKENtokensUSToken@pcmflatten : null #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '325604 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten :
+    9220718155666358913853/576460752303423488 > 
+<  '325652 : AtomicActionExec@MGBehavior | participants@ActionExec@MGBehavior :
+    Set{'325653 ; '325654} # variables@ActionExec@MGBehavior : Set{'325655} #
+    startingTime@ActionExec@MGBehavior :
+    9221053223478635278653/576460752303423488 #
+    endingTime@ActionExec@MGBehavior : null # action@ActionExec@MGBehavior :
+    "DelayUsageModel" # maxTimer@ActionExec@MGBehavior :
+    2008605433807241/1125899906842624 # minTimer@AtomicActionExec@MGBehavior :
+    2008605433807241/1125899906842624 #
+    executionTime@AtomicActionExec@MGBehavior :
+    3620894100405879/1125899906842624 # status@AtomicActionExec@MGBehavior :
+    unfinished@ActionStatus@MGBehavior > 
+<  '325653 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '_Rr7aIHnTEeOBarAp0jPAaA # role@ObjectRole@MGBehavior : "delay" > 
+<  '325654 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '325569 # role@ObjectRole@MGBehavior : "sToken" > 
+<  '325655 : Variable@MGBehavior | name@Variable@MGBehavior : "spec" #
+    value@Variable@MGBehavior : 5 > 
+<  '325658 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten
+    : '325659 # cToken@TOKENtokensUSToken@pcmflatten : '325664 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '325659 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten :
+    9221925120366494206781/576460752303423488 > 
+<  '325664 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '325665 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 22 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{100 # 700 # 200} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 108 > 
+<  '325678 : OngoingActionExec@MGBehavior | participants@ActionExec@MGBehavior
+    : Set{'325679} # variables@ActionExec@MGBehavior : Set{mt} #
+    startingTime@ActionExec@MGBehavior :
+    9222907121258043088701/576460752303423488 #
+    endingTime@ActionExec@MGBehavior : null # action@ActionExec@MGBehavior :
+    "DecreaseCountDown" # maxTimer@ActionExec@MGBehavior : freeze('1 .
+    countDown@OCLSf) # upperBoundTimer@OngoingActionExec@MGBehavior : null > 
+<  '325679 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior : '1 #
+    role@ObjectRole@MGBehavior : "st" > 
+<  '325689 : AtomicActionExec@MGBehavior | participants@ActionExec@MGBehavior :
+    Set{'325690 ; '325691 ; '325692 ; '325693 ; '325694 ; '325695} #
+    variables@ActionExec@MGBehavior : Set{'325696} #
+    startingTime@ActionExec@MGBehavior :
+    9222907121258043088701/576460752303423488 #
+    endingTime@ActionExec@MGBehavior : null # action@ActionExec@MGBehavior :
+    "InternalActionSEFF" # maxTimer@ActionExec@MGBehavior :
+    3458764513820541/2251799813685248 # minTimer@AtomicActionExec@MGBehavior :
+    3458764513820541/2251799813685248 #
+    executionTime@AtomicActionExec@MGBehavior : 0 #
+    status@AtomicActionExec@MGBehavior : unfinished@ActionStatus@MGBehavior > 
+<  '325690 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '_TjBvYH6ZEeOczJTm_QImZQ # role@ObjectRole@MGBehavior : "IA" > 
+<  '325691 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior : '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.1/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0 # role@ObjectRole@MGBehavior : "PRD" > 
+<  '325692 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '_oro4gG3fEdy4YaaT-RYrLQ # role@ObjectRole@MGBehavior : "PRT" > 
+<  '325693 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '_ssJ0QYr-EeG0c6Q1F-wA1Q # role@ObjectRole@MGBehavior : "PRS" > 
+<  '325694 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior : 'FCFS
+    # role@ObjectRole@MGBehavior : "Sch" > 
+<  '325695 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '325664 # role@ObjectRole@MGBehavior : "t" > 
+<  '325696 : Variable@MGBehavior | name@Variable@MGBehavior : "rTime" #
+    value@Variable@MGBehavior : 3458764513820541/2251799813685248 > 
+<  '325707 : AtomicActionExec@MGBehavior | participants@ActionExec@MGBehavior :
+    Set{'325708 ; '325709} # variables@ActionExec@MGBehavior : Set{'325710} #
+    startingTime@ActionExec@MGBehavior :
+    9222907121258043088701/576460752303423488 #
+    endingTime@ActionExec@MGBehavior : null # action@ActionExec@MGBehavior :
+    "DelayUsageModel" # maxTimer@ActionExec@MGBehavior : 5 #
+    minTimer@AtomicActionExec@MGBehavior : 5 #
+    executionTime@AtomicActionExec@MGBehavior : 0 #
+    status@AtomicActionExec@MGBehavior : unfinished@ActionStatus@MGBehavior > 
+<  '325708 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '_Rr7aIHnTEeOBarAp0jPAaA # role@ObjectRole@MGBehavior : "delay" > 
+<  '325709 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '325603 # role@ObjectRole@MGBehavior : "sToken" > 
+<  '325710 : Variable@MGBehavior | name@Variable@MGBehavior : "spec" #
+    value@Variable@MGBehavior : 5 > 
+<  'Delay : PCMresourcetypeSchedulingPolicy@pcmflatten | resourceRepository@-@@-@SchedulingPolicy@PCMresourcetypeSchedulingPolicy@pcmflatten : '/1 #
+    entityName@PCMentityNamedElement@pcmflatten : "Delay" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "Delay" > 
+<  'FCFS : PCMresourcetypeSchedulingPolicy@pcmflatten | resourceRepository@-@@-@SchedulingPolicy@PCMresourcetypeSchedulingPolicy@pcmflatten : '/1 #
+    entityName@PCMentityNamedElement@pcmflatten : "First-Come-First-Serve" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "FCFS" > 
+<  'ProcessorSharing : PCMresourcetypeSchedulingPolicy@pcmflatten | resourceRepository@-@@-@SchedulingPolicy@PCMresourcetypeSchedulingPolicy@pcmflatten : '/1 #
+    entityName@PCMentityNamedElement@pcmflatten : "Processor Sharing" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "ProcessorSharing" > 
+<  '_-r1fUCHcEd6lJo4DCALHMw : PCMrepositoryOperationProvidedRole@pcmflatten |
+    providingEntity@-@ProvidedRole@PCMrepositoryProvidedRole@pcmflatten :
+    '_84D0kCHcEd6lJo4DCALHMw # providedInterface@-@@-@OperationProvidedRole@PCMrepositoryOperationProvidedRole@pcmflatten : '_n7g-oCHbEd62GabW1zGSBw #
+    entityName@PCMentityNamedElement@pcmflatten : "Provided_AnInterface" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_-r1fUCHcEd6lJo4DCALHMw" > 
+<  '_84D0kCHcEd6lJo4DCALHMw : PCMsystemSystem@pcmflatten | providedRoles@-@InterfaceProvidingEntity@PCMentityInterfaceProvidingEntity@pcmflatten : Set{
+    '_-r1fUCHcEd6lJo4DCALHMw} # requiredRoles@-@InterfaceRequiringEntity@PCMentityInterfaceRequiringEntity@pcmflatten : Set{mt} # resourceRequiredRoles@-@@-@ResourceInterfaceRequiringEntity@PCMentityResourceInterfaceRequiringEntity@pcmflatten : Set{mt} # assemblyContexts@-@@-@ComposedStructure@PCMcompositionComposedStructure@pcmflatten : Set{'_9c3KwCHcEd6lJo4DCALHMw} # resourceRequiredDelegationConnectors@-@ComposedStructure@PCMcompositionComposedStructure@pcmflatten : Set{
+    mt} # eventChannel@-@@-@ComposedStructure@PCMcompositionComposedStructure@pcmflatten : Set{mt} # connectors@-@@-@ComposedStructure@PCMcompositionComposedStructure@pcmflatten : Set{'__VHF0CHcEd6lJo4DCALHMw} #
+    qosAnnotations@-@System@PCMsystemSystem@pcmflatten : Set{mt} #
+    entityName@PCMentityNamedElement@pcmflatten : "defaultSystem" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_84D0kCHcEd6lJo4DCALHMw" > 
+<  '_9c3KwCHcEd6lJo4DCALHMw : PCMcompositionAssemblyContext@pcmflatten | parentStructure@-@@-@AssemblyContext@PCMcompositionAssemblyContext@pcmflatten :
+    '_84D0kCHcEd6lJo4DCALHMw # encapsulatedComponent@-@@-@AssemblyContext@PCMcompositionAssemblyContext@pcmflatten : '_os1t4CHbEd62GabW1zGSBw # configParameterUsages@-@@-@AssemblyContext@PCMcompositionAssemblyContext@pcmflatten : Set{mt} #
+    entityName@PCMentityNamedElement@pcmflatten :
+    "Assembly_AComponent <AComponent>" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_9c3KwCHcEd6lJo4DCALHMw" > 
+<  '_B0aZ0CHdEd6lJo4DCALHMw :
+    PCMresourceenvironmentResourceContainer@pcmflatten | activeResourceSpecifications@-@ResourceContainer@PCMresourceenvironmentResourceContainer@pcmflatten :
+    Set{'_ssJ0QYr-EeG0c6Q1F-wA1Q} # resourceEnvironment@-@ResourceContainer@PCMresourceenvironmentResourceContainer@pcmflatten : '/2 # nestedResourceContainers@-@@-@ResourceContainer@PCMresourceenvironmentResourceContainer@pcmflatten :
+    Set{mt} # parentResourceContainer@-@@-@ResourceContainer@PCMresourceenvironmentResourceContainer@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "appserver" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_B0aZ0CHdEd6lJo4DCALHMw" > 
+<  '_BIjHoQ3KEdyouMqirZIhzQ : PCMresourcetypeProcessingResourceType@pcmflatten
+    | resourceProvidedRoles@-@@-@ResourceInterfaceProvidingEntity@PCMentityResourceInterfaceProvidingEntity@pcmflatten : Set{'_tCR8kE5dEeCg1tUg4V9tRw} # hardwareInducedFailureType@-@@-@ProcessingResourceType@PCMresourcetypeProcessingResourceType@pcmflatten : null #
+    resourceRepository@-@ResourceType@PCMresourcetypeResourceType@pcmflatten :
+    '/1 # unit@UNITSunitsUnitCarryingElement@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "HDD" #
+    unitSpecification@UNITSunitsUnitCarryingElement@pcmflatten :
+    "byte per second" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_BIjHoQ3KEdyouMqirZIhzQ" > 
+<  '_CEfb8H6ZEeOczJTm_QImZQ : PCMseffProbabilisticBranchTransition@pcmflatten | branchAction@-@AbstractBranchTransition@PCMseffAbstractBranchTransition@pcmflatten : '_uPAUsH6XEeOczJTm_QImZQ # branchBehaviour@-@BranchTransition@PCMseffAbstractBranchTransition@pcmflatten : '_CEfb8X6ZEeOczJTm_QImZQ #
+    entityName@PCMentityNamedElement@pcmflatten : "branch2" #
+    branchProbability@PCMseffProbabilisticBranchTransition@pcmflatten :
+    6.9999999999999996e-1 # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_CEfb8H6ZEeOczJTm_QImZQ" > 
+<  '_CEfb8X6ZEeOczJTm_QImZQ : PCMseffResourceDemandingBehaviour@pcmflatten | abstractLoopAction@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : null # abstractBranchTransition@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : '_CEfb8H6ZEeOczJTm_QImZQ #
+    steps@-@Behaviour@PCMseffResourceDemandingBehaviour@pcmflatten : Set{
+    '_CEfb8n6ZEeOczJTm_QImZQ ; '_CEgDAH6ZEeOczJTm_QImZQ ;
+    '_TjBvYH6ZEeOczJTm_QImZQ} #
+    tpOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    rtOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_CEfb8X6ZEeOczJTm_QImZQ" > 
+<  '_CEfb8n6ZEeOczJTm_QImZQ : PCMseffStartAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_TjBvYH6ZEeOczJTm_QImZQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '_CEfb8X6ZEeOczJTm_QImZQ #
+    token@PCMseffAbstractAction@pcmflatten : OrderedSet{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_CEfb8n6ZEeOczJTm_QImZQ" > 
+<  '_CEgDAH6ZEeOczJTm_QImZQ : PCMseffStopAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_TjBvYH6ZEeOczJTm_QImZQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_CEfb8X6ZEeOczJTm_QImZQ # token@PCMseffAbstractAction@pcmflatten :
+    OrderedSet{mt-ord} # entityName@PCMentityNamedElement@pcmflatten : "aName"
+    # id@IDENTIFIERidentifierIdentifier@pcmflatten : "_CEgDAH6ZEeOczJTm_QImZQ"
+    > 
+<  '_JiPBICHdEd6lJo4DCALHMw : PCMallocationAllocation@pcmflatten |
+    targetResourceEnvironment@-@Allocation@PCMallocationAllocation@pcmflatten :
+    '/2 # system@-@Allocation@PCMallocationAllocation@pcmflatten :
+    '_84D0kCHcEd6lJo4DCALHMw #
+    allocationContexts@-@Allocation@PCMallocationAllocation@pcmflatten : Set{
+    '_KCkHACHdEd6lJo4DCALHMw} # entityName@PCMentityNamedElement@pcmflatten :
+    "defaultAllocation" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_JiPBICHdEd6lJo4DCALHMw" > 
+<  '_KCkHACHdEd6lJo4DCALHMw : PCMallocationAllocationContext@pcmflatten | resourceContainer@-@AllocationContext@PCMallocationAllocationContext@pcmflatten :
+    '_B0aZ0CHdEd6lJo4DCALHMw # assemblyContext@-@AllocationContext@PCMallocationAllocationContext@pcmflatten : '_9c3KwCHcEd6lJo4DCALHMw #
+    allocation@-@AllocationContext@PCMallocationAllocationContext@pcmflatten :
+    '_JiPBICHdEd6lJo4DCALHMw # eventChannel@-@@-@AllocationContext@PCMallocationAllocationContext@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten :
+    "Allocation_Assembly_AComponent <AComponent> <AComponent>" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_KCkHACHdEd6lJo4DCALHMw" > 
+<  '_KjhikgzkEeCFg86gxKwVPw : PCMrepositoryOperationSignature@pcmflatten |
+    exceptions@-@@-@Signature@PCMrepositorySignature@pcmflatten : Set{mt} #
+    failureType@PCMrepositorySignature@pcmflatten : Set{mt} # interface@-@@-@OperationSignature@PCMrepositoryOperationSignature@pcmflatten :
+    '_n7g-oCHbEd62GabW1zGSBw # parameters@-@@-@OperationSignature@PCMrepositoryOperationSignature@pcmflatten : OrderedSet{mt-ord} # returnType@-@@-@OperationSignature@PCMrepositoryOperationSignature@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "do" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_KjhikgzkEeCFg86gxKwVPw" > 
+<  '_LPnI8CHdEd6lJo4DCALHMw : PCMusagemodelUsageScenario@pcmflatten |
+    usageModel@-@UsageScenario@PCMusagemodelUsageScenario@pcmflatten : '/0 #
+    scenarioBehaviour@-@UsageScenario@PCMusagemodelUsageScenario@pcmflatten :
+    '_LPwS4CHdEd6lJo4DCALHMw #
+    workload@-@UsageScenario@PCMusagemodelUsageScenario@pcmflatten :
+    '/0/@usageScenario_UsageModel.0/@workload_UsageScenario #
+    entityName@PCMentityNamedElement@pcmflatten : "defaultUsageScenario" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_LPnI8CHdEd6lJo4DCALHMw" > 
+<  '_LPwS4CHdEd6lJo4DCALHMw : PCMusagemodelScenarioBehaviour@pcmflatten |
+    usageScenario@-@SenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten
+    : '_LPnI8CHdEd6lJo4DCALHMw # branchTransition@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten : null #
+    loop@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten : null #
+    actions@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten :
+    Set{'_LPwS4SHdEd6lJo4DCALHMw ; '_LPwS4iHdEd6lJo4DCALHMw ;
+    '_NC8HwCHdEd6lJo4DCALHMw ; '_Rr7aIHnTEeOBarAp0jPAaA} #
+    rtOb@PCMusagemodelScenarioBehaviour@pcmflatten : '3 #
+    tpOb@PCMusagemodelScenarioBehaviour@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten :
+    "defaultUsageScenarioBehaviour" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_LPwS4CHdEd6lJo4DCALHMw" > 
+<  '_LPwS4SHdEd6lJo4DCALHMw : PCMusagemodelStart@pcmflatten |
+    successor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_NC8HwCHdEd6lJo4DCALHMw #
+    predecessor@PCMusagemodelAbstractUserAction@pcmflatten : null # scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_LPwS4CHdEd6lJo4DCALHMw # token@PCMusagemodelAbstractUserAction@pcmflatten
+    : OrderedSet{mt-ord} # entityName@PCMentityNamedElement@pcmflatten :
+    "aName" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_LPwS4SHdEd6lJo4DCALHMw" > 
+<  '_LPwS4iHdEd6lJo4DCALHMw : PCMusagemodelStop@pcmflatten |
+    successor@PCMusagemodelAbstractUserAction@pcmflatten : null #
+    predecessor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_Rr7aIHnTEeOBarAp0jPAaA # scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten : '_LPwS4CHdEd6lJo4DCALHMw #
+    token@PCMusagemodelAbstractUserAction@pcmflatten : OrderedSet{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_LPwS4iHdEd6lJo4DCALHMw" > 
+<  '_NC8HwCHdEd6lJo4DCALHMw : PCMusagemodelEntryLevelSystemCall@pcmflatten | providedRole@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten :
+    '_-r1fUCHcEd6lJo4DCALHMw # operationSignature@-@@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten : '_KjhikgzkEeCFg86gxKwVPw # outputParameterUsages@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten
+    : Set{mt} # inputParameterUsages@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten : Set{mt} #
+    successor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_Rr7aIHnTEeOBarAp0jPAaA #
+    predecessor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_LPwS4SHdEd6lJo4DCALHMw # scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten : '_LPwS4CHdEd6lJo4DCALHMw #
+    token@PCMusagemodelAbstractUserAction@pcmflatten : OrderedSet{'325658} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    priority@PCMusagemodelEntryLevelSystemCall@pcmflatten : 0 #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_NC8HwCHdEd6lJo4DCALHMw" > 
+<  '_Rr7aIHnTEeOBarAp0jPAaA : PCMusagemodelDelay@pcmflatten |
+    successor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_LPwS4iHdEd6lJo4DCALHMw #
+    predecessor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_NC8HwCHdEd6lJo4DCALHMw # scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten : '_LPwS4CHdEd6lJo4DCALHMw #
+    token@PCMusagemodelAbstractUserAction@pcmflatten : OrderedSet{'325569 #
+    '325603} # timeSpecification@-@Delay@PCMusagemodelDelay@pcmflatten : '/0/@usageScenario_UsageModel.0/@scenarioBehaviour_UsageScenario/@actions_ScenarioBehaviour.3/@timeSpecification_Delay # entityName@PCMentityNamedElement@pcmflatten :
+    "anyDelay" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_Rr7aIHnTEeOBarAp0jPAaA" > 
+<  '_TjBvYH6ZEeOczJTm_QImZQ : PCMseffInternalAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{'/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.1/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_CEfb8n6ZEeOczJTm_QImZQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_CEgDAH6ZEeOczJTm_QImZQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '_CEfb8X6ZEeOczJTm_QImZQ #
+    token@PCMseffAbstractAction@pcmflatten : OrderedSet{'325664} # internalFailureOccurrenceDescriptions@-@@-@InternalAction@PCMseffInternalAction@pcmflatten :
+    Set{mt} # queue@PCMseffInternalAction@pcmflatten : Sequence{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "processB" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_TjBvYH6ZEeOczJTm_QImZQ" > 
+<  '__VHF0CHcEd6lJo4DCALHMw :
+    PCMcompositionProvidedDelegationConnector@pcmflatten |
+    parentStructure@-@@-@Connector@PCMcompositionConnector@pcmflatten :
+    '_84D0kCHcEd6lJo4DCALHMw # innerProvidedRole@-@ProvidedDelegationConnector@PCMcompositionProvidedDelegationConnector@pcmflatten : '_qZKs0CHbEd62GabW1zGSBw
+    # outerProvidedRole@-@ProvidedDelegationConnector@PCMcompositionProvidedDelegationConnector@pcmflatten : '_-r1fUCHcEd6lJo4DCALHMw # assemblyContext@-@ProvidedDelegationConnector@PCMcompositionProvidedDelegationConnector@pcmflatten :
+    '_9c3KwCHcEd6lJo4DCALHMw # entityName@PCMentityNamedElement@pcmflatten :
+    "ProvDelegation Provided_AnInterface -> Provided_AnInterface_AComponent" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "__VHF0CHcEd6lJo4DCALHMw" > 
+<  '_dqFLECHbEd6tG9VclJz3cw : PCMrepositoryRepository@pcmflatten |
+    components@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{
+    '_os1t4CHbEd62GabW1zGSBw} #
+    interfaces@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{
+    '_n7g-oCHbEd62GabW1zGSBw} #
+    failureTypes@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{mt} #
+    dataTypes@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{mt} #
+    entityName@PCMentityNamedElement@pcmflatten : "defaultRepository" #
+    repositoryDescription@PCMrepositoryRepository@pcmflatten : null #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_dqFLECHbEd6tG9VclJz3cw" > 
+<  '_hCXCUH6ZEeOczJTm_QImZQ : PCMseffProbabilisticBranchTransition@pcmflatten | branchAction@-@AbstractBranchTransition@PCMseffAbstractBranchTransition@pcmflatten : '_uPAUsH6XEeOczJTm_QImZQ # branchBehaviour@-@BranchTransition@PCMseffAbstractBranchTransition@pcmflatten : '_hCXCUX6ZEeOczJTm_QImZQ #
+    entityName@PCMentityNamedElement@pcmflatten : "branch3" #
+    branchProbability@PCMseffProbabilisticBranchTransition@pcmflatten :
+    2.0000000000000001e-1 # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_hCXCUH6ZEeOczJTm_QImZQ" > 
+<  '_hCXCUX6ZEeOczJTm_QImZQ : PCMseffResourceDemandingBehaviour@pcmflatten | abstractLoopAction@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : null # abstractBranchTransition@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : '_hCXCUH6ZEeOczJTm_QImZQ #
+    steps@-@Behaviour@PCMseffResourceDemandingBehaviour@pcmflatten : Set{
+    '_hCXpYH6ZEeOczJTm_QImZQ ; '_hCXpYX6ZEeOczJTm_QImZQ ;
+    '_jwKsYH6ZEeOczJTm_QImZQ} #
+    tpOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    rtOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_hCXCUX6ZEeOczJTm_QImZQ" > 
+<  '_hCXpYH6ZEeOczJTm_QImZQ : PCMseffStartAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_jwKsYH6ZEeOczJTm_QImZQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '_hCXCUX6ZEeOczJTm_QImZQ #
+    token@PCMseffAbstractAction@pcmflatten : OrderedSet{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_hCXpYH6ZEeOczJTm_QImZQ" > 
+<  '_hCXpYX6ZEeOczJTm_QImZQ : PCMseffStopAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_jwKsYH6ZEeOczJTm_QImZQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_hCXCUX6ZEeOczJTm_QImZQ # token@PCMseffAbstractAction@pcmflatten :
+    OrderedSet{mt-ord} # entityName@PCMentityNamedElement@pcmflatten : "aName"
+    # id@IDENTIFIERidentifierIdentifier@pcmflatten : "_hCXpYX6ZEeOczJTm_QImZQ"
+    > 
+<  '_j-AwkH6YEeOczJTm_QImZQ : PCMseffProbabilisticBranchTransition@pcmflatten | branchAction@-@AbstractBranchTransition@PCMseffAbstractBranchTransition@pcmflatten : '_uPAUsH6XEeOczJTm_QImZQ # branchBehaviour@-@BranchTransition@PCMseffAbstractBranchTransition@pcmflatten : '_j-BXoH6YEeOczJTm_QImZQ #
+    entityName@PCMentityNamedElement@pcmflatten : "branch1" #
+    branchProbability@PCMseffProbabilisticBranchTransition@pcmflatten :
+    1.0000000000000001e-1 # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_j-AwkH6YEeOczJTm_QImZQ" > 
+<  '_j-B-sH6YEeOczJTm_QImZQ : PCMseffStartAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_r2_fAH6YEeOczJTm_QImZQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '_j-BXoH6YEeOczJTm_QImZQ #
+    token@PCMseffAbstractAction@pcmflatten : OrderedSet{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_j-B-sH6YEeOczJTm_QImZQ" > 
+<  '_j-B-sX6YEeOczJTm_QImZQ : PCMseffStopAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_r2_fAH6YEeOczJTm_QImZQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_j-BXoH6YEeOczJTm_QImZQ # token@PCMseffAbstractAction@pcmflatten :
+    OrderedSet{mt-ord} # entityName@PCMentityNamedElement@pcmflatten : "aName"
+    # id@IDENTIFIERidentifierIdentifier@pcmflatten : "_j-B-sX6YEeOczJTm_QImZQ"
+    > 
+<  '_j-BXoH6YEeOczJTm_QImZQ : PCMseffResourceDemandingBehaviour@pcmflatten | abstractLoopAction@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : null # abstractBranchTransition@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : '_j-AwkH6YEeOczJTm_QImZQ #
+    steps@-@Behaviour@PCMseffResourceDemandingBehaviour@pcmflatten : Set{
+    '_j-B-sH6YEeOczJTm_QImZQ ; '_j-B-sX6YEeOczJTm_QImZQ ;
+    '_r2_fAH6YEeOczJTm_QImZQ} #
+    tpOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    rtOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_j-BXoH6YEeOczJTm_QImZQ" > 
+<  '_jwKsYH6ZEeOczJTm_QImZQ : PCMseffInternalAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{'/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.2/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_hCXpYH6ZEeOczJTm_QImZQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_hCXpYX6ZEeOczJTm_QImZQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '_hCXCUX6ZEeOczJTm_QImZQ #
+    token@PCMseffAbstractAction@pcmflatten : OrderedSet{mt-ord} # internalFailureOccurrenceDescriptions@-@@-@InternalAction@PCMseffInternalAction@pcmflatten :
+    Set{mt} # queue@PCMseffInternalAction@pcmflatten : Sequence{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "processC" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_jwKsYH6ZEeOczJTm_QImZQ" > 
+<  '_n7g-oCHbEd62GabW1zGSBw : PCMrepositoryOperationInterface@pcmflatten |
+    parentInterfaces@-@@-@Interface@PCMrepositoryInterface@pcmflatten : Set{mt}
+    # protocols@-@@-@Interface@PCMrepositoryInterface@pcmflatten : Set{mt} #
+    requiredCharacterisations@PCMrepositoryInterface@pcmflatten : Set{mt} #
+    repository@-@@-@Interface@PCMrepositoryInterface@pcmflatten :
+    '_dqFLECHbEd6tG9VclJz3cw # signatures@-@@-@OperationInterface@PCMrepositoryOperationInterface@pcmflatten : Set{'_KjhikgzkEeCFg86gxKwVPw} #
+    entityName@PCMentityNamedElement@pcmflatten : "AnInterface" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_n7g-oCHbEd62GabW1zGSBw" > 
+<  '_nvHX4KkREdyEA_b89s7q9w : PCMresourcetypeProcessingResourceType@pcmflatten
+    | resourceProvidedRoles@-@@-@ResourceInterfaceProvidingEntity@PCMentityResourceInterfaceProvidingEntity@pcmflatten : Set{'_x68UoE5dEeCg1tUg4V9tRw} # hardwareInducedFailureType@-@@-@ProcessingResourceType@PCMresourcetypeProcessingResourceType@pcmflatten : null #
+    resourceRepository@-@ResourceType@PCMresourcetypeResourceType@pcmflatten :
+    '/1 # unit@UNITSunitsUnitCarryingElement@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "DELAY" #
+    unitSpecification@UNITSunitsUnitCarryingElement@pcmflatten : "seconds" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_nvHX4KkREdyEA_b89s7q9w" > 
+<  '_o3sScH2AEdyH8uerKnHYug :
+    PCMresourcetypeCommunicationLinkResourceType@pcmflatten | resourceProvidedRoles@-@@-@ResourceInterfaceProvidingEntity@PCMentityResourceInterfaceProvidingEntity@pcmflatten : Set{mt} #
+    resourceRepository@-@ResourceType@PCMresourcetypeResourceType@pcmflatten :
+    '/1 # networkInducedFailureType@-@@-@CommunicationLinkResourceType@PCMresourcetypeCommunicationLinkResourceType@pcmflatten : null #
+    unit@UNITSunitsUnitCarryingElement@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "LAN" #
+    unitSpecification@UNITSunitsUnitCarryingElement@pcmflatten :
+    "byte per second" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_o3sScH2AEdyH8uerKnHYug" > 
+<  '_oro4gG3fEdy4YaaT-RYrLQ : PCMresourcetypeProcessingResourceType@pcmflatten
+    | resourceProvidedRoles@-@@-@ResourceInterfaceProvidingEntity@PCMentityResourceInterfaceProvidingEntity@pcmflatten : Set{'_patY8E5dEeCg1tUg4V9tRw} # hardwareInducedFailureType@-@@-@ProcessingResourceType@PCMresourcetypeProcessingResourceType@pcmflatten : null #
+    resourceRepository@-@ResourceType@PCMresourcetypeResourceType@pcmflatten :
+    '/1 # unit@UNITSunitsUnitCarryingElement@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "CPU" #
+    unitSpecification@UNITSunitsUnitCarryingElement@pcmflatten :
+    "work units per second" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_oro4gG3fEdy4YaaT-RYrLQ" > 
+<  '_os1t4CHbEd62GabW1zGSBw : PCMrepositoryBasicComponent@pcmflatten | providedRoles@-@InterfaceProvidingEntity@PCMentityInterfaceProvidingEntity@pcmflatten :
+    Set{'_qZKs0CHbEd62GabW1zGSBw} # requiredRoles@-@InterfaceRequiringEntity@PCMentityInterfaceRequiringEntity@pcmflatten : Set{mt} # resourceRequiredRoles@-@@-@ResourceInterfaceRequiringEntity@PCMentityResourceInterfaceRequiringEntity@pcmflatten : Set{mt} # serviceEffectSpecifications@-@@-@BasicComponent@PCMrepositoryBasicComponent@pcmflatten : Set{'12345} #
+    passiveResource@-@BasicComponent@PCMrepositoryBasicComponent@pcmflatten :
+    Set{mt} # parentCompleteComponentTypes@PCMrepositoryImplementationComponentType@pcmflatten : Set{mt} # componentParameterUsage@-@ImplementationComponentType@PCMrepositoryImplementationComponentType@pcmflatten : Set{mt} # repository@-@@-@RepositoryComponent@PCMrepositoryRepositoryComponent@pcmflatten :
+    '_dqFLECHbEd6tG9VclJz3cw # entityName@PCMentityNamedElement@pcmflatten :
+    "AComponent" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_os1t4CHbEd62GabW1zGSBw" > 
+<  '_patY8E5dEeCg1tUg4V9tRw : PCMentityResourceProvidedRole@pcmflatten | resourceInterfaceProvidingEntity@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten : '_oro4gG3fEdy4YaaT-RYrLQ # providedResourceInterface@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten :
+    '_tw_Q8E5CEeCUKeckjJ_n-w # entityName@PCMentityNamedElement@pcmflatten :
+    "ResourceProvidedRole_CpuInterface_CPU" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_patY8E5dEeCg1tUg4V9tRw" > 
+<  '_qZKs0CHbEd62GabW1zGSBw : PCMrepositoryOperationProvidedRole@pcmflatten |
+    providingEntity@-@ProvidedRole@PCMrepositoryProvidedRole@pcmflatten :
+    '_os1t4CHbEd62GabW1zGSBw # providedInterface@-@@-@OperationProvidedRole@PCMrepositoryOperationProvidedRole@pcmflatten : '_n7g-oCHbEd62GabW1zGSBw #
+    entityName@PCMentityNamedElement@pcmflatten :
+    "Provided_AnInterface_AComponent" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_qZKs0CHbEd62GabW1zGSBw" > 
+<  '_qZUd0CHbEd62GabW1zGSBw : PCMseffStartAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_uPAUsH6XEeOczJTm_QImZQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '12345 # token@PCMseffAbstractAction@pcmflatten :
+    OrderedSet{mt-ord} # entityName@PCMentityNamedElement@pcmflatten : "aName"
+    # id@IDENTIFIERidentifierIdentifier@pcmflatten : "_qZUd0CHbEd62GabW1zGSBw"
+    > 
+<  '_qZUd0SHbEd62GabW1zGSBw : PCMseffStopAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_uPAUsH6XEeOczJTm_QImZQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '12345
+    # token@PCMseffAbstractAction@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_qZUd0SHbEd62GabW1zGSBw" > 
+<  '_r2_fAH6YEeOczJTm_QImZQ : PCMseffInternalAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{'/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.0/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_j-B-sH6YEeOczJTm_QImZQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_j-B-sX6YEeOczJTm_QImZQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '_j-BXoH6YEeOczJTm_QImZQ #
+    token@PCMseffAbstractAction@pcmflatten : OrderedSet{mt-ord} # internalFailureOccurrenceDescriptions@-@@-@InternalAction@PCMseffInternalAction@pcmflatten :
+    Set{mt} # queue@PCMseffInternalAction@pcmflatten : Sequence{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "processA" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_r2_fAH6YEeOczJTm_QImZQ" > 
+<  '_ssJ0QYr-EeG0c6Q1F-wA1Q :
+    PCMresourceenvironmentProcessingResourceSpecification@pcmflatten | schedulingPolicy@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten :
+    'FCFS # activeResourceType@-@ActiveResourceSpecification@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : '_oro4gG3fEdy4YaaT-RYrLQ # processingRate@-@ProcessingResourceSpecification@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : '/2/@resourceContainer_ResourceEnvironment.0/@activeResourceSpecifications_ResourceContainer.0/@processingRate_ProcessingResourceSpecification # resourceContainer@-@ProcessingResourceSpecification@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : '_B0aZ0CHdEd6lJo4DCALHMw
+    # queue@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten :
+    Sequence{'325664} #
+    MTTR@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : 0.0
+    # MTTF@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten :
+    0.0 # requiredByContainer@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : false # numberOfReplicas@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : 1 # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_ssJ0QYr-EeG0c6Q1F-wA1Q" > 
+<  '_tCR8kE5dEeCg1tUg4V9tRw : PCMentityResourceProvidedRole@pcmflatten | resourceInterfaceProvidingEntity@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten : '_BIjHoQ3KEdyouMqirZIhzQ # providedResourceInterface@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten :
+    '_xXv8QE5CEeCUKeckjJ_n-w # entityName@PCMentityNamedElement@pcmflatten :
+    "ResourceProvidedRole_HddInterface_HDD" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_tCR8kE5dEeCg1tUg4V9tRw" > 
+<  '_tw_Q8E5CEeCUKeckjJ_n-w : PCMresourcetypeResourceInterface@pcmflatten | resourceRepository@-@@-@ResourceInterface@PCMresourcetypeResourceInterface@pcmflatten : '/1 # resourceSignatures@-@@-@ResourceInterface@PCMresourcetypeResourceInterface@pcmflatten : Set{'_wF22kE5CEeCUKeckjJ_n-w} #
+    entityName@PCMentityNamedElement@pcmflatten : "CpuInterface" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_tw_Q8E5CEeCUKeckjJ_n-w" > 
+<  '_uPAUsH6XEeOczJTm_QImZQ : PCMseffBranchAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten :
+    Set{mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_qZUd0CHbEd62GabW1zGSBw #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_qZUd0SHbEd62GabW1zGSBw # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '12345 # token@PCMseffAbstractAction@pcmflatten :
+    OrderedSet{mt-ord} # branches@-@Branch@PCMseffBranchAction@pcmflatten :
+    OrderedSet{'_j-AwkH6YEeOczJTm_QImZQ # '_CEfb8H6ZEeOczJTm_QImZQ #
+    '_hCXCUH6ZEeOczJTm_QImZQ} # entityName@PCMentityNamedElement@pcmflatten :
+    "branch" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_uPAUsH6XEeOczJTm_QImZQ" > 
+<  '_wF22kE5CEeCUKeckjJ_n-w : PCMresourcetypeResourceSignature@pcmflatten | parameter@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : null
+    # resourceInterface@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : '_tw_Q8E5CEeCUKeckjJ_n-w #
+    entityName@PCMentityNamedElement@pcmflatten : "process" #
+    resourceServiceId@PCMresourcetypeResourceSignature@pcmflatten : 1 #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_wF22kE5CEeCUKeckjJ_n-w" > 
+<  '_x68UoE5dEeCg1tUg4V9tRw : PCMentityResourceProvidedRole@pcmflatten | resourceInterfaceProvidingEntity@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten : '_nvHX4KkREdyEA_b89s7q9w # providedResourceInterface@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten :
+    '_tw_Q8E5CEeCUKeckjJ_n-w # entityName@PCMentityNamedElement@pcmflatten :
+    "ResourceProvidedRole_CpuInterface_DELAY" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_x68UoE5dEeCg1tUg4V9tRw" > 
+<  '_xXv8QE5CEeCUKeckjJ_n-w : PCMresourcetypeResourceInterface@pcmflatten | resourceRepository@-@@-@ResourceInterface@PCMresourcetypeResourceInterface@pcmflatten : '/1 # resourceSignatures@-@@-@ResourceInterface@PCMresourcetypeResourceInterface@pcmflatten : Set{'_ygMyEE5CEeCUKeckjJ_n-w ; '_zUFtIE5CEeCUKeckjJ_n-w} #
+    entityName@PCMentityNamedElement@pcmflatten : "HddInterface" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_xXv8QE5CEeCUKeckjJ_n-w" > 
+<  '_ygMyEE5CEeCUKeckjJ_n-w : PCMresourcetypeResourceSignature@pcmflatten | parameter@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : null
+    # resourceInterface@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : '_xXv8QE5CEeCUKeckjJ_n-w #
+    entityName@PCMentityNamedElement@pcmflatten : "read" #
+    resourceServiceId@PCMresourcetypeResourceSignature@pcmflatten : 1 #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_ygMyEE5CEeCUKeckjJ_n-w" > 
+<  '_zUFtIE5CEeCUKeckjJ_n-w : PCMresourcetypeResourceSignature@pcmflatten | parameter@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : null
+    # resourceInterface@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : '_xXv8QE5CEeCUKeckjJ_n-w #
+    entityName@PCMentityNamedElement@pcmflatten : "write" #
+    resourceServiceId@PCMresourcetypeResourceSignature@pcmflatten : 2 #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_zUFtIE5CEeCUKeckjJ_n-w" > 
+<  'clk@ : Clock@MGBehavior | time@Clock@MGBehavior :
+    9222907121258043088701/576460752303423488 > 
+<  'ids@ : Counter@MGBehavior | value@Counter@MGBehavior : 325711 > 
+<  'rdm@ : Counter@MGBehavior | value@Counter@MGBehavior : 786164 >}}  in time
+    9222907121258043088701/576460752303423488
+Bye.

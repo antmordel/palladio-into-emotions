@@ -1,0 +1,63 @@
+---- Results for testing the ECMFA
+
+*******
+**** For OpenWorkload = 8.0 (without saturation) || 1000 t.u.
+*******
+
+size of the sample
+  # size:    125
+e-Motions data analysis:
+  # mean:    2.81968
+  # st dev:  1.77487746693
+PCM data analysis:
+  # mean:    2.93838888067
+  # st dev:  1.75988927067
+(0.096000000000000002, 0.59062258362582365)
+
+*******
+**** For OpenWorkload = 8.0 (without saturation) || 5000 t.u.
+*******
+
+size of the sample
+  # size:    625
+e-Motions data analysis:
+  # mean:    2.872916
+  # st dev:  1.7683200338
+PCM data analysis:
+  # mean:    2.92404422275
+  # st dev:  1.77434520731
+(0.036799999999999944, 0.78394110735867217)
+
+*******
+**** For OpenWorkload = 4.0 (with saturation) || 1000 t.u.
+*******
+
+todo: but it does not match, that's why with saturation we need larger samples
+
+*******
+**** For OpenWorkload = 4.0 (with saturation) || 5000 t.u.
+*******
+
+size of the sample
+  # size:    1250
+e-Motions data analysis:
+  # mean:    3.717344
+  # st dev:  2.31083617727
+PCM data analysis:
+  # mean:    3.52905363673
+  # st dev:  2.03468469053
+(0.039964131305044059, 0.26586909604235259)
+
+*******
+**** For OpenWorkload = 4.0 (with saturation) || 10000 t.u.
+*******
+
+size of the sample
+  # size:    2499
+e-Motions data analysis:
+  # mean:    3.71636254502
+  # st dev:  2.19386857325
+PCM data analysis:
+  # mean:    3.5933788337
+  # st dev:  2.16758758454
+(0.031019927971188466, 0.17738346650037451)

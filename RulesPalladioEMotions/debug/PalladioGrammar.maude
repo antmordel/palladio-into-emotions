@@ -1,0 +1,196 @@
+fmod PALLADIO-GRAMMAR is
+	pr QID-LIST .
+		
+	sort Exp Variable Characterization .
+	
+	op vble : Qid -> Variable
+		[special
+		  (id-hook Bubble (1 1)
+		   op-hook qidSymbol (<Qids> : ~> Qid))] .
+    
+    op cht : Qid -> Characterization
+		[special
+		  (id-hook Bubble (1 1)
+		   op-hook qidSymbol (<Qids> : ~> Qid))] .
+		   
+    op t : Qid -> Exp
+		[special
+		  (id-hook Bubble (1 1)
+		   op-hook qidSymbol (<Qids> : ~> Qid))] .
+			
+	op _._ : Variable Characterization -> Exp [prec 31] .
+	op _*_ : Exp Exp -> Exp [prec 33] .
+
+endfm
+
+mod LEX-ANALYZER is
+  
+  pr MGLIST{Qid} * (sort MGList{Qid} to QidList) .
+  pr INT .
+  pr STRING .
+  
+  ---- I will use my lists because sort conflicts
+  sort MyFindResultList .
+  subsort FindResult < MyFindResultList .
+  
+  op nilFindResult : -> MyFindResultList [ctor] .
+  op _::FR_ : MyFindResultList MyFindResultList -> MyFindResultList [assoc id: nilFindResult] .
+  
+  var N N' : Int .
+  var QIL : QidList .
+  var S S' Token : String .
+  var L : MyFindResultList .
+  var FR : FindResult .
+  
+  op preParsing : String -> QidList .
+  op preParsing : String QidList -> QidList .
+  
+  eq preParsing(S) = preParsing(removeSpaces(S), (nil).QidList) .
+  eq preParsing("", QIL) = QIL .
+  
+  op removeSpaces : String -> String .
+  ceq removeSpaces(S)
+    = if FR == notFound
+      then S
+      else substr(S, 0, FR) + if FR < length(S)
+       				          then removeSpaces(substr(S, FR + 1, length(S)))
+       				          else ""
+       				          fi
+      fi
+     if FR := find(S, " ", 0) .
+  
+  ceq preParsing(S, QIL)
+    = if N == length(S)
+      ---- Last token is not included
+      then preParsing(substr(S, N + 1, length(S)), QIL qid(S'))
+      else preParsing(substr(S, N + 1, length(S)), QIL qid(S') qid(Token))
+      fi
+  if  N := nextToken(S)
+   /\ S' := substr(S, 0, N) 
+   /\ Token := substr(S, N, 1) .
+   
+  op nextToken : String -> Int .
+  op minToken : MyFindResultList -> Int .
+  
+  ceq nextToken(S)
+    = if N =/= -1 
+      then N
+      else length(S)
+      fi
+   if N := minToken(find(S, " ", 0) ::FR
+                    find(S, ".", 0) ::FR
+                    find(S, "*", 0) ::FR
+                    find(S, "+", 0)) .
+   
+   eq minToken(nilFindResult) = -1 .
+   eq minToken(notFound) = -1 .
+   eq minToken(N) = N .
+   eq minToken(N ::FR notFound ::FR L) = N .
+   eq minToken(notFound ::FR L) = minToken(L) .
+   eq minToken(notFound ::FR N ::FR L) = minToken(N ::FR L) .
+   eq minToken(N ::FR N' ::FR L)
+     = if N > N' 
+       then minToken(N' ::FR L) 
+       else minToken(N ::FR L)
+       fi .
+
+endm
+
+mod PALLADIO-EVAL-EXP is
+  pr @PCMFLATTEN@ .
+  pr MGBEHAVIORMM .
+  ---pr QID-LIST .
+  ---pr MYQID .
+  pr MGDISTRIBUTIONS .
+  pr LEX-ANALYZER * ( --- Same renamings as in mOdCL
+	           op _|_   : Nat Nat -> Nat  to _|N_,    
+	           op _xor_ : Nat Nat -> Nat to _nxor_,   
+	           op _<_   : Nat Nat -> Bool to _<N_,    
+	           op _<=_  : Nat Nat -> Bool to _<=N_,   
+	           op _>_   : Nat Nat -> Bool to _>N_,    
+	           op _>=_  : Nat Nat -> Bool to _>=N_,   
+	           op _*_   : Nat Nat -> Nat to _*N_,     
+	           op _+_   : Nat Nat -> Nat to _+N_,
+	           op _<_  : String String -> Bool to _lt_,   
+	           op _<=_ : String String -> Bool to _leq_,   
+	           op _>_  : String String -> Bool to _gt_,   
+	           op _>=_ : String String -> Bool to _geq_,  
+	           op _+_  : String String -> String to _++_,
+	           --- Renamings of Qid
+	           op string : Qid -> String to toString,
+	           op -_   : Int -> Int to -I_,
+	           op _-_  : Int Int -> Int  to _-I_) .
+	           
+  ---pr META-LEVEL .
+  ---pr CONVERSION .
+  
+  sort PalladioParsingError .
+  op palladioError : -> PalladioParsingError [ctor] .
+  
+  var QIL : QidList .
+  var S S' S'' VN CN : String .
+  var N AUX : Int .
+  var E1 E2 : GroundTerm .
+  var Ctx Chrs : Set .
+  var M : @Model .
+  var Ct : Constant .
+  var V V' V'' V''' : Qid .
+  var MM : @Metamodel .
+  var RSet RSet' : MSet{OCL-Exp} .
+  var OBJSET : Set{@Object} .
+  var SFS SFS' SFS'' : Set{@StructuralFeatureInstance} .
+  
+  op parsePallExp : String Set @Model -> Int .
+  op parsePallExp : QidList Set @Model -> Int . ---- it could be any type, but in a naive solution we'll use int.
+  ---- 1st: List of tokens which conform the expression
+  ---- 2nd: Context (references to VariableCharacterizations)
+  ---- 3rd: Model used to navigate to VariableUsages
+  
+  eq parsePallExp(S, Ctx, M) = parsePallExp(preParsing(S), Ctx, M) .
+  
+  eq parsePallExp(QIL, Ctx, M) 
+    = evalPall(getTerm(metaParse(upModule('PALLADIO-GRAMMAR, false), QIL, 'Exp )), Ctx, M) .
+  						    
+  op evalPall : Term Set @Model -> Int .
+
+  eq evalPall(_`[_`]('t, C:Constant), Ctx, M ) = getRat(downQid(C:Constant)) .
+
+  eq [multiplication] : evalPall(_`[_`]('_*_, (E1 , E2)) , Ctx, M)
+   	= evalPall(E1, Ctx, M) *N evalPall(E2, Ctx, M) .
+   	
+  eq [evalVariable] : evalPall(_`[_`]('_._, 
+                               (_`[_`]('vble, CV:Constant), 
+                                _`[_`]('cht, CC:Constant))), Ctx, M) 
+    = getVariable(toString(downQid(CV:Constant)), toString(downQid(CC:Constant)), Ctx, M) .
+    
+  ---- Auxiliary functions to get variables ----
+  op getVariable : String String Set @Model -> [Int] .
+  ---- var. name
+  ---- characterization name
+  ---- context
+  ---- model
+  eq [VALUE-Characterization] : getVariable(VN, "VALUE" , Set{V ; RSet}, 
+    (MM{ < V : PCMparameterVariableUsage@pcmflatten | 
+           namedReference@-@@-@VariableUsage@PCMparameterVariableUsage@pcmflatten : V''' #
+           variableCharacterisation@-@VariableUsage@PCMparameterVariableUsage@pcmflatten : Set{V' ; RSet'} #
+           SFS >
+         < V''' : STOEXstoexVariableReference@pcmflatten |
+    	   referenceName@STOEXstoexAbstractNamedReference@pcmflatten : CN >
+         < V' : PCMparameterVariableCharacterisation@pcmflatten |
+           type@PCMparameterVariableCharacterisation@pcmflatten : VALUE@VariableCharacterisationType@pcmflatten #
+           specification@-@VariableCharacterisation@PCMparameterVariableCharacterisation@pcmflatten : V'' #
+           SFS' >
+         < V'' : PCMcorePCMRandomVariable@pcmflatten |
+           specification@STOEXstoexRandomVariable@pcmflatten : VSPEC:String #
+           SFS'' >
+         OBJSET})) = string2rat(VSPEC:String, 10) .
+  
+  op getRat : Qid -> [Rat] .
+  eq getRat(Q:Qid) = string2rat(toString(Q:Qid), 10) .
+  
+  ----op parseToken : 
+  op downQid : Term -> [Qid] [memo] .
+  eq downQid(Ct) 
+    = qid(substr(toString(getName(Ct)), 1, length(toString(getName(Ct))))) .
+
+endm

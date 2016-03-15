@@ -1,0 +1,63 @@
+
+
+--> Reading file  MaudeResults/result_1000tu.txt
+--> Reading file  PalladioResults/result_1000.csv
+e-Motions data analysis:
+  # mean:    8.64284545885
+  # st dev:  2.62141043422
+PCM data analysis:
+  # mean:    10.0764000313
+  # st dev:  4.24898980447
+(0.14494047619047612, 0.0017778912034735756)
+
+
+--> Reading file  MaudeResults/result_2000tu.txt
+--> Reading file  PalladioResults/result_2000.csv
+size of the sample
+  # size:    689
+e-Motions data analysis:
+  # mean:    8.69253917192
+  # st dev:  3.12076060511
+PCM data analysis:
+  # mean:    9.47870090386
+  # st dev:  3.67106120387
+(0.1108703698312824, 0.00035378261624801629)
+
+
+--> Reading file  MaudeResults/result_4000tu.txt
+--> Reading file  PalladioResults/result_4000.csv
+size of the sample
+  # size:    1401
+e-Motions data analysis:
+  # mean:    9.15692004121
+  # st dev:  3.7580803901
+PCM data analysis:
+  # mean:    9.6466340605
+  # st dev:  3.73050762364
+(0.080316854420755424, 0.000233844585291198)
+
+
+--> Reading file  MaudeResults/result_8000tu.txt
+--> Reading file  PalladioResults/result_8000.csv
+size of the sample
+  # size:    2782
+e-Motions data analysis:
+  # mean:    9.35857370823
+  # st dev:  3.58469426452
+PCM data analysis:
+  # mean:    9.45590077037
+  # st dev:  3.44516385917
+(0.033538216224135553, 0.087626712139278362)
+
+
+--> Reading file  MaudeResults/result_16000tu.txt
+--> Reading file  PalladioResults/result_16000.csv
+size of the sample
+  # size:    5530
+e-Motions data analysis:
+  # mean:    9.65688938222
+  # st dev:  3.85153212218
+PCM data analysis:
+  # mean:    10.0259210033
+  # st dev:  5.55929853988
+(0.09020394256055736, 7.21265765267507e-20)

@@ -1,0 +1,8 @@
+in PalladioGrammar.maude
+
+
+red parseExp("doA.VALUE*2", 1) .
+
+red parsePallExp("Exp(2)", Set{}, M:@Model, 1) .
+
+red metaParse(upModule('PALLADIO-GRAMMAR, false), 'Exp('2 '* '2) , 'Exp ) .

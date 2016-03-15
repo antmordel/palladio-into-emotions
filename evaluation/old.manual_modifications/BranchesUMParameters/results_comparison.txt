@@ -1,0 +1,94 @@
+-- --------------------------------
+-- BranchesUMParameters 1000 t.u. 
+-- --------------------------------
+
+## Palladio:
+
+Number of observations: 199
+
+Mean value: 3.9849246231155777
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 200
+rTime@ObResponseTime@pcmflatten : 3.8399999999999999
+
+-- --------------------------------
+-- BranchesUMParameters 2000 t.u. 
+-- --------------------------------
+
+## Palladio:
+
+Number of observations: 399
+
+Mean value: 3.9423558897243107
+
+Mean value: 3.9240924092409237
+Confidence value alpha: 0.9
+Upper bound: 4.046674484287645
+Lower bound: 3.801510334194202
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 400
+rTime@ObResponseTime@pcmflatten : 3.8599999999999999
+
+-- --------------------------------
+-- BranchesUMParameters 4000 t.u. 
+-- --------------------------------
+
+## Palladio:
+
+Number of observations: 799
+
+Mean value: 4.0212765957446805
+
+Mean value: 3.9957567185289955
+Confidence value alpha: 0.9
+Upper bound: 4.03134086199353
+Lower bound: 3.960172575064461
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 800
+rTime@ObResponseTime@pcmflatten : 3.9300000000000002
+
+-- --------------------------------
+-- BranchesUMParameters 8000 t.u. 
+-- --------------------------------
+
+## Palladio:
+
+Number of observations: 1599
+
+Mean value: 4.061913696060038
+
+Mean value: 4.0574257425742575
+Confidence value alpha: 0.9
+Upper bound: 4.085636757426274
+Lower bound: 4.029214727722241
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 1600
+rTime@ObResponseTime@pcmflatten : 3.9849999999999999 
+
+-- --------------------------------
+-- BranchesUMParameters 16000  t.u. 
+-- --------------------------------
+
+## Palladio:
+
+Number of observations: 3200
+
+Mean value: 3.985625
+
+Mean value: 3.987543915681891
+Confidence value alpha: 0.9
+Upper bound: 4.0070121992919985
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 3200
+rTime@ObResponseTime@pcmflatten : 3.9725000000000001
+Lower bound: 3.9680756320717836

@@ -1,0 +1,79 @@
+-- ---------------------------------------------------------------------------
+-- MinimumExample 2000 t.u. OpenWorkload = 3.0 only Exp distributions.
+-- ---------------------------------------------------------------------------
+
+## Palladio:
+
+Number of observations: 667
+
+Mean value: 1.6622796518920542
+
+Mean value: 1.663887943049505
+Confidence value alpha: 0.9
+Upper bound: 1.7160131009463246
+Lower bound: 1.6117627851526855
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 667
+rTime@ObResponseTime@pcmflatten : 1.6572399011705623
+
+-- ---------------------------------------------------------------------------
+-- MinimumExample 4000 t.u. OpenWorkload = 3.0 only Exp distributions.
+-- ---------------------------------------------------------------------------
+
+## Palladio:
+
+Number of observations: 1333
+
+Mean value: 1.636076967826702
+
+Mean value: 1.63323906885377
+Confidence value alpha: 0.9
+Upper bound: 1.6567273434349588
+Lower bound: 1.609750794272581
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 1333
+rTime@ObResponseTime@pcmflatten : 1.6798969953686695
+
+-- ---------------------------------------------------------------------------
+-- MinimumExample 8000 t.u. OpenWorkload = 3.0 only Exp distributions.
+-- ---------------------------------------------------------------------------
+
+## Palladio:
+
+Number of observations: 2667
+
+Mean value: 1.6550652437952786
+
+Mean value: 1.653539567573115
+Confidence value alpha: 0.9
+Upper bound: 1.6749019220997405
+Lower bound: 1.6321772130464896
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 2667
+rTime@ObResponseTime@pcmflatten : 1.6646403244262815
+
+-- ---------------------------------------------------------------------------
+-- MinimumExample 16000 t.u. OpenWorkload = 3.0 only Exp distributions.
+-- ---------------------------------------------------------------------------
+
+## Palladio:
+
+Number of observations: 5333
+
+Mean value: 1.6585892916127898
+
+Mean value: 1.6587370496686975
+Confidence value alpha: 0.9
+Upper bound: 1.673346419068971
+Lower bound: 1.644127680268424
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 5333
+rTime@ObResponseTime@pcmflatten : 1.6531756128911028

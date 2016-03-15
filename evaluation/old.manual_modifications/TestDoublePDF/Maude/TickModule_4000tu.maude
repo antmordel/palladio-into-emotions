@@ -1,0 +1,17 @@
+
+mod TICKRULE is
+  pr TESTDOUBLEPDF .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) /\ TE =/= zero /\ (T plus TE) le toRat(4000) .
+endm
+
+rewrite init(TESTDOUBLEPDF) .
+
+q

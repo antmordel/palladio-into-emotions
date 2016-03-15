@@ -1,0 +1,21 @@
+set print attribute on .
+load ../BehaviorFiles/mOdCL.maude
+load model-checker.maude
+load ../BehaviorFiles/MGDefinitions.maude
+load ../BehaviorFiles/MGRealTimeMaude24.maude
+load ../BehaviorFiles/EcoreMM.maude
+load ../BehaviorFiles/e-Motions.maude
+
+load ../BehaviorFiles/flatten.ecore.maude
+load ../BehaviorFiles/PalladioGrammar.maude
+load ../BehaviorFiles/ManualChangesRulesPalladio_v5.maude
+load MediaStore60.xmi.maude
+
+set print conceal on .
+print conceal _`{_`} .
+
+mod TOP-MODULE is
+  pr MEDIASTORE60 .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+endm
+

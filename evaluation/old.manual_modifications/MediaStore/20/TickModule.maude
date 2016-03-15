@@ -1,0 +1,32 @@
+---- ----------------------------------------------- ----
+---- Programmatically generated code using e-Motions ----
+---- @date Fri Jun 26 17:15:24 CEST 2015             ----
+---- ----------------------------------------------- ----
+set print attribute on .
+load ../BehaviorFiles/mOdCL.maude
+load model-checker.maude
+load ../BehaviorFiles/MGDefinitions.maude
+load ../BehaviorFiles/MGRealTimeMaude24.maude
+load ../BehaviorFiles/EcoreMM.maude
+load ../BehaviorFiles/e-Motions.maude
+
+load ../BehaviorFiles/flatten.ecore.maude
+load ../BehaviorFiles/PalladioGrammar.maude
+load ../BehaviorFiles/ManualChangesRulesPalladio_v5.maude
+load MediaStore20.xmi.maude
+
+mod TICKRULE is
+  pr MEDIASTORE20 .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) /\ TE =/= zero 
+  /\ (T plus TE) le toRat(4) .
+endm
+
+rewrite init(MEDIASTORE20) .

@@ -1,0 +1,41 @@
+set print attribute on .
+set show advisories off .
+
+load ../../global_files/mOdCL.maude
+load model-checker.maude
+load ../../global_files/MGDefinitions.maude
+load ../../global_files/MGRealTimeMaude24.maude
+load ../../global_files/EcoreMM.maude
+load ../../global_files/e-Motions.maude
+
+load ../../global_files/flatten.ecore.maude
+load ../../global_files/PalladioGrammar.maude
+load ../../global_files/behavior_eMotions/EfficientRulesPalladio.behavior.maude
+load ../../case_studies/MinimumExample.xmi.maude
+
+mod TICKRULE is
+  pr MINIMUMEXAMPLE .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) /\ TE =/= zero /\ (T plus TE) le rat(5.00)
+  [print "Applied tick rule. TE := " TE] .
+endm
+
+set print conceal on .
+print conceal _`{_`} <_:_|_> __ .
+set trace on .
+set trace whole off .
+set trace eq off .
+set trace select on .
+trace select InternalActionSEFF@Triggering .
+
+set trace off .
+---- set print conceal off .
+
+rewrite init(MINIMUMEXAMPLE) .

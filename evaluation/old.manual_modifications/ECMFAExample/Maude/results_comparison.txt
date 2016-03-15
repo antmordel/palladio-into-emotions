@@ -1,0 +1,99 @@
+-- -------------------------
+-- ECMFAExample 1000 t.u. 
+-- -------------------------
+
+## Palladio:
+
+Number of observations: 345
+
+Mean value: 9.058721914646378
+
+Mean value: 9.173211235085809
+Confidence value alpha: 0.9
+Upper bound: 9.834539930986114
+Lower bound: 8.511882539185503
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 324
+rTime@ObResponseTime@pcmflatten : 8.7325868233725945
+
+-- -------------------------
+-- ECMFAExample 2000 t.u. 
+-- -------------------------
+
+## Palladio:
+
+Number of observations: 698
+
+Mean value: 9.95096312416333
+
+Mean value: 9.869956476440594
+Confidence value alpha: 0.9
+Upper bound: 10.335730902306397
+Lower bound: 9.404182050574791
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 662
+rTime@ObResponseTime@pcmflatten : 8.5281763660756802
+
+-- -------------------------
+-- ECMFAExample 4000 t.u. 
+-- -------------------------
+
+## Palladio:
+
+Number of observations: 1359
+
+Mean value: 10.486757766624727
+
+Mean value: 10.590584786752474
+Confidence value alpha: 0.9
+Upper bound: 12.12000547479077
+Lower bound: 9.06116409871418
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 1325
+rTime@ObResponseTime@pcmflatten : 8.4131323436437331
+
+-- -------------------------
+-- ECMFAExample 8000 t.u. 
+-- -------------------------
+
+## Palladio:
+
+Number of observations: 2737
+
+Mean value: 9.851891316880536
+
+Mean value: 9.855999226673264
+Confidence value alpha: 0.9
+Upper bound: 10.206481902827823
+Lower bound: 9.505516550518704
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 2702
+rTime@ObResponseTime@pcmflatten : 9.1435156128764596
+
+-- -------------------------
+-- ECMFAExample 16000  t.u. 
+-- -------------------------
+
+## Palladio:
+
+Number of observations: 5493
+
+Mean value: 9.949738703107785
+
+Mean value: 9.961176006029154
+Confidence value alpha: 0.9
+Upper bound: 10.25049740605882
+Lower bound: 9.671854605999489
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 5415
+rTime@ObResponseTime@pcmflatten : 9.0995536059949433

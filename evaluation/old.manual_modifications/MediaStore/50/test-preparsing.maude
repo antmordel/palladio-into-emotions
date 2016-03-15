@@ -1,0 +1,3 @@
+red preParsing("StoredFiles.NUMBER_OF_ELEMENTS + 5") .
+red preParsing("StoredFiles.NUMBER_OF_ELEMENTS + 0.1") .
+red nextToken("NUMBER_OF_ELEMENTS+0.1") .

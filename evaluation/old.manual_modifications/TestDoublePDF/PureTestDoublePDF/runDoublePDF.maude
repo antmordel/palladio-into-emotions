@@ -1,0 +1,39 @@
+
+
+load ../../GlobalFiles/mOdCL.maude 
+load model-checker.maude 
+load ../../GlobalFiles/MGDefinitions.maude
+load ../../GlobalFiles/MGRealTimeMaude24.maude
+load ../../GlobalFiles/EcoreMM.maude
+load ../../GlobalFiles/e-Motions.maude
+load ../../GlobalFiles/flatten.ecore.maude
+load ../../GlobalFiles/PalladioGrammar.maude
+
+mod DOUBLEPDFEVAL is
+  pr E-MOTIONS .
+  pr DENSE_TIME .
+  pr @PCMFLATTEN@ .
+  pr PALLADIO-EVAL-EXP .
+  
+  op numOfValues : -> @StructuralFeature .
+  op values : -> @StructuralFeature .
+
+  op doublePDFClass : -> @Class .
+
+  op initTest : -> Configuration .
+  eq initTest = < 'dPDF : doublePDFClass | numOfValues : 10000 #
+                                           values : Sequence{} > .
+
+  
+  var O : Oid .
+  var N : Nat .
+  var List : List{OCL-Exp} .
+
+  ceq < O : doublePDFClass | numOfValues : N # values : Sequence{List} >
+    = < O : doublePDFClass | numOfValues : N - 1 # values : Sequence{List # toFloat(parsePallExp("DoublePDF[(1.0; 0.2)(2.0; 0.8)]", Set{}, @pcmflatten@{none}, N))} >
+  if N >= 0 . 
+endm
+
+rew initTest .
+
+q

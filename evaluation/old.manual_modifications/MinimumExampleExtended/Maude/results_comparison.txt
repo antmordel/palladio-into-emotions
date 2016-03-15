@@ -1,0 +1,39 @@
+-- --------------------------------
+-- MinimumExampleExtended 2000 t.u. 
+-- --------------------------------
+
+## Palladio:
+
+Number of observations: 400
+
+Mean value: 4.9376175722525035
+
+Mean value: 4.959821014072609
+Confidence value alpha: 0.9
+Upper bound: 5.0383580092854805
+Lower bound: 4.881284018859737
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 399
+rTime@ObResponseTime@pcmflatten : 4.9790004760034687
+
+-- --------------------------------
+-- MinimumExampleExtended 4000 t.u. 
+-- --------------------------------
+
+## Palladio:
+
+Number of observations: 799
+
+Mean value: 4.756769151120155
+
+Mean value: 4.752047375272984
+Confidence value alpha: 0.9
+Upper bound: 4.852195264226297
+Lower bound: 4.651899486319672
+
+## e-Motions:
+
+counter@ObResponseTime@pcmflatten : 799
+rTime@ObResponseTime@pcmflatten : 4.9451059743408825

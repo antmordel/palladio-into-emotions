@@ -1,0 +1,25 @@
+-- ---------------------------------------------------------------------------
+-- MinimumExample 1000 t.u. OpenWorkload = 1.0 only Exp distributions.
+-- ---------------------------------------------------------------------------
+
+Number of observations: 998
+
+Mean value: 2.0701703190821656
+
+Mean value: 2.1117186359845985
+Confidence value alpha: 0.9
+Upper bound: 2.319328447621065
+Lower bound: 1.904108824348132
+
+-- ---------------------------------------------------------------------------
+-- MinimumExample 2000 t.u. OpenWorkload = 1.0 only Exp distributions.
+-- ---------------------------------------------------------------------------
+
+Number of observations: 1999
+
+Mean value: 2.156542707139571
+
+Mean value: 2.1677593907738406
+Confidence value alpha: 0.9
+Upper bound: 2.2593187254340066
+Lower bound: 2.0762000561136746

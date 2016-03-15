@@ -1,0 +1,2 @@
+Palladio results: Mean value: 1.3700000000000037 (for 750 tokens)
+e-Motions results: 1.12012 (for 2 tokens)

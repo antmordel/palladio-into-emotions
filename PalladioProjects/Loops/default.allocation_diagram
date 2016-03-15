@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:allocation="http://sdq.ipd.uka.de/PalladioComponentModel/Allocation/5.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:resourceenvironment="http://sdq.ipd.uka.de/PalladioComponentModel/ResourceEnvironment/5.0" xsi:schemaLocation="http://sdq.ipd.uka.de/PalladioComponentModel/Allocation/5.0 http://sdq.ipd.uka.de/PalladioComponentModel/5.0#//allocation http://sdq.ipd.uka.de/PalladioComponentModel/ResourceEnvironment/5.0 http://sdq.ipd.uka.de/PalladioComponentModel/5.0#//resourceenvironment" xmi:id="_QSKQoKDVEeSTa-m_xXpXMw" type="allocation" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_QazPQKDVEeSTa-m_xXpXMw" type="2003" fontName=".Helvetica Neue DeskInterface">
+    <children xmi:type="notation:DecorationNode" xmi:id="_QazPQqDVEeSTa-m_xXpXMw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_QazPQ6DVEeSTa-m_xXpXMw" type="7003"/>
+    <element xmi:type="resourceenvironment:ResourceContainer" href="default.resourceenvironment#_2SiKEKDNEeSTa-m_xXpXMw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QazPQaDVEeSTa-m_xXpXMw" x="144" y="99"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_QSKQoaDVEeSTa-m_xXpXMw"/>
+  <element xmi:type="allocation:Allocation" href="default.allocation#_ry3pEKDUEeSTa-m_xXpXMw"/>
+</notation:Diagram>

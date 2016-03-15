@@ -1,0 +1,34 @@
+
+---- manually generated
+
+set print attribute off .
+set show advisories off .
+
+load ../../global_files/mOdCL.maude
+load model-checker.maude
+load ../../global_files/MGDefinitions.maude
+load ../../global_files/MGRealTimeMaude24.maude
+load ../../global_files/EcoreMM.maude
+load ../../global_files/e-Motions.maude
+
+load ../../global_files/flatten.ecore.maude
+load ../../global_files/PalladioGrammar.maude
+load ../../global_files/behavior_optimized/palladio_behavior.maude
+load ../../case_studies/ExternalCalls.xmi.maude
+
+mod TICKRULE is
+  pr EXTERNALCALLS .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) /\ TE =/= zero /\ (T plus TE) le 50 .
+endm
+
+rewrite init(EXTERNALCALLS) .
+
+q

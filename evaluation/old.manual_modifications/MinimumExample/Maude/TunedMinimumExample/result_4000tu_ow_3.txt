@@ -1,0 +1,791 @@
+		     \||||||||||||||||||/
+		   --- Welcome to Maude ---
+		     /||||||||||||||||||\
+	    Maude alpha100 built: Oct 29 2013 19:10:31
+	    Copyright 1997-2013 SRI International
+		   Fri Jan 30 14:21:52 2015
+Warning: "e-Motions.maude", line 900 (mod MGDISTRIBUTIONS): multiple distinct
+    parses for statement
+eq doublePDF (S:String, Pos:Int, Acc:Float, R:Int) = if R:Int < Acc:Float +
+    100.0 * string2float (substr (S:String, 2 + find (S:String, ";", Pos:Int),
+    sd (find (S:String, ")", Pos:Int), 2 + find (S:String, ";", Pos:Int))))
+    then rat (string2float (substr (S:String, s find (S:String, "(", Pos:Int),
+    sd (find (S:String, ";", Pos:Int), 1 + find (S:String, "(", Pos:Int)))))
+    else doublePDF (S:String, find (S:String, "(", 1 + Pos:Int), Acc:Float +
+    100.0 * string2float (substr (S:String, 2 + find (S:String, ";", Pos:Int),
+    sd (find (S:String, ")", Pos:Int), 2 + find (S:String, ";", Pos:Int)))),
+    R:Int) fi .
+Warning: sort declarations for operator if_then_else_fi failed preregularity
+    check on 14 out of 38614472 sort tuples. First such tuple is (Bool,
+    OclVoid, @Attribute).
+==========================================
+rewrite in TICKRULE : init(MINIMUMEXAMPLE) .
+rewrites: 48388599 in 128718ms cpu (154573ms real) (375926 rewrites/second)
+result ClockedSystem: {@pcmflatten@{
+<  '/0 : PCMusagemodelUsageModel@pcmflatten |
+    usageScenario@-@UsageModel@PCMusagemodelUsageModel@pcmflatten : Set{
+    '_LPnI8CHdEd6lJo4DCALHMw} #
+    userData@-@UsageModel@PCMusagemodelUsageModel@pcmflatten : Set{mt} > 
+<  '/0/@usageScenario_UsageModel.0/@scenarioBehaviour_UsageScenario/@actions_ScenarioBehaviour.3/@timeSpecification_Delay : PCMcorePCMRandomVariable@pcmflatten
+    | closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null
+    # delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten :
+    '_Rr7aIHnTEeOBarAp0jPAaA # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    specification@STOEXstoexRandomVariable@pcmflatten : "1.0" > 
+<  '/0/@usageScenario_UsageModel.0/@workload_UsageScenario :
+    PCMusagemodelOpenWorkload@pcmflatten |
+    usageScenario@-@Workload@PCMusagemodelWorkload@pcmflatten :
+    '_LPnI8CHdEd6lJo4DCALHMw #
+    interArrivalTime@-@OpenWorkload@PCMusagemodelOpenWorkload@pcmflatten : '/0/@usageScenario_UsageModel.0/@workload_UsageScenario/@interArrivalTime_OpenWorkload # sandTimer@PCMusagemodelOpenWorkload@pcmflatten : '2 > 
+<  '/0/@usageScenario_UsageModel.0/@workload_UsageScenario/@interArrivalTime_OpenWorkload : PCMcorePCMRandomVariable@pcmflatten |
+    closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    '/0/@usageScenario_UsageModel.0/@workload_UsageScenario #
+    delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # specification@STOEXstoexRandomVariable@pcmflatten : "3.0" > 
+<  '/1 : PCMresourcetypeResourceRepository@pcmflatten | resourceInterfaces@-@@-@ResourceRepository@PCMresourcetypeResourceRepository@pcmflatten : Set{
+    '_tw_Q8E5CEeCUKeckjJ_n-w ; '_xXv8QE5CEeCUKeckjJ_n-w} # schedulingPolicies@-@@-@ResourceRepository@PCMresourcetypeResourceRepository@pcmflatten : Set{'Delay
+    ; 'FCFS ; 'ProcessorSharing} # availableResourceTypes@-@ResourceRepository@PCMresourcetypeResourceRepository@pcmflatten : Set{'_BIjHoQ3KEdyouMqirZIhzQ ;
+    '_nvHX4KkREdyEA_b89s7q9w ; '_o3sScH2AEdyH8uerKnHYug ;
+    '_oro4gG3fEdy4YaaT-RYrLQ} > 
+<  '/2 : PCMresourceenvironmentResourceEnvironment@pcmflatten | linkingResources@-@@-@ResourceEnvironment@PCMresourceenvironmentResourceEnvironment@pcmflatten
+    : Set{mt} # resourceContainer@-@ResourceEnvironment@PCMresourceenvironmentResourceEnvironment@pcmflatten : Set{'_B0aZ0CHdEd6lJo4DCALHMw} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" > 
+<  '/2/@resourceContainer_ResourceEnvironment.0/@activeResourceSpecifications_ResourceContainer.0/@processingRate_ProcessingResourceSpecification :
+    PCMcorePCMRandomVariable@pcmflatten |
+    closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null
+    # delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    '_ssJ0QYr-EeG0c6Q1F-wA1Q # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    specification@STOEXstoexRandomVariable@pcmflatten : "1" > 
+<  '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.0/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0 :
+    PCMseffperformanceParametricResourceDemand@pcmflatten | specification@-@ParametericResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.0/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0/@specification_ParametericResourceDemand # requiredResource@-@ParametricResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '_oro4gG3fEdy4YaaT-RYrLQ # action@-@ParametricResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '_r2_fAH6YEeOczJTm_QImZQ > 
+<  '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.0/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0/@specification_ParametericResourceDemand :
+    PCMcorePCMRandomVariable@pcmflatten |
+    closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.0/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0 #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null
+    # delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # specification@STOEXstoexRandomVariable@pcmflatten :
+    "Exp(1)" > 
+<  '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.1/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0 :
+    PCMseffperformanceParametricResourceDemand@pcmflatten | specification@-@ParametericResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.1/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0/@specification_ParametericResourceDemand # requiredResource@-@ParametricResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '_oro4gG3fEdy4YaaT-RYrLQ # action@-@ParametricResourceDemand@PCMseffperformanceParametricResourceDemand@pcmflatten : '_TjBvYH6ZEeOczJTm_QImZQ > 
+<  '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.1/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0/@specification_ParametericResourceDemand :
+    PCMcorePCMRandomVariable@pcmflatten |
+    closedWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # passiveResource@-@capacity@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # variableCharacterisation@-@Specification@PCMcorePCMRandomVariable@pcmflatten : null # infrastructureCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null #
+    resourceCall@-@@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten :
+    null # parametricResourceDemand@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.1/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0 #
+    loopAction@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # guardedBranchTransition@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten
+    : null # specifiedExecutionTime@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # eventChannelSinkConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null # assemblyEventConnector@-@@-@FilterCondition@PCMcorePCMRandomVariable@pcmflatten : null #
+    loop@-@LoopIteration@PCMcorePCMRandomVariable@pcmflatten : null #
+    openWorkload@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null
+    # delay@-@TimeSpecification@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecifcation@-@throughput@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # processingResourceSpecification@-@processingRate@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # communicationLinkResourceSpecification@-@latency@-@PCMRandomVariable@PCMcorePCMRandomVariable@pcmflatten : null # specification@STOEXstoexRandomVariable@pcmflatten :
+    "DoublePDF[ (1.0; 0.25000000) (3.0; 0.50000000) (4.0; 0.25000000) ]" > 
+<  '12345 : PCMseffResourceDemandingSEFF@pcmflatten | abstractLoopAction@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : null # abstractBranchTransition@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    steps@-@Behaviour@PCMseffResourceDemandingBehaviour@pcmflatten : Set{
+    '_qZUd0CHbEd62GabW1zGSBw ; '_qZUd0SHbEd62GabW1zGSBw ;
+    '_uPAUsH6XEeOczJTm_QImZQ} #
+    tpOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    rtOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    describedService@-@@-@SEFF@PCMseffServiceEffectSpecification@pcmflatten :
+    '_KjhikgzkEeCFg86gxKwVPw # basicComponent@-@ServiceEffectSpecification@PCMseffServiceEffectSpecification@pcmflatten : '_os1t4CHbEd62GabW1zGSBw # resourceDemandingInternalBehaviours@PCMseffResourceDemandingSEFF@pcmflatten : Set{mt} #
+    seffTypeID@PCMseffServiceEffectSpecification@pcmflatten : "1" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "12345" > 
+<  '2 : TOKENtokensSandTimer@pcmflatten |
+    countDown@TOKENtokensSandTimer@pcmflatten : 2 > 
+<  '4 : ObResponseTime@pcmflatten | counter@ObResponseTime@pcmflatten : 1333 #
+    tTime@ObResponseTime@pcmflatten : 4020866841548974957/1125899906842624 #
+    rTime@ObResponseTime@pcmflatten : 2.6791051441497391 #
+    allRT@ObResponseTime@pcmflatten : Sequence{1283601433977197/562949953421312
+    # 2 # 1282695079144141/1125899906842624 # 4 # 2 # 4 #
+    1768709455228545/1125899906842624 # 1598858123568063/1125899906842624 #
+    1859992566363409/1125899906842624 # 4 # 2 # 4 #
+    141160338366587/140737488355328 # 1162517789018149/1125899906842624 # 4 #
+    634800978527713/281474976710656 # 4 # 2010026871727383/1125899906842624 # 4
+    # 2 # 4 # 2 # 1401320473908179/1125899906842624 # 2 # 2 # 2 # 4 # 4 #
+    887351806317529/562949953421312 # 4 # 2005099511973161/1125899906842624 # 2
+    # 2 # 4 # 2 # 1537172384749175/1125899906842624 # 4 #
+    10303224416034865/2251799813685248 # 10303224416034865/2251799813685248 #
+    5799624788664369/2251799813685248 # 1828034889068099/1125899906842624 # 4 #
+    4 # 1842550009757855/562949953421312 # 1180101174603725/1125899906842624 #
+    4 # 2 # 4 # 2 # 4 # 4 # 2 # 58875578134353/35184372088832 #
+    7091274959925725/1125899906842624 # 7091274959925725/1125899906842624 #
+    3869077017063345/1125899906842624 # 4 # 4 # 4 # 2 #
+    3532027581342835/1125899906842624 # 2030731652395899/281474976710656 #
+    1467781698974587/281474976710656 # 1467781698974587/281474976710656 #
+    904831745553275/281474976710656 # 983219103034843/562949953421312 # 2 # 4 #
+    2 # 2571260169306655/1125899906842624 # 73168075521693/70368744177664 # 2 #
+    1651479845527339/1125899906842624 # 197942440148241/140737488355328 #
+    1586925688871663/1125899906842624 # 1516277140079715/1125899906842624 # 4 #
+    4 # 1095922799517019/562949953421312 # 2 # 4 # 2 #
+    576625535403539/562949953421312 # 2 # 4 # 1210031164207589/1125899906842624
+    # 2 # 4 # 2 # 817716747244491/562949953421312 # 2 #
+    855230132121029/562949953421312 # 2 # 2 # 4 # 4 #
+    2915670149957167/1125899906842624 # 4 # 4 # 2 # 4 # 4 # 4 #
+    996437318591561/562949953421312 # 2 # 2 # 4 # 4 # 4 #
+    2121541871818011/1125899906842624 # 2 # 4 # 4 # 2 # 2 # 4 # 4 # 2 # 2 # 4 #
+    4 # 1578479288367665/1125899906842624 # 4 # 2 # 4 # 2 # 2 #
+    601318983181123/281474976710656 # 4 # 4 # 363955504636333/281474976710656 #
+    4 # 2 # 2 # 2 # 2089294324109011/1125899906842624 # 4 #
+    141160338366587/140737488355328 # 4 # 1961697567879259/1125899906842624 #
+    2160369854243899/1125899906842624 # 2 # 4 # 2 # 2 # 2 # 4 # 4 # 4 #
+    946441949850663/562949953421312 # 2 # 2 # 2 #
+    141483497837215/70368744177664 # 175022569055401/70368744177664 # 2 # 4 #
+    857125588300341/562949953421312 # 2785513857993831/1125899906842624 # 2 # 4
+    # 2 # 2 # 4 # 1338404671007537/1125899906842624 #
+    611728344013593/562949953421312 # 4 # 4 # 2 # 2 # 4 # 4 # 2 #
+    378980658990255/140737488355328 # 2638247947375765/1125899906842624 # 4 #
+    1904064725515529/1125899906842624 # 2 # 1543680494817253/1125899906842624 #
+    679494211793457/562949953421312 # 4 # 4 # 4 #
+    1139492448593647/1125899906842624 # 651138220321633/562949953421312 #
+    762936468003231/562949953421312 # 2 # 1222229549042663/1125899906842624 # 4
+    # 1399883460430599/1125899906842624 # 4 # 333583173959767/281474976710656 #
+    4 # 4 # 4 # 686713138022589/281474976710656 #
+    1973586800921611/1125899906842624 # 2380987473586505/1125899906842624 # 4 #
+    2 # 4 # 1571767495574375/1125899906842624 #
+    1154405248157605/1125899906842624 # 4 # 4 #
+    1360374146724105/1125899906842624 # 4 # 4 # 4 # 2 # 4 # 2 # 2 #
+    2949281598386369/1125899906842624 # 4 # 2022440447386461/1125899906842624 #
+    4 # 4 # 2 # 2 # 4 # 4 # 2 # 1139492448593647/1125899906842624 # 4 #
+    1412883090618595/1125899906842624 # 2 # 4 # 2 # 2 # 2 #
+    177887339246415/140737488355328 # 4 # 2 # 2 # 4 # 4 # 4 #
+    4778537239514687/1125899906842624 # 4778537239514687/1125899906842624 #
+    1898731936032395/562949953421312 # 4 # 2 #
+    1762747041081511/1125899906842624 # 4 # 2 # 2 #
+    151881245523033/70368744177664 # 2 # 2 # 1604010992547875/1125899906842624
+    # 1444203659497463/562949953421312 # 2 # 2 # 410131119846391/70368744177664
+    # 269393631491063/70368744177664 # 2 # 2 #
+    1379955508223229/1125899906842624 # 4 # 2 # 4 # 2 # 2 # 4 #
+    1409981285128691/1125899906842624 # 4 # 4 # 4 #
+    1780729853106425/1125899906842624 # 2 # 2 # 2 # 4 # 2 # 4 #
+    1337045708975513/1125899906842624 # 2 # 4 # 4 #
+    977311913959375/562949953421312 # 2 # 2 # 426199430335347/281474976710656 #
+    1290486805098157/1125899906842624 # 2 # 4 #
+    1477152289380831/1125899906842624 # 4 # 2045135726823431/1125899906842624 #
+    2118819017028207/1125899906842624 # 4 # 4 # 4 # 2 #
+    824842791173929/562949953421312 # 2 # 4 # 2 # 4 # 2 #
+    303115072790613/281474976710656 # 4 # 2 # 1330275394486807/1125899906842624
+    # 2 # 2 # 1548586384526245/1125899906842624 # 4 # 4 #
+    1452807559162699/1125899906842624 # 4 # 4 # 4 # 2 #
+    614806262853357/562949953421312 # 1162047420418961/562949953421312 #
+    4152597623424753/1125899906842624 # 4 # 2 #
+    1799004553964461/1125899906842624 # 2 # 2 # 4 # 4 # 2 #
+    2135255803936497/1125899906842624 # 1285286334388843/1125899906842624 # 4 #
+    4 # 2 # 918234317835073/562949953421312 # 2 #
+    703851690458813/281474976710656 # 4 # 1637205170553755/1125899906842624 #
+    1407086939301229/1125899906842624 # 1918502833484941/562949953421312 # 2 #
+    2 # 2 # 5673214206045/2199023255552 # 2 # 4 # 4 # 4 #
+    335279250771561/140737488355328 # 2 # 4 # 4 #
+    2037519689393895/1125899906842624 # 2 # 4 #
+    1575118390627703/1125899906842624 # 4 # 4 #
+    3161401819607175/1125899906842624 # 2 # 2 # 4 # 2 # 4 # 4 # 4 # 2 # 2 # 4 #
+    1656879855432007/1125899906842624 # 4 # 2 # 4 #
+    3476186389934337/1125899906842624 # 2 # 4 # 4 # 4 # 2 # 2 # 4 #
+    2027444455209489/1125899906842624 # 1651479845527339/1125899906842624 # 4 #
+    865735016220613/562949953421312 # 2 # 2 # 4 # 4 # 2 # 2 #
+    1279565933159111/562949953421312 # 2 # 4 # 2 # 2 # 2 #
+    676042637808465/562949953421312 # 2177429270105093/1125899906842624 #
+    3494494108869087/1125899906842624 # 3422984371283063/1125899906842624 # 4 #
+    4 # 4 # 2 # 4 # 4 # 2188947528175661/1125899906842624 # 2 #
+    1259638302612175/1125899906842624 # 690683647562627/562949953421312 # 2 # 4
+    # 3075514453895919/1125899906842624 # 1446903664449797/562949953421312 # 4
+    # 4 # 2 # 2 # 2 # 606838411392345/562949953421312 # 4 #
+    1323454379298139/562949953421312 # 1464914126421891/1125899906842624 #
+    648978974263625/281474976710656 # 299190961302183/281474976710656 # 2 # 2 #
+    4119960558359561/1125899906842624 # 4 # 400143281891459/281474976710656 # 2
+    # 2143565066055379/1125899906842624 # 4 # 2 #
+    1464914126421891/1125899906842624 # 2 # 2 #
+    2766017268539083/1125899906842624 # 514486184409191/281474976710656 # 4 # 4
+    # 849581757443695/562949953421312 # 2 # 2 #
+    1915357697892997/1125899906842624 # 4 # 4 # 4 # 2 # 2 # 4 # 2 # 2 # 4 #
+    829342814763471/562949953421312 # 2333928090301137/1125899906842624 # 2 #
+    4103990079143521/1125899906842624 # 2 # 2 # 4 # 4 # 2 #
+    1990445510228259/1125899906842624 # 358351969013207/281474976710656 # 4 #
+    7737426070335/4398046511104 # 3050353632380415/1125899906842624 #
+    2608449235088769/1125899906842624 # 4 # 2140788492744775/1125899906842624 #
+    2 # 4 # 1222267370138233/562949953421312 # 4 # 2 #
+    1809286816357591/1125899906842624 # 2470249722157623/1125899906842624 # 4 #
+    562949965253317/562949953421312 # 2 # 2 # 4 # 2 # 2 # 2 #
+    566708338403143/281474976710656 # 1323545548347923/1125899906842624 # 4 # 2
+    # 730179447345819/562949953421312 # 2 # 2 # 4 #
+    590641610929295/562949953421312 # 2 # 1300960368130069/1125899906842624 # 4
+    # 449239830490913/281474976710656 # 4 # 354312467533331/281474976710656 # 4
+    # 2 # 1803106197505553/1125899906842624 # 4 # 2 # 2 # 2 #
+    849581757443695/562949953421312 # 2711568272660771/562949953421312 #
+    2711568272660771/562949953421312 # 2711568272660771/562949953421312 #
+    1585668365818147/562949953421312 # 4 # 2 # 2 # 2 # 4 #
+    2805354017312011/1125899906842624 # 883359236721047/562949953421312 #
+    1200366727985091/1125899906842624 # 4 # 4 # 2 #
+    672612097311669/562949953421312 # 2 # 4 # 4 #
+    1274956904994309/1125899906842624 # 1687978986752103/1125899906842624 # 4 #
+    1560117281725543/1125899906842624 # 2 # 4 #
+    1311532275915229/1125899906842624 # 4 # 4 # 2 #
+    482265125703517/281474976710656 # 2 # 4 # 2 # 2 #
+    1585231332032945/1125899906842624 # 2 # 1378197066915009/562949953421312 #
+    2 # 2 # 4 # 2 # 58455101538947/17592186044416 # 2 # 4 # 2 # 2 # 2 # 2 # 4 #
+    7737426070335/4398046511104 # 2508035144261925/1125899906842624 #
+    856177062459391/562949953421312 # 3217708547473347/1125899906842624 # 2 # 2
+    # 4 # 2 # 2 # 4 # 2 # 2 # 4 # 2 # 2 # 599582242789223/562949953421312 # 2 #
+    4 # 2 # 2 # 4 # 4 # 2 # 2 # 4 # 2543161387102181/1125899906842624 #
+    24247951466693/17592186044416 # 4 # 4 # 4 # 2 # 4 #
+    680880788734399/562949953421312 # 2 # 4 # 1242026101365791/1125899906842624
+    # 2 # 1017496207907291/562949953421312 # 843062826576815/562949953421312 #
+    397580517814171/281474976710656 # 85895374810053/70368744177664 # 2 # 4 #
+    3254386054730967/1125899906842624 # 1870849930219491/1125899906842624 #
+    382675419454755/281474976710656 # 320350421127029/281474976710656 # 2 # 2 #
+    4 # 4 # 2 # 2 # 2 # 4 # 1899579062582827/1125899906842624 #
+    1990445510228259/1125899906842624 # 2 # 1162047420418961/562949953421312 #
+    2 # 2 # 418452151746883/140737488355328 # 318097321804565/281474976710656 #
+    4 # 4 # 4 # 4 # 967987477954013/562949953421312 #
+    504364645315845/281474976710656 # 2 # 363955504636333/281474976710656 # 4 #
+    2065700680409513/1125899906842624 # 4 # 1208818563221403/1125899906842624 #
+    372381235084769/281474976710656 # 4 # 997654508154231/562949953421312 # 2 #
+    4 # 4 # 2254494601007639/1125899906842624 # 4 # 2 # 2 # 2 #
+    2608449235088769/1125899906842624 # 2 # 2 #
+    2766017268539083/1125899906842624 # 2 # 2 # 742434624178189/562949953421312
+    # 2 # 4 # 2 # 2531330456103021/1125899906842624 #
+    840291943443283/562949953421312 # 2 # 2 # 686713138022589/281474976710656 #
+    2 # 2 # 4 # 4 # 4 # 1101756529995995/562949953421312 #
+    1665937827914099/1125899906842624 # 2 # 4 # 663789313476793/562949953421312
+    # 4 # 2 # 246399861162687/140737488355328 # 2 # 4 # 2 #
+    524985302769273/281474976710656 # 4 # 4 # 2 # 2 #
+    2861789060171409/1125899906842624 # 788398792715449/562949953421312 # 4 # 2
+    # 2 # 2380987473586505/1125899906842624 # 4 #
+    1204394441900853/562949953421312 # 1899579062582827/1125899906842624 # 4 #
+    2 # 2 # 4 # 4 # 171086947041097/70368744177664 # 4 #
+    404946421066365/140737488355328 # 2 # 4238585953123599/1125899906842624 # 4
+    # 2 # 4 # 2 # 2 # 463382012882835/281474976710656 # 2 # 2 # 2 #
+    2883033084891975/1125899906842624 # 2 # 2 # 4 #
+    578358579214785/562949953421312 # 2 # 754962539311385/562949953421312 # 2 #
+    1897342915061589/1125899906842624 # 4 # 2174568023566891/1125899906842624 #
+    2 # 2 # 4 # 4 # 4 # 2 # 4 # 611728344013593/562949953421312 # 4 # 2 #
+    1402759323825207/1125899906842624 # 4 # 4 #
+    1597145727942395/1125899906842624 # 4 # 2 # 4 # 4 # 4 # 4 # 4 #
+    153927653700701/70368744177664 # 2 # 4 # 3025742818463231/1125899906842624
+    # 24247951466693/17592186044416 # 4 # 2 # 2 # 2 # 4 # 2 #
+    918234317835073/562949953421312 # 811554606477103/562949953421312 #
+    2387873733015665/1125899906842624 # 2 # 754171323505213/562949953421312 #
+    2785513857993831/1125899906842624 # 2 # 4 # 4 # 4 # 2 # 4 #
+    2215302695537099/1125899906842624 # 4 # 1741151088707077/1125899906842624 #
+    2279308826480189/1125899906842624 # 2 # 407093634445259/281474976710656 # 4
+    # 2 # 2 # 203866696547433/70368744177664 # 4 # 4 # 4 # 4 # 4 # 4 #
+    2029954823934753/1125899906842624 # 4 # 946441949850663/562949953421312 # 4
+    # 517074478295065/281474976710656 # 4 # 360953076417069/281474976710656 # 4
+    # 4 # 2029954823934753/1125899906842624 # 2 # 2 # 2 #
+    8866379319995817/2251799813685248 # 2 # 4 # 4 # 2 # 4 #
+    3983780025557943/1125899906842624 # 2 # 2 # 2 # 4 #
+    2317586730769845/1125899906842624 # 1189592483977471/1125899906842624 # 4 #
+    2 # 2 # 735902386639337/281474976710656 # 2 #
+    8952997683997013/2251799813685248 # 503421086401955/140737488355328 #
+    155409377482467/140737488355328 # 2 # 4 # 4 # 2 # 4 #
+    90051861725917/70368744177664 # 4 # 4 # 4 # 2 #
+    1402759323825207/1125899906842624 # 4 # 2 # 2 #
+    1760766565800685/1125899906842624 # 672612097311669/562949953421312 #
+    1651479845527339/1125899906842624 # 1913090023598027/1125899906842624 # 4 #
+    2 # 1598131093265161/562949953421312 # 2 # 4 # 2 # 4 # 2 # 4 # 4 #
+    2660026187438907/1125899906842624 # 4 # 1267271551557435/1125899906842624 #
+    4 # 2 # 1227146150335245/1125899906842624 # 517074478295065/281474976710656
+    # 4 # 4 # 4 # 2927173743229069/562949953421312 #
+    1801273836386445/562949953421312 # 4 # 4 # 2 #
+    1398448278710657/1125899906842624 # 2 # 2 # 2 # 2 # 4 # 2 #
+    2185598930998381/562949953421312 # 4722230511648515/1125899906842624 #
+    2470430697963267/1125899906842624 # 2 # 246399861162687/140737488355328 # 4
+    # 578586682200503/281474976710656 # 4 # 4 # 2 # 2 # 4 # 2 #
+    2825550072844101/1125899906842624 # 1322204392850635/1125899906842624 # 2 #
+    2 # 4 # 2 # 1152341146289757/562949953421312 # 2 # 4 # 4 #
+    308330562172509/281474976710656 # 1575118390627703/1125899906842624 # 2 # 2
+    # 2 # 2 # 4 # 2 # 4 # 2 # 2 # 2 # 2 # 4 # 4 # 4 # 2 #
+    809806313291145/562949953421312 # 2 # 2 # 2 #
+    191136224383937/140737488355328 # 1384196190851781/1125899906842624 # 2 # 4
+    # 2 # 2 # 4 # 4 # 4 # 4 # 4 # 4 # 4 # 606838411392345/562949953421312 #
+    1250797764372869/1125899906842624 # 1924474346139589/1125899906842624 # 2 #
+    1133808943809767/1125899906842624 # 9500063843727431/2251799813685248 #
+    6368796441356789/2251799813685248 # 2 # 2 #
+    2485212067362057/1125899906842624 # 2 # 2 # 4 # 2 # 2 # 4 # 2 #
+    1229578511255125/562949953421312 # 4 # 4 # 2 #
+    1640756908221037/1125899906842624 # 742434624178189/562949953421312 #
+    1446903664449797/562949953421312 # 1397014924084423/1125899906842624 # 4 #
+    4 # 2587637183969193/1125899906842624 # 4 # 2 #
+    1025120928800831/562949953421312 # 4 # 2073510422059169/1125899906842624 #
+    4 # 3776131387578439/1125899906842624 # 2608449235088769/1125899906842624 #
+    4 # 842137682648929/562949953421312 # 693930840582283/281474976710656 # 4 #
+    4 # 1799004553964461/1125899906842624 # 2 # 2 # 2 # 2 # 2 # 4 #
+    8952997683997013/2251799813685248 # 1173034834001399/1125899906842624 # 4 #
+    2 # 2 # 2239258916466751/1125899906842624 # 2 # 4 # 4 # 2 #
+    335279250771561/140737488355328 # 2337225017713623/1125899906842624 # 4 # 2
+    # 4 # 4 # 4 # 2 # 2 # 2 # 2 # 2 # 4 # 587627531626049/281474976710656 # 2 #
+    2 # 1169518225499109/1125899906842624 # 4 #
+    1535551218296523/1125899906842624 # 4 # 4 # 2 # 4 # 2 # 4 #
+    2347174124339611/1125899906842624 # 1805162636263265/1125899906842624 # 2 #
+    4 # 2 # 4 # 2 # 1402759323825207/1125899906842624 # 4 # 4 #
+    885402441511775/281474976710656 # 358351969013207/281474976710656 # 2 #
+    1578479288367665/1125899906842624 # 3013636251204039/1125899906842624 #
+    1505184440432343/1125899906842624 # 4 # 2 #
+    1436370772254409/1125899906842624 # 2 # 4 #
+    1098832108076997/562949953421312 # 4 # 4 # 619426510045731/281474976710656
+    # 2 # 2 # 4 # 4 # 1388452906345029/1125899906842624 # 4 # 2 #
+    741660809687385/562949953421312 # 1308879978088341/1125899906842624 # 4 #
+    2320836083405669/1125899906842624 # 4 # 2 # 4 #
+    600785127762749/562949953421312 # 2 # 2 # 2 # 4 # 4 # 2 # 4 #
+    1518990490711085/562949953421312 # 2 # 4 # 4 # 4 #
+    1418709235090519/1125899906842624 # 1985602922518413/1125899906842624 #
+    2021140745389799/562949953421312 # 3140992198983115/1125899906842624 #
+    1913090023598027/1125899906842624 # 2 # 1644319885583211/1125899906842624 #
+    2 # 4 # 676042637808465/562949953421312 # 4 #
+    982032695949949/562949953421312 # 58455101538947/17592186044416 # 4 # 4 # 2
+    # 2 # 2 # 1446903664449797/562949953421312 # 4 # 4 #
+    3696084495977837/1125899906842624 # 35680434629753/35184372088832 # 2 # 2 #
+    4 # 751017534005035/562949953421312 # 2790441217748053/1125899906842624 # 4
+    # 482265125703517/281474976710656 # 1550226442947115/1125899906842624 #
+    1169518225499109/1125899906842624 # 4 # 4 # 4 # 2 # 2 #
+    23322491638891/17592186044416 # 4 # 4 # 2 # 2 # 4 #
+    1222229549042663/1125899906842624 # 4 # 4 # 4 # 2 # 4 #
+    2600078193502295/1125899906842624 # 4 # 2 # 2 #
+    8909272041881867/2251799813685248 # 2 # 313985547307737/140737488355328 #
+    1191977866028299/1125899906842624 # 2 # 2 #
+    3485303038180929/1125899906842624 # 1602290747894139/1125899906842624 #
+    2591768931383413/1125899906842624 # 4 # 2 #
+    1017496207907291/562949953421312 # 2 # 4 # 2 # 2 #
+    9933246835749251/2251799813685248 # 9933246835749251/2251799813685248 #
+    5429647208378755/2251799813685248 # 3355746490495793/1125899906842624 # 4 #
+    4 # 4 # 295912761469807/281474976710656 # 4 # 2 # 2 #
+    1444203659497463/562949953421312 # 2 # 4 # 2 #
+    2877684381688623/1125899906842624 # 2 # 4 # 841214056595273/562949953421312
+    # 2 # 2 # 4 # 4 # 2 # 2 # 231422679404263/140737488355328 # 2 # 4 #
+    4331688548290269/1125899906842624 # 4 # 4 # 4 # 2 # 2 #
+    1252056456406525/1125899906842624 # 2 # 2 # 2 # 4 #
+    546514224453869/281474976710656 # 1189592483977471/1125899906842624 #
+    308330562172509/281474976710656 # 4 # 2 # 1803106197505553/1125899906842624
+    # 1543680494817253/1125899906842624 # 2 # 4 # 4 # 2 #
+    958814974364249/562949953421312 # 1264721380802761/1125899906842624 # 4 # 4
+    # 4 # 407533783052087/281474976710656 # 4 # 4 # 4 # 2 # 2 # 4 # 4 # 4 # 2 #
+    2 # 4 # 529025682813783/281474976710656 # 4 # 4 # 4 # 2 # 4 # 4 # 4 # 2 # 4
+    # 1644319885583211/1125899906842624 # 2 # 1868670065246505/1125899906842624
+    # 2 # 4 # 290920382208301/140737488355328 #
+    1273672364174035/1125899906842624 # 4 # 2 # 2 # 4 # 4 #
+    2047685897578105/1125899906842624 # 1437855149406585/1125899906842624 #
+    929595068051461/281474976710656 # 431425276210099/281474976710656 #
+    1807222837948523/1125899906842624 # 4238585953123599/1125899906842624 # 4 #
+    1461875258431745/1125899906842624 # 2 # 915068705256769/562949953421312 # 4
+    # 2 # 4 # 4 # 2 # 2 # 4 # 2543161387102181/1125899906842624 #
+    996437318591561/562949953421312 # 2 # 1338404671007537/1125899906842624 #
+    1242026101365791/1125899906842624 # 2 # 4 #
+    4868657316627753/1125899906842624 # 2616857502942505/1125899906842624 #
+    680880788734399/562949953421312 # 1617868397098137/1125899906842624 # 4 # 2
+    # 4 # 885402441511775/281474976710656 # 2 # 811554606477103/562949953421312
+    # 2 # 4 # 4 # 4 # 4 # 2 # 2 # 2 # 3532027581342835/1125899906842624 # 4 # 4
+    # 2110689740507477/1125899906842624 # 1644319885583211/1125899906842624 # 2
+    # 2 # 2 # 1166012566496123/1125899906842624 # 2 # 2 #
+    1181976933603299/562949953421312 # 1526396197523835/281474976710656 #
+    963446244102523/281474976710656 # 2 # 1689835376136953/1125899906842624 #
+    1938289242245663/1125899906842624 # 2 # 2 # 2 # 4 #
+    431425276210099/281474976710656 # 2 # 3476186389934337/1125899906842624 #
+    2242289604452415/1125899906842624 # 2 # 1651479845527339/1125899906842624 #
+    2 # 4 # 2 # 4 # 2 # 4 # 4 # 2 # 1311532275915229/1125899906842624 # 2 # 2 #
+    687865369068631/562949953421312 # 2022440447386461/1125899906842624 # 4 # 2
+    # 1221003746083429/1125899906842624 # 4 # 4 # 4 # 4 #
+    1578479288367665/1125899906842624 # 2 # 4 #
+    1095922799517019/562949953421312 # 2 # 982032695949949/562949953421312 # 4
+    # 4 # 4 # 172847606814501/140737488355328 #
+    1304913209780115/1125899906842624 # 4 # 4 # 2 # 4 # 4 # 4 # 4 #
+    1527480216660351/1125899906842624 # 4 # 4 # 2 # 4 # 2 # 4 #
+    3380492539522965/1125899906842624 # 2 # 4 # 2 # 2 #
+    1746999932545073/1125899906842624 # 4} > 
+<  '92051 : TOKENtokensUSToken@pcmflatten | tsOb@TOKENtokensUSToken@pcmflatten
+    : '92052 # cToken@TOKENtokensUSToken@pcmflatten : '92057 #
+    loopToken@TOKENtokensUSToken@pcmflatten : null #
+    id@TOKENtokensUSToken@pcmflatten : "" #
+    completed@TOKENtokensUSToken@pcmflatten : false #
+    branchNumber@TOKENtokensUSToken@pcmflatten : 0 #
+    branchesProb@TOKENtokensUSToken@pcmflatten : Sequence{mt-ord} #
+    prob@TOKENtokensUSToken@pcmflatten : 0 > 
+<  '92052 : ObTimeStamp@pcmflatten | tStamp@ObTimeStamp@pcmflatten : 3999 > 
+<  '92057 : TOKENtokensSEFFToken@pcmflatten |
+    tsOb@TOKENtokensSEFFToken@pcmflatten : '92058 #
+    context@TOKENtokensSEFFToken@pcmflatten : Set{mt} #
+    nestedToken@TOKENtokensSEFFToken@pcmflatten : null #
+    loopToken@TOKENtokensSEFFToken@pcmflatten : null #
+    id@TOKENtokensSEFFToken@pcmflatten : "" #
+    completed@TOKENtokensSEFFToken@pcmflatten : false #
+    branchNumber@TOKENtokensSEFFToken@pcmflatten : 22 #
+    branchesProb@TOKENtokensSEFFToken@pcmflatten : Sequence{300 # 700} #
+    prob@TOKENtokensSEFFToken@pcmflatten : 706 > 
+<  '92101 : AtomicActionExec@MGBehavior | participants@ActionExec@MGBehavior :
+    Set{'92102 ; '92103 ; '92104 ; '92105 ; '92106 ; '92107} #
+    variables@ActionExec@MGBehavior : Set{'92108} #
+    startingTime@ActionExec@MGBehavior : 3999 #
+    endingTime@ActionExec@MGBehavior : null # action@ActionExec@MGBehavior :
+    "InternalActionSEFF" # maxTimer@ActionExec@MGBehavior : 2 #
+    minTimer@AtomicActionExec@MGBehavior : 2 #
+    executionTime@AtomicActionExec@MGBehavior : 1 #
+    status@AtomicActionExec@MGBehavior : unfinished@ActionStatus@MGBehavior > 
+<  '92102 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '_TjBvYH6ZEeOczJTm_QImZQ # role@ObjectRole@MGBehavior : "IA" > 
+<  '92103 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior : '/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.1/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0 # role@ObjectRole@MGBehavior : "PRD" > 
+<  '92104 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '_oro4gG3fEdy4YaaT-RYrLQ # role@ObjectRole@MGBehavior : "PRT" > 
+<  '92105 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior :
+    '_ssJ0QYr-EeG0c6Q1F-wA1Q # role@ObjectRole@MGBehavior : "PRS" > 
+<  '92106 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior : 'FCFS
+    # role@ObjectRole@MGBehavior : "Sch" > 
+<  '92107 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior : '92057
+    # role@ObjectRole@MGBehavior : "t" > 
+<  '92108 : Variable@MGBehavior | name@Variable@MGBehavior : "rTime" #
+    value@Variable@MGBehavior : 3 > 
+<  '92113 : OngoingActionExec@MGBehavior | participants@ActionExec@MGBehavior :
+    Set{'92114} # variables@ActionExec@MGBehavior : Set{mt} #
+    startingTime@ActionExec@MGBehavior : 4000 #
+    endingTime@ActionExec@MGBehavior : null # action@ActionExec@MGBehavior :
+    "DecreaseCountDown" # maxTimer@ActionExec@MGBehavior : freeze('2 .
+    countDown@OCLSf) # upperBoundTimer@OngoingActionExec@MGBehavior : null > 
+<  '92114 : ObjectRole@MGBehavior | actualObject@ObjectRole@MGBehavior : '2 #
+    role@ObjectRole@MGBehavior : "st" > 
+<  'Delay : PCMresourcetypeSchedulingPolicy@pcmflatten | resourceRepository@-@@-@SchedulingPolicy@PCMresourcetypeSchedulingPolicy@pcmflatten : '/1 #
+    entityName@PCMentityNamedElement@pcmflatten : "Delay" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "Delay" > 
+<  'FCFS : PCMresourcetypeSchedulingPolicy@pcmflatten | resourceRepository@-@@-@SchedulingPolicy@PCMresourcetypeSchedulingPolicy@pcmflatten : '/1 #
+    entityName@PCMentityNamedElement@pcmflatten : "First-Come-First-Serve" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "FCFS" > 
+<  'ProcessorSharing : PCMresourcetypeSchedulingPolicy@pcmflatten | resourceRepository@-@@-@SchedulingPolicy@PCMresourcetypeSchedulingPolicy@pcmflatten : '/1 #
+    entityName@PCMentityNamedElement@pcmflatten : "Processor Sharing" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "ProcessorSharing" > 
+<  '_-r1fUCHcEd6lJo4DCALHMw : PCMrepositoryOperationProvidedRole@pcmflatten |
+    providingEntity@-@ProvidedRole@PCMrepositoryProvidedRole@pcmflatten :
+    '_84D0kCHcEd6lJo4DCALHMw # providedInterface@-@@-@OperationProvidedRole@PCMrepositoryOperationProvidedRole@pcmflatten : '_n7g-oCHbEd62GabW1zGSBw #
+    entityName@PCMentityNamedElement@pcmflatten : "Provided_AnInterface" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_-r1fUCHcEd6lJo4DCALHMw" > 
+<  '_84D0kCHcEd6lJo4DCALHMw : PCMsystemSystem@pcmflatten | providedRoles@-@InterfaceProvidingEntity@PCMentityInterfaceProvidingEntity@pcmflatten : Set{
+    '_-r1fUCHcEd6lJo4DCALHMw} # requiredRoles@-@InterfaceRequiringEntity@PCMentityInterfaceRequiringEntity@pcmflatten : Set{mt} # resourceRequiredRoles@-@@-@ResourceInterfaceRequiringEntity@PCMentityResourceInterfaceRequiringEntity@pcmflatten : Set{mt} # assemblyContexts@-@@-@ComposedStructure@PCMcompositionComposedStructure@pcmflatten : Set{'_9c3KwCHcEd6lJo4DCALHMw} # resourceRequiredDelegationConnectors@-@ComposedStructure@PCMcompositionComposedStructure@pcmflatten : Set{
+    mt} # eventChannel@-@@-@ComposedStructure@PCMcompositionComposedStructure@pcmflatten : Set{mt} # connectors@-@@-@ComposedStructure@PCMcompositionComposedStructure@pcmflatten : Set{'__VHF0CHcEd6lJo4DCALHMw} #
+    qosAnnotations@-@System@PCMsystemSystem@pcmflatten : Set{mt} #
+    entityName@PCMentityNamedElement@pcmflatten : "defaultSystem" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_84D0kCHcEd6lJo4DCALHMw" > 
+<  '_9c3KwCHcEd6lJo4DCALHMw : PCMcompositionAssemblyContext@pcmflatten | parentStructure@-@@-@AssemblyContext@PCMcompositionAssemblyContext@pcmflatten :
+    '_84D0kCHcEd6lJo4DCALHMw # encapsulatedComponent@-@@-@AssemblyContext@PCMcompositionAssemblyContext@pcmflatten : '_os1t4CHbEd62GabW1zGSBw # configParameterUsages@-@@-@AssemblyContext@PCMcompositionAssemblyContext@pcmflatten : Set{mt} #
+    entityName@PCMentityNamedElement@pcmflatten :
+    "Assembly_AComponent <AComponent>" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_9c3KwCHcEd6lJo4DCALHMw" > 
+<  '_B0aZ0CHdEd6lJo4DCALHMw :
+    PCMresourceenvironmentResourceContainer@pcmflatten | activeResourceSpecifications@-@ResourceContainer@PCMresourceenvironmentResourceContainer@pcmflatten :
+    Set{'_ssJ0QYr-EeG0c6Q1F-wA1Q} # resourceEnvironment@-@ResourceContainer@PCMresourceenvironmentResourceContainer@pcmflatten : '/2 # nestedResourceContainers@-@@-@ResourceContainer@PCMresourceenvironmentResourceContainer@pcmflatten :
+    Set{mt} # parentResourceContainer@-@@-@ResourceContainer@PCMresourceenvironmentResourceContainer@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "appserver" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_B0aZ0CHdEd6lJo4DCALHMw" > 
+<  '_BIjHoQ3KEdyouMqirZIhzQ : PCMresourcetypeProcessingResourceType@pcmflatten
+    | resourceProvidedRoles@-@@-@ResourceInterfaceProvidingEntity@PCMentityResourceInterfaceProvidingEntity@pcmflatten : Set{'_tCR8kE5dEeCg1tUg4V9tRw} # hardwareInducedFailureType@-@@-@ProcessingResourceType@PCMresourcetypeProcessingResourceType@pcmflatten : null #
+    resourceRepository@-@ResourceType@PCMresourcetypeResourceType@pcmflatten :
+    '/1 # unit@UNITSunitsUnitCarryingElement@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "HDD" #
+    unitSpecification@UNITSunitsUnitCarryingElement@pcmflatten :
+    "byte per second" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_BIjHoQ3KEdyouMqirZIhzQ" > 
+<  '_CEfb8H6ZEeOczJTm_QImZQ : PCMseffProbabilisticBranchTransition@pcmflatten | branchAction@-@AbstractBranchTransition@PCMseffAbstractBranchTransition@pcmflatten : '_uPAUsH6XEeOczJTm_QImZQ # branchBehaviour@-@BranchTransition@PCMseffAbstractBranchTransition@pcmflatten : '_CEfb8X6ZEeOczJTm_QImZQ #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    branchProbability@PCMseffProbabilisticBranchTransition@pcmflatten :
+    6.9999999999999996e-1 # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_CEfb8H6ZEeOczJTm_QImZQ" > 
+<  '_CEfb8X6ZEeOczJTm_QImZQ : PCMseffResourceDemandingBehaviour@pcmflatten | abstractLoopAction@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : null # abstractBranchTransition@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : '_CEfb8H6ZEeOczJTm_QImZQ #
+    steps@-@Behaviour@PCMseffResourceDemandingBehaviour@pcmflatten : Set{
+    '_CEfb8n6ZEeOczJTm_QImZQ ; '_CEgDAH6ZEeOczJTm_QImZQ ;
+    '_TjBvYH6ZEeOczJTm_QImZQ} #
+    tpOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    rtOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_CEfb8X6ZEeOczJTm_QImZQ" > 
+<  '_CEfb8n6ZEeOczJTm_QImZQ : PCMseffStartAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_TjBvYH6ZEeOczJTm_QImZQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '_CEfb8X6ZEeOczJTm_QImZQ #
+    token@PCMseffAbstractAction@pcmflatten : OrderedSet{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_CEfb8n6ZEeOczJTm_QImZQ" > 
+<  '_CEgDAH6ZEeOczJTm_QImZQ : PCMseffStopAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_TjBvYH6ZEeOczJTm_QImZQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_CEfb8X6ZEeOczJTm_QImZQ # token@PCMseffAbstractAction@pcmflatten :
+    OrderedSet{mt-ord} # entityName@PCMentityNamedElement@pcmflatten : "aName"
+    # id@IDENTIFIERidentifierIdentifier@pcmflatten : "_CEgDAH6ZEeOczJTm_QImZQ"
+    > 
+<  '_JiPBICHdEd6lJo4DCALHMw : PCMallocationAllocation@pcmflatten |
+    targetResourceEnvironment@-@Allocation@PCMallocationAllocation@pcmflatten :
+    '/2 # system@-@Allocation@PCMallocationAllocation@pcmflatten :
+    '_84D0kCHcEd6lJo4DCALHMw #
+    allocationContexts@-@Allocation@PCMallocationAllocation@pcmflatten : Set{
+    '_KCkHACHdEd6lJo4DCALHMw} # entityName@PCMentityNamedElement@pcmflatten :
+    "defaultAllocation" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_JiPBICHdEd6lJo4DCALHMw" > 
+<  '_KCkHACHdEd6lJo4DCALHMw : PCMallocationAllocationContext@pcmflatten | resourceContainer@-@AllocationContext@PCMallocationAllocationContext@pcmflatten :
+    '_B0aZ0CHdEd6lJo4DCALHMw # assemblyContext@-@AllocationContext@PCMallocationAllocationContext@pcmflatten : '_9c3KwCHcEd6lJo4DCALHMw #
+    allocation@-@AllocationContext@PCMallocationAllocationContext@pcmflatten :
+    '_JiPBICHdEd6lJo4DCALHMw # eventChannel@-@@-@AllocationContext@PCMallocationAllocationContext@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten :
+    "Allocation_Assembly_AComponent <AComponent> <AComponent>" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_KCkHACHdEd6lJo4DCALHMw" > 
+<  '_KjhikgzkEeCFg86gxKwVPw : PCMrepositoryOperationSignature@pcmflatten |
+    exceptions@-@@-@Signature@PCMrepositorySignature@pcmflatten : Set{mt} #
+    failureType@PCMrepositorySignature@pcmflatten : Set{mt} # interface@-@@-@OperationSignature@PCMrepositoryOperationSignature@pcmflatten :
+    '_n7g-oCHbEd62GabW1zGSBw # parameters@-@@-@OperationSignature@PCMrepositoryOperationSignature@pcmflatten : OrderedSet{mt-ord} # returnType@-@@-@OperationSignature@PCMrepositoryOperationSignature@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "do" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_KjhikgzkEeCFg86gxKwVPw" > 
+<  '_LPnI8CHdEd6lJo4DCALHMw : PCMusagemodelUsageScenario@pcmflatten |
+    usageModel@-@UsageScenario@PCMusagemodelUsageScenario@pcmflatten : '/0 #
+    scenarioBehaviour@-@UsageScenario@PCMusagemodelUsageScenario@pcmflatten :
+    '_LPwS4CHdEd6lJo4DCALHMw #
+    workload@-@UsageScenario@PCMusagemodelUsageScenario@pcmflatten :
+    '/0/@usageScenario_UsageModel.0/@workload_UsageScenario #
+    entityName@PCMentityNamedElement@pcmflatten : "defaultUsageScenario" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_LPnI8CHdEd6lJo4DCALHMw" > 
+<  '_LPwS4CHdEd6lJo4DCALHMw : PCMusagemodelScenarioBehaviour@pcmflatten |
+    usageScenario@-@SenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten
+    : '_LPnI8CHdEd6lJo4DCALHMw # branchTransition@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten : null #
+    loop@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten : null #
+    actions@-@ScenarioBehaviour@PCMusagemodelScenarioBehaviour@pcmflatten :
+    Set{'_LPwS4SHdEd6lJo4DCALHMw ; '_LPwS4iHdEd6lJo4DCALHMw ;
+    '_NC8HwCHdEd6lJo4DCALHMw ; '_Rr7aIHnTEeOBarAp0jPAaA} #
+    rtOb@PCMusagemodelScenarioBehaviour@pcmflatten : '4 #
+    tpOb@PCMusagemodelScenarioBehaviour@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten :
+    "defaultUsageScenarioBehaviour" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_LPwS4CHdEd6lJo4DCALHMw" > 
+<  '_LPwS4SHdEd6lJo4DCALHMw : PCMusagemodelStart@pcmflatten |
+    successor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_NC8HwCHdEd6lJo4DCALHMw #
+    predecessor@PCMusagemodelAbstractUserAction@pcmflatten : null # scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_LPwS4CHdEd6lJo4DCALHMw # token@PCMusagemodelAbstractUserAction@pcmflatten
+    : OrderedSet{mt-ord} # entityName@PCMentityNamedElement@pcmflatten :
+    "aName" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_LPwS4SHdEd6lJo4DCALHMw" > 
+<  '_LPwS4iHdEd6lJo4DCALHMw : PCMusagemodelStop@pcmflatten |
+    successor@PCMusagemodelAbstractUserAction@pcmflatten : null #
+    predecessor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_Rr7aIHnTEeOBarAp0jPAaA # scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten : '_LPwS4CHdEd6lJo4DCALHMw #
+    token@PCMusagemodelAbstractUserAction@pcmflatten : OrderedSet{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_LPwS4iHdEd6lJo4DCALHMw" > 
+<  '_NC8HwCHdEd6lJo4DCALHMw : PCMusagemodelEntryLevelSystemCall@pcmflatten | providedRole@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten :
+    '_-r1fUCHcEd6lJo4DCALHMw # operationSignature@-@@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten : '_KjhikgzkEeCFg86gxKwVPw # outputParameterUsages@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten
+    : Set{mt} # inputParameterUsages@-@EntryLevelSystemCall@PCMusagemodelEntryLevelSystemCall@pcmflatten : Set{mt} #
+    successor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_Rr7aIHnTEeOBarAp0jPAaA #
+    predecessor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_LPwS4SHdEd6lJo4DCALHMw # scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten : '_LPwS4CHdEd6lJo4DCALHMw #
+    token@PCMusagemodelAbstractUserAction@pcmflatten : OrderedSet{'92051} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    priority@PCMusagemodelEntryLevelSystemCall@pcmflatten : 0 #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_NC8HwCHdEd6lJo4DCALHMw" > 
+<  '_Rr7aIHnTEeOBarAp0jPAaA : PCMusagemodelDelay@pcmflatten |
+    successor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_LPwS4iHdEd6lJo4DCALHMw #
+    predecessor@PCMusagemodelAbstractUserAction@pcmflatten :
+    '_NC8HwCHdEd6lJo4DCALHMw # scenarioBehaviour@-@AbstractUserAction@PCMusagemodelAbstractUserAction@pcmflatten : '_LPwS4CHdEd6lJo4DCALHMw #
+    token@PCMusagemodelAbstractUserAction@pcmflatten : OrderedSet{mt-ord} #
+    timeSpecification@-@Delay@PCMusagemodelDelay@pcmflatten : '/0/@usageScenario_UsageModel.0/@scenarioBehaviour_UsageScenario/@actions_ScenarioBehaviour.3/@timeSpecification_Delay # entityName@PCMentityNamedElement@pcmflatten : "anyDelay"
+    # id@IDENTIFIERidentifierIdentifier@pcmflatten : "_Rr7aIHnTEeOBarAp0jPAaA"
+    > 
+<  '_TjBvYH6ZEeOczJTm_QImZQ : PCMseffInternalAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{'/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.1/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_CEfb8n6ZEeOczJTm_QImZQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_CEgDAH6ZEeOczJTm_QImZQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '_CEfb8X6ZEeOczJTm_QImZQ #
+    token@PCMseffAbstractAction@pcmflatten : OrderedSet{'92057} # internalFailureOccurrenceDescriptions@-@@-@InternalAction@PCMseffInternalAction@pcmflatten :
+    Set{mt} # queue@PCMseffInternalAction@pcmflatten : Sequence{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "computeMore" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_TjBvYH6ZEeOczJTm_QImZQ" > 
+<  '__VHF0CHcEd6lJo4DCALHMw :
+    PCMcompositionProvidedDelegationConnector@pcmflatten |
+    parentStructure@-@@-@Connector@PCMcompositionConnector@pcmflatten :
+    '_84D0kCHcEd6lJo4DCALHMw # innerProvidedRole@-@ProvidedDelegationConnector@PCMcompositionProvidedDelegationConnector@pcmflatten : '_qZKs0CHbEd62GabW1zGSBw
+    # outerProvidedRole@-@ProvidedDelegationConnector@PCMcompositionProvidedDelegationConnector@pcmflatten : '_-r1fUCHcEd6lJo4DCALHMw # assemblyContext@-@ProvidedDelegationConnector@PCMcompositionProvidedDelegationConnector@pcmflatten :
+    '_9c3KwCHcEd6lJo4DCALHMw # entityName@PCMentityNamedElement@pcmflatten :
+    "ProvDelegation Provided_AnInterface -> Provided_AnInterface_AComponent" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "__VHF0CHcEd6lJo4DCALHMw" > 
+<  '_dqFLECHbEd6tG9VclJz3cw : PCMrepositoryRepository@pcmflatten |
+    components@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{
+    '_os1t4CHbEd62GabW1zGSBw} #
+    interfaces@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{
+    '_n7g-oCHbEd62GabW1zGSBw} #
+    failureTypes@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{mt} #
+    dataTypes@-@@-@Repository@PCMrepositoryRepository@pcmflatten : Set{mt} #
+    entityName@PCMentityNamedElement@pcmflatten : "defaultRepository" #
+    repositoryDescription@PCMrepositoryRepository@pcmflatten : null #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_dqFLECHbEd6tG9VclJz3cw" > 
+<  '_j-AwkH6YEeOczJTm_QImZQ : PCMseffProbabilisticBranchTransition@pcmflatten | branchAction@-@AbstractBranchTransition@PCMseffAbstractBranchTransition@pcmflatten : '_uPAUsH6XEeOczJTm_QImZQ # branchBehaviour@-@BranchTransition@PCMseffAbstractBranchTransition@pcmflatten : '_j-BXoH6YEeOczJTm_QImZQ #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    branchProbability@PCMseffProbabilisticBranchTransition@pcmflatten :
+    2.9999999999999999e-1 # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_j-AwkH6YEeOczJTm_QImZQ" > 
+<  '_j-B-sH6YEeOczJTm_QImZQ : PCMseffStartAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_r2_fAH6YEeOczJTm_QImZQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '_j-BXoH6YEeOczJTm_QImZQ #
+    token@PCMseffAbstractAction@pcmflatten : OrderedSet{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_j-B-sH6YEeOczJTm_QImZQ" > 
+<  '_j-B-sX6YEeOczJTm_QImZQ : PCMseffStopAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_r2_fAH6YEeOczJTm_QImZQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_j-BXoH6YEeOczJTm_QImZQ # token@PCMseffAbstractAction@pcmflatten :
+    OrderedSet{mt-ord} # entityName@PCMentityNamedElement@pcmflatten : "aName"
+    # id@IDENTIFIERidentifierIdentifier@pcmflatten : "_j-B-sX6YEeOczJTm_QImZQ"
+    > 
+<  '_j-BXoH6YEeOczJTm_QImZQ : PCMseffResourceDemandingBehaviour@pcmflatten | abstractLoopAction@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : null # abstractBranchTransition@-@ResourceDemandingBehaviour@PCMseffResourceDemandingBehaviour@pcmflatten : '_j-AwkH6YEeOczJTm_QImZQ #
+    steps@-@Behaviour@PCMseffResourceDemandingBehaviour@pcmflatten : Set{
+    '_j-B-sH6YEeOczJTm_QImZQ ; '_j-B-sX6YEeOczJTm_QImZQ ;
+    '_r2_fAH6YEeOczJTm_QImZQ} #
+    tpOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    rtOb@PCMseffResourceDemandingBehaviour@pcmflatten : null #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_j-BXoH6YEeOczJTm_QImZQ" > 
+<  '_n7g-oCHbEd62GabW1zGSBw : PCMrepositoryOperationInterface@pcmflatten |
+    parentInterfaces@-@@-@Interface@PCMrepositoryInterface@pcmflatten : Set{mt}
+    # protocols@-@@-@Interface@PCMrepositoryInterface@pcmflatten : Set{mt} #
+    requiredCharacterisations@PCMrepositoryInterface@pcmflatten : Set{mt} #
+    repository@-@@-@Interface@PCMrepositoryInterface@pcmflatten :
+    '_dqFLECHbEd6tG9VclJz3cw # signatures@-@@-@OperationInterface@PCMrepositoryOperationInterface@pcmflatten : Set{'_KjhikgzkEeCFg86gxKwVPw} #
+    entityName@PCMentityNamedElement@pcmflatten : "AnInterface" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_n7g-oCHbEd62GabW1zGSBw" > 
+<  '_nvHX4KkREdyEA_b89s7q9w : PCMresourcetypeProcessingResourceType@pcmflatten
+    | resourceProvidedRoles@-@@-@ResourceInterfaceProvidingEntity@PCMentityResourceInterfaceProvidingEntity@pcmflatten : Set{'_x68UoE5dEeCg1tUg4V9tRw} # hardwareInducedFailureType@-@@-@ProcessingResourceType@PCMresourcetypeProcessingResourceType@pcmflatten : null #
+    resourceRepository@-@ResourceType@PCMresourcetypeResourceType@pcmflatten :
+    '/1 # unit@UNITSunitsUnitCarryingElement@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "DELAY" #
+    unitSpecification@UNITSunitsUnitCarryingElement@pcmflatten : "seconds" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_nvHX4KkREdyEA_b89s7q9w" > 
+<  '_o3sScH2AEdyH8uerKnHYug :
+    PCMresourcetypeCommunicationLinkResourceType@pcmflatten | resourceProvidedRoles@-@@-@ResourceInterfaceProvidingEntity@PCMentityResourceInterfaceProvidingEntity@pcmflatten : Set{mt} #
+    resourceRepository@-@ResourceType@PCMresourcetypeResourceType@pcmflatten :
+    '/1 # networkInducedFailureType@-@@-@CommunicationLinkResourceType@PCMresourcetypeCommunicationLinkResourceType@pcmflatten : null #
+    unit@UNITSunitsUnitCarryingElement@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "LAN" #
+    unitSpecification@UNITSunitsUnitCarryingElement@pcmflatten :
+    "byte per second" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_o3sScH2AEdyH8uerKnHYug" > 
+<  '_oro4gG3fEdy4YaaT-RYrLQ : PCMresourcetypeProcessingResourceType@pcmflatten
+    | resourceProvidedRoles@-@@-@ResourceInterfaceProvidingEntity@PCMentityResourceInterfaceProvidingEntity@pcmflatten : Set{'_patY8E5dEeCg1tUg4V9tRw} # hardwareInducedFailureType@-@@-@ProcessingResourceType@PCMresourcetypeProcessingResourceType@pcmflatten : null #
+    resourceRepository@-@ResourceType@PCMresourcetypeResourceType@pcmflatten :
+    '/1 # unit@UNITSunitsUnitCarryingElement@pcmflatten : null #
+    entityName@PCMentityNamedElement@pcmflatten : "CPU" #
+    unitSpecification@UNITSunitsUnitCarryingElement@pcmflatten :
+    "work units per second" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_oro4gG3fEdy4YaaT-RYrLQ" > 
+<  '_os1t4CHbEd62GabW1zGSBw : PCMrepositoryBasicComponent@pcmflatten | providedRoles@-@InterfaceProvidingEntity@PCMentityInterfaceProvidingEntity@pcmflatten :
+    Set{'_qZKs0CHbEd62GabW1zGSBw} # requiredRoles@-@InterfaceRequiringEntity@PCMentityInterfaceRequiringEntity@pcmflatten : Set{mt} # resourceRequiredRoles@-@@-@ResourceInterfaceRequiringEntity@PCMentityResourceInterfaceRequiringEntity@pcmflatten : Set{mt} # serviceEffectSpecifications@-@@-@BasicComponent@PCMrepositoryBasicComponent@pcmflatten : Set{'12345} #
+    passiveResource@-@BasicComponent@PCMrepositoryBasicComponent@pcmflatten :
+    Set{mt} # parentCompleteComponentTypes@PCMrepositoryImplementationComponentType@pcmflatten : Set{mt} # componentParameterUsage@-@ImplementationComponentType@PCMrepositoryImplementationComponentType@pcmflatten : Set{mt} # repository@-@@-@RepositoryComponent@PCMrepositoryRepositoryComponent@pcmflatten :
+    '_dqFLECHbEd6tG9VclJz3cw # entityName@PCMentityNamedElement@pcmflatten :
+    "AComponent" # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_os1t4CHbEd62GabW1zGSBw" > 
+<  '_patY8E5dEeCg1tUg4V9tRw : PCMentityResourceProvidedRole@pcmflatten | resourceInterfaceProvidingEntity@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten : '_oro4gG3fEdy4YaaT-RYrLQ # providedResourceInterface@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten :
+    '_tw_Q8E5CEeCUKeckjJ_n-w # entityName@PCMentityNamedElement@pcmflatten :
+    "ResourceProvidedRole_CpuInterface_CPU" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_patY8E5dEeCg1tUg4V9tRw" > 
+<  '_qZKs0CHbEd62GabW1zGSBw : PCMrepositoryOperationProvidedRole@pcmflatten |
+    providingEntity@-@ProvidedRole@PCMrepositoryProvidedRole@pcmflatten :
+    '_os1t4CHbEd62GabW1zGSBw # providedInterface@-@@-@OperationProvidedRole@PCMrepositoryOperationProvidedRole@pcmflatten : '_n7g-oCHbEd62GabW1zGSBw #
+    entityName@PCMentityNamedElement@pcmflatten :
+    "Provided_AnInterface_AComponent" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_qZKs0CHbEd62GabW1zGSBw" > 
+<  '_qZUd0CHbEd62GabW1zGSBw : PCMseffStartAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_uPAUsH6XEeOczJTm_QImZQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '12345 # token@PCMseffAbstractAction@pcmflatten :
+    OrderedSet{mt-ord} # entityName@PCMentityNamedElement@pcmflatten : "aName"
+    # id@IDENTIFIERidentifierIdentifier@pcmflatten : "_qZUd0CHbEd62GabW1zGSBw"
+    > 
+<  '_qZUd0SHbEd62GabW1zGSBw : PCMseffStopAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{
+    mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_uPAUsH6XEeOczJTm_QImZQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten : null # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '12345
+    # token@PCMseffAbstractAction@pcmflatten : OrderedSet{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "aName" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_qZUd0SHbEd62GabW1zGSBw" > 
+<  '_r2_fAH6YEeOczJTm_QImZQ : PCMseffInternalAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{'/3/@components__Repository.0/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@branches_Branch.0/@branchBehaviour_BranchTransition/@steps_Behaviour.2/@resourceDemand_Action.0} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_j-B-sH6YEeOczJTm_QImZQ #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_j-B-sX6YEeOczJTm_QImZQ # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '_j-BXoH6YEeOczJTm_QImZQ #
+    token@PCMseffAbstractAction@pcmflatten : OrderedSet{mt-ord} # internalFailureOccurrenceDescriptions@-@@-@InternalAction@PCMseffInternalAction@pcmflatten :
+    Set{mt} # queue@PCMseffInternalAction@pcmflatten : Sequence{mt-ord} #
+    entityName@PCMentityNamedElement@pcmflatten : "compute" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_r2_fAH6YEeOczJTm_QImZQ" > 
+<  '_ssJ0QYr-EeG0c6Q1F-wA1Q :
+    PCMresourceenvironmentProcessingResourceSpecification@pcmflatten | schedulingPolicy@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten :
+    'FCFS # activeResourceType@-@ActiveResourceSpecification@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : '_oro4gG3fEdy4YaaT-RYrLQ # processingRate@-@ProcessingResourceSpecification@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : '/2/@resourceContainer_ResourceEnvironment.0/@activeResourceSpecifications_ResourceContainer.0/@processingRate_ProcessingResourceSpecification # resourceContainer@-@ProcessingResourceSpecification@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : '_B0aZ0CHdEd6lJo4DCALHMw
+    # queue@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten :
+    Sequence{'92057} #
+    MTTR@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : 0.0
+    # MTTF@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten :
+    0.0 # requiredByContainer@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : false # numberOfReplicas@PCMresourceenvironmentProcessingResourceSpecification@pcmflatten : 1 # id@IDENTIFIERidentifierIdentifier@pcmflatten :
+    "_ssJ0QYr-EeG0c6Q1F-wA1Q" > 
+<  '_tCR8kE5dEeCg1tUg4V9tRw : PCMentityResourceProvidedRole@pcmflatten | resourceInterfaceProvidingEntity@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten : '_BIjHoQ3KEdyouMqirZIhzQ # providedResourceInterface@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten :
+    '_xXv8QE5CEeCUKeckjJ_n-w # entityName@PCMentityNamedElement@pcmflatten :
+    "ResourceProvidedRole_HddInterface_HDD" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_tCR8kE5dEeCg1tUg4V9tRw" > 
+<  '_tw_Q8E5CEeCUKeckjJ_n-w : PCMresourcetypeResourceInterface@pcmflatten | resourceRepository@-@@-@ResourceInterface@PCMresourcetypeResourceInterface@pcmflatten : '/1 # resourceSignatures@-@@-@ResourceInterface@PCMresourcetypeResourceInterface@pcmflatten : Set{'_wF22kE5CEeCUKeckjJ_n-w} #
+    entityName@PCMentityNamedElement@pcmflatten : "CpuInterface" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_tw_Q8E5CEeCUKeckjJ_n-w" > 
+<  '_uPAUsH6XEeOczJTm_QImZQ : PCMseffBranchAction@pcmflatten | resourceDemand@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} # infrastructureCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten :
+    Set{mt} # resourceCall@-@@-@Action@PCMseffAbstractInternalControlFlowAction@pcmflatten : Set{mt} #
+    predecessor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_qZUd0CHbEd62GabW1zGSBw #
+    successor@-@AbstractAction@PCMseffAbstractAction@pcmflatten :
+    '_qZUd0SHbEd62GabW1zGSBw # resourceDemandingBehaviour@-@AbstractAction@PCMseffAbstractAction@pcmflatten : '12345 # token@PCMseffAbstractAction@pcmflatten :
+    OrderedSet{mt-ord} # branches@-@Branch@PCMseffBranchAction@pcmflatten :
+    OrderedSet{'_j-AwkH6YEeOczJTm_QImZQ # '_CEfb8H6ZEeOczJTm_QImZQ} #
+    entityName@PCMentityNamedElement@pcmflatten : "branch" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_uPAUsH6XEeOczJTm_QImZQ" > 
+<  '_wF22kE5CEeCUKeckjJ_n-w : PCMresourcetypeResourceSignature@pcmflatten | parameter@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : null
+    # resourceInterface@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : '_tw_Q8E5CEeCUKeckjJ_n-w #
+    entityName@PCMentityNamedElement@pcmflatten : "process" #
+    resourceServiceId@PCMresourcetypeResourceSignature@pcmflatten : 1 #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_wF22kE5CEeCUKeckjJ_n-w" > 
+<  '_x68UoE5dEeCg1tUg4V9tRw : PCMentityResourceProvidedRole@pcmflatten | resourceInterfaceProvidingEntity@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten : '_nvHX4KkREdyEA_b89s7q9w # providedResourceInterface@-@@-@ResourceProvidedRole@PCMentityResourceProvidedRole@pcmflatten :
+    '_tw_Q8E5CEeCUKeckjJ_n-w # entityName@PCMentityNamedElement@pcmflatten :
+    "ResourceProvidedRole_CpuInterface_DELAY" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_x68UoE5dEeCg1tUg4V9tRw" > 
+<  '_xXv8QE5CEeCUKeckjJ_n-w : PCMresourcetypeResourceInterface@pcmflatten | resourceRepository@-@@-@ResourceInterface@PCMresourcetypeResourceInterface@pcmflatten : '/1 # resourceSignatures@-@@-@ResourceInterface@PCMresourcetypeResourceInterface@pcmflatten : Set{'_ygMyEE5CEeCUKeckjJ_n-w ; '_zUFtIE5CEeCUKeckjJ_n-w} #
+    entityName@PCMentityNamedElement@pcmflatten : "HddInterface" #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_xXv8QE5CEeCUKeckjJ_n-w" > 
+<  '_ygMyEE5CEeCUKeckjJ_n-w : PCMresourcetypeResourceSignature@pcmflatten | parameter@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : null
+    # resourceInterface@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : '_xXv8QE5CEeCUKeckjJ_n-w #
+    entityName@PCMentityNamedElement@pcmflatten : "read" #
+    resourceServiceId@PCMresourcetypeResourceSignature@pcmflatten : 1 #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_ygMyEE5CEeCUKeckjJ_n-w" > 
+<  '_zUFtIE5CEeCUKeckjJ_n-w : PCMresourcetypeResourceSignature@pcmflatten | parameter@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : null
+    # resourceInterface@-@@-@ResourceSignature@PCMresourcetypeResourceSignature@pcmflatten : '_xXv8QE5CEeCUKeckjJ_n-w #
+    entityName@PCMentityNamedElement@pcmflatten : "write" #
+    resourceServiceId@PCMresourcetypeResourceSignature@pcmflatten : 2 #
+    id@IDENTIFIERidentifierIdentifier@pcmflatten : "_zUFtIE5CEeCUKeckjJ_n-w" > 
+<  'clk@ : Clock@MGBehavior | time@Clock@MGBehavior : 4000 > 
+<  'ids@ : Counter@MGBehavior | value@Counter@MGBehavior : 92117 > 
+<  'rdm@ : Counter@MGBehavior | value@Counter@MGBehavior : 200690 >}}  in time
+    4000
+Bye.

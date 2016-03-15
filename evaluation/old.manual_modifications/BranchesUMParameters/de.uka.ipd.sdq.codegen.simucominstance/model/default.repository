@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://sdq.ipd.uka.de/PalladioComponentModel/Repository/5.0" xmlns:seff="http://sdq.ipd.uka.de/PalladioComponentModel/SEFF/5.0" id="_C_7mkKDKEeSTa-m_xXpXMw" entityName="defaultRepository">
+  <components__Repository xsi:type="repository:BasicComponent" id="_G9PwsKDKEeSTa-m_xXpXMw" entityName="AComponent">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DjuhEKDTEeSTa-m_xXpXMw" entityName="Provided_AnInterface_AComponent" providedInterface__OperationProvidedRole="_tfjfQKDSEeSTa-m_xXpXMw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DjwWQKDTEeSTa-m_xXpXMw" describedService__SEFF="_vbwtQKDSEeSTa-m_xXpXMw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DjwWQaDTEeSTa-m_xXpXMw" entityName="start" successor_AbstractAction="_h3ZMgKDWEeSTa-m_xXpXMw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DjwWQqDTEeSTa-m_xXpXMw" entityName="stop" predecessor_AbstractAction="_h3ZMgKDWEeSTa-m_xXpXMw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_h3ZMgKDWEeSTa-m_xXpXMw" entityName="compute" predecessor_AbstractAction="_DjwWQaDTEeSTa-m_xXpXMw" successor_AbstractAction="_DjwWQqDTEeSTa-m_xXpXMw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="doA.VALUE*2"/>
+          <requiredResource_ParametricResourceDemand href="Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_tfjfQKDSEeSTa-m_xXpXMw" entityName="AnInterface">
+    <signatures__OperationInterface id="_vbwtQKDSEeSTa-m_xXpXMw" entityName="do">
+      <parameters__OperationSignature parameterName="doA">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+</repository:Repository>

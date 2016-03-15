@@ -1,0 +1,47 @@
+---- ----------------------------------------------- ----
+---- Programmatically generated code using e-Motions ----
+---- @date Mon Jan 19 11:14:37 CET 2015             ----
+---- ----------------------------------------------- ----
+--- set print attribute on .
+
+load ../../GlobalFiles/mOdCL.maude
+load model-checker.maude
+load ../../GlobalFiles/MGDefinitions.maude
+load ../../GlobalFiles/MGRealTimeMaude24.maude
+load ../../GlobalFiles/EcoreMM.maude
+load ../../GlobalFiles/e-Motions.maude
+load ../../GlobalFiles/flatten.ecore.maude
+load ../../GlobalFiles/PalladioGrammar.maude 
+load ../../GlobalFiles/ManualChangesRulesPalladio_v5.maude
+
+load MinimumExample_ow_3_Exp.maude
+
+mod TICKRULE is
+  pr MINIMUMEXAMPLE .
+  pr @PCMFLATTEN@BEHAVIOR@ .
+  var T TE : Time .
+  var MODEL : @Model .
+
+  crl [tick] :
+     { MODEL } in time T
+  =>
+    { delta(MODEL, TE) } in time (T plus TE)
+  if TE := mte(MODEL) 
+    /\ TE =/= zero .
+endm
+
+set profile on .
+
+---- set trace on .
+---- set trace condition off .
+---- set trace whole off .
+---- set trace substitution off .
+
+---- set print conceal on .
+---- print conceal _`{_`} <_:_|_> __ .
+
+rewrite init(MINIMUMEXAMPLE) .
+
+---- set print conceal off .
+
+---- set trace off .

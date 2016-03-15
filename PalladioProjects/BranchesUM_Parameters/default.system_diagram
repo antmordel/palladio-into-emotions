@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" type="CompositeModel" name="default.system_diagram" measurementUnit="Pixel">
+  <children xsi:type="notation:Shape" type="2002" fontName=".Helvetica Neue DeskInterface">
+    <children xsi:type="notation:DecorationNode" type="5012"/>
+    <children xsi:type="notation:DecorationNode" type="7002">
+      <children xsi:type="notation:Shape" type="3006" fontName=".Helvetica Neue DeskInterface">
+        <children xsi:type="notation:DecorationNode" type="5009"/>
+        <children xsi:type="notation:Shape" type="3007" fontName=".Helvetica Neue DeskInterface">
+          <children xsi:type="notation:DecorationNode" type="5007">
+            <layoutConstraint xsi:type="notation:Location" y="5"/>
+          </children>
+          <element href="default.repository#_DjuhEKDTEeSTa-m_xXpXMw"/>
+          <layoutConstraint xsi:type="notation:Bounds"/>
+        </children>
+        <element href="default.system#_wB98MKDTEeSTa-m_xXpXMw"/>
+        <layoutConstraint xsi:type="notation:Bounds" x="198" y="111" width="176"/>
+      </children>
+    </children>
+    <children xsi:type="notation:Shape" type="3011" fontName=".Helvetica Neue DeskInterface">
+      <children xsi:type="notation:DecorationNode" type="5013">
+        <layoutConstraint xsi:type="notation:Location" x="11" y="82"/>
+      </children>
+      <element href="default.system#_vQ9aMKDMEeSTa-m_xXpXMw"/>
+      <layoutConstraint xsi:type="notation:Bounds"/>
+    </children>
+    <element href="default.system#_u7zpkKDMEeSTa-m_xXpXMw"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="162" y="18"/>
+  </children>
+  <styles xsi:type="notation:DiagramStyle"/>
+  <element href="default.system#_u7zpkKDMEeSTa-m_xXpXMw"/>
+  <edges xsi:type="notation:Connector" type="4006" source="//@children.0/@children.2" target="//@children.0/@children.1/@children.0/@children.1">
+    <styles xsi:type="notation:FontStyle" fontName=".Helvetica Neue DeskInterface"/>
+    <element href="default.system#_xldIMKDTEeSTa-m_xXpXMw"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[30, 0, -177, 72]$[203, -72, -4, 0]"/>
+    <sourceAnchor xsi:type="notation:IdentityAnchor" id="(0.15,0.38333333333333336)"/>
+    <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.13333333333333333,0.5333333333333333)"/>
+  </edges>
+</notation:Diagram>
